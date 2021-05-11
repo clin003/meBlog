@@ -1,22 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - 白菜林</title>
-        <link>https://3ae.cn/posts/</link>
-        <description>所有文章 | 白菜林</description>
+        <title>收集与整理 - 分类 - 白菜林</title>
+        <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
+        <description>收集与整理 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 12 May 2021 07:42:44 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 12 May 2021 07:42:44 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
     <title>Go20210512</title>
     <link>https://3ae.cn/go20210512/</link>
     <pubDate>Wed, 12 May 2021 07:42:44 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://3ae.cn/go20210512/</guid>
     <description><![CDATA[图解 Go 内存管理分配 https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ Go 刷 leetcode 之任务调度器 https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA 自己动手实现一个 kubectl exec https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ 云上细粒度访问管理的参考架构 https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug Go 工程师必学：Go 大杀器之跟踪剖析 trace https://mp.weixin.qq.com/s/7DY0hDwidgx0zezP1ml3Ig Go并发编]]></description>
-</item><item>
-    <title>Hello world</title>
-    <link>https://3ae.cn/hello_world/</link>
-    <pubDate>Tue, 11 May 2021 14:00:54 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/hello_world/</guid>
-    <description><![CDATA[Hello World! 白菜林^_^]]></description>
 </item></channel>
 </rss>
