@@ -4,7 +4,14 @@
         <link>https://3ae.cn/posts/</link>
         <description>所有文章 | 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 12 May 2021 07:42:44 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 12 May 2021 18:59:21 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>使用 cron 调度自动化任务</title>
+    <link>https://3ae.cn/linux_cron/</link>
+    <pubDate>Wed, 12 May 2021 18:59:21 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/linux_cron/</guid>
+    <description><![CDATA[cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执]]></description>
+</item><item>
     <title>Go20210512</title>
     <link>https://3ae.cn/go20210512/</link>
     <pubDate>Wed, 12 May 2021 07:42:44 &#43;0800</pubDate>
