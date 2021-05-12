@@ -4,7 +4,14 @@
         <link>https://3ae.cn/tags/go/</link>
         <description>Go - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 12 May 2021 07:42:44 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/go/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 03:33:46 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/go/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210513</title>
+    <link>https://3ae.cn/go20210513/</link>
+    <pubDate>Thu, 13 May 2021 03:33:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/go20210513/</guid>
+    <description><![CDATA[unsafe 包真的不安全吗？ https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg go-callvis 源码分析 https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw 深度探索Go语言（二）：动态派发 https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ 再一次看到了 Go 的节制：int128 类型要不要支持？ https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow Go 笔试题精选 三： 19 道填]]></description>
+</item><item>
     <title>Go20210512</title>
     <link>https://3ae.cn/go20210512/</link>
     <pubDate>Wed, 12 May 2021 07:42:44 &#43;0800</pubDate>
