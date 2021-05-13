@@ -2,15 +2,20 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://3ae.cn/categories/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/categories/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/tags/ios/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/posts/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/tags/swift/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/article/2021/swift-basic-syntax/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/tags/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/tags/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/tags/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</loc><lastmod>2021-05-13T21:31:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/tags/golang/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/posts/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/tags/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/article/2021/go_cross_compilling/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/tags/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/</loc><lastmod>2021-05-13T14:35:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/tags/gnu-screen/</loc><lastmod>2021-05-13T12:50:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/tags/linux/</loc><lastmod>2021-05-13T12:50:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/article/2021/linux_screen/</loc><lastmod>2021-05-13T12:50:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>

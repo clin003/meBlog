@@ -4,7 +4,14 @@
         <link>https://3ae.cn/posts/</link>
         <description>所有文章 | 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 14:35:47 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 21:31:19 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Swift语法全面解析</title>
+    <link>https://3ae.cn/article/2021/swift-basic-syntax/</link>
+    <pubDate>Thu, 13 May 2021 21:31:19 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
+    <description><![CDATA[Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以]]></description>
+</item><item>
     <title>使用 Golang 的交叉编译</title>
     <link>https://3ae.cn/article/2021/go_cross_compilling/</link>
     <pubDate>Thu, 13 May 2021 14:35:47 &#43;0800</pubDate>
