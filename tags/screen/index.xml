@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>screen - 标签 - 白菜林</title>
+        <link>https://3ae.cn/tags/screen/</link>
+        <description>screen - 标签 - 白菜林</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 12:50:05 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/screen/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux/Mac 使用 GNU Screen 的小技巧</title>
+    <link>https://3ae.cn/linux_screen/</link>
+    <pubDate>Thu, 13 May 2021 12:50:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/linux_screen/</guid>
+    <description><![CDATA[学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘]]></description>
+</item></channel>
+</rss>
