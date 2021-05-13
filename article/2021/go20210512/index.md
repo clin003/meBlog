@@ -1,86 +1,91 @@
-# Go20210512
+# Go20210512 今日技术分享
 
 
-1. 图解 Go 内存管理分配
-https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ
+今日技术分享
 
-2. Go 刷 leetcode 之任务调度器
-https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA
+1. unsafe 包真的不安全吗？
+https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg
 
-3. 自己动手实现一个 kubectl exec
-https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ
+2. go-callvis 源码分析
+https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw
 
-4. 云上细粒度访问管理的参考架构
-https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug
+3. 深度探索Go语言（二）：动态派发
+https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ
 
-5. Go 工程师必学：Go 大杀器之跟踪剖析 trace
-https://mp.weixin.qq.com/s/7DY0hDwidgx0zezP1ml3Ig
+4. 再一次看到了 Go 的节制：int128 类型要不要支持？
+https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow
 
-6. Go并发编程 — sync.Once 单实例模式的思考
-https://mp.weixin.qq.com/s/nMHNujmbIx7uMqMtjUMTvQ
+5. Go 笔试题精选 三： 19 道填空题
+https://mp.weixin.qq.com/s/5Zd1DmQGDvjMySOUf7eFMg
 
-7. 4. kustomize 简明教程
-https://mp.weixin.qq.com/s/JDsDOYaACgyt97-Nz5ScDw
+6. 在提赋能之前，先想想这5个问题
+https://mp.weixin.qq.com/s/V8l7S7A-kRF_WDb7tlJJ0Q
 
-8. 你不知道的 Go 之 slice
-https://mp.weixin.qq.com/s/aOIp7jeBWubT-u85vQJxzA
+7. 代码无可避免腐化是因为这 5 个原因
+https://mp.weixin.qq.com/s/IzDgV6AmK-2ph1ctcz9liA
 
-9. 缓存系统稳定性 - 架构师峰会演讲实录
-https://mp.weixin.qq.com/s/o0qUY5zUjBQuOkx_4XGB6Q
+8. 5. kubebuilder 实战: CRUD
+https://mp.weixin.qq.com/s/UDA55y5RCpzyDvfSfs9d2w
 
-10. 微服务的灾难
-https://mp.weixin.qq.com/s/bY2s7wjfggSt77kj8exYLQ
+9. 实现无限缓存的channel
+https://colobu.com/2021/05/11/unbounded-channel-in-go/
 
-11. 利用 NATS JetStream 构建分布式事件流系统
-https://shijuvar.medium.com/building-distributed-event-streaming-systems-in-go-with-nats-jetstream-3938e6dc7a13
+10. 轻轻松松打印网页并生成 pdf 文档
+https://colobu.com/2021/05/05/generate-pdf-for-a-web-page-by-using-chromedp/
 
-12. 100 行 Golang 代码构建一个简单的终端仿真器 
-https://ishuah.com/2021/03/10/build-a-terminal-emulator-in-100-lines-of-go
+11. Go 1.16 的 signal.NotifyContext 让你的服务重启更优雅
+https://juejin.cn/post/6960578101755510798
 
-13. 编写简单的 CLI 程序：Python vs Go
-https://dev.to/jidicula/writing-a-simple-cli-program-python-vs-go-59kf
+12. 一种持锁被调度的情况
+https://xargin.com/schedule-when-holding-lock-causes-latency-spike/
 
-14. 如何使用 Go，Maroto 和 GoFakeIt 创建 PDF
-https://dev.to/divrhino/creating-a-pdf-with-go-maroto-gofakeit-3c7m
+13. assembly 完全解析：
+https://segmentfault.com/a/1190000039978109?utm_source=tag-newest
 
-15. 一个用 Go 编写的类似 cowsay 的开源程序 weebsay
-https://github.com/irevenko/weebsay
+14. strace 的 10 个命令
+https://colobu.com/2021/04/30/strace-commands-for-troubleshooting-and-debugging-linux/
 
-16. 最受欢迎的编程语言（1965/2021）
-https://statisticsanddata.org/data/the-most-popular-programming-languages-1965-2021/
+15. 使eBPF工作在windows操作系统上
+https://cloudblogs.microsoft.com/opensource/2021/05/10/making-ebpf-work-on-windows/
 
-17. 用NATS JetStream在Go中构建分布式事件流系统
-https://shijuvar.medium.com/building-distributed-event-streaming-systems-in-go-with-nats-jetstream-3938e6dc7a13
+16. 油管视频：调试你的Go test代码：用printf还是delve
+https://www.youtube.com/watch?v=nmNVd7FbSYs
 
-18. 外部secret管理系统与k8s的集成
-https://github.com/external-secrets/kubernetes-external-secrets
+17. 如何在你的本地项目中使用未发布的Go module
+https://iaziz786.com/blog/use-unpublished-go-modules
 
-19. 生成随机的、可发音的名字，像docker给容器起的默认名字那样
-https://github.com/lucasepe/codename
+18. Prometheus监控告警规则大全
+https://awesome-prometheus-alerts.grep.to/
 
-20. Pixie为CNCF带来Kubernetes集群内的调试能力
-https://thenewstack.io/pixie-brings-in-cluster-kubernetes-debugging-to-cncf/
+19. dblab: 支持与PostgreSQL和MySQL交互的终端命令行工具
+https://github.com/danvergara/dblab
 
-21. bofied: 一个网络启动服务器，支持PXE服务协议
-https://github.com/pojntfx/bofied
+20. 终端应用的自动黑暗模式 by vim-go作者
+https://arslan.io/2021/02/15/automatic-dark-mode-for-terminal-applications/
 
-22. 糟糕的磁盘性能 by Brendan Gregg
-http://www.brendangregg.com/blog/2021-05-09/poor-disk-performance.html
+21. 另一个开源的容器平台
+https://github.com/sylabs/singularity
 
-23. 油管视频：使用go重头构建container
-https://www.youtube.com/watch?v=8fi7uSYlOdc
+22. 在Go中没有一个完美的切片克隆方案
+https://github.com/go101/go101/wiki/There-is-not-a-perfect-slice-clone-way-in-Go
 
-24. milvus：开源向量数据库搜索引擎
-https://github.com/milvus-io/milvus
+23. 理解nil接口类型与值为nil的接口变量
+https://trstringer.com/go-nil-interface-and-interface-with-nil-concrete-value/
 
-25. 使用go加速python代码
-https://medium.com/geekculture/speed-up-python-with-golang-9a1d2c6067ab
+24. 微软Teams的命令行终端UI工具
+https://github.com/fossteams/teams-cli
 
-26. go语言编译器
-https://mp.weixin.qq.com/s/UhxFOQBpW8EUVpFvqH2tMg
+25. Kubernetes GUI大全
+http://kokizzu.blogspot.com/2021/03/kubernetes-gui.html
 
-27. 虚拟内存工作原理
-https://mp.weixin.qq.com/s/c81Fvws0J2tHjcdTgxvv6g
+26. 如何做出你的第一个开源贡献
+https://dev.to/codesandboxio/how-to-make-your-first-open-source-contribution-2oim
 
-28. redis vs tendis
-https://mp.weixin.qq.com/s/MeYkfOIdnU6LYlsGb24KjQ
+27. 无服务器下的数据库
+https://mp.weixin.qq.com/s/_MfuhpSAtZFnB8p-xp5HUw
+
+28. MySQL AUTO_UNCREMENT
+https://mp.weixin.qq.com/s/Ya3JrUftN0ASI8dTzb1lvw
+
+29. facebook google网络架构揭秘
+https://mp.weixin.qq.com/s/MPBk9wdYsE48H7OXWAd5bA

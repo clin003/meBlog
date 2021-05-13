@@ -1,89 +1,97 @@
-# Go20210513
+# Go20210513 今日技术分享
 
 
-1. unsafe 包真的不安全吗？
-https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg
+今日技术分享
 
-2. go-callvis 源码分析
-https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw
+1. Go：跨团队协作时如何共享对象
+https://mp.weixin.qq.com/s/zJaruocUDSzld8ttDyawng
 
-3. 深度探索Go语言（二）：动态派发
-https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ
+2. template源码分析
+https://mp.weixin.qq.com/s/HqcaFEXgQbcRyjYjI6oKGQ
 
-4. 再一次看到了 Go 的节制：int128 类型要不要支持？
-https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow
+3. 6. kubebuilder 实战: status & event
+https://mp.weixin.qq.com/s/JuRlClCX7TnQKaW-Rr3Z7g
 
-5. Go 笔试题精选 三： 19 道填空题
-https://mp.weixin.qq.com/s/5Zd1DmQGDvjMySOUf7eFMg
+4. 如何优雅地实现并发编排任务
+https://mp.weixin.qq.com/s/M88-VS_H7o754mw5Ra7BYg
 
-6. 在提赋能之前，先想想这5个问题
-https://mp.weixin.qq.com/s/V8l7S7A-kRF_WDb7tlJJ0Q
+5. Prometheus 二次开发之 API 接口
+https://mp.weixin.qq.com/s/K7ERtE2KKflYSA9KJOukYg
 
-7. 代码无可避免腐化是因为这 5 个原因
-https://mp.weixin.qq.com/s/IzDgV6AmK-2ph1ctcz9liA
+6. 从TDSQL，看分布式数据库的技术之美
+https://mp.weixin.qq.com/s/CbzlPmGJCQKi3UmvwjFC1Q
 
-8. 5. kubebuilder 实战: CRUD
-https://mp.weixin.qq.com/s/UDA55y5RCpzyDvfSfs9d2w
+7. Go Team Leader — rsc大神新开源了一个库，增强模板功能
+https://mp.weixin.qq.com/s/3DFejimkPY9tg9QQL2QTqw
 
-9. 实现无限缓存的channel
+8. Wow，联通数科也招Gopher了
+https://mp.weixin.qq.com/s/tVY3AuUOYEnMKi7Km4eBCw
+
+9. Go 数组比切片好在哪？
+https://mp.weixin.qq.com/s/zp1vdhGukEYKpzAdPt--Mw
+
+10. Go 缓存系列之 go-cache
+https://mp.weixin.qq.com/s/dKlfwJ69s3fUBWYIV57hyg
+
+11. Go 存储基础 — 内存结构体怎么写入文件？
+https://mp.weixin.qq.com/s/mfNz7r76vZOOgiMSmuVeJA
+
+12. 深度解密Go语言之基于信号的抢占式调度
+https://mp.weixin.qq.com/s/ESfbVoCGUIdpwFOfGyvz1w
+
+13. 实现无限缓存的 channel
 https://colobu.com/2021/05/11/unbounded-channel-in-go/
 
-10. 轻轻松松打印网页并生成 pdf 文档
-https://colobu.com/2021/05/05/generate-pdf-for-a-web-page-by-using-chromedp/
+14. Go RIP 协议简单的模拟实现
+https://segmentfault.com/a/1190000039984330
 
-11. Go 1.16 的 signal.NotifyContext 让你的服务重启更优雅
-https://juejin.cn/post/6960578101755510798
+15. Golang 框架 gin 运行源码分析 
+https://mp.weixin.qq.com/s/D6Ls3fUZnmimg8EgBDuXcQ
 
-12. 一种持锁被调度的情况
-https://xargin.com/schedule-when-holding-lock-causes-latency-spike/
+16. Golang MySQL 查询更轻松
+https://mp.weixin.qq.com/s/Sdt_wYJCXepoUwIIy7h9yw
 
-13. assembly 完全解析：
-https://segmentfault.com/a/1190000039978109?utm_source=tag-newest
+17. golang 如何使用原生 RPC 及微服务简述
+https://segmentfault.com/a/1190000039990286
 
-14. strace 的 10 个命令
-https://colobu.com/2021/04/30/strace-commands-for-troubleshooting-and-debugging-linux/
+18. Go并发：高级话题
+https://t.zsxq.com/yJMRjiI
 
-15. 使eBPF工作在windows操作系统上
-https://cloudblogs.microsoft.com/opensource/2021/05/10/making-ebpf-work-on-windows/
+19. pprof++: 带有硬件性能监控的Go性能剖析器 by uber
+https://eng.uber.com/pprof-go-profiler/
 
-16. 油管视频：调试你的Go test代码：用printf还是delve
-https://www.youtube.com/watch?v=nmNVd7FbSYs
+20. Kubernetes中混沌工程的开源解决方案
+https://blog.flant.com/chaos-engineering-in-kubernetes-open-source-tools/
 
-17. 如何在你的本地项目中使用未发布的Go module
-https://iaziz786.com/blog/use-unpublished-go-modules
+21. 用GoPacket对数据包进行捕获和程序化分析
+https://blog.apnic.net/2021/05/12/programmatically-analyse-packet-captures-with-gopacket/
 
-18. Prometheus监控告警规则大全
-https://awesome-prometheus-alerts.grep.to/
+22. KrakenD：高性能API网关框架项目加入linux基金会
+https://www.krakend.io/blog/krakend-framework-joins-the-linux-foundation/
 
-19. dblab: 支持与PostgreSQL和MySQL交互的终端命令行工具
-https://github.com/danvergara/dblab
+23. 跳出Go module的泥潭
+https://mp.weixin.qq.com/s/EndbbH0Cxw7jBmUOovs6Ew
 
-20. 终端应用的自动黑暗模式 by vim-go作者
-https://arslan.io/2021/02/15/automatic-dark-mode-for-terminal-applications/
+24. 在Kubernetes上用多容器pod扩展应用程序
+https://learnk8s.io/sidecar-containers-patterns
 
-21. 另一个开源的容器平台
-https://github.com/sylabs/singularity
+25. Popeye是一个实时扫描Kubernetes集群并报告部署资源和配置的潜在问题的工具
+https://github.com/derailed/popeye
 
-22. 在Go中没有一个完美的切片克隆方案
-https://github.com/go101/go101/wiki/There-is-not-a-perfect-slice-clone-way-in-Go
+26. 分布式账本技术（DLT）和数字凭证–完美的搭配
+https://www.memberpass.com/2021/05/distributed-ledger-technology-dlt-and-digital-credentials-a-perfect-match/
 
-23. 理解nil接口类型与值为nil的接口变量
-https://trstringer.com/go-nil-interface-and-interface-with-nil-concrete-value/
+27. 通过microsoft learn零基础学习Go编程语言
+https://dev.to/azure/get-started-with-the-go-programming-language-with-microsoft-learn-no-experience-needed-1npg
 
-24. 微软Teams的命令行终端UI工具
-https://github.com/fossteams/teams-cli
+28. 通过AI和机器学习扩大网络防御
+https://thenewstack.io/expanding-cyber-defense-through-ai-and-ml/
 
-25. Kubernetes GUI大全
-http://kokizzu.blogspot.com/2021/03/kubernetes-gui.html
+29. 云开发如何扛过大流量活动洪峰
+https://mp.weixin.qq.com/s/WOhY_bTj213XP6tdUYQCZQ
 
-26. 如何做出你的第一个开源贡献
-https://dev.to/codesandboxio/how-to-make-your-first-open-source-contribution-2oim
+30. MySQL 学习
+https://mp.weixin.qq.com/s/sRFmW57KUY3yyyRkyw0L4A
 
-27. 无服务器下的数据库
-https://mp.weixin.qq.com/s/_MfuhpSAtZFnB8p-xp5HUw
-
-28. MySQL AUTO_UNCREMENT
-https://mp.weixin.qq.com/s/Ya3JrUftN0ASI8dTzb1lvw
-
-29. facebook google网络架构揭秘
-https://mp.weixin.qq.com/s/MPBk9wdYsE48H7OXWAd5bA
+31. 煎鱼 数组比切片好在哪里
+https://mp.weixin.qq.com/s/zp1vdhGukEYKpzAdPt--Mw
