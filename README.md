@@ -25,7 +25,7 @@
 
 #   发布方法1:
 
-    hugo --baseUrl="https://blog.io.2d6.cn/"
+    hugo --baseUrl="https://3ae.cn/"
 
 #   发布方法2:
 
