@@ -6,17 +6,17 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
             <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 12:50:05 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Linux/Mac 使用 GNU Screen 的小技巧</title>
-    <link>https://3ae.cn/linux_screen/</link>
+    <link>https://3ae.cn/article/2021/linux_screen/</link>
     <pubDate>Thu, 13 May 2021 12:50:05 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://3ae.cn/linux_screen/</guid>
+    <guid>https://3ae.cn/article/2021/linux_screen/</guid>
     <description><![CDATA[学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘]]></description>
 </item><item>
     <title>使用 cron 调度自动化任务</title>
-    <link>https://3ae.cn/linux_cron/</link>
+    <link>https://3ae.cn/article/2021/linux_cron/</link>
     <pubDate>Wed, 12 May 2021 18:59:21 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://3ae.cn/linux_cron/</guid>
+    <guid>https://3ae.cn/article/2021/linux_cron/</guid>
     <description><![CDATA[cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执]]></description>
 </item></channel>
 </rss>

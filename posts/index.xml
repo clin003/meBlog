@@ -4,40 +4,47 @@
         <link>https://3ae.cn/posts/</link>
         <description>所有文章 | 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 12:50:05 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 14:35:47 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>使用 Golang 的交叉编译</title>
+    <link>https://3ae.cn/article/2021/go_cross_compilling/</link>
+    <pubDate>Thu, 13 May 2021 14:35:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
+    <description><![CDATA[在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多]]></description>
+</item><item>
     <title>Linux/Mac 使用 GNU Screen 的小技巧</title>
-    <link>https://3ae.cn/linux_screen/</link>
+    <link>https://3ae.cn/article/2021/linux_screen/</link>
     <pubDate>Thu, 13 May 2021 12:50:05 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://3ae.cn/linux_screen/</guid>
+    <guid>https://3ae.cn/article/2021/linux_screen/</guid>
     <description><![CDATA[学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘]]></description>
 </item><item>
     <title>Go20210513</title>
-    <link>https://3ae.cn/go20210513/</link>
+    <link>https://3ae.cn/article/2021/go20210513/</link>
     <pubDate>Thu, 13 May 2021 03:33:46 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://3ae.cn/go20210513/</guid>
+    <guid>https://3ae.cn/article/2021/go20210513/</guid>
     <description><![CDATA[unsafe 包真的不安全吗？ https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg go-callvis 源码分析 https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw 深度探索Go语言（二）：动态派发 https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ 再一次看到了 Go 的节制：int128 类型要不要支持？ https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow Go 笔试题精选 三： 19 道填]]></description>
 </item><item>
     <title>使用 cron 调度自动化任务</title>
-    <link>https://3ae.cn/linux_cron/</link>
+    <link>https://3ae.cn/article/2021/linux_cron/</link>
     <pubDate>Wed, 12 May 2021 18:59:21 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://3ae.cn/linux_cron/</guid>
+    <guid>https://3ae.cn/article/2021/linux_cron/</guid>
     <description><![CDATA[cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执]]></description>
 </item><item>
     <title>Go20210512</title>
-    <link>https://3ae.cn/go20210512/</link>
+    <link>https://3ae.cn/article/2021/go20210512/</link>
     <pubDate>Wed, 12 May 2021 07:42:44 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://3ae.cn/go20210512/</guid>
+    <guid>https://3ae.cn/article/2021/go20210512/</guid>
     <description><![CDATA[图解 Go 内存管理分配 https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ Go 刷 leetcode 之任务调度器 https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA 自己动手实现一个 kubectl exec https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ 云上细粒度访问管理的参考架构 https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug Go 工程师必学：Go 大杀器之跟踪剖析 trace https://mp.weixin.qq.com/s/7DY0hDwidgx0zezP1ml3Ig Go并发编]]></description>
 </item><item>
     <title>Hello world</title>
-    <link>https://3ae.cn/hello_world/</link>
+    <link>https://3ae.cn/article/2021/hello_world/</link>
     <pubDate>Tue, 11 May 2021 14:00:54 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://3ae.cn/hello_world/</guid>
+    <guid>https://3ae.cn/article/2021/hello_world/</guid>
     <description><![CDATA[Hello World! 白菜林^_^]]></description>
 </item></channel>
 </rss>
