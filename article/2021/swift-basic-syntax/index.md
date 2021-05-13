@@ -52,6 +52,88 @@ Swift 并不强制要求你在每条语句的结尾处使用分号（;）。
 let cat = "🐱"; print(cat)
 // 输出“🐱”
 ```
+
+####    标识符
+
+标识符就是给变量、常量、方法、函数、枚举、结构体、类、协议等指定的名字。构成标识符的字母均有一定的规范，Swift语言中标识符的命名规则如下：
+
+*    区分大小写，Myname与myname是两个不同的标识符；
+
+*    标识符首字符可以以下划线（_）或者字母开始，但不能是数字；
+
+*    标识符中其他字符可以是下划线（_）、字母或数字。
+
+例如： userName、User_Name、_sys_val、身高等为合法的标识符，而2mail、room#和class为非法的标识符。
+
+注意:Swift中的字母采用的是Unicode编码。Unicode叫做统一编码制，它包含了亚洲文字编码，如中文、日文、韩文等字符，甚至是我们在聊天工具中使用的表情符号
+
+如果一定要使用关键字作为标识符，可以在关键字前后添加重音符号（`），例如：
+```swift
+let `class` = "xiaobai"
+```
+####    关键字
+
+关键字是类似于标识符的保留字符序列，除非用重音符号（`）将其括起来，否则不能用作标识符。关键字是对编译器具有特殊意义的预定义保留标识符。常见的关键字有以下4种。
+**与声明有关的关键字**
+
+    class 	deinit 	enum 	extension
+    func 	import 	init 	internal
+    let 	operator 	private 	protocol
+    public 	static 	struct 	subscript
+    typealias 	var 
+
+**与语句有关的关键字**
+
+    break 	case 	continue 	default
+    do 	else 	fallthrough 	for
+    if 	in 	return 	switch
+    where 	while 		
+
+**表达式和类型关键字**
+
+    as 	dynamicType 	false 	is
+    nil 	self 	Self 	super
+    true 	_COLUMN_ 	_FILE_ 	_FUNCTION_
+    _LINE_ 		
+
+**在特定上下文中使用的关键字**
+
+    associativity 	convenience 	dynamic 	didSet
+    final 	get 	infix 	inout
+    lazy 	left 	mutating 	none
+    nonmutating 	optional 	override 	postfix
+    precedence 	prefix 	Protocol 	required
+    right 	set 	Type 	unowned
+    weak 	willSet 		
+
+####    Swift 空格
+
+Swift对空格的使用有一定的要求。
+在Swift中，运算符不能直接跟在变量或常量的后面。例如下面的代码会报错：
+```swift
+let a= 1 + 2
+```
+错误信息是：
+
+`error: prefix/postfix '=' is reserved`
+
+意思大概是等号直接跟在前面或后面这种用法是保留的。
+
+下面的代码还是会报错（继续注意空格）：
+```swift
+let a = 1+ 2
+```
+错误信息是：
+
+`error: consecutive statements on a line must be separated by ';'`
+
+这是因为Swift认为到1+这个语句就结束了，2就是下一个语句了。
+
+只有这样写才不会报错：
+```swift
+let a = 1 + 2;  // 编码规范推荐使用这种写法
+let b = 3+4 // 这样也是OK的
+```
 ####    整数、浮点数
 
 统一使用 Int 可以提高代码的可复用性，避免不同类型数字之间的转换， 并且匹配数字的类型推断。

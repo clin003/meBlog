@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/3ae.cn\/article\/2021\/swift-basic-syntax\/"
-        },"genre": "posts","keywords": "swift, 语法基础, 编程学习, ios","wordcount":  11098 ,
+        },"genre": "posts","keywords": "swift, 语法基础, 编程学习, ios","wordcount":  11860 ,
         "url": "https:\/\/3ae.cn\/article\/2021\/swift-basic-syntax\/","datePublished": "2021-05-13T21:31:19+08:00","dateModified": "2021-05-13T21:31:19+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Swift语法全面解析</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/clin003/meBlog" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>baicai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/"><i class="far fa-folder fa-fw"></i>开发技能</a>&nbsp;<a href="/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/"><i class="far fa-folder fa-fw"></i>编程经验</a>&nbsp;<a href="/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/"><i class="far fa-folder fa-fw"></i>收集与整理</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-13">2021-05-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 11098 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 23 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-13">2021-05-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 11860 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 24 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -123,6 +123,9 @@
             <li><a href="#常量和变量">常量和变量</a></li>
             <li><a href="#注释">注释</a></li>
             <li><a href="#分号">分号</a></li>
+            <li><a href="#标识符">标识符</a></li>
+            <li><a href="#关键字">关键字</a></li>
+            <li><a href="#swift-空格">Swift 空格</a></li>
             <li><a href="#整数浮点数">整数、浮点数</a></li>
             <li><a href="#类型安全和类型推断">类型安全和类型推断</a></li>
             <li><a href="#数值型字面量数值型类型转换">数值型字面量、数值型类型转换</a></li>
@@ -233,6 +236,97 @@ swift 支持代码预览（playgrounds），这个特性可以允许程序员在
 <td class="lntd">
 <pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">cat</span> <span class="p">=</span> <span class="s">&#34;🐱&#34;</span><span class="p">;</span> <span class="bp">print</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span>
 <span class="c1">// 输出“🐱”</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="标识符">标识符</h4>
+<p>标识符就是给变量、常量、方法、函数、枚举、结构体、类、协议等指定的名字。构成标识符的字母均有一定的规范，Swift语言中标识符的命名规则如下：</p>
+<ul>
+<li>
+<p>区分大小写，Myname与myname是两个不同的标识符；</p>
+</li>
+<li>
+<p>标识符首字符可以以下划线（_）或者字母开始，但不能是数字；</p>
+</li>
+<li>
+<p>标识符中其他字符可以是下划线（_）、字母或数字。</p>
+</li>
+</ul>
+<p>例如： userName、User_Name、_sys_val、身高等为合法的标识符，而2mail、room#和class为非法的标识符。</p>
+<p>注意:Swift中的字母采用的是Unicode编码。Unicode叫做统一编码制，它包含了亚洲文字编码，如中文、日文、韩文等字符，甚至是我们在聊天工具中使用的表情符号</p>
+<p>如果一定要使用关键字作为标识符，可以在关键字前后添加重音符号（`），例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="p">`</span><span class="kd">class</span><span class="p">`</span> <span class="p">=</span> <span class="s">&#34;xiaobai&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="关键字">关键字</h4>
+<p>关键字是类似于标识符的保留字符序列，除非用重音符号（`）将其括起来，否则不能用作标识符。关键字是对编译器具有特殊意义的预定义保留标识符。常见的关键字有以下4种。
+<strong>与声明有关的关键字</strong></p>
+<pre><code>class 	deinit 	enum 	extension
+func 	import 	init 	internal
+let 	operator 	private 	protocol
+public 	static 	struct 	subscript
+typealias 	var 
+</code></pre>
+<p><strong>与语句有关的关键字</strong></p>
+<pre><code>break 	case 	continue 	default
+do 	else 	fallthrough 	for
+if 	in 	return 	switch
+where 	while 		
+</code></pre>
+<p><strong>表达式和类型关键字</strong></p>
+<pre><code>as 	dynamicType 	false 	is
+nil 	self 	Self 	super
+true 	_COLUMN_ 	_FILE_ 	_FUNCTION_
+_LINE_ 		
+</code></pre>
+<p><strong>在特定上下文中使用的关键字</strong></p>
+<pre><code>associativity 	convenience 	dynamic 	didSet
+final 	get 	infix 	inout
+lazy 	left 	mutating 	none
+nonmutating 	optional 	override 	postfix
+precedence 	prefix 	Protocol 	required
+right 	set 	Type 	unowned
+weak 	willSet 		
+</code></pre>
+<h4 id="swift-空格">Swift 空格</h4>
+<p>Swift对空格的使用有一定的要求。
+在Swift中，运算符不能直接跟在变量或常量的后面。例如下面的代码会报错：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">a</span><span class="p">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>错误信息是：</p>
+<p><code>error: prefix/postfix '=' is reserved</code></p>
+<p>意思大概是等号直接跟在前面或后面这种用法是保留的。</p>
+<p>下面的代码还是会报错（继续注意空格）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="mi">1</span><span class="o">+</span> <span class="mi">2</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>错误信息是：</p>
+<p><code>error: consecutive statements on a line must be separated by ';'</code></p>
+<p>这是因为Swift认为到1+这个语句就结束了，2就是下一个语句了。</p>
+<p>只有这样写才不会报错：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">a</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// 编码规范推荐使用这种写法</span>
+<span class="kd">let</span> <span class="nv">b</span> <span class="p">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">4</span> <span class="c1">// 这样也是OK的</span>
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="整数浮点数">整数、浮点数</h4>
