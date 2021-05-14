@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>log - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/log/</link>
-        <description>log - 标签 - 白菜林</description>
+        <title>点滴 - 分类 - 白菜林</title>
+        <link>https://3ae.cn/categories/%E7%82%B9%E6%BB%B4/</link>
+        <description>点滴 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 14 May 2021 22:58:55 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/log/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 14 May 2021 22:58:55 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E7%82%B9%E6%BB%B4/" rel="self" type="application/rss+xml" /><item>
     <title>Go20210514</title>
     <link>https://3ae.cn/article/2021/go20210514/</link>
     <pubDate>Fri, 14 May 2021 22:58:55 &#43;0800</pubDate>
