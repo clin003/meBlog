@@ -4,7 +4,21 @@
         <link>https://3ae.cn/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
         <description>技术分享 - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 22:59:55 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 15 May 2021 22:55:37 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210515</title>
+    <link>https://3ae.cn/article/2021/go20210515/</link>
+    <pubDate>Sat, 15 May 2021 22:55:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210515/</guid>
+    <description><![CDATA[今日技术分享 Uber 使用 Go 的规模这么大？！都自己定制的 Go 编译器了 https://mp.weixin.qq.com/s/oJ6BD8AXbKKe_OBj9kCx6A Go：如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/5RhaUEk33kf4LkcZphyt_g grpc Go Client 源码分析 https://mp.weixin.qq.com/s/SQ22u7l17mWl2nQlSqvGXg 使用 Loki 进行日志报警(一) https://mp.weixin.qq.com/s/s4g_lg9k1QjGa-GLRfZtEg Go 程]]></description>
+</item><item>
+    <title>Go20210514</title>
+    <link>https://3ae.cn/article/2021/go20210514/</link>
+    <pubDate>Fri, 14 May 2021 22:58:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210514/</guid>
+    <description><![CDATA[今日技术分享 面试官：聊聊 defer 的工作原理。。。 https://mp.weixin.qq.com/s/oWlQU9c9z11CHdOwOMOHxA 深度解密Go语言之基于信号的抢占式调度 https://mp.weixin.qq.com/s/xdhv24Lh-7smOT5ESw2dBw 聊聊如何做技术分享 https://mp.weixin.qq.com/s/iRe1aGShDBeVhLhOSHwbMQ Uber 使用 Go 的规模这么大？！都自己定制的]]></description>
+</item><item>
     <title>Go20210513 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210513/</link>
     <pubDate>Thu, 13 May 2021 22:59:55 &#43;0800</pubDate>

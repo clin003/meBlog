@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 14 May 2021 22:58:55 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 15 May 2021 22:55:37 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Go20210515</title>
+    <link>https://3ae.cn/article/2021/go20210515/</link>
+    <pubDate>Sat, 15 May 2021 22:55:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210515/</guid>
+    <description><![CDATA[今日技术分享 Uber 使用 Go 的规模这么大？！都自己定制的 Go 编译器了 https://mp.weixin.qq.com/s/oJ6BD8AXbKKe_OBj9kCx6A Go：如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/5RhaUEk33kf4LkcZphyt_g grpc Go Client 源码分析 https://mp.weixin.qq.com/s/SQ22u7l17mWl2nQlSqvGXg 使用 Loki 进行日志报警(一) https://mp.weixin.qq.com/s/s4g_lg9k1QjGa-GLRfZtEg Go 程]]></description>
+</item><item>
     <title>Go20210514</title>
     <link>https://3ae.cn/article/2021/go20210514/</link>
     <pubDate>Fri, 14 May 2021 22:58:55 &#43;0800</pubDate>
