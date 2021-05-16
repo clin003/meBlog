@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 15 May 2021 22:55:37 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sun, 16 May 2021 23:37:59 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Go20210516 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210516/</link>
+    <pubDate>Sun, 16 May 2021 23:37:59 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210516/</guid>
+    <description><![CDATA[2021-05-16 今日技术分享 面试官：说说unsafe.Pointer和uintptr的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww http.Client的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg 你不知道的 Go 之]]></description>
+</item><item>
     <title>Go20210515 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210515/</link>
     <pubDate>Sat, 15 May 2021 22:55:37 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/hello_world/</guid>
     <description><![CDATA[Hello World! 白菜林^_^]]></description>
-</item><item>
-    <title>Go20210511 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210511/</link>
-    <pubDate>Tue, 11 May 2021 07:42:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210511/</guid>
-    <description><![CDATA[今日技术分享 图解 Go 内存管理分配 https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ Go 刷 leetcode 之任务调度器 https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA 自己动手实现一个 kubectl exec https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ 云上细粒度访问管理的参考架构 https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug Go 工程师必学：Go 大杀器之跟踪剖析 trace]]></description>
 </item></channel>
 </rss>
