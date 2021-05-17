@@ -4,7 +4,14 @@
         <link>https://3ae.cn/posts/</link>
         <description>所有文章 | 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sun, 16 May 2021 23:37:59 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 17 May 2021 23:05:05 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210517 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210517/</link>
+    <pubDate>Mon, 17 May 2021 23:05:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210517/</guid>
+    <description><![CDATA[2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性]]></description>
+</item><item>
     <title>Go20210516 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210516/</link>
     <pubDate>Sun, 16 May 2021 23:37:59 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210512/</guid>
     <description><![CDATA[今日技术分享 unsafe 包真的不安全吗？ https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg go-callvis 源码分析 https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw 深度探索Go语言（二）：动态派发 https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ 再一次看到了 Go 的节制：int128 类型要不要支持？ https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow Go 笔试题精]]></description>
-</item><item>
-    <title>Hello world</title>
-    <link>https://3ae.cn/article/2021/hello_world/</link>
-    <pubDate>Tue, 11 May 2021 14:00:54 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/hello_world/</guid>
-    <description><![CDATA[Hello World! 白菜林^_^]]></description>
 </item></channel>
 </rss>
