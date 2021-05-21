@@ -4,7 +4,14 @@
         <link>https://3ae.cn/posts/</link>
         <description>所有文章 | 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 18 May 2021 23:00:31 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 22 May 2021 00:36:08 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210521 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210521/</link>
+    <pubDate>Sat, 22 May 2021 00:36:08 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210521/</guid>
+    <description><![CDATA[2021-05-21 今日技术分享 优化 Golang 服务来减少 40% 以上的 CPU https://mp.weixin.qq.com/s/dgVv6p8HQtc-krPGEdU2cQ fuckdb 新功能上线，开箱即用、更加强大的代码生成器 https://mp.weixin.qq.com/s/ysOlv8xsc7wF7cPcV5pu7g Go 面试官问我如何实现面向对象？ https://mp.weixin.qq.com/s/2x4Sajv7HkAjWFPe4oD96g 一文搞懂缓存系统稳定]]></description>
+</item><item>
     <title>Go20210518 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210518/</link>
     <pubDate>Tue, 18 May 2021 23:00:31 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/linux_screen/</guid>
     <description><![CDATA[学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘]]></description>
-</item><item>
-    <title>使用 cron 调度自动化任务</title>
-    <link>https://3ae.cn/article/2021/linux_cron/</link>
-    <pubDate>Wed, 12 May 2021 18:59:21 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_cron/</guid>
-    <description><![CDATA[cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执]]></description>
 </item></channel>
 </rss>
