@@ -4,7 +4,14 @@
         <link>https://3ae.cn/tags/golang/</link>
         <description>Golang - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 24 May 2021 00:26:25 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 24 May 2021 23:38:04 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210524 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210524/</link>
+    <pubDate>Mon, 24 May 2021 23:38:04 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210524/</guid>
+    <description><![CDATA[2021-05-24 今日技术分享 2021 年 5 月程序员工资排行：Go的工资满意吗？ https://mp.weixin.qq.com/s/cX25jSXo_wI22x2CKWW2Cg Go语言爱好者周刊：第 96 期 — 用 Go 实现一个计算器 https://mp.weixin.qq.com/s/yKRK4cfcdJcdwh2u0tyi7w 源码级剖析new和make怎么用！]]></description>
+</item><item>
     <title>Go20210523 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210523/</link>
     <pubDate>Mon, 24 May 2021 00:26:25 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
     <description><![CDATA[在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多]]></description>
-</item><item>
-    <title>Go20210512 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210512/</link>
-    <pubDate>Wed, 12 May 2021 03:33:46 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210512/</guid>
-    <description><![CDATA[今日技术分享 unsafe 包真的不安全吗？ https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg go-callvis 源码分析 https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw 深度探索Go语言（二）：动态派发 https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ 再一次看到了 Go 的节制：int128 类型要不要支持？ https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow Go 笔试题精]]></description>
 </item></channel>
 </rss>

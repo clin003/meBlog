@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 24 May 2021 00:39:20 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 24 May 2021 23:38:04 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Go20210524 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210524/</link>
+    <pubDate>Mon, 24 May 2021 23:38:04 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210524/</guid>
+    <description><![CDATA[2021-05-24 今日技术分享 2021 年 5 月程序员工资排行：Go的工资满意吗？ https://mp.weixin.qq.com/s/cX25jSXo_wI22x2CKWW2Cg Go语言爱好者周刊：第 96 期 — 用 Go 实现一个计算器 https://mp.weixin.qq.com/s/yKRK4cfcdJcdwh2u0tyi7w 源码级剖析new和make怎么用！]]></description>
+</item><item>
     <title>使用 sed 命令进行复制、剪切和粘贴</title>
     <link>https://3ae.cn/article/2021/linux_sed/</link>
     <pubDate>Mon, 24 May 2021 00:39:20 &#43;0800</pubDate>
