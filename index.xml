@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 24 May 2021 23:38:04 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 25 May 2021 23:02:42 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Go20210525 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210525/</link>
+    <pubDate>Tue, 25 May 2021 23:02:42 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210525/</guid>
+    <description><![CDATA[2021-05-25 今日技术分享 Go 中为什么应该使用接口 https://mp.weixin.qq.com/s/KqXI9ekYAZYd5oYmhqFH8Q 图解Go sync.Pool https://mp.weixin.qq.com/s/aiOjUcN89nxwEUJzVNkl3A 自制文件系统 — 01 文件系统的样子 https://mp.weixin.qq.com/s/0FpQGDzFh_D7IJi6z7oXjg 深入 Go 中各个高性能 JSON 解析库 https://mp.weixin.qq.com/s/FBT5QN_Pja6vRntWY0wFeA 【预告】理论结合实践详解 b+ 树存]]></description>
+</item><item>
     <title>Go20210524 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210524/</link>
     <pubDate>Mon, 24 May 2021 23:38:04 &#43;0800</pubDate>

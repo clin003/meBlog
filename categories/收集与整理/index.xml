@@ -4,7 +4,14 @@
         <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
         <description>收集与整理 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 24 May 2021 23:38:04 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 25 May 2021 23:02:42 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210525 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210525/</link>
+    <pubDate>Tue, 25 May 2021 23:02:42 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210525/</guid>
+    <description><![CDATA[2021-05-25 今日技术分享 Go 中为什么应该使用接口 https://mp.weixin.qq.com/s/KqXI9ekYAZYd5oYmhqFH8Q 图解Go sync.Pool https://mp.weixin.qq.com/s/aiOjUcN89nxwEUJzVNkl3A 自制文件系统 — 01 文件系统的样子 https://mp.weixin.qq.com/s/0FpQGDzFh_D7IJi6z7oXjg 深入 Go 中各个高性能 JSON 解析库 https://mp.weixin.qq.com/s/FBT5QN_Pja6vRntWY0wFeA 【预告】理论结合实践详解 b+ 树存]]></description>
+</item><item>
     <title>Go20210524 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210524/</link>
     <pubDate>Mon, 24 May 2021 23:38:04 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210513/</guid>
     <description><![CDATA[今日技术分享 Go：跨团队协作时如何共享对象 https://mp.weixin.qq.com/s/zJaruocUDSzld8ttDyawng template源码分析 https://mp.weixin.qq.com/s/HqcaFEXgQbcRyjYjI6oKGQ kubebuilder 实战: status &amp; event https://mp.weixin.qq.com/s/JuRlClCX7TnQKaW-Rr3Z7g 如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/M88-VS_H7o754mw5Ra7BYg Prometheus 二次开发之 API 接口 https://mp.weixin.qq.com/s/K7ERtE2KKflYSA9KJOukYg 从TD]]></description>
-</item><item>
-    <title>Swift语法全面解析</title>
-    <link>https://3ae.cn/article/2021/swift-basic-syntax/</link>
-    <pubDate>Thu, 13 May 2021 21:31:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
-    <description><![CDATA[Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以]]></description>
 </item></channel>
 </rss>
