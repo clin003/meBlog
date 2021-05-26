@@ -4,7 +4,14 @@
         <link>https://3ae.cn/posts/</link>
         <description>所有文章 | 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 25 May 2021 23:02:42 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 26 May 2021 12:57:28 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>使用开源工具进行 Linux 内存取证</title>
+    <link>https://3ae.cn/article/2021/linux-memory-forensics/</link>
+    <pubDate>Wed, 26 May 2021 12:57:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
+    <description><![CDATA[利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量]]></description>
+</item><item>
     <title>Go20210525 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210525/</link>
     <pubDate>Tue, 25 May 2021 23:02:42 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210515/</guid>
     <description><![CDATA[今日技术分享 Uber 使用 Go 的规模这么大？！都自己定制的 Go 编译器了 https://mp.weixin.qq.com/s/oJ6BD8AXbKKe_OBj9kCx6A Go：如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/5RhaUEk33kf4LkcZphyt_g grpc Go Client 源码分析 https://mp.weixin.qq.com/s/SQ22u7l17mWl2nQlSqvGXg 使用 Loki 进行日志报警(一) https://mp.weixin.qq.com/s/s4g_lg9k1QjGa-GLRfZtEg Go 程]]></description>
-</item><item>
-    <title>Go20210514 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210514/</link>
-    <pubDate>Fri, 14 May 2021 22:58:55 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210514/</guid>
-    <description><![CDATA[今日技术分享 面试官：聊聊 defer 的工作原理。。。 https://mp.weixin.qq.com/s/oWlQU9c9z11CHdOwOMOHxA 深度解密Go语言之基于信号的抢占式调度 https://mp.weixin.qq.com/s/xdhv24Lh-7smOT5ESw2dBw 聊聊如何做技术分享 https://mp.weixin.qq.com/s/iRe1aGShDBeVhLhOSHwbMQ Uber 使用 Go 的规模这么大？！都自己定制的]]></description>
 </item></channel>
 </rss>

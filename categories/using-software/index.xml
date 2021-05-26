@@ -4,7 +4,14 @@
         <link>https://3ae.cn/categories/using-software/</link>
         <description>Using Software - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 24 May 2021 00:39:20 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/using-software/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 26 May 2021 12:57:28 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/using-software/" rel="self" type="application/rss+xml" /><item>
+    <title>使用开源工具进行 Linux 内存取证</title>
+    <link>https://3ae.cn/article/2021/linux-memory-forensics/</link>
+    <pubDate>Wed, 26 May 2021 12:57:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
+    <description><![CDATA[利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量]]></description>
+</item><item>
     <title>使用 sed 命令进行复制、剪切和粘贴</title>
     <link>https://3ae.cn/article/2021/linux_sed/</link>
     <pubDate>Mon, 24 May 2021 00:39:20 &#43;0800</pubDate>

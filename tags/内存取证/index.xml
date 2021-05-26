@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>内存取证 - 标签 - 白菜林</title>
+        <link>https://3ae.cn/tags/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/</link>
+        <description>内存取证 - 标签 - 白菜林</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 26 May 2021 12:57:28 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81/" rel="self" type="application/rss+xml" /><item>
+    <title>使用开源工具进行 Linux 内存取证</title>
+    <link>https://3ae.cn/article/2021/linux-memory-forensics/</link>
+    <pubDate>Wed, 26 May 2021 12:57:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
+    <description><![CDATA[利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量]]></description>
+</item></channel>
+</rss>
