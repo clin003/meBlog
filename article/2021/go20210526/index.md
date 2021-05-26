@@ -25,8 +25,6 @@ https://mp.weixin.qq.com/s/jEhX5JHAo9L6iD3N54x6aA
 7. B 站直播 | Istio 开源四周年回顾与展望
 https://mp.weixin.qq.com/s/tYIP1_s1jHXu6j4mjLuJIw
 
-8. 【北京】Opera 招聘 Go 工程师
-https://mp.weixin.qq.com/s/nP8P-0hcAYrr6zvKOIo3gw
 
 9. PAAS平台开发的自我救赎
 https://mp.weixin.qq.com/s/0vuneQ-rweCZ-kKLvhe_6g
