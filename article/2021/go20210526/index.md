@@ -53,8 +53,6 @@ https://github.com/AkihiroSuda/lima
 17. 使用Go的两年后我学到的五大教训
 https://sayedalesawy.hashnode.dev/top-5-lessons-i-learned-while-working-with-go-for-two-years
 
-18. Manning出版社《Go语言实战》英文版 5.31日前限免下载
-https://freecontent.manning.com/free-ebook-go-in-action/
 
 19. Ransomware：Kasten K8s存储平台如何克服终极数据复制挑战
 https://thenewstack.io/ransomware-how-the-kasten-k8s-storage-platform-overcomes-the-ultimate-data-replication-challenge/
