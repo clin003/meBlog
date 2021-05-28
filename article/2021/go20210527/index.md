@@ -49,8 +49,7 @@ https://mp.weixin.qq.com/s/zbYIdB0HlYwYSQRXFFpqSg
 15. Promtheus rules lint 工具
 https://github.com/cloudflare/pint
 
-16. Go 1.17新特性 
-https://mp.weixin.qq.com/s/T14M_s5qOA6LKvWGgNa0Ow
+
 
 17. 详解Go语言的栈跟踪
 https://github.com/DataDog/go-profiler-notes/blob/main/stack-traces.md
