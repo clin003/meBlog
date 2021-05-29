@@ -2,14 +2,15 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://3ae.cn/categories/</loc><lastmod>2021-05-28T12:54:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/categories/</loc><lastmod>2021-05-29T15:52:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/article/2021/go20210528/</loc><lastmod>2021-05-29T15:52:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/tags/golang/</loc><lastmod>2021-05-29T15:52:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/posts/</loc><lastmod>2021-05-29T15:52:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/tags/</loc><lastmod>2021-05-29T15:52:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc><lastmod>2021-05-29T15:52:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</loc><lastmod>2021-05-29T15:52:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/</loc><lastmod>2021-05-29T15:52:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/article/2021/go20210527/</loc><lastmod>2021-05-28T12:54:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/tags/golang/</loc><lastmod>2021-05-28T12:54:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/posts/</loc><lastmod>2021-05-28T12:54:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/tags/</loc><lastmod>2021-05-28T12:54:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc><lastmod>2021-05-28T12:54:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</loc><lastmod>2021-05-28T12:54:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/</loc><lastmod>2021-05-28T12:54:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/tags/goproxy/</loc><lastmod>2021-05-27T11:22:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/article/2021/goproxy/</loc><lastmod>2021-05-27T11:22:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/</loc><lastmod>2021-05-27T11:22:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>

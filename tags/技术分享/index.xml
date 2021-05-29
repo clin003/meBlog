@@ -4,7 +4,14 @@
         <link>https://3ae.cn/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
         <description>技术分享 - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 28 May 2021 12:54:47 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 29 May 2021 15:52:25 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210528 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210528/</link>
+    <pubDate>Sat, 29 May 2021 15:52:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210528/</guid>
+    <description><![CDATA[2021-05-28 今日技术分享 如何让 Go 的缓存库 BigCache 更好用？ https://mp.weixin.qq.com/s/Zn1rP18GtmZsbaRnRfJ8ug 在 Go 语言中，有时 nil 并不是一个 nil https://mp.weixin.qq.com/s/_REGCKxs0ymIdZXN5a6Tgg AWS 容器服务的安全实践 https://mp.weixin.qq.com/s/GYMXc4HXBGOGgA_7mdenhA 骚操作，这款工具可以把Kubernetes集]]></description>
+</item><item>
     <title>Go20210527 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210527/</link>
     <pubDate>Fri, 28 May 2021 12:54:47 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210517/</guid>
     <description><![CDATA[2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性]]></description>
-</item><item>
-    <title>Go20210516 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210516/</link>
-    <pubDate>Sun, 16 May 2021 23:37:59 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210516/</guid>
-    <description><![CDATA[2021-05-16 今日技术分享 面试官：说说unsafe.Pointer和uintptr的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww http.Client的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg 你不知道的 Go 之]]></description>
 </item></channel>
 </rss>
