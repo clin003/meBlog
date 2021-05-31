@@ -4,7 +4,14 @@
         <link>https://3ae.cn/tags/golang/</link>
         <description>Golang - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sun, 30 May 2021 15:24:56 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 31 May 2021 16:19:07 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210531 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210531/</link>
+    <pubDate>Mon, 31 May 2021 16:19:07 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210531/</guid>
+    <description><![CDATA[2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的]]></description>
+</item><item>
     <title>Go20210529 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210529/</link>
     <pubDate>Sun, 30 May 2021 15:24:56 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210521/</guid>
     <description><![CDATA[2021-05-21 今日技术分享 优化 Golang 服务来减少 40% 以上的 CPU https://mp.weixin.qq.com/s/dgVv6p8HQtc-krPGEdU2cQ fuckdb 新功能上线，开箱即用、更加强大的代码生成器 https://mp.weixin.qq.com/s/ysOlv8xsc7wF7cPcV5pu7g Go 面试官问我如何实现面向对象？ https://mp.weixin.qq.com/s/2x4Sajv7HkAjWFPe4oD96g 一文搞懂缓存系统稳定]]></description>
-</item><item>
-    <title>Go20210518 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210518/</link>
-    <pubDate>Tue, 18 May 2021 23:00:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210518/</guid>
-    <description><![CDATA[2021-05-18 今日技术分享 也许是你从来没用过的利器：GODEBUG https://mp.weixin.qq.com/s/lqOs34aMs7AYCxM_Jv0Hug 从0开发上线一个web项目（下） https://mp.weixin.qq.com/s/W5lHCgA_SzzyCoDaHDmz1Q 如何打造高性能的 Go 缓存库 https://mp.weixin.qq.com/s/G8LJ1HBuWoQfWV2dILi6Rg 【本周四预告】JetBr]]></description>
 </item></channel>
 </rss>
