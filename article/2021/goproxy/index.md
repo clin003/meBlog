@@ -9,6 +9,8 @@ goproxy.io：https://goproxy.io/
 
 百度云BOS提供的：https://goproxy.baidu.com/
 
+阿里云提供的：https://mirrors.aliyun.com/goproxy/
+
 ### 下载 Go 镜像（Golang Downloads Mirrors）
 
 下载 Go 镜像：https://golang.google.cn/
