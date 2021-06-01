@@ -4,7 +4,14 @@
         <link>https://3ae.cn/tags/golang/</link>
         <description>Golang - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 31 May 2021 16:19:07 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 01 Jun 2021 10:13:03 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210601 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210601/</link>
+    <pubDate>Tue, 01 Jun 2021 10:13:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210601/</guid>
+    <description><![CDATA[2021-06-01 今日技术分享 发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA 优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA 图解 数据]]></description>
+</item><item>
     <title>Go20210531 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210531/</link>
     <pubDate>Mon, 31 May 2021 16:19:07 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210523/</guid>
     <description><![CDATA[2021-05-23 今日技术分享 用Go实现一个直播系统难吗？看看这个开源项目 https://mp.weixin.qq.com/s/5YPp7WFgVfPlGxim7tmQ5A Go语言数据争用与race原理 https://mp.weixin.qq.com/s/gGGg6wqQX5b1kEOeRbTQlA Go 标准库之 unsafe 包详解 https://mp.weixin.qq.com/s/Pj4Q_8sj2pCmXe2cHNqdvw Go - 开箱即用，WEB 界面一键]]></description>
-</item><item>
-    <title>Go20210521 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210521/</link>
-    <pubDate>Sat, 22 May 2021 00:36:08 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210521/</guid>
-    <description><![CDATA[2021-05-21 今日技术分享 优化 Golang 服务来减少 40% 以上的 CPU https://mp.weixin.qq.com/s/dgVv6p8HQtc-krPGEdU2cQ fuckdb 新功能上线，开箱即用、更加强大的代码生成器 https://mp.weixin.qq.com/s/ysOlv8xsc7wF7cPcV5pu7g Go 面试官问我如何实现面向对象？ https://mp.weixin.qq.com/s/2x4Sajv7HkAjWFPe4oD96g 一文搞懂缓存系统稳定]]></description>
 </item></channel>
 </rss>
