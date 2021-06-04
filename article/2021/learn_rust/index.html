@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Rust 学习指南 - 白菜林</title><meta name="Description" content="白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。"><meta property="og:title" content="Rust 学习指南" />
+<meta property="og:description" content="了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://3ae.cn/article/2021/learn_rust/" /><meta property="og:image" content="https://3ae.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-05T02:16:24&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-05T02:16:24&#43;08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://3ae.cn/logo.png"/>
+
+<meta name="twitter:title" content="Rust 学习指南"/>
+<meta name="twitter:description" content="了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大"/>
+<meta name="application-name" content="白菜林">
+<meta name="apple-mobile-web-app-title" content="白菜林"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://3ae.cn/article/2021/learn_rust/" /><link rel="prev" href="https://3ae.cn/article/2021/go20210603/" /><link rel="next" href="https://3ae.cn/article/2021/toml/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.055364f5be272caa092b0e6654c165828707f8ab971e2656383a6d6392bc345e.css" integrity="sha256-BVNk9b4nLKoJKw5mVMFlgocH&#43;KuXHiZWODptY5K8NF4="><link rel="stylesheet" href="/css/style.min.1e2694bed152fa2922dbe909a441838ed693d88b1330f97485bfa8ed78da42df.css" integrity="sha256-HiaUvtFS&#43;iki2&#43;kJpEGDjtaT2IsTMPl0hb&#43;o7XjaQt8="><link rel="stylesheet" href="/lib/fontawesome-free/all.min.876d023d9d10c97941b80c3b03e2a5b94631ff7a4af9cee5604a6a2d39718d84.css" integrity="sha256-h20CPZ0QyXlBuAw7A&#43;KluUYx/3pK&#43;c7lYEpqLTlxjYQ="><link rel="stylesheet" href="/lib/animate/animate.min.3c770e90f98eb21b0c042fafb49755af93306fbaf42e449524f94fae9fc83295.css" integrity="sha256-PHcOkPmOshsMBC&#43;vtJdVr5Mwb7r0LkSVJPlPrp/IMpU="><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Rust 学习指南",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/3ae.cn\/article\/2021\/learn_rust\/"
+        },"genre": "posts","keywords": "Rust","wordcount":  3998 ,
+        "url": "https:\/\/3ae.cn\/article\/2021\/learn_rust\/","datePublished": "2021-06-05T02:16:24+08:00","dateModified": "2021-06-05T02:16:24+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "baicai"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="白菜林"><span class="header-title-pre"><i class="far fa-kiss-wink-heart fa-fw"></i></span>白菜林</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://support.qq.com/product/325110" rel="noopener noreffer" target="_blank"> 反馈 </a><a class="menu-item" href="https://nav.3ae.cn" rel="noopener noreffer" target="_blank"> 网址导航 </a><a class="menu-item" href="/donations/"> 打赏 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="白菜林"><span class="header-title-pre"><i class="far fa-kiss-wink-heart fa-fw"></i></span>白菜林</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://support.qq.com/product/325110" title="" rel="noopener noreffer" target="_blank">反馈</a><a class="menu-item" href="https://nav.3ae.cn" title="" rel="noopener noreffer" target="_blank">网址导航</a><a class="menu-item" href="/donations/" title="">打赏</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Rust 学习指南</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/clin003/meBlog" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>baicai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/learn-rust/"><i class="far fa-folder fa-fw"></i>Learn Rust</a>&nbsp;<a href="/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/"><i class="far fa-folder fa-fw"></i>收集与整理</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-05">2021-06-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3998 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#了解">了解</a></li>
+    <li><a href="#rust-官方文档">Rust 官方文档</a></li>
+    <li><a href="#rust-资源">Rust 资源</a>
+      <ul>
+        <li><a href="#rust-相关的中文网站">Rust 相关的中文网站</a></li>
+      </ul>
+    </li>
+    <li><a href="#rust-语言术语中英文对照表">Rust 语言术语中英文对照表</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="了解">了解</h2>
+<p>一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。
+这时，建议看 Rust 官网 <a href="https://rust-lang.org">https://rust-lang.org</a></p>
+<h2 id="rust-官方文档">Rust 官方文档</h2>
+<p>Rust 语言的学习或参考文档大都列在 <a href="https://www.rust-lang.org/learn" target="_blank" rel="noopener noreffer"><strong>Rust 学习指引页</strong></a> 和 <a href="https://doc.rust-lang.org/" target="_blank" rel="noopener noreffer"><strong>Rust 官方文档主页</strong></a> 上，目前 Rust 官方团队已经将相关文档拆分到不同的仓库上：</p>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/" target="_blank" rel="noopener noreffer">《Rust 程序设计语言》（The Rust Programming Language）</a>，对应 <a href="https://github.com/rust-lang/book" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://doc.rust-lang.org/stable/rust-by-example/" target="_blank" rel="noopener noreffer">《通过例子学 Rust》（Rust by Example）</a>，对应 <a href="https://github.com/rust-lang/rust-by-example" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://doc.rust-lang.org/edition-guide/index.html" target="_blank" rel="noopener noreffer">Rust 版本指南（The Edition Guide）</a>，对应 <a href="https://github.com/rust-lang-nursery/edition-guide" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://doc.rust-lang.org/cargo/index.html" target="_blank" rel="noopener noreffer">Cargo 帮助文档</a>，对应 <a href="https://github.com/rust-lang/cargo/tree/master/src/doc/src" target="_blank" rel="noopener noreffer">GitHub 仓库源文件</a></li>
+<li><a href="https://doc.rust-lang.org/rustdoc/index.html" target="_blank" rel="noopener noreffer">rustdoc 帮助文档</a>，对应 <a href="https://github.com/rust-lang/rust/tree/master/src/doc/rustdoc" target="_blank" rel="noopener noreffer">GitHub 仓库源文件</a></li>
+<li><a href="https://doc.rust-lang.org/rustc/index.html" target="_blank" rel="noopener noreffer">rustc 帮助文档</a>，对应 <a href="https://github.com/rust-lang/rust/tree/master/src/doc/rustc" target="_blank" rel="noopener noreffer">GitHub 仓库源文件</a></li>
+<li><a href="https://doc.rust-lang.org/error-index.html" target="_blank" rel="noopener noreffer">Rust 编译错误索引</a>，对应 <a href="https://github.com/rust-lang/rust/blob/master/src/librustc_mir/error_codes.rs" target="_blank" rel="noopener noreffer">GitHub 仓库源代码</a></li>
+<li><a href="https://doc.rust-lang.org/reference/index.html" target="_blank" rel="noopener noreffer">《Rust 语言参考》（The Rust Reference）</a>，对应 <a href="https://github.com/rust-lang-nursery/reference" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://doc.rust-lang.org/nomicon/" target="_blank" rel="noopener noreffer">The Rustonomicon</a>，对应 <a href="https://github.com/rust-lang-nursery/nomicon" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+</ul>
+<p>还有其他更多官方或其他非官方相关的文档：</p>
+<ul>
+<li><a href="https://rust-lang-nursery.github.io/cli-wg/" target="_blank" rel="noopener noreffer">使用 Rust 编写命令行应用</a>，对应 <a href="https://github.com/rust-lang-nursery/cli-wg" target="_blank" rel="noopener noreffer">GitHub 仓库地址</a></li>
+<li><a href="https://rustwasm.github.io/docs/book/" target="_blank" rel="noopener noreffer">Rust 和 WebAssembly 教程（WebAssembly Book）</a>，对应 <a href="https://github.com/rustwasm/book" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://rust-embedded.github.io/book/" target="_blank" rel="noopener noreffer">嵌入式 Rust 教程</a>，对应 <a href="https://github.com/rust-embedded/book" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://rust-lang-nursery.github.io/rust-cookbook/" target="_blank" rel="noopener noreffer">A Rust Cookbook</a>，对应 <a href="https://github.com/rust-lang-nursery/rust-cookbook" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://doc.rust-lang.org/nightly/unstable-book/" target="_blank" rel="noopener noreffer">The Unstable Book</a>，对应 <a href="https://github.com/rust-lang/rust/tree/master/src/doc/unstable-book" target="_blank" rel="noopener noreffer">GitHub 仓库源代码</a></li>
+<li><a href="https://rust-lang.github.io/rustc-guide/" target="_blank" rel="noopener noreffer">rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide）</a>，对应 <a href="https://github.com/rust-lang/rustc-guide" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://github.com/rust-lang/rustup.rs" target="_blank" rel="noopener noreffer">rustup 命令说明</a>，本翻译项目会将 <code>rustup</code> 的相关说明翻译成中文</li>
+<li><a href="https://rust-lang.github.io/rfcs/" target="_blank" rel="noopener noreffer">Rust RFC——Rust 发展相关制定的文稿</a>，对应 <a href="https://github.com/rust-lang/rfcs" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://rust-lang-nursery.github.io/mdBook/" target="_blank" rel="noopener noreffer">mdBook 使用手册</a>，对应 <a href="https://github.com/rust-lang-nursery/mdBook" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://rust-lang-nursery.github.io/api-guidelines/" target="_blank" rel="noopener noreffer">Rust API 指导原则</a>，对应 <a href="https://github.com/rust-lang-nursery/api-guidelines" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+<li><a href="https://rust-lang.github.io/async-book/" target="_blank" rel="noopener noreffer">async-book</a>，对应 <a href="https://github.com/rust-lang/async-book" target="_blank" rel="noopener noreffer">GitHub 仓库</a></li>
+</ul>
+<p>上述文档的源文件有些是放在 <a href="https://github.com/rust-lang/rust" target="_blank" rel="noopener noreffer">rust</a> 和 <a href="https://github.com/rust-lang/cargo" target="_blank" rel="noopener noreffer">cargo</a> 的仓库的子目录中：<a href="https://github.com/rust-lang/rust/tree/master/src/doc" target="_blank" rel="noopener noreffer">Rust 文档</a> 和 <a href="https://github.com/rust-lang/cargo/tree/master/src/doc" target="_blank" rel="noopener noreffer">cargo 文档</a>。</p>
+<h2 id="rust-资源">Rust 资源</h2>
+<p>Rust 相关的中文资源，包括网站，或者国内的 Rust 的文章或书籍。</p>
+<h3 id="rust-相关的中文网站">Rust 相关的中文网站</h3>
+<blockquote>
+<p>以下列出目前搜集到的 Rust 中文网站：</p>
+</blockquote>
+<p>Rust 语言中文社区：https://rust.cc/</p>
+<p>Rust Wiki 网：https://rustwiki.org/</p>
+<h2 id="rust-语言术语中英文对照表">Rust 语言术语中英文对照表</h2>
+<p>👉 部分来自 <a href="https://github.com/rust-lang-cn/english-chinese-glossary-of-rust" target="_blank" rel="noopener noreffer">Rust 语言术语中英文对照表</a>仓库，收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在原仓库指出或修改错误。</p>
+<table>
+<thead>
+<tr>
+<th>English 英文</th>
+<th>Chinese 中文</th>
+<th>Note 备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Abstract Syntax Tree</td>
+<td>抽象语法树</td>
+<td></td>
+</tr>
+<tr>
+<td>ABI</td>
+<td>应用程序二进制接口</td>
+<td>Application Binary Interface 缩写</td>
+</tr>
+<tr>
+<td>accumulator</td>
+<td>累加器</td>
+<td></td>
+</tr>
+<tr>
+<td>accumulator variable</td>
+<td>累加器变量</td>
+<td></td>
+</tr>
+<tr>
+<td>ahead-of-time compiled</td>
+<td>预编译</td>
+<td></td>
+</tr>
+<tr>
+<td>ahead-of-time compiled language</td>
+<td>预编译语言</td>
+<td></td>
+</tr>
+<tr>
+<td>alias</td>
+<td>别名</td>
+<td></td>
+</tr>
+<tr>
+<td>aliasing</td>
+<td>别名使用</td>
+<td>参见 <a href="https://en.wikipedia.org/wiki/Pointer_aliasing" target="_blank" rel="noopener noreffer">Wikipedia</a></td>
+</tr>
+<tr>
+<td>angle brackets</td>
+<td>尖括号，“&lt;”和“&gt;”</td>
+<td></td>
+</tr>
+<tr>
+<td>annotate</td>
+<td>标注，注明（动词）</td>
+<td></td>
+</tr>
+<tr>
+<td>annotation</td>
+<td>标注，注明（名词）</td>
+<td></td>
+</tr>
+<tr>
+<td>ARC</td>
+<td>原子引用计数器</td>
+<td>Atomic Referecne Counter</td>
+</tr>
+<tr>
+<td>anonymity</td>
+<td>匿名</td>
+<td></td>
+</tr>
+<tr>
+<td>argument</td>
+<td>参数，实参，实际参数</td>
+<td>不严格区分的话， argument（参数）和 <br> parameter（参量）可以互换地使用</td>
+</tr>
+<tr>
+<td>argument type</td>
+<td>参数类型</td>
+<td></td>
+</tr>
+<tr>
+<td>assignment</td>
+<td>赋值</td>
+<td></td>
+</tr>
+<tr>
+<td>associated functions</td>
+<td>关联函数</td>
+<td></td>
+</tr>
+<tr>
+<td>associated items</td>
+<td>关联项</td>
+<td></td>
+</tr>
+<tr>
+<td>associated types</td>
+<td>关联类型</td>
+<td></td>
+</tr>
+<tr>
+<td>asterisk</td>
+<td>星号（*)</td>
+<td></td>
+</tr>
+<tr>
+<td>atomic</td>
+<td>原子的</td>
+<td></td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>属性</td>
+<td></td>
+</tr>
+<tr>
+<td>automated building</td>
+<td>自动构建</td>
+<td></td>
+</tr>
+<tr>
+<td>automated test</td>
+<td>自动测试，自动化测试</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>baroque macro</td>
+<td>巴洛克宏</td>
+<td></td>
+</tr>
+<tr>
+<td>benchmark</td>
+<td>基准</td>
+<td></td>
+</tr>
+<tr>
+<td>binary</td>
+<td>二进制的</td>
+<td></td>
+</tr>
+<tr>
+<td>binary executable</td>
+<td>二进制的可执行文件</td>
+<td></td>
+</tr>
+<tr>
+<td>bind</td>
+<td>绑定</td>
+<td></td>
+</tr>
+<tr>
+<td>block</td>
+<td>语句块，代码块</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>布尔型，布尔值</td>
+<td></td>
+</tr>
+<tr>
+<td>borrow check</td>
+<td>借用检查</td>
+<td></td>
+</tr>
+<tr>
+<td>borrower</td>
+<td>借用者，借入者</td>
+<td></td>
+</tr>
+<tr>
+<td>borrowing</td>
+<td>借用</td>
+<td></td>
+</tr>
+<tr>
+<td>bound</td>
+<td>约束，限定，限制</td>
+<td>此词和 constraint 意思相近，<br>constraint 在 C# 语言中翻译成“约束”</td>
+</tr>
+<tr>
+<td>box</td>
+<td>箱子，盒子，装箱类型</td>
+<td>一般不译，作动词时翻译成“装箱”，<br>具有所有权的智能指针</td>
+</tr>
+<tr>
+<td>boxed</td>
+<td>装箱，装包</td>
+<td></td>
+</tr>
+<tr>
+<td>boxing</td>
+<td>装箱，装包</td>
+<td></td>
+</tr>
+<tr>
+<td>brace</td>
+<td>大括号，“{”或“}”</td>
+<td></td>
+</tr>
+<tr>
+<td>buffer</td>
+<td>缓冲，缓冲区，缓冲器，缓存</td>
+<td></td>
+</tr>
+<tr>
+<td>build</td>
+<td>构建</td>
+<td></td>
+</tr>
+<tr>
+<td>builder pattern</td>
+<td>创建者模式</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>call</td>
+<td>调用</td>
+<td></td>
+</tr>
+<tr>
+<td>caller</td>
+<td>调用者</td>
+<td></td>
+</tr>
+<tr>
+<td>capacity</td>
+<td>容器</td>
+<td></td>
+</tr>
+<tr>
+<td>capture</td>
+<td>捕获</td>
+<td></td>
+</tr>
+<tr>
+<td>cargo</td>
+<td>(Rust 包管理器，不译)</td>
+<td>该词作名词时意思是“货物”，<br>作动词时意思是“装载货物”</td>
+</tr>
+<tr>
+<td>cargo-fy</td>
+<td>Cargo 化，使用 Cargo 创建项目</td>
+<td></td>
+</tr>
+<tr>
+<td>case analysis</td>
+<td>事例分析</td>
+<td></td>
+</tr>
+<tr>
+<td>cast</td>
+<td>类型转换，转型</td>
+<td></td>
+</tr>
+<tr>
+<td>casting</td>
+<td>类型转换</td>
+<td></td>
+</tr>
+<tr>
+<td>chaining method call</td>
+<td>链式方法调用</td>
+<td></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>信道，通道</td>
+<td></td>
+</tr>
+<tr>
+<td>closure</td>
+<td>闭包</td>
+<td></td>
+</tr>
+<tr>
+<td>coercion</td>
+<td>强制类型转换，强制转换</td>
+<td>coercion 原意是“强制，胁迫”</td>
+</tr>
+<tr>
+<td>collection</td>
+<td>集合</td>
+<td>参见 <a href="https://zh.wikipedia.org/wiki/%E9%9B%86%E5%90%88_%28%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%29" target="_blank" rel="noopener noreffer">Wikipedia</a></td>
+</tr>
+<tr>
+<td>combinator</td>
+<td>组合算子，组合器</td>
+<td></td>
+</tr>
+<tr>
+<td>comma</td>
+<td>逗号，“,”</td>
+<td></td>
+</tr>
+<tr>
+<td>command</td>
+<td>命令</td>
+<td></td>
+</tr>
+<tr>
+<td>command line</td>
+<td>命令行</td>
+<td></td>
+</tr>
+<tr>
+<td>comment</td>
+<td>注释</td>
+<td></td>
+</tr>
+<tr>
+<td>compile</td>
+<td>编译（动词）</td>
+<td></td>
+</tr>
+<tr>
+<td>compile time</td>
+<td>编译期，编译期间，编译时</td>
+<td></td>
+</tr>
+<tr>
+<td>compilation</td>
+<td>编译（名词）</td>
+<td></td>
+</tr>
+<tr>
+<td>compilation unit</td>
+<td>编译单元</td>
+<td></td>
+</tr>
+<tr>
+<td>compiler</td>
+<td>编译器</td>
+<td></td>
+</tr>
+<tr>
+<td>compiler intrinsics</td>
+<td>编译器固有功能</td>
+<td></td>
+</tr>
+<tr>
+<td>compound</td>
+<td>复合（类型，数据）</td>
+<td></td>
+</tr>
+<tr>
+<td>concurrency</td>
+<td>并发</td>
+<td></td>
+</tr>
+<tr>
+<td>conditional compilation</td>
+<td>条件编译</td>
+<td></td>
+</tr>
+<tr>
+<td>configuration</td>
+<td>配置</td>
+<td></td>
+</tr>
+<tr>
+<td>constructor</td>
+<td>构造器</td>
+<td></td>
+</tr>
+<tr>
+<td>consumer</td>
+<td>消费者</td>
+<td></td>
+</tr>
+<tr>
+<td>container</td>
+<td>容器</td>
+<td></td>
+</tr>
+<tr>
+<td>container type</td>
+<td>容器类型</td>
+<td></td>
+</tr>
+<tr>
+<td>convert</td>
+<td>转换，转化，转</td>
+<td></td>
+</tr>
+<tr>
+<td>copy</td>
+<td>复制，拷贝</td>
+<td></td>
+</tr>
+<tr>
+<td>crate</td>
+<td>包，包装箱，装包</td>
+<td>一般不译，crate 是 Rust 的基本编译单元</td>
+</tr>
+<tr>
+<td>curly braces</td>
+<td>大括号，包含“{”和“}”</td>
+<td></td>
+</tr>
+<tr>
+<td>custom type</td>
+<td>自定义类型</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dangling pointer</td>
+<td>悬垂指针</td>
+<td>use after free 在释放后使用</td>
+</tr>
+<tr>
+<td>data race</td>
+<td>数据竞争</td>
+<td></td>
+</tr>
+<tr>
+<td>dead code</td>
+<td>死代码，无效代码，不可达代码</td>
+<td></td>
+</tr>
+<tr>
+<td>deallocate</td>
+<td>释放，重新分配</td>
+<td></td>
+</tr>
+<tr>
+<td>declare</td>
+<td>声明</td>
+<td></td>
+</tr>
+<tr>
+<td>deep copy</td>
+<td>深拷贝，深复制</td>
+<td></td>
+</tr>
+<tr>
+<td>dependency</td>
+<td>依赖</td>
+<td></td>
+</tr>
+<tr>
+<td>deref coercions</td>
+<td>强制多态</td>
+<td></td>
+</tr>
+<tr>
+<td>dereference</td>
+<td>解引用</td>
+<td>Rust  文章中有时简写为 Deref</td>
+</tr>
+<tr>
+<td>derive</td>
+<td>派生</td>
+<td></td>
+</tr>
+<tr>
+<td>designator</td>
+<td>指示符</td>
+<td></td>
+</tr>
+<tr>
+<td>destruction</td>
+<td>销毁，毁灭</td>
+<td></td>
+</tr>
+<tr>
+<td>destructor</td>
+<td>析构器，析构函数</td>
+<td></td>
+</tr>
+<tr>
+<td>destructure</td>
+<td>解构</td>
+<td></td>
+</tr>
+<tr>
+<td>destructuring</td>
+<td>解构，解构赋值</td>
+<td></td>
+</tr>
+<tr>
+<td>desugar</td>
+<td>脱糖</td>
+<td></td>
+</tr>
+<tr>
+<td>diverge function</td>
+<td>发散函数</td>
+<td></td>
+</tr>
+<tr>
+<td>device drive</td>
+<td>设备驱动</td>
+<td></td>
+</tr>
+<tr>
+<td>directory</td>
+<td>目录</td>
+<td></td>
+</tr>
+<tr>
+<td>dispatch</td>
+<td>分发</td>
+<td></td>
+</tr>
+<tr>
+<td>diverging functions</td>
+<td>发散函数</td>
+<td></td>
+</tr>
+<tr>
+<td>documentation</td>
+<td>文档</td>
+<td></td>
+</tr>
+<tr>
+<td>dot operator</td>
+<td>点运算符</td>
+<td></td>
+</tr>
+<tr>
+<td>DST</td>
+<td>动态大小类型</td>
+<td>dynamic sized type，一般不译，<br>使用英文缩写形式</td>
+</tr>
+<tr>
+<td>dynamic language</td>
+<td>动态类型语言</td>
+<td></td>
+</tr>
+<tr>
+<td>dynamic trait type</td>
+<td>动态特质类型</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>enumeration</td>
+<td>枚举</td>
+<td></td>
+</tr>
+<tr>
+<td>encapsulation</td>
+<td>封装</td>
+<td></td>
+</tr>
+<tr>
+<td>equality test</td>
+<td>相等测试</td>
+<td></td>
+</tr>
+<tr>
+<td>elision</td>
+<td>省略</td>
+<td></td>
+</tr>
+<tr>
+<td>exhaustiveness checking</td>
+<td>穷尽性检查，无遗漏检查</td>
+<td></td>
+</tr>
+<tr>
+<td>expression</td>
+<td>表达式</td>
+<td></td>
+</tr>
+<tr>
+<td>expression-oriented language</td>
+<td>面向表达式的语言</td>
+<td></td>
+</tr>
+<tr>
+<td>explicit</td>
+<td>显式</td>
+<td></td>
+</tr>
+<tr>
+<td>explicit discriminator</td>
+<td>显式的辨别值</td>
+<td></td>
+</tr>
+<tr>
+<td>explicit type conversion</td>
+<td>显式类型转换</td>
+<td></td>
+</tr>
+<tr>
+<td>extension</td>
+<td>扩展名</td>
+<td></td>
+</tr>
+<tr>
+<td>extern</td>
+<td>外，外部</td>
+<td>作关键字时不译</td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fat pointer</td>
+<td>胖指针</td>
+<td></td>
+</tr>
+<tr>
+<td>feature gate</td>
+<td>功能开关</td>
+<td></td>
+</tr>
+<tr>
+<td>field</td>
+<td>字段</td>
+<td></td>
+</tr>
+<tr>
+<td>field-level mutability</td>
+<td>字段级别可变性</td>
+<td></td>
+</tr>
+<tr>
+<td>file</td>
+<td>文件</td>
+<td></td>
+</tr>
+<tr>
+<td>fmt</td>
+<td>格式化，是 format 的缩写</td>
+<td></td>
+</tr>
+<tr>
+<td>formatter</td>
+<td>格式化程序，格式化工具，格式器</td>
+<td></td>
+</tr>
+<tr>
+<td>floating-point number</td>
+<td>浮点数</td>
+<td></td>
+</tr>
+<tr>
+<td>flow control</td>
+<td>流程控制</td>
+<td></td>
+</tr>
+<tr>
+<td>Foreign Function Interface（FFI）</td>
+<td>外部语言函数接口</td>
+<td></td>
+</tr>
+<tr>
+<td>fragment specifier</td>
+<td>片段分类符</td>
+<td></td>
+</tr>
+<tr>
+<td>free variables</td>
+<td>自由变量</td>
+<td></td>
+</tr>
+<tr>
+<td>freeze</td>
+<td>冻结</td>
+<td></td>
+</tr>
+<tr>
+<td>function</td>
+<td>函数</td>
+<td></td>
+</tr>
+<tr>
+<td>function declaration</td>
+<td>函数声明</td>
+<td></td>
+</tr>
+<tr>
+<td>functional</td>
+<td>函数式</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>garbage collector</td>
+<td>垃圾回收</td>
+<td></td>
+</tr>
+<tr>
+<td>generalize</td>
+<td>泛化，泛型化</td>
+<td></td>
+</tr>
+<tr>
+<td>generator</td>
+<td>生成器</td>
+<td></td>
+</tr>
+<tr>
+<td>generic</td>
+<td>泛型</td>
+<td></td>
+</tr>
+<tr>
+<td>generic type</td>
+<td>泛型类型</td>
+<td></td>
+</tr>
+<tr>
+<td>growable</td>
+<td>可增长的</td>
+<td></td>
+</tr>
+<tr>
+<td>guard</td>
+<td>守卫</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>H</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>handle error</td>
+<td>句柄错误</td>
+<td></td>
+</tr>
+<tr>
+<td>hash</td>
+<td>哈希，哈希值，散列</td>
+<td></td>
+</tr>
+<tr>
+<td>hash map</td>
+<td>散列映射，哈希表</td>
+<td></td>
+</tr>
+<tr>
+<td>heap</td>
+<td>堆</td>
+<td></td>
+</tr>
+<tr>
+<td>hierarchy</td>
+<td>层次，分层，层次结构</td>
+<td></td>
+</tr>
+<tr>
+<td>higher rank lifetime</td>
+<td>高阶生命周期</td>
+<td></td>
+</tr>
+<tr>
+<td>higher rank trait bound</td>
+<td>高阶特质约束</td>
+<td></td>
+</tr>
+<tr>
+<td>higher tank type</td>
+<td>高阶类型</td>
+<td></td>
+</tr>
+<tr>
+<td>hygiene</td>
+<td>卫生</td>
+<td></td>
+</tr>
+<tr>
+<td>hygienic macro system</td>
+<td>卫生宏系统</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ICE</td>
+<td>编译内部错误</td>
+<td>internal comppiler error 的缩写</td>
+</tr>
+<tr>
+<td>immutable</td>
+<td>不可变的</td>
+<td></td>
+</tr>
+<tr>
+<td>implement</td>
+<td>实现</td>
+<td></td>
+</tr>
+<tr>
+<td>implementor</td>
+<td>实现者</td>
+<td></td>
+</tr>
+<tr>
+<td>implicit</td>
+<td>隐式</td>
+<td></td>
+</tr>
+<tr>
+<td>implicit discriminator</td>
+<td>隐式的辨别值</td>
+<td></td>
+</tr>
+<tr>
+<td>implicit type conversion</td>
+<td>隐式类型转换</td>
+<td></td>
+</tr>
+<tr>
+<td>import</td>
+<td>导入</td>
+<td></td>
+</tr>
+<tr>
+<td>in assignment</td>
+<td>在赋值（语句）</td>
+<td></td>
+</tr>
+<tr>
+<td>index</td>
+<td>索引</td>
+<td>英语复数形式：indices</td>
+</tr>
+<tr>
+<td>infer</td>
+<td>推导（动词）</td>
+<td></td>
+</tr>
+<tr>
+<td>inference</td>
+<td>推导（名词）</td>
+<td></td>
+</tr>
+<tr>
+<td>inherited mutability</td>
+<td>承袭可变性</td>
+<td></td>
+</tr>
+<tr>
+<td>inheritance</td>
+<td>继承</td>
+<td></td>
+</tr>
+<tr>
+<td>integrated development <br>environment(IDE)</td>
+<td>集成开发环境</td>
+<td>中文著作中通常直接写成 IDE</td>
+</tr>
+<tr>
+<td>integration-style test</td>
+<td>集成测试</td>
+<td></td>
+</tr>
+<tr>
+<td>interior mutability</td>
+<td>内部可变性</td>
+<td></td>
+</tr>
+<tr>
+<td>installer</td>
+<td>安装程序，安装器</td>
+<td></td>
+</tr>
+<tr>
+<td>instance</td>
+<td>实例</td>
+<td></td>
+</tr>
+<tr>
+<td>instance method</td>
+<td>实例方法</td>
+<td></td>
+</tr>
+<tr>
+<td>integer</td>
+<td>整型，整数</td>
+<td></td>
+</tr>
+<tr>
+<td>interact</td>
+<td>相互作用，相互影响</td>
+<td></td>
+</tr>
+<tr>
+<td>interior mutability</td>
+<td>内部可变性</td>
+<td></td>
+</tr>
+<tr>
+<td>intrinsic</td>
+<td>固有的</td>
+<td></td>
+</tr>
+<tr>
+<td>invoke</td>
+<td>调用</td>
+<td></td>
+</tr>
+<tr>
+<td>item</td>
+<td>项，条目，项目</td>
+<td></td>
+</tr>
+<tr>
+<td>iterate</td>
+<td>重复</td>
+<td></td>
+</tr>
+<tr>
+<td>iteration</td>
+<td>迭代</td>
+<td></td>
+</tr>
+<tr>
+<td>iterator</td>
+<td>迭代器</td>
+<td></td>
+</tr>
+<tr>
+<td>iterator adaptors</td>
+<td>迭代器适配器</td>
+<td></td>
+</tr>
+<tr>
+<td>iterator invalidation</td>
+<td>迭代器失效</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>L</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LHS</td>
+<td>左操作数</td>
+<td>left-hand side 的非正式缩写，<br>与 RHS 相对</td>
+</tr>
+<tr>
+<td>lender</td>
+<td>借出者</td>
+<td></td>
+</tr>
+<tr>
+<td>library</td>
+<td>库</td>
+<td></td>
+</tr>
+<tr>
+<td>lifetime</td>
+<td>生存时间，寿命，生命周期</td>
+<td></td>
+</tr>
+<tr>
+<td>lifetime elision</td>
+<td>生命周期省略</td>
+<td></td>
+</tr>
+<tr>
+<td>link</td>
+<td>链接</td>
+<td></td>
+</tr>
+<tr>
+<td>linked-list</td>
+<td>链表</td>
+<td></td>
+</tr>
+<tr>
+<td>lint</td>
+<td>（不译）</td>
+<td>lint 英文本义是“纱布，绒毛”，此词在<br>计算机领域中表示程序代码中可疑和<br>不具结构性的片段，参见 <a href="https://en.wikipedia.org/wiki/Lint_%28software%29" target="_blank" rel="noopener noreffer">Wikipedia</a></td>
+</tr>
+<tr>
+<td>list</td>
+<td>列表</td>
+<td></td>
+</tr>
+<tr>
+<td>listener</td>
+<td>监听器</td>
+<td></td>
+</tr>
+<tr>
+<td>literal</td>
+<td>数据，常量数据，字面值，字面量，<br>字面常量，字面上的</td>
+<td>英文意思：字面意义的（内容）</td>
+</tr>
+<tr>
+<td>LLVM</td>
+<td>（不译）</td>
+<td>Low Level Virtual Machine 的缩写，<br>是构建编译器的系统</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>循环</td>
+<td>作关键字时不译</td>
+</tr>
+<tr>
+<td>low-level code</td>
+<td>底层代码</td>
+<td></td>
+</tr>
+<tr>
+<td>low-level language</td>
+<td>底层语言</td>
+<td></td>
+</tr>
+<tr>
+<td>l-value</td>
+<td>左值</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>main function</td>
+<td>main 函数，主函数</td>
+<td></td>
+</tr>
+<tr>
+<td>macro</td>
+<td>宏</td>
+<td></td>
+</tr>
+<tr>
+<td>map</td>
+<td>映射</td>
+<td>一般不译</td>
+</tr>
+<tr>
+<td>match guard</td>
+<td>匹配守卫</td>
+<td></td>
+</tr>
+<tr>
+<td>memory</td>
+<td>内存</td>
+<td></td>
+</tr>
+<tr>
+<td>memory leak</td>
+<td>内存泄露</td>
+<td></td>
+</tr>
+<tr>
+<td>memory safe</td>
+<td>内存安全</td>
+<td></td>
+</tr>
+<tr>
+<td>meta</td>
+<td>原则，元</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>元数据</td>
+<td></td>
+</tr>
+<tr>
+<td>metaprogramming</td>
+<td>元编程</td>
+<td></td>
+</tr>
+<tr>
+<td>metavariable</td>
+<td>元变量</td>
+<td></td>
+</tr>
+<tr>
+<td>method call syntax</td>
+<td>方法调用语法</td>
+<td></td>
+</tr>
+<tr>
+<td>method chaining</td>
+<td>方法链</td>
+<td></td>
+</tr>
+<tr>
+<td>method definition</td>
+<td>方法定义</td>
+<td></td>
+</tr>
+<tr>
+<td>modifier</td>
+<td>修饰符</td>
+<td></td>
+</tr>
+<tr>
+<td>module</td>
+<td>模块</td>
+<td></td>
+</tr>
+<tr>
+<td>monomorphization</td>
+<td>单态</td>
+<td>mono: one, morph: form</td>
+</tr>
+<tr>
+<td>move</td>
+<td>移动，转移</td>
+<td>按照 Rust 所规定的内容，<br>英语单词 transfer 的意思<br>比 move 更贴合实际描述<br>参考：<a href="http://rustwiki.org/rust-by-example/scope/move.html" target="_blank" rel="noopener noreffer">Rust by Example</a></td>
+</tr>
+<tr>
+<td>move semantics</td>
+<td>移动语义</td>
+<td></td>
+</tr>
+<tr>
+<td>mutability</td>
+<td>可变性</td>
+<td></td>
+</tr>
+<tr>
+<td>mutable</td>
+<td>可变</td>
+<td></td>
+</tr>
+<tr>
+<td>mutable reference</td>
+<td>可变引用</td>
+<td></td>
+</tr>
+<tr>
+<td>multiple bounds</td>
+<td>多重约束</td>
+<td></td>
+</tr>
+<tr>
+<td>mutiple patterns</td>
+<td>多重模式</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>N</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>nest</td>
+<td>嵌套</td>
+<td></td>
+</tr>
+<tr>
+<td>Nightly Rust</td>
+<td>Rust 开发版</td>
+<td>nightly本意是“每夜，每天晚上”，<br>指代码每天都更新</td>
+</tr>
+<tr>
+<td>NLL</td>
+<td>非词法生命周期</td>
+<td>non lexical lifetime 的缩写，<br>一般不译</td>
+</tr>
+<tr>
+<td>non-copy type</td>
+<td>非复制类型</td>
+<td></td>
+</tr>
+<tr>
+<td>non-generic</td>
+<td>非泛型</td>
+<td></td>
+</tr>
+<tr>
+<td>no-op</td>
+<td>空操作，空运算</td>
+<td>(此词出现在类型转换章节中）</td>
+</tr>
+<tr>
+<td>non-commutative</td>
+<td>非交换的</td>
+<td></td>
+</tr>
+<tr>
+<td>non-scalar cast</td>
+<td>非标量转换</td>
+<td></td>
+</tr>
+<tr>
+<td>notation</td>
+<td>符号，记号</td>
+<td></td>
+</tr>
+<tr>
+<td>numeric</td>
+<td>数值，数字</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>optimization</td>
+<td>优化</td>
+<td></td>
+</tr>
+<tr>
+<td>out-of-bounds accessing</td>
+<td>越界访问</td>
+<td></td>
+</tr>
+<tr>
+<td>orphan rule</td>
+<td>孤儿规则</td>
+<td></td>
+</tr>
+<tr>
+<td>overflow</td>
+<td>溢出，越界</td>
+<td></td>
+</tr>
+<tr>
+<td>own</td>
+<td>占有，拥有</td>
+<td></td>
+</tr>
+<tr>
+<td>owner</td>
+<td>所有者，拥有者</td>
+<td></td>
+</tr>
+<tr>
+<td>ownership</td>
+<td>所有权</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>P</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>package manager</td>
+<td>包管理器，软件包管理器</td>
+<td></td>
+</tr>
+<tr>
+<td>panic</td>
+<td>（不译）</td>
+<td>此单词直接翻译是“恐慌”，<br>在 Rust 中用于不可恢复的错误处理</td>
+</tr>
+<tr>
+<td>parameter</td>
+<td>参量，形参，形式参量</td>
+<td>不严格区分的话， argument（参数）和 <br> parameter（参量）可以互换地使用</td>
+</tr>
+<tr>
+<td>parametric polymorphism</td>
+<td>参数多态</td>
+<td></td>
+</tr>
+<tr>
+<td>parent scope</td>
+<td>父级作用域</td>
+<td></td>
+</tr>
+<tr>
+<td>parentheses</td>
+<td>小括号，包括“(”和“)”</td>
+<td></td>
+</tr>
+<tr>
+<td>parse</td>
+<td>分析，解析</td>
+<td></td>
+</tr>
+<tr>
+<td>parser</td>
+<td>（语法）分析器，解析器</td>
+<td></td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>模式</td>
+<td></td>
+</tr>
+<tr>
+<td>pattern match</td>
+<td>模式匹配</td>
+<td></td>
+</tr>
+<tr>
+<td>phantom type</td>
+<td>虚类型，虚位类型</td>
+<td>phantom 相关的专有名词：<br>phantom bug 幻影指令<br>phantom power 幻象电源<br>参见：<a href="https://wiki.haskell.org/Phantom_type" target="_blank" rel="noopener noreffer">Haskell</a>、<a href="https://en.wikibooks.org/wiki/Haskell/Phantom_types" target="_blank" rel="noopener noreffer">Haskell/Phantom_type</a>、<br><a href="http://rustwiki.org/rust-by-example/generics/phantom.html" target="_blank" rel="noopener noreffer">Rust/Phantom</a>、<a href="https://doc.rust-lang.org/std/marker/struct.PhantomData.html" target="_blank" rel="noopener noreffer">stdlib/PhantomData</a></td>
+</tr>
+<tr>
+<td>platform</td>
+<td>平台</td>
+<td></td>
+</tr>
+<tr>
+<td>polymorphism</td>
+<td>多态</td>
+<td></td>
+</tr>
+<tr>
+<td>powershell</td>
+<td>（不译）</td>
+<td>Windows 系统的一种命令行外壳程序<br>和脚本环境</td>
+</tr>
+<tr>
+<td>possibility of absence</td>
+<td>不存在的可能性</td>
+<td></td>
+</tr>
+<tr>
+<td>precede</td>
+<td>预先？，在&hellip;发生（或出现）</td>
+<td></td>
+</tr>
+<tr>
+<td>prelude</td>
+<td>（不译）</td>
+<td>预先导入模块，英文本意：序曲，前奏</td>
+</tr>
+<tr>
+<td>primitive types</td>
+<td>原生类型，基本类型，简单类型</td>
+<td></td>
+</tr>
+<tr>
+<td>print</td>
+<td>打印</td>
+<td></td>
+</tr>
+<tr>
+<td>process</td>
+<td>进程</td>
+<td></td>
+</tr>
+<tr>
+<td>procedural macros</td>
+<td>过程宏，程序宏</td>
+<td></td>
+</tr>
+<tr>
+<td>project</td>
+<td>项目，工程</td>
+<td></td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>原型</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>race condition</td>
+<td>竞态条件</td>
+<td></td>
+</tr>
+<tr>
+<td>RAII</td>
+<td>资源获取即初始化（一般不译）</td>
+<td>resource acquisition is initialization 的缩写</td>
+</tr>
+<tr>
+<td>range</td>
+<td>区间，范围</td>
+<td></td>
+</tr>
+<tr>
+<td>range expression</td>
+<td>区间表达式</td>
+<td></td>
+</tr>
+<tr>
+<td>raw identifier</td>
+<td>原始标识符</td>
+<td></td>
+</tr>
+<tr>
+<td>raw pointer</td>
+<td>原始指针，裸指针</td>
+<td></td>
+</tr>
+<tr>
+<td>RC</td>
+<td>引用计数</td>
+<td>reference counted</td>
+</tr>
+<tr>
+<td>Reader</td>
+<td>读取器</td>
+<td></td>
+</tr>
+<tr>
+<td>recursive macro</td>
+<td>递归宏</td>
+<td></td>
+</tr>
+<tr>
+<td>reference</td>
+<td>引用</td>
+<td></td>
+</tr>
+<tr>
+<td>reference cycle</td>
+<td>引用循环</td>
+<td></td>
+</tr>
+<tr>
+<td>release</td>
+<td>发布</td>
+<td></td>
+</tr>
+<tr>
+<td>resource</td>
+<td>资源</td>
+<td></td>
+</tr>
+<tr>
+<td>resource leak</td>
+<td>资源泄露</td>
+<td></td>
+</tr>
+<tr>
+<td>RHS</td>
+<td>右操作数</td>
+<td>right-hand side 的非正式缩写，<br>与 LHS 相对</td>
+</tr>
+<tr>
+<td>root directory</td>
+<td>根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>runtime</td>
+<td>运行时</td>
+<td></td>
+</tr>
+<tr>
+<td>runtime behavior</td>
+<td>运行时行为</td>
+<td></td>
+</tr>
+<tr>
+<td>runtime overhead</td>
+<td>运行时开销</td>
+<td></td>
+</tr>
+<tr>
+<td>Rust</td>
+<td>（不译）</td>
+<td>一种编程语言</td>
+</tr>
+<tr>
+<td>Rustacean</td>
+<td>（不译）</td>
+<td>编写 Rust 的程序员或爱好者的通称</td>
+</tr>
+<tr>
+<td>rustc</td>
+<td>（不译）</td>
+<td>Rust 语言编译器</td>
+</tr>
+<tr>
+<td>r-value</td>
+<td>右值</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>scalar</td>
+<td>标量，数量</td>
+<td></td>
+</tr>
+<tr>
+<td>schedule</td>
+<td>调度</td>
+<td></td>
+</tr>
+<tr>
+<td>scope</td>
+<td>作用域</td>
+<td></td>
+</tr>
+<tr>
+<td>screen</td>
+<td>屏幕</td>
+<td></td>
+</tr>
+<tr>
+<td>script</td>
+<td>脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>semicolon</td>
+<td>分号，“;”</td>
+<td></td>
+</tr>
+<tr>
+<td>self</td>
+<td>自身，作关键字时不译</td>
+<td></td>
+</tr>
+<tr>
+<td>shadow</td>
+<td>遮蔽，隐蔽，隐藏，覆盖</td>
+<td></td>
+</tr>
+<tr>
+<td>shallow copy</td>
+<td>浅拷贝，浅复制</td>
+<td></td>
+</tr>
+<tr>
+<td>signature</td>
+<td>标记</td>
+<td></td>
+</tr>
+<tr>
+<td>slice</td>
+<td>切片</td>
+<td></td>
+</tr>
+<tr>
+<td>snake case</td>
+<td>蛇形命名</td>
+<td>参见：<a href="https://en.wikipedia.org/wiki/Snake_case" target="_blank" rel="noopener noreffer">Snake case</a></td>
+</tr>
+<tr>
+<td>source file</td>
+<td>源文件</td>
+<td></td>
+</tr>
+<tr>
+<td>source code</td>
+<td>源代码</td>
+<td></td>
+</tr>
+<tr>
+<td>specialization</td>
+<td>泛型特化</td>
+<td></td>
+</tr>
+<tr>
+<td>square</td>
+<td>平方，二次方，二次幂</td>
+<td></td>
+</tr>
+<tr>
+<td>square brackets</td>
+<td>中括号，“[”和“]”</td>
+<td></td>
+</tr>
+<tr>
+<td>src</td>
+<td>（不译）</td>
+<td>source 的缩写，指源代码</td>
+</tr>
+<tr>
+<td>stack</td>
+<td>栈</td>
+<td></td>
+</tr>
+<tr>
+<td>stack unwind</td>
+<td>栈解开、栈展开</td>
+<td></td>
+</tr>
+<tr>
+<td>statement</td>
+<td>语句</td>
+<td></td>
+</tr>
+<tr>
+<td>statically allocated</td>
+<td>静态分配</td>
+<td></td>
+</tr>
+<tr>
+<td>statically allocated string</td>
+<td>静态分配的字符串</td>
+<td></td>
+</tr>
+<tr>
+<td>statically dispatch</td>
+<td>静态分发</td>
+<td></td>
+</tr>
+<tr>
+<td>static method</td>
+<td>静态方法</td>
+<td></td>
+</tr>
+<tr>
+<td>string</td>
+<td>字符串</td>
+<td></td>
+</tr>
+<tr>
+<td>string literal</td>
+<td>字符串常量</td>
+<td></td>
+</tr>
+<tr>
+<td>string slices</td>
+<td>字符串片段</td>
+<td></td>
+</tr>
+<tr>
+<td>stringify</td>
+<td>字符串化</td>
+<td></td>
+</tr>
+<tr>
+<td>subscript notation</td>
+<td>下标</td>
+<td></td>
+</tr>
+<tr>
+<td>sugar</td>
+<td>糖</td>
+<td></td>
+</tr>
+<tr>
+<td>super</td>
+<td>父级，作关键字时不译</td>
+<td></td>
+</tr>
+<tr>
+<td>syntax context</td>
+<td>语法上下文</td>
+<td></td>
+</tr>
+<tr>
+<td>systems programming language</td>
+<td>系统级编程语言</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tagged union</td>
+<td>标记联合</td>
+<td></td>
+</tr>
+<tr>
+<td>target triple</td>
+<td>多层次指标，三层/重 指标/目标</td>
+<td>triple 本义是“三”，但此处虚指“多”，<br>此词翻译需要更多讨论</td>
+</tr>
+<tr>
+<td>terminal</td>
+<td>终端</td>
+<td></td>
+</tr>
+<tr>
+<td>testing</td>
+<td>测试</td>
+<td></td>
+</tr>
+<tr>
+<td>testsuit</td>
+<td>测试套件</td>
+<td></td>
+</tr>
+<tr>
+<td>the least significant bit (LSB)</td>
+<td>最低数字位</td>
+<td></td>
+</tr>
+<tr>
+<td>the most significant bit (MSB)</td>
+<td>最高数字位</td>
+<td></td>
+</tr>
+<tr>
+<td>thread</td>
+<td>线程</td>
+<td></td>
+</tr>
+<tr>
+<td>TOML</td>
+<td>（不译）</td>
+<td>Tom&rsquo;s Obvious, Minimal Language <br>的缩写，一种配置语言</td>
+</tr>
+<tr>
+<td>token tree</td>
+<td>令牌树？</td>
+<td>待进一步斟酌</td>
+</tr>
+<tr>
+<td>trait</td>
+<td>特质</td>
+<td>其字面上有“特性，特征”之意</td>
+</tr>
+<tr>
+<td>trait bound</td>
+<td>特质约束</td>
+<td>bound 有“约束，限制，限定”之意</td>
+</tr>
+<tr>
+<td>trait object</td>
+<td>特质对象</td>
+<td></td>
+</tr>
+<tr>
+<td>transmute</td>
+<td>（不译）</td>
+<td>其字面上有“变化，变形，变异”之意，<br>不作翻译</td>
+</tr>
+<tr>
+<td>trivial</td>
+<td>平凡的</td>
+<td></td>
+</tr>
+<tr>
+<td>troubleshooting</td>
+<td>疑难解答，故障诊断，<br>故障排除，故障分析</td>
+<td></td>
+</tr>
+<tr>
+<td>tuple</td>
+<td>元组</td>
+<td></td>
+</tr>
+<tr>
+<td>two&rsquo;s complement</td>
+<td>补码，二补数</td>
+<td></td>
+</tr>
+<tr>
+<td>two-word object</td>
+<td>双字对象</td>
+<td></td>
+</tr>
+<tr>
+<td>type annotation</td>
+<td>类型标注</td>
+<td></td>
+</tr>
+<tr>
+<td>type erasure</td>
+<td>类型擦除</td>
+<td></td>
+</tr>
+<tr>
+<td>type inference</td>
+<td>类型推导</td>
+<td></td>
+</tr>
+<tr>
+<td>type inference engine</td>
+<td>类型推导引擎</td>
+<td></td>
+</tr>
+<tr>
+<td>type parameter</td>
+<td>类型参量</td>
+<td></td>
+</tr>
+<tr>
+<td>type placeholder</td>
+<td>类型占位符</td>
+<td></td>
+</tr>
+<tr>
+<td>type signature</td>
+<td>类型标记</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>U</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>undefined behavior</td>
+<td>未定义行为</td>
+<td></td>
+</tr>
+<tr>
+<td>uninstall</td>
+<td>卸载</td>
+<td></td>
+</tr>
+<tr>
+<td>unit-like struct</td>
+<td>类单元结构体</td>
+<td></td>
+</tr>
+<tr>
+<td>unit struct</td>
+<td>单元结构体</td>
+<td></td>
+</tr>
+<tr>
+<td>&ldquo;unit-style&rdquo; tests</td>
+<td>单元测试</td>
+<td></td>
+</tr>
+<tr>
+<td>unit test</td>
+<td>单元测试</td>
+<td></td>
+</tr>
+<tr>
+<td>unit type</td>
+<td>单元类型</td>
+<td></td>
+</tr>
+<tr>
+<td>universal function call syntax <br>(UFCS)</td>
+<td>通用函数调用语法</td>
+<td></td>
+</tr>
+<tr>
+<td>unsized types</td>
+<td>不定长类型</td>
+<td></td>
+</tr>
+<tr>
+<td>unwind</td>
+<td>展开</td>
+<td></td>
+</tr>
+<tr>
+<td>unwrap</td>
+<td>解包</td>
+<td>暂译！</td>
+</tr>
+<tr>
+<td><strong>V</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>variable binding</td>
+<td>变量绑定</td>
+<td></td>
+</tr>
+<tr>
+<td>variable shadowing</td>
+<td>变量遮蔽，变量隐蔽,<br>变量隐藏，变量覆盖</td>
+<td></td>
+</tr>
+<tr>
+<td>variable capture</td>
+<td>变量捕获</td>
+<td></td>
+</tr>
+<tr>
+<td>variant</td>
+<td>变量</td>
+<td></td>
+</tr>
+<tr>
+<td>vector</td>
+<td>（动态数组，一般不译）</td>
+<td>vector 本义是“向量”</td>
+</tr>
+<tr>
+<td>visibility</td>
+<td>可见性</td>
+<td></td>
+</tr>
+<tr>
+<td>vtable</td>
+<td>虚表</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>W</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>where clause</td>
+<td>where 子句，where 从句，where 分句</td>
+<td>在数据库的官方手册中多翻译成“子句”，英语语法中翻译成“从句”</td>
+</tr>
+<tr>
+<td>wrap</td>
+<td>包裹</td>
+<td>暂译！</td>
+</tr>
+<tr>
+<td>wrapped</td>
+<td>装包</td>
+<td></td>
+</tr>
+<tr>
+<td>wrapper</td>
+<td>装包</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>yield</td>
+<td>产生(收益、效益等)，产出，提供</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>zero-cost abstractions</td>
+<td>零开销抽象</td>
+<td></td>
+</tr>
+<tr>
+<td>zero-width space(ZWSP)</td>
+<td>零宽空格</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-06-05</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/article/2021/learn_rust/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://3ae.cn/article/2021/learn_rust/" data-title="Rust 学习指南" data-hashtags="Rust"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://3ae.cn/article/2021/learn_rust/" data-hashtag="Rust"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="https://3ae.cn/article/2021/learn_rust/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Instapaper" data-sharer="instapaper" data-url="https://3ae.cn/article/2021/learn_rust/" data-title="Rust 学习指南" data-description=""><i data-svg-src="/lib/simple-icons/icons/instapaper.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Pocket" data-sharer="pocket" data-url="https://3ae.cn/article/2021/learn_rust/"><i class="fab fa-get-pocket fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://3ae.cn/article/2021/learn_rust/" data-title="Rust 学习指南" data-ralateuid="lyhuilin"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://3ae.cn/article/2021/learn_rust/" data-title="Rust 学习指南"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/rust/">Rust</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/article/2021/go20210603/" class="prev" rel="prev" title="Go20210603 今日技术分享"><i class="fas fa-angle-left fa-fw"></i>Go20210603 今日技术分享</a>
+            <a href="/article/2021/toml/" class="next" rel="next" title="TOML 语言规范 1.0 正式版">TOML 语言规范 1.0 正式版<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/clin003/meBlog" target="_blank">baicai</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.4710034e669c7ff17f823f9ba12cf8a36582d65b007f79cbc4a3c11d7db2e4ca.css" integrity="sha256-RxADTmacf/F/gj&#43;boSz4o2WC1lsAf3nLxKPBHX2y5Mo="><link rel="stylesheet" href="/lib/katex/copy-tex.min.bf9ff4137fec38f6255419e142d0883c9c52090885d746f80eee12b273d9b3e0.css" integrity="sha256-v5/0E3/sOPYlVBnhQtCIPJxSCQiF10b4Du4SsnPZs&#43;A="><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.bcff85fb5e00d68802850b393ac7792c997f722f536f38e26638c46dca8e5eb6.js" integrity="sha256-vP&#43;F&#43;14A1ogChQs5Osd5LJl/ci9TbzjiZjjEbcqOXrY="></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.615590a2ca2b667afa7c02ef396f5500b62e22795ddbb46448f90494605d09a5.js" integrity="sha256-YVWQosorZnr6fALvOW9VALYuInld27RkSPkElGBdCaU="></script><script type="text/javascript" src="/lib/lunr/lunr.min.df84a2d58ea594c04a3371b48d020b55ea10284c2ec636e4e331965d7313e29b.js" integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps="></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.115461812ca5b093f9bcc2f15d2693a6c90e8fe38dabf2375e5f18e1c348d97c.js" integrity="sha256-EVRhgSylsJP5vMLxXSaTpskOj&#43;ONq/I3Xl8Y4cNI2Xw="></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.b3aab24bd69b746d28f433f4a82ecfa1556a75ba5ef9f4caa2bcc7ab8d327c14.js" integrity="sha256-s6qyS9abdG0o9DP0qC7PoVVqdbpe&#43;fTKorzHq40yfBQ="></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.8a7739925f4c03586479852df840b7061948832a7fda30c8c812d2ea4dd4c4f2.js" integrity="sha256-inc5kl9MA1hkeYUt&#43;EC3BhlIgyp/2jDIyBLS6k3UxPI="></script><script type="text/javascript" src="/lib/sharer/sharer.min.9c88f86c7f0820287113f6236200459832693656e80d7556cc80a93dfbd45813.js" integrity="sha256-nIj4bH8IIChxE/YjYgBFmDJpNlboDXVWzICpPfvUWBM="></script><script type="text/javascript" src="/lib/katex/katex.min.17f5dd6b9f123dd7140abfb18521b3f4c036cd004f6f40121182a8865f140877.js" integrity="sha256-F/Xda58SPdcUCr&#43;xhSGz9MA2zQBPb0ASEYKohl8UCHc="></script><script type="text/javascript" src="/lib/katex/auto-render.min.f74776a677f0d2be0af0264058f928e2ba455d0b19bc985304660d922a43a6b2.js" integrity="sha256-90d2pnfw0r4K8CZAWPko4rpFXQsZvJhTBGYNkipDprI="></script><script type="text/javascript" src="/lib/katex/copy-tex.min.2ab2237329021bc443986c8327f6e61357fb68a54e5d233d224023718c02207d.js" integrity="sha256-KrIjcykCG8RDmGyDJ/bmE1f7aKVOXSM9IkAjcYwCIH0="></script><script type="text/javascript" src="/lib/katex/mhchem.min.5cea356d6025c5a2f18c454c83ec5674dbb04fab1cd1d75569e77788c6b6f888.js" integrity="sha256-XOo1bWAlxaLxjEVMg&#43;xWdNuwT6sc0ddVaed3iMa2&#43;Ig="></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.f51938f3065a40ee841bcb558e4330e31fd26c0ea55343fff8770b88b0319a3c.js" integrity="sha256-9Rk48wZaQO6EG8tVjkMw4x/SbA6lU0P/&#43;HcLiLAxmjw="></script></body>
+</html>

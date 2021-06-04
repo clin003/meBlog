@@ -4,9 +4,23 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 03 Jun 2021 15:06:59 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>TOML 语言规范 1.0 正式版</title>
+    <link>https://3ae.cn/article/2021/toml/</link>
+    <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/toml/</guid>
+    <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
+</item><item>
+    <title>Rust 学习指南</title>
+    <link>https://3ae.cn/article/2021/learn_rust/</link>
+    <pubDate>Sat, 05 Jun 2021 02:16:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/learn_rust/</guid>
+    <description><![CDATA[了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大]]></description>
+</item><item>
     <title>Go20210603 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210603/</link>
     <pubDate>Thu, 03 Jun 2021 15:06:59 &#43;0800</pubDate>
@@ -132,19 +146,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210518/</guid>
     <description><![CDATA[2021-05-18 今日技术分享 也许是你从来没用过的利器：GODEBUG https://mp.weixin.qq.com/s/lqOs34aMs7AYCxM_Jv0Hug 从0开发上线一个web项目（下） https://mp.weixin.qq.com/s/W5lHCgA_SzzyCoDaHDmz1Q 如何打造高性能的 Go 缓存库 https://mp.weixin.qq.com/s/G8LJ1HBuWoQfWV2dILi6Rg 【本周四预告】JetBr]]></description>
-</item><item>
-    <title>Go20210517 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210517/</link>
-    <pubDate>Mon, 17 May 2021 23:05:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210517/</guid>
-    <description><![CDATA[2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性]]></description>
-</item><item>
-    <title>Go20210516 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210516/</link>
-    <pubDate>Sun, 16 May 2021 23:37:59 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210516/</guid>
-    <description><![CDATA[2021-05-16 今日技术分享 面试官：说说unsafe.Pointer和uintptr的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww http.Client的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg 你不知道的 Go 之]]></description>
 </item></channel>
 </rss>

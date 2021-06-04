@@ -4,7 +4,14 @@
         <link>https://3ae.cn/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/</link>
         <description>开发技能 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 13 May 2021 21:31:19 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/" rel="self" type="application/rss+xml" /><item>
+    <title>TOML 语言规范 1.0 正式版</title>
+    <link>https://3ae.cn/article/2021/toml/</link>
+    <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/toml/</guid>
+    <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
+</item><item>
     <title>Swift语法全面解析</title>
     <link>https://3ae.cn/article/2021/swift-basic-syntax/</link>
     <pubDate>Thu, 13 May 2021 21:31:19 &#43;0800</pubDate>

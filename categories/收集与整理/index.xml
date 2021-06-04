@@ -4,7 +4,21 @@
         <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
         <description>收集与整理 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 03 Jun 2021 15:06:59 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>TOML 语言规范 1.0 正式版</title>
+    <link>https://3ae.cn/article/2021/toml/</link>
+    <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/toml/</guid>
+    <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
+</item><item>
+    <title>Rust 学习指南</title>
+    <link>https://3ae.cn/article/2021/learn_rust/</link>
+    <pubDate>Sat, 05 Jun 2021 02:16:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/learn_rust/</guid>
+    <description><![CDATA[了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大]]></description>
+</item><item>
     <title>Go20210603 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210603/</link>
     <pubDate>Thu, 03 Jun 2021 15:06:59 &#43;0800</pubDate>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/goproxy/</guid>
     <description><![CDATA[Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/ goproxy.io：https://goproxy.io/ 百]]></description>
-</item><item>
-    <title>Go20210526 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210526/</link>
-    <pubDate>Wed, 26 May 2021 23:14:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210526/</guid>
-    <description><![CDATA[2021-05-26 今日技术分享 gRPC 可以不用 pb 而使用 JSON 吗？ https://mp.weixin.qq.com/s/oQ4aG0pIJmQFQd2TKGxsXg 什么？无限缓冲 channel。。。 https://mp.weixin.qq.com/s/0TJRcbaWlfwEjbKMKAxNAQ 10.0 有史以来性能最优 https://mp.weixin.qq.com/s/qJ7HQ2BVS6DEO6sPTJzeAA 最强 CNI 基准测试：Cilium 网络性能分析 https://mp.weixin.qq.com/s/NR7gDpp2i5gCRRwZjxaASA 使]]></description>
-</item><item>
-    <title>Go20210525 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210525/</link>
-    <pubDate>Tue, 25 May 2021 23:02:42 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210525/</guid>
-    <description><![CDATA[2021-05-25 今日技术分享 Go 中为什么应该使用接口 https://mp.weixin.qq.com/s/KqXI9ekYAZYd5oYmhqFH8Q 图解Go sync.Pool https://mp.weixin.qq.com/s/aiOjUcN89nxwEUJzVNkl3A 自制文件系统 — 01 文件系统的样子 https://mp.weixin.qq.com/s/0FpQGDzFh_D7IJi6z7oXjg 深入 Go 中各个高性能 JSON 解析库 https://mp.weixin.qq.com/s/FBT5QN_Pja6vRntWY0wFeA 【预告】理论结合实践详解 b+ 树存]]></description>
 </item></channel>
 </rss>

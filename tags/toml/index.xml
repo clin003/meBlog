@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>TOML - 标签 - 白菜林</title>
+        <link>https://3ae.cn/tags/toml/</link>
+        <description>TOML - 标签 - 白菜林</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/toml/" rel="self" type="application/rss+xml" /><item>
+    <title>TOML 语言规范 1.0 正式版</title>
+    <link>https://3ae.cn/article/2021/toml/</link>
+    <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/toml/</guid>
+    <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
+</item></channel>
+</rss>
