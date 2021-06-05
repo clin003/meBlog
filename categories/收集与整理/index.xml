@@ -4,7 +4,14 @@
         <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
         <description>收集与整理 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 18:54:29 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210605 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210605/</link>
+    <pubDate>Sat, 05 Jun 2021 18:54:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210605/</guid>
+    <description><![CDATA[2021-06-05 今日技术分享 Go: stringer 命令，通过代码生成提高效率 https://mp.weixin.qq.com/s/Ik3PxNRbddtbm6E-Xo_rdA 详解并发编程基础之原子操作(atomic包) https://mp.weixin.qq.com/s/-KE6jNKkVxNrm-e3laibzw 函数的不定参数你是这样用吗？ https://mp.weixin.qq.com/s/jvSbZ0_g_EFqaR2TmjjO8w 如何不 Review 每一行代码]]></description>
+</item><item>
     <title>TOML 语言规范 1.0 正式版</title>
     <link>https://3ae.cn/article/2021/toml/</link>
     <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210527/</guid>
     <description><![CDATA[2021-05-27 今日技术分享 为什么Go程序占用那么大的虚拟内存？ https://mp.weixin.qq.com/s/tkAWtSJ4ebAUcQG9AmeXWA 你不知道的 Go 之 string https://mp.weixin.qq.com/s/6miIgsZN_Fh79Aixv5BlTg 又吵起来了，Go 是传值还是传引用？ https://mp.weixin.qq.com/s/qsxvfiyZfRCtgTymO9LBZQ Go 编程怎么也有踩内存？ https://mp.weixin.qq.com/s/tXAP8_U63QLNj1h0ZMvXPw kubectl debug | 调试]]></description>
-</item><item>
-    <title>Goproxy</title>
-    <link>https://3ae.cn/article/2021/goproxy/</link>
-    <pubDate>Thu, 27 May 2021 11:22:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/goproxy/</guid>
-    <description><![CDATA[Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/ goproxy.io：https://goproxy.io/ 百]]></description>
 </item></channel>
 </rss>

@@ -4,7 +4,14 @@
         <link>https://3ae.cn/posts/</link>
         <description>所有文章 | 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 10:31:29 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 18:54:29 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210605 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210605/</link>
+    <pubDate>Sat, 05 Jun 2021 18:54:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210605/</guid>
+    <description><![CDATA[2021-06-05 今日技术分享 Go: stringer 命令，通过代码生成提高效率 https://mp.weixin.qq.com/s/Ik3PxNRbddtbm6E-Xo_rdA 详解并发编程基础之原子操作(atomic包) https://mp.weixin.qq.com/s/-KE6jNKkVxNrm-e3laibzw 函数的不定参数你是这样用吗？ https://mp.weixin.qq.com/s/jvSbZ0_g_EFqaR2TmjjO8w 如何不 Review 每一行代码]]></description>
+</item><item>
     <title>Linux 常用命令</title>
     <link>https://3ae.cn/article/2021/linux_cmd/</link>
     <pubDate>Sat, 05 Jun 2021 10:31:29 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210601/</guid>
     <description><![CDATA[2021-06-01 今日技术分享 发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA 优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA 图解 数据]]></description>
-</item><item>
-    <title>Go20210531 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210531/</link>
-    <pubDate>Mon, 31 May 2021 16:19:07 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210531/</guid>
-    <description><![CDATA[2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的]]></description>
 </item></channel>
 </rss>
