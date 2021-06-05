@@ -7,27 +7,27 @@ awk 分析 nginx 运行日志常用指令
 
 1.独立IP
 ```bash
-awk '{print $1}' host.access.log | sort -r |uniq -c | wc -l
+awk '{print $1}' access.log | sort -r |uniq -c | wc -l
 ```
 
 2.统计PV
 ```bash
-awk '{print $6}' host.access.log | wc -l
+awk '{print $6}' access.log | wc -l
 ```
 
 3.查询访问最频繁的URL
 ```bash
-awk '{print $7}' host.access.log|sort | uniq -c |sort -n -k 1 -r|more
+awk '{print $7}' access.log|sort | uniq -c |sort -n -k 1 -r|more
 ```
 
 4.查询访问最频繁的IP
 ```bash
-awk '{print $1}' host.access.log|sort | uniq -c |sort -n -k 1 -r|more
+awk '{print $1}' access.log|sort | uniq -c |sort -n -k 1 -r|more
 ```
 
 5.UV统计：
 ```bash
-awk '{print $6}' host.access.log | sort -r |uniq -c |wc -l
+awk '{print $6}' access.log | sort -r |uniq -c |wc -l
 ```
 
 6.按小时统计

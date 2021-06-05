@@ -121,7 +121,7 @@
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $1}&#39;</span> host.access.log <span class="p">|</span> sort -r <span class="p">|</span>uniq -c <span class="p">|</span> wc -l
+<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $1}&#39;</span> access.log <span class="p">|</span> sort -r <span class="p">|</span>uniq -c <span class="p">|</span> wc -l
 </code></pre></td></tr></table>
 </div>
 </div><p>2.统计PV</p>
@@ -130,7 +130,7 @@
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $6}&#39;</span> host.access.log <span class="p">|</span> wc -l
+<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $6}&#39;</span> access.log <span class="p">|</span> wc -l
 </code></pre></td></tr></table>
 </div>
 </div><p>3.查询访问最频繁的URL</p>
@@ -139,7 +139,7 @@
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $7}&#39;</span> host.access.log<span class="p">|</span>sort <span class="p">|</span> uniq -c <span class="p">|</span>sort -n -k <span class="m">1</span> -r<span class="p">|</span>more
+<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $7}&#39;</span> access.log<span class="p">|</span>sort <span class="p">|</span> uniq -c <span class="p">|</span>sort -n -k <span class="m">1</span> -r<span class="p">|</span>more
 </code></pre></td></tr></table>
 </div>
 </div><p>4.查询访问最频繁的IP</p>
@@ -148,7 +148,7 @@
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $1}&#39;</span> host.access.log<span class="p">|</span>sort <span class="p">|</span> uniq -c <span class="p">|</span>sort -n -k <span class="m">1</span> -r<span class="p">|</span>more
+<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $1}&#39;</span> access.log<span class="p">|</span>sort <span class="p">|</span> uniq -c <span class="p">|</span>sort -n -k <span class="m">1</span> -r<span class="p">|</span>more
 </code></pre></td></tr></table>
 </div>
 </div><p>5.UV统计：</p>
@@ -157,7 +157,7 @@
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $6}&#39;</span> host.access.log <span class="p">|</span> sort -r <span class="p">|</span>uniq -c <span class="p">|</span>wc -l
+<pre class="chroma"><code class="language-bash" data-lang="bash">awk <span class="s1">&#39;{print $6}&#39;</span> access.log <span class="p">|</span> sort -r <span class="p">|</span>uniq -c <span class="p">|</span>wc -l
 </code></pre></td></tr></table>
 </div>
 </div><p>6.按小时统计</p>
