@@ -4,7 +4,14 @@
         <link>https://3ae.cn/tags/linux/</link>
         <description>linux - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 26 May 2021 12:57:28 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/linux/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 10:31:29 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux 常用命令</title>
+    <link>https://3ae.cn/article/2021/linux_cmd/</link>
+    <pubDate>Sat, 05 Jun 2021 10:31:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
+    <description><![CDATA[Linux 常用命令 日期 1 $(date -d &#39;1 day ago&#39; &#39;+%Y-%m-%d&#39;) 常用方法 数字格式化 1 part=`printf &#34;%03d&#34; $i` # 左补0 删除旧文件 1 2 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &#34;*.tar&#34;]]></description>
+</item><item>
     <title>使用开源工具进行 Linux 内存取证</title>
     <link>https://3ae.cn/article/2021/linux-memory-forensics/</link>
     <pubDate>Wed, 26 May 2021 12:57:28 &#43;0800</pubDate>

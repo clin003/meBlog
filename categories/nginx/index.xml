@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Nginx - 分类 - 白菜林</title>
+        <link>https://3ae.cn/categories/nginx/</link>
+        <description>Nginx - 分类 - 白菜林</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 10:16:16 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/nginx/" rel="self" type="application/rss+xml" /><item>
+    <title>awk 分析 nginx 运行日志常用指令</title>
+    <link>https://3ae.cn/article/2021/awk-nginx-access_log/</link>
+    <pubDate>Sat, 05 Jun 2021 10:16:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/awk-nginx-access_log/</guid>
+    <description><![CDATA[awk 分析 nginx 运行日志常用指令 1.独立IP 1 awk &#39;{print $1}&#39; host.access.log | sort -r |uniq -c | wc -l 2.统计PV 1 awk &#39;{print $6}&#39; host.access.log | wc -l 3.查询访问最频繁的URL 1 awk &#39;{print $7}&#39; host.access.log|sort | uniq -c |sort -n -k 1]]></description>
+</item></channel>
+</rss>

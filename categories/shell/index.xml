@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Shell - 分类 - 白菜林</title>
+        <link>https://3ae.cn/categories/shell/</link>
+        <description>Shell - 分类 - 白菜林</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 10:31:29 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/shell/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux 常用命令</title>
+    <link>https://3ae.cn/article/2021/linux_cmd/</link>
+    <pubDate>Sat, 05 Jun 2021 10:31:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
+    <description><![CDATA[Linux 常用命令 日期 1 $(date -d &#39;1 day ago&#39; &#39;+%Y-%m-%d&#39;) 常用方法 数字格式化 1 part=`printf &#34;%03d&#34; $i` # 左补0 删除旧文件 1 2 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &#34;*.tar&#34;]]></description>
+</item><item>
+    <title>awk 分析 nginx 运行日志常用指令</title>
+    <link>https://3ae.cn/article/2021/awk-nginx-access_log/</link>
+    <pubDate>Sat, 05 Jun 2021 10:16:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/awk-nginx-access_log/</guid>
+    <description><![CDATA[awk 分析 nginx 运行日志常用指令 1.独立IP 1 awk &#39;{print $1}&#39; host.access.log | sort -r |uniq -c | wc -l 2.统计PV 1 awk &#39;{print $6}&#39; host.access.log | wc -l 3.查询访问最频繁的URL 1 awk &#39;{print $7}&#39; host.access.log|sort | uniq -c |sort -n -k 1]]></description>
+</item></channel>
+</rss>
