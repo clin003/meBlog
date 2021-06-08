@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 18:54:29 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 08 Jun 2021 10:35:19 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Go20210608 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210608/</link>
+    <pubDate>Tue, 08 Jun 2021 10:35:19 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210608/</guid>
+    <description><![CDATA[2021-06-08 今日技术分享 Go 调度器的任务窃取（Work-Stealing） https://mp.weixin.qq.com/s/trBAi976eaaTDcSzpAqPkQ 通过实例理解Go逃逸分析 https://mp.weixin.qq.com/s/bR9shJGRXsRHJhh-GcY83A Go 凭什么不支持三元运算符？ https://mp.weixin.qq.com/s/LmHR7Y674dSo-Xa0tajL_w 一文搞懂如何实现 Go 超时]]></description>
+</item><item>
     <title>Go20210605 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210605/</link>
     <pubDate>Sat, 05 Jun 2021 18:54:29 &#43;0800</pubDate>
@@ -139,12 +146,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210524/</guid>
     <description><![CDATA[2021-05-24 今日技术分享 2021 年 5 月程序员工资排行：Go的工资满意吗？ https://mp.weixin.qq.com/s/cX25jSXo_wI22x2CKWW2Cg Go语言爱好者周刊：第 96 期 — 用 Go 实现一个计算器 https://mp.weixin.qq.com/s/yKRK4cfcdJcdwh2u0tyi7w 源码级剖析new和make怎么用！]]></description>
-</item><item>
-    <title>使用 sed 命令进行复制、剪切和粘贴</title>
-    <link>https://3ae.cn/article/2021/linux_sed/</link>
-    <pubDate>Mon, 24 May 2021 00:39:20 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_sed/</guid>
-    <description><![CDATA[很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有]]></description>
 </item></channel>
 </rss>
