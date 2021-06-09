@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 08 Jun 2021 10:35:19 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 09 Jun 2021 10:28:01 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Go20210609 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210609/</link>
+    <pubDate>Wed, 09 Jun 2021 10:28:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210609/</guid>
+    <description><![CDATA[2021-06-09 今日技术分享 字节跳动打造的轮子：Go 表单验证器 https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw 16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g Go 每日一库之 reflect https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA 一个高逼格的 Go 招聘 https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A 云原生 CI/CD 框架 Tekton 初体验 https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A Go 简单分]]></description>
+</item><item>
     <title>Go20210608 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210608/</link>
     <pubDate>Tue, 08 Jun 2021 10:35:19 &#43;0800</pubDate>
@@ -139,12 +146,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210525/</guid>
     <description><![CDATA[2021-05-25 今日技术分享 Go 中为什么应该使用接口 https://mp.weixin.qq.com/s/KqXI9ekYAZYd5oYmhqFH8Q 图解Go sync.Pool https://mp.weixin.qq.com/s/aiOjUcN89nxwEUJzVNkl3A 自制文件系统 — 01 文件系统的样子 https://mp.weixin.qq.com/s/0FpQGDzFh_D7IJi6z7oXjg 深入 Go 中各个高性能 JSON 解析库 https://mp.weixin.qq.com/s/FBT5QN_Pja6vRntWY0wFeA 【预告】理论结合实践详解 b+ 树存]]></description>
-</item><item>
-    <title>Go20210524 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210524/</link>
-    <pubDate>Mon, 24 May 2021 23:38:04 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210524/</guid>
-    <description><![CDATA[2021-05-24 今日技术分享 2021 年 5 月程序员工资排行：Go的工资满意吗？ https://mp.weixin.qq.com/s/cX25jSXo_wI22x2CKWW2Cg Go语言爱好者周刊：第 96 期 — 用 Go 实现一个计算器 https://mp.weixin.qq.com/s/yKRK4cfcdJcdwh2u0tyi7w 源码级剖析new和make怎么用！]]></description>
 </item></channel>
 </rss>
