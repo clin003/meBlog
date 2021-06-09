@@ -34,7 +34,7 @@ https://mp.weixin.qq.com/s/-FWxWGVJEVe8JPPcGqHxgw
 10. Go timer 是如何被调度的？
 https://mp.weixin.qq.com/s/iseiQ20eIUR9i02fy1tFhg
 
-11. 5年写成的Go免费在线图书
+11. 2.5年写成的Go免费在线图书
 https://mp.weixin.qq.com/s/Z97eT7FrqeJhygQwKvJaIw
 
 12. 一文带你深究无线缓冲channel的实现
