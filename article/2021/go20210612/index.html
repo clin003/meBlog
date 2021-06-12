@@ -5,32 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Go20210609 今日技术分享 - 白菜林</title><meta name="Description" content="白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。"><meta property="og:title" content="Go20210609 今日技术分享" />
-<meta property="og:description" content="2021-06-09 今日技术分享 字节跳动打造的轮子：Go 表单验证器 https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw 16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g Go 每日一库之 reflect https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA 一个高逼格的 Go 招聘 https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A 云原生 CI/CD 框架 Tekton 初体验 https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A Go 简单分" />
+        <title>Go20210612 今日技术分享 - 白菜林</title><meta name="Description" content="白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。"><meta property="og:title" content="Go20210612 今日技术分享" />
+<meta property="og:description" content="2021-06-12 今日技术分享 Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg 漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ 《Istio 大咖说》" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://3ae.cn/article/2021/go20210609/" /><meta property="og:image" content="https://3ae.cn/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-06-09T10:28:01&#43;08:00" />
-<meta property="article:modified_time" content="2021-06-09T10:28:01&#43;08:00" />
+<meta property="og:url" content="https://3ae.cn/article/2021/go20210612/" /><meta property="og:image" content="https://3ae.cn/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-12T13:39:00&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-12T13:39:00&#43;08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://3ae.cn/logo.png"/>
 
-<meta name="twitter:title" content="Go20210609 今日技术分享"/>
-<meta name="twitter:description" content="2021-06-09 今日技术分享 字节跳动打造的轮子：Go 表单验证器 https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw 16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g Go 每日一库之 reflect https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA 一个高逼格的 Go 招聘 https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A 云原生 CI/CD 框架 Tekton 初体验 https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A Go 简单分"/>
+<meta name="twitter:title" content="Go20210612 今日技术分享"/>
+<meta name="twitter:description" content="2021-06-12 今日技术分享 Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg 漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ 《Istio 大咖说》"/>
 <meta name="application-name" content="白菜林">
 <meta name="apple-mobile-web-app-title" content="白菜林"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://3ae.cn/article/2021/go20210609/" /><link rel="prev" href="https://3ae.cn/article/2021/go20210608/" /><link rel="next" href="https://3ae.cn/article/2021/go20210612/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.055364f5be272caa092b0e6654c165828707f8ab971e2656383a6d6392bc345e.css" integrity="sha256-BVNk9b4nLKoJKw5mVMFlgocH&#43;KuXHiZWODptY5K8NF4="><link rel="stylesheet" href="/css/style.min.1e2694bed152fa2922dbe909a441838ed693d88b1330f97485bfa8ed78da42df.css" integrity="sha256-HiaUvtFS&#43;iki2&#43;kJpEGDjtaT2IsTMPl0hb&#43;o7XjaQt8="><link rel="stylesheet" href="/lib/fontawesome-free/all.min.876d023d9d10c97941b80c3b03e2a5b94631ff7a4af9cee5604a6a2d39718d84.css" integrity="sha256-h20CPZ0QyXlBuAw7A&#43;KluUYx/3pK&#43;c7lYEpqLTlxjYQ="><link rel="stylesheet" href="/lib/animate/animate.min.3c770e90f98eb21b0c042fafb49755af93306fbaf42e449524f94fae9fc83295.css" integrity="sha256-PHcOkPmOshsMBC&#43;vtJdVr5Mwb7r0LkSVJPlPrp/IMpU="><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://3ae.cn/article/2021/go20210612/" /><link rel="prev" href="https://3ae.cn/article/2021/go20210609/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.055364f5be272caa092b0e6654c165828707f8ab971e2656383a6d6392bc345e.css" integrity="sha256-BVNk9b4nLKoJKw5mVMFlgocH&#43;KuXHiZWODptY5K8NF4="><link rel="stylesheet" href="/css/style.min.1e2694bed152fa2922dbe909a441838ed693d88b1330f97485bfa8ed78da42df.css" integrity="sha256-HiaUvtFS&#43;iki2&#43;kJpEGDjtaT2IsTMPl0hb&#43;o7XjaQt8="><link rel="stylesheet" href="/lib/fontawesome-free/all.min.876d023d9d10c97941b80c3b03e2a5b94631ff7a4af9cee5604a6a2d39718d84.css" integrity="sha256-h20CPZ0QyXlBuAw7A&#43;KluUYx/3pK&#43;c7lYEpqLTlxjYQ="><link rel="stylesheet" href="/lib/animate/animate.min.3c770e90f98eb21b0c042fafb49755af93306fbaf42e449524f94fae9fc83295.css" integrity="sha256-PHcOkPmOshsMBC&#43;vtJdVr5Mwb7r0LkSVJPlPrp/IMpU="><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Go20210609 今日技术分享",
+        "headline": "Go20210612 今日技术分享",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/3ae.cn\/article\/2021\/go20210609\/"
-        },"genre": "posts","keywords": "技术分享, Golang","wordcount":  487 ,
-        "url": "https:\/\/3ae.cn\/article\/2021\/go20210609\/","datePublished": "2021-06-09T10:28:01+08:00","dateModified": "2021-06-09T10:28:01+08:00","publisher": {
+            "@id": "https:\/\/3ae.cn\/article\/2021\/go20210612\/"
+        },"genre": "posts","keywords": "技术分享, Golang","wordcount":  597 ,
+        "url": "https:\/\/3ae.cn\/article\/2021\/go20210612\/","datePublished": "2021-06-12T13:39:00+08:00","dateModified": "2021-06-12T13:39:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -104,141 +104,161 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Go20210609 今日技术分享</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Go20210612 今日技术分享</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/clin003/meBlog" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>baicai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/"><i class="far fa-folder fa-fw"></i>收集与整理</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-09">2021-06-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 487 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-12">2021-06-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 597 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>2021-06-09 今日技术分享</p>
+            </div><div class="content" id="content"><p>2021-06-12 今日技术分享</p>
 <ol>
 <li>
-<p>字节跳动打造的轮子：Go 表单验证器
-<a href="https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw">https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw</a></p>
+<p>Go：内存管理与内存清理
+<a href="https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg">https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg</a></p>
 </li>
 <li>
-<p>16 中的新函数 signal.NotifyContext 怎么用？
-<a href="https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g">https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g</a></p>
+<p>Go看源码必会知识之unsafe包
+<a href="https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg">https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg</a></p>
 </li>
 <li>
-<p>Go 每日一库之 reflect
-<a href="https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA">https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA</a></p>
+<p>漫画：寻找无序数组的第k大元素（文末送书）
+<a href="https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ">https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ</a></p>
 </li>
 <li>
-<p>一个高逼格的 Go 招聘
-<a href="https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A">https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A</a></p>
+<p>《Istio 大咖说》第3期直播回放|如何让 Istio 变得更为高效和智能
+<a href="https://mp.weixin.qq.com/s/k3tj6n6lcWfAbu_8k9l5eg">https://mp.weixin.qq.com/s/k3tj6n6lcWfAbu_8k9l5eg</a></p>
 </li>
 <li>
-<p>云原生 CI/CD 框架 Tekton 初体验
-<a href="https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A">https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A</a></p>
+<p>或许这是目前为止最好的 Git 教程了
+<a href="https://mp.weixin.qq.com/s/MsAO29B05AizHHuOQe_p3g">https://mp.weixin.qq.com/s/MsAO29B05AizHHuOQe_p3g</a></p>
 </li>
 <li>
-<p>Go 简单分布式系统 3.4 服务发现（2）
-<a href="https://mp.weixin.qq.com/s/dLtyKjJ5_p0aiyx9BMGEYg">https://mp.weixin.qq.com/s/dLtyKjJ5_p0aiyx9BMGEYg</a></p>
+<p>曹大带我学 Go（6）—— 技术之外
+<a href="https://mp.weixin.qq.com/s/OHljMca3k7m__puOUCrrtA">https://mp.weixin.qq.com/s/OHljMca3k7m__puOUCrrtA</a></p>
 </li>
 <li>
-<p>Go 简单分布式系统 3.5 服务发现（3）
-<a href="https://mp.weixin.qq.com/s/SQbOS1xRECM2Oa-tXjEkfw">https://mp.weixin.qq.com/s/SQbOS1xRECM2Oa-tXjEkfw</a></p>
+<p>全网最牛X的！MySQL两阶段提交串讲！没有之一！
+<a href="https://mp.weixin.qq.com/s/NNRH4TQcCQr4aQw7Cm6zLg">https://mp.weixin.qq.com/s/NNRH4TQcCQr4aQw7Cm6zLg</a></p>
 </li>
 <li>
-<p>Go 每日一库之 ants（源码赏析）
-<a href="https://mp.weixin.qq.com/s/a84T6Hpbrhop7vQA01N1Bg">https://mp.weixin.qq.com/s/a84T6Hpbrhop7vQA01N1Bg</a></p>
+<p>gRPC入门指南 — 简单RPC（一）
+<a href="https://mp.weixin.qq.com/s/GnDKAx9bLe90h0rvCQYb6g">https://mp.weixin.qq.com/s/GnDKAx9bLe90h0rvCQYb6g</a></p>
 </li>
 <li>
-<p>2021 中国 Go 语言开源贡献者峰会预告
-<a href="https://mp.weixin.qq.com/s/-FWxWGVJEVe8JPPcGqHxgw">https://mp.weixin.qq.com/s/-FWxWGVJEVe8JPPcGqHxgw</a></p>
+<p>面试题：mysql 一棵 B+ 树能存多少条数据？
+<a href="https://mp.weixin.qq.com/s/ItFtW9OLt-x-J--IVzvJ_A">https://mp.weixin.qq.com/s/ItFtW9OLt-x-J--IVzvJ_A</a></p>
 </li>
 <li>
-<p>Go timer 是如何被调度的？
-<a href="https://mp.weixin.qq.com/s/iseiQ20eIUR9i02fy1tFhg">https://mp.weixin.qq.com/s/iseiQ20eIUR9i02fy1tFhg</a></p>
+<p>TCP 连接的前世今生
+<a href="https://mp.weixin.qq.com/s/f3rDqiDe4isTIBx-RPPN4g">https://mp.weixin.qq.com/s/f3rDqiDe4isTIBx-RPPN4g</a></p>
 </li>
 <li>
-<p>2.5年写成的Go免费在线图书
-<a href="https://mp.weixin.qq.com/s/Z97eT7FrqeJhygQwKvJaIw">https://mp.weixin.qq.com/s/Z97eT7FrqeJhygQwKvJaIw</a></p>
+<p>分享两个在开发中需注意的小点
+<a href="https://mp.weixin.qq.com/s/-QCG61vh6NVJUWz6tOY7Gw">https://mp.weixin.qq.com/s/-QCG61vh6NVJUWz6tOY7Gw</a></p>
 </li>
 <li>
-<p>一文带你深究无线缓冲channel的实现
-<a href="https://mp.weixin.qq.com/s/7P3Gn7JFvMWUh0iuNExPKA">https://mp.weixin.qq.com/s/7P3Gn7JFvMWUh0iuNExPKA</a></p>
+<p>一文教你搞懂 Go 中栈操作
+<a href="https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg">https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg</a></p>
 </li>
 <li>
-<p>东南亚最大的外卖出行公司招聘，这福利，酸了，酸了
-<a href="https://mp.weixin.qq.com/s/wynt1zdgsRJywFva_gE5dA">https://mp.weixin.qq.com/s/wynt1zdgsRJywFva_gE5dA</a></p>
+<p>kubernetes面试相关总结(下)
+<a href="https://mp.weixin.qq.com/s/Tc292lVE1Lue267N5RdunA">https://mp.weixin.qq.com/s/Tc292lVE1Lue267N5RdunA</a></p>
 </li>
 <li>
-<p>在 Golang 中创建自定义应用程序 logger
-<a href="https://jilsonfreddy.medium.com/create-a-custom-application-logger-in-golang-cdd11ba106d5">https://jilsonfreddy.medium.com/create-a-custom-application-logger-in-golang-cdd11ba106d5</a></p>
+<p>Go Runtime 的调度器
+<a href="https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg">https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg</a></p>
 </li>
 <li>
-<p>在 Go 1.16+ 中构建 GUI 桌面应用程序
-<a href="https://blog.ctrlshiftmake.com/build-tray-gui-desktop-application-go">https://blog.ctrlshiftmake.com/build-tray-gui-desktop-application-go</a></p>
+<p>一文讲懂服务的优雅重启和更新
+<a href="https://mp.weixin.qq.com/s/yryqf8SCzvt-BFj8j5bZ2w">https://mp.weixin.qq.com/s/yryqf8SCzvt-BFj8j5bZ2w</a></p>
 </li>
 <li>
-<p>Go 实现为以太坊智能合约创建绑定
-<a href="https://www.metachris.com/2021/05/creating-go-bindings-for-ethereum-smart-contracts/">https://www.metachris.com/2021/05/creating-go-bindings-for-ethereum-smart-contracts/</a></p>
+<p>你不知道的 Go 之 pprof
+<a href="https://mp.weixin.qq.com/s/pSD2k1uNH9WFZumw24I4uQ">https://mp.weixin.qq.com/s/pSD2k1uNH9WFZumw24I4uQ</a></p>
 </li>
 <li>
-<p>Go 中简单、可定制、分级且高效的日志记录
-<a href="https://github.com/ermanimer/log">https://github.com/ermanimer/log</a></p>
+<p>源码剖析 Go 语言的 timer
+<a href="https://mp.weixin.qq.com/s/GwY6650MNF07MOb79-A-jQ">https://mp.weixin.qq.com/s/GwY6650MNF07MOb79-A-jQ</a></p>
 </li>
 <li>
-<p>Go 实现的发送原始 HTTP 请求的基准测试和压力测试工具
-<a href="https://github.com/utkusen/reqstress">https://github.com/utkusen/reqstress</a></p>
+<p>一文教你搞懂 Go 中栈操作
+<a href="https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg">https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg</a></p>
 </li>
 <li>
-<p>2021 中国 Go 语言开源贡献者峰会预告
-<a href="https://mp.weixin.qq.com/s/-FWxWGVJEVe8JPPcGqHxgw">https://mp.weixin.qq.com/s/-FWxWGVJEVe8JPPcGqHxgw</a></p>
+<p>将一个巨大的金融系统迁移到云端的20,000个pod上
+<a href="https://medium.com/virtuslab/migrating-a-gigantic-financial-system-to-20-000-pods-in-the-cloud-220d5fcfcbc0">https://medium.com/virtuslab/migrating-a-gigantic-financial-system-to-20-000-pods-in-the-cloud-220d5fcfcbc0</a></p>
 </li>
 <li>
-<p>使用Go和cube.js构建你自己的网站分析工具
-<a href="https://itnext.io/build-your-own-website-analytics-with-cube-js-in-10-minutes-f195ed5d4d21">https://itnext.io/build-your-own-website-analytics-with-cube-js-in-10-minutes-f195ed5d4d21</a></p>
+<p>如何使用go 1.16中的go:embed by The GoLand Blog
+<a href="https://blog.jetbrains.com/go/2021/06/09/how-to-use-go-embed-in-go-1-16/">https://blog.jetbrains.com/go/2021/06/09/how-to-use-go-embed-in-go-1-16/</a></p>
 </li>
 <li>
-<p>使用Go 1.16构建桌面GUI应用
-<a href="https://blog.ctrlshiftmake.com/build-tray-gui-desktop-application-go">https://blog.ctrlshiftmake.com/build-tray-gui-desktop-application-go</a></p>
+<p>什么是eBPF，为什么它对可观察性很重要？
+<a href="https://www.cncf.io/blog/2021/06/07/what-is-ebpf-and-why-does-it-matter-for-observability/">https://www.cncf.io/blog/2021/06/07/what-is-ebpf-and-why-does-it-matter-for-observability/</a></p>
 </li>
 <li>
-<p>最后测试(TLD)简介(Test-Last Development)
-<a href="https://bitfieldconsulting.com/golang/test-last-development">https://bitfieldconsulting.com/golang/test-last-development</a></p>
+<p>如何用Github Actions自动发布你的Go二进制文件
+<a href="https://web3.coach/golang-github-actions-release-binaries-tutorial">https://web3.coach/golang-github-actions-release-binaries-tutorial</a></p>
 </li>
 <li>
-<p>2021年及以后的DevOps预测
-<a href="https://harness.io/blog/devops/devops-predictions/">https://harness.io/blog/devops/devops-predictions/</a></p>
+<p>基于OAuth 2.0/OIDC的UI优先的集中认证/单点登录（SSO）平台
+<a href="https://github.com/casbin/casdoor">https://github.com/casbin/casdoor</a></p>
 </li>
 <li>
-<p>Docker安全实践速查表
-<a href="https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html</a></p>
+<p>用Trimaran在Kubernetes中进行真正的负载感知调度
+<a href="https://medium.com/paypal-tech/real-load-aware-scheduling-in-kubernetes-with-trimaran-a8efe14d51e2">https://medium.com/paypal-tech/real-load-aware-scheduling-in-kubernetes-with-trimaran-a8efe14d51e2</a></p>
 </li>
 <li>
-<p>提高开发人员的工作效率：BuildKit CLI for kubectl是docker build的替代品
-<a href="https://container-registry.com/posts/productivity-lift-buildkit-cli-for-kubectl/">https://container-registry.com/posts/productivity-lift-buildkit-cli-for-kubectl/</a></p>
+<p>Hashicorp发布Packer云服务
+<a href="https://www.hashicorp.com/blog/announcing-hcp-packer">https://www.hashicorp.com/blog/announcing-hcp-packer</a></p>
 </li>
 <li>
-<p>理解defer关键字
-<a href="https://syed-hasan-83344.medium.com/understanding-defer-keyword-in-go-lang-b02c7f406870">https://syed-hasan-83344.medium.com/understanding-defer-keyword-in-go-lang-b02c7f406870</a></p>
+<p>bramble: 生产可用的GraphQL网关
+<a href="https://github.com/movio/bramble">https://github.com/movio/bramble</a></p>
 </li>
 <li>
-<p>开源项目维护不易，docz维护者的心路历程
-<a href="https://github.com/pedronauck/docz/issues/1634">https://github.com/pedronauck/docz/issues/1634</a></p>
+<p>Redis 作者谈如何处理维护开源项目面对的精神压力
+<a href="https://news.ycombinator.com/item?id=27423526">https://news.ycombinator.com/item?id=27423526</a></p>
+</li>
+<li>
+<p>用Terraform在Linode上配置Kubernetes集群
+<a href="https://learnk8s.io/terraform-lke">https://learnk8s.io/terraform-lke</a></p>
+</li>
+<li>
+<p>你使用的开源软件比你想象的要多
+<a href="https://github.com/readme/unseen-oss">https://github.com/readme/unseen-oss</a></p>
+</li>
+<li>
+<p>go 栈操作
+<a href="https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg">https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg</a></p>
+</li>
+<li>
+<p>go pprof
+<a href="https://mp.weixin.qq.com/s/pSD2k1uNH9WFZumw24I4uQ">https://mp.weixin.qq.com/s/pSD2k1uNH9WFZumw24I4uQ</a></p>
+</li>
+<li>
+<p>索引下推
+<a href="https://mp.weixin.qq.com/s/i2CWsDi8pqISGbwdn9Wm3g">https://mp.weixin.qq.com/s/i2CWsDi8pqISGbwdn9Wm3g</a></p>
 </li>
 </ol>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-06-09</span>
+                <span>更新于 2021-06-12</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/article/2021/go20210609/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/article/2021/go20210612/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://3ae.cn/article/2021/go20210609/" data-title="Go20210609 今日技术分享" data-hashtags="技术分享,Golang"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://3ae.cn/article/2021/go20210609/" data-hashtag="技术分享"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="https://3ae.cn/article/2021/go20210609/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Instapaper" data-sharer="instapaper" data-url="https://3ae.cn/article/2021/go20210609/" data-title="Go20210609 今日技术分享" data-description=""><i data-svg-src="/lib/simple-icons/icons/instapaper.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Pocket" data-sharer="pocket" data-url="https://3ae.cn/article/2021/go20210609/"><i class="fab fa-get-pocket fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://3ae.cn/article/2021/go20210609/" data-title="Go20210609 今日技术分享" data-ralateuid="lyhuilin"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://3ae.cn/article/2021/go20210609/" data-title="Go20210609 今日技术分享"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://3ae.cn/article/2021/go20210612/" data-title="Go20210612 今日技术分享" data-hashtags="技术分享,Golang"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://3ae.cn/article/2021/go20210612/" data-hashtag="技术分享"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="https://3ae.cn/article/2021/go20210612/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Instapaper" data-sharer="instapaper" data-url="https://3ae.cn/article/2021/go20210612/" data-title="Go20210612 今日技术分享" data-description=""><i data-svg-src="/lib/simple-icons/icons/instapaper.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Pocket" data-sharer="pocket" data-url="https://3ae.cn/article/2021/go20210612/"><i class="fab fa-get-pocket fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://3ae.cn/article/2021/go20210612/" data-title="Go20210612 今日技术分享" data-ralateuid="lyhuilin"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://3ae.cn/article/2021/go20210612/" data-title="Go20210612 今日技术分享"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -250,8 +270,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/article/2021/go20210608/" class="prev" rel="prev" title="Go20210608 今日技术分享"><i class="fas fa-angle-left fa-fw"></i>Go20210608 今日技术分享</a>
-            <a href="/article/2021/go20210612/" class="next" rel="next" title="Go20210612 今日技术分享">Go20210612 今日技术分享<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/article/2021/go20210609/" class="prev" rel="prev" title="Go20210609 今日技术分享"><i class="fas fa-angle-left fa-fw"></i>Go20210609 今日技术分享</a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">

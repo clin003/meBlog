@@ -4,7 +4,14 @@
         <link>https://3ae.cn/tags/golang/</link>
         <description>Golang - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 09 Jun 2021 10:28:01 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 12 Jun 2021 13:39:00 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210612 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210612/</link>
+    <pubDate>Sat, 12 Jun 2021 13:39:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210612/</guid>
+    <description><![CDATA[2021-06-12 今日技术分享 Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg 漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ 《Istio 大咖说》]]></description>
+</item><item>
     <title>Go20210609 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210609/</link>
     <pubDate>Wed, 09 Jun 2021 10:28:01 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210528/</guid>
     <description><![CDATA[2021-05-28 今日技术分享 如何让 Go 的缓存库 BigCache 更好用？ https://mp.weixin.qq.com/s/Zn1rP18GtmZsbaRnRfJ8ug 在 Go 语言中，有时 nil 并不是一个 nil https://mp.weixin.qq.com/s/_REGCKxs0ymIdZXN5a6Tgg AWS 容器服务的安全实践 https://mp.weixin.qq.com/s/GYMXc4HXBGOGgA_7mdenhA 骚操作，这款工具可以把Kubernetes集]]></description>
-</item><item>
-    <title>Go20210527 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210527/</link>
-    <pubDate>Fri, 28 May 2021 12:54:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210527/</guid>
-    <description><![CDATA[2021-05-27 今日技术分享 为什么Go程序占用那么大的虚拟内存？ https://mp.weixin.qq.com/s/tkAWtSJ4ebAUcQG9AmeXWA 你不知道的 Go 之 string https://mp.weixin.qq.com/s/6miIgsZN_Fh79Aixv5BlTg 又吵起来了，Go 是传值还是传引用？ https://mp.weixin.qq.com/s/qsxvfiyZfRCtgTymO9LBZQ Go 编程怎么也有踩内存？ https://mp.weixin.qq.com/s/tXAP8_U63QLNj1h0ZMvXPw kubectl debug | 调试]]></description>
 </item></channel>
 </rss>

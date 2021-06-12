@@ -4,7 +4,14 @@
         <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
         <description>收集与整理 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 09 Jun 2021 10:28:01 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 12 Jun 2021 13:39:00 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>Go20210612 今日技术分享</title>
+    <link>https://3ae.cn/article/2021/go20210612/</link>
+    <pubDate>Sat, 12 Jun 2021 13:39:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/go20210612/</guid>
+    <description><![CDATA[2021-06-12 今日技术分享 Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg 漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ 《Istio 大咖说》]]></description>
+</item><item>
     <title>Go20210609 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210609/</link>
     <pubDate>Wed, 09 Jun 2021 10:28:01 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210531/</guid>
     <description><![CDATA[2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的]]></description>
-</item><item>
-    <title>Go20210529 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210529/</link>
-    <pubDate>Sun, 30 May 2021 15:24:56 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210529/</guid>
-    <description><![CDATA[2021-05-29 今日技术分享 Go：近期两个开源免费好资源 https://mp.weixin.qq.com/s/wXrIztN5MXsNvBKg2LR3hA 再次探讨 Go 的无限缓冲的channel https://mp.weixin.qq.com/s/wZNLOywbQWdju_-7TN_48Q 读者问答：Go 编程怎么也有内存问题？ https://mp.weixin.qq.com/s/51xEfULa1cWaltkTkg1cUA validator库]]></description>
 </item></channel>
 </rss>
