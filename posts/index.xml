@@ -4,7 +4,14 @@
         <link>https://3ae.cn/posts/</link>
         <description>所有文章 | 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 21 Jun 2021 16:57:16 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 21 Jun 2021 19:50:25 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>用 Deskreen 将你的 Linux 屏幕镜像或串流到任何设备上</title>
+    <link>https://3ae.cn/article/2021/linux_deskreen/</link>
+    <pubDate>Mon, 21 Jun 2021 19:50:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/linux_deskreen/</guid>
+    <description><![CDATA[如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。 Deskreen：将任何设备变]]></description>
+</item><item>
     <title>为你营造专注冥想的时间-The Zen Zone</title>
     <link>https://3ae.cn/article/2021/the-zen-zone/</link>
     <pubDate>Mon, 21 Jun 2021 16:57:16 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/toml/</guid>
     <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
-</item><item>
-    <title>Rust 学习指南</title>
-    <link>https://3ae.cn/article/2021/learn_rust/</link>
-    <pubDate>Sat, 05 Jun 2021 02:16:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/learn_rust/</guid>
-    <description><![CDATA[了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大]]></description>
 </item></channel>
 </rss>
