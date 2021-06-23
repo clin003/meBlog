@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 22 Jun 2021 22:48:53 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 23 Jun 2021 12:23:58 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>给我来点酷炫玩意-Sharkle</title>
+    <link>https://3ae.cn/article/2021/sharkle/</link>
+    <pubDate>Wed, 23 Jun 2021 12:23:58 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/sharkle/</guid>
+    <description><![CDATA[网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新]]></description>
+</item><item>
     <title>Cargo Wix 创建Windows安装程序的cargo子命令</title>
     <link>https://3ae.cn/article/2021/cargo-wix/</link>
     <pubDate>Tue, 22 Jun 2021 22:48:53 &#43;0800</pubDate>
@@ -139,12 +146,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210529/</guid>
     <description><![CDATA[2021-05-29 今日技术分享 Go：近期两个开源免费好资源 https://mp.weixin.qq.com/s/wXrIztN5MXsNvBKg2LR3hA 再次探讨 Go 的无限缓冲的channel https://mp.weixin.qq.com/s/wZNLOywbQWdju_-7TN_48Q 读者问答：Go 编程怎么也有内存问题？ https://mp.weixin.qq.com/s/51xEfULa1cWaltkTkg1cUA validator库]]></description>
-</item><item>
-    <title>Go20210528 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210528/</link>
-    <pubDate>Sat, 29 May 2021 15:52:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210528/</guid>
-    <description><![CDATA[2021-05-28 今日技术分享 如何让 Go 的缓存库 BigCache 更好用？ https://mp.weixin.qq.com/s/Zn1rP18GtmZsbaRnRfJ8ug 在 Go 语言中，有时 nil 并不是一个 nil https://mp.weixin.qq.com/s/_REGCKxs0ymIdZXN5a6Tgg AWS 容器服务的安全实践 https://mp.weixin.qq.com/s/GYMXc4HXBGOGgA_7mdenhA 骚操作，这款工具可以把Kubernetes集]]></description>
 </item></channel>
 </rss>
