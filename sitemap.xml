@@ -3,6 +3,7 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
             <loc>https://3ae.cn/categories/</loc><lastmod>2021-06-25T22:53:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://3ae.cn/categories/learn-rust/</loc><lastmod>2021-06-25T22:53:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/posts/</loc><lastmod>2021-06-25T22:53:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/tags/rust/</loc><lastmod>2021-06-25T22:53:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/article/2021/rustproxy/</loc><lastmod>2021-06-25T22:53:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -18,7 +19,6 @@
             <loc>https://3ae.cn/categories/%E8%B6%A3%E7%AB%99/</loc><lastmod>2021-06-23T12:23:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/categories/%E8%BD%BB%E6%9D%BE%E5%A5%BD%E7%8E%A9/</loc><lastmod>2021-06-23T12:23:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/article/2021/cargo-wix/</loc><lastmod>2021-06-22T22:48:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://3ae.cn/categories/learn-rust/</loc><lastmod>2021-06-22T22:48:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/tags/wix/</loc><lastmod>2021-06-22T22:48:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/tags/deskreen/</loc><lastmod>2021-06-21T19:50:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://3ae.cn/tags/linux/</loc><lastmod>2021-06-21T19:50:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
