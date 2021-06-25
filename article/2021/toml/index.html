@@ -254,7 +254,7 @@ TOML 应该能很容易地被解析成各种语言中的数据结构。</p>
 <td class="lntd">
 <pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
 <span class="nx">bare_key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-<span class="nx">bare</span><span class="err">-</span><span class="nx">key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
+<span class="nx">bare-key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
 <span class="mi">1234</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
 </code></pre></td></tr></table>
 </div>
@@ -617,7 +617,7 @@ TOML 对此进行了简化。</p>
 <span class="nx">str6</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;这有十五个引号：&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;。&#34;&#34;&#34;</span>
 
 <span class="c"># &#34;这，&#34;她说，&#34;只是个无意义的条款。&#34;</span>
-<span class="nx">str7</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;&#34;</span><span class="nx">这</span><span class="err">，</span><span class="s2">&#34;她说，&#34;</span><span class="nx">只是个无意义的条款</span><span class="err">。</span><span class="s2">&#34;&#34;&#34;&#34;</span>
+<span class="nx">str7</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;&#34;</span><span class="err">这，</span><span class="s2">&#34;她说，&#34;</span><span class="err">只是个无意义的条款。</span><span class="s2">&#34;&#34;&#34;&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>如果你常常要指定 Windows 路径或正则表达式，那么必须转义反斜杠就马上成为啰嗦而易错的了。<br>
@@ -636,7 +636,7 @@ TOML 对此进行了简化。</p>
 <pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 所见即所得。</span>
 <span class="nx">winpath</span>  <span class="p">=</span> <span class="s1">&#39;C:\Users\nodejs\templates&#39;</span>
 <span class="nx">winpath2</span> <span class="p">=</span> <span class="s1">&#39;\\ServerX\admin$\system32\&#39;
-</span><span class="s1">quoted   = &#39;</span><span class="nx">Tom</span> <span class="s2">&#34;Dubs&#34;</span> <span class="nx">Preston</span><span class="err">-</span><span class="nx">Werner</span><span class="s1">&#39;
+</span><span class="s1">quoted   = &#39;</span><span class="nx">Tom</span> <span class="s2">&#34;Dubs&#34;</span> <span class="nx">Preston-Werner</span><span class="s1">&#39;
 </span><span class="s1">regex    = &#39;</span><span class="err">&lt;\</span><span class="nx">i</span><span class="err">\</span><span class="nx">c</span><span class="err">*\</span><span class="nx">s</span><span class="err">*&gt;&#39;</span>
 </code></pre></td></tr></table>
 </div>
@@ -659,10 +659,10 @@ TOML 对此进行了简化。</p>
 <td class="lntd">
 <pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">regex2</span> <span class="p">=</span> <span class="s1">&#39;&#39;&#39;I [dw]on&#39;</span><span class="nx">t</span> <span class="nx">need</span> <span class="err">\</span><span class="nx">d</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span> <span class="nx">apples</span><span class="s1">&#39;&#39;&#39;
 </span><span class="s1">lines  = &#39;&#39;&#39;</span>
-<span class="nx">原始字符串中的</span>
-<span class="nx">第一个换行被剔除了</span><span class="err">。</span>
-   <span class="nx">所有其它空白</span>
-   <span class="nx">都保留了</span><span class="err">。</span>
+<span class="err">原始字符串中的</span>
+<span class="err">第一个换行被剔除了。</span>
+   <span class="err">所有其它空白</span>
+   <span class="err">都保留了。</span>
 <span class="s1">&#39;&#39;</span><span class="err">&#39;</span>
 </code></pre></td></tr></table>
 </div>
@@ -684,7 +684,7 @@ TOML 对此进行了简化。</p>
 <span class="nx">apos15</span> <span class="p">=</span> <span class="s2">&#34;这有十五个撇号：&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#34;</span>
 
 <span class="c"># &#39;那，&#39;她说，&#39;仍然没有意义。&#39;</span>
-<span class="nx">str</span> <span class="p">=</span> <span class="s1">&#39;&#39;&#39;&#39;</span><span class="nx">那</span><span class="err">，</span><span class="s1">&#39;她说，&#39;</span><span class="nx">仍然没有意义</span><span class="err">。</span><span class="s1">&#39;&#39;&#39;&#39;</span>
+<span class="nx">str</span> <span class="p">=</span> <span class="s1">&#39;&#39;&#39;&#39;</span><span class="err">那，</span><span class="s1">&#39;她说，&#39;</span><span class="err">仍然没有意义。</span><span class="s1">&#39;&#39;&#39;&#39;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>除制表符以外的所有控制字符都不允许出现在字面量字符串中。<br>
@@ -788,10 +788,10 @@ TOML 对此进行了简化。</p>
 <span class="c"># 指数</span>
 <span class="nx">flt4</span> <span class="p">=</span> <span class="mi">5</span><span class="nx">e</span><span class="mi">+22</span>
 <span class="nx">flt5</span> <span class="p">=</span> <span class="mi">1</span><span class="nx">e06</span>
-<span class="nx">flt6</span> <span class="p">=</span> <span class="mi">-2</span><span class="nx">E</span><span class="mi">-2</span>
+<span class="nx">flt6</span> <span class="p">=</span> <span class="mi">-2</span><span class="nx">E-2</span>
 
 <span class="c"># 都有</span>
-<span class="nx">flt7</span> <span class="p">=</span> <span class="mf">6.626</span><span class="nx">e</span><span class="mi">-34</span>
+<span class="nx">flt7</span> <span class="p">=</span> <span class="mf">6.626</span><span class="nx">e-34</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>小数部分是一个小数点后跟一个或多个数字。</p>
@@ -840,12 +840,12 @@ invalid_float_3 = 3.e+20
 <pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 无穷</span>
 <span class="nx">sf1</span> <span class="p">=</span> <span class="nx">inf</span>  <span class="c"># 正无穷</span>
 <span class="nx">sf2</span> <span class="p">=</span> <span class="err">+</span><span class="nx">inf</span> <span class="c"># 正无穷</span>
-<span class="nx">sf3</span> <span class="p">=</span> <span class="err">-</span><span class="nx">inf</span> <span class="c"># 负无穷</span>
+<span class="nx">sf3</span> <span class="p">=</span> <span class="nx">-inf</span> <span class="c"># 负无穷</span>
 
 <span class="c"># 非数</span>
 <span class="nx">sf4</span> <span class="p">=</span> <span class="nx">nan</span>  <span class="c"># 实际上对应信号非数码还是静默非数码，取决于实现</span>
 <span class="nx">sf5</span> <span class="p">=</span> <span class="err">+</span><span class="nx">nan</span> <span class="c"># 等同于 `nan`</span>
-<span class="nx">sf6</span> <span class="p">=</span> <span class="err">-</span><span class="nx">nan</span> <span class="c"># 有效，实际码取决于实现</span>
+<span class="nx">sf6</span> <span class="p">=</span> <span class="nx">-nan</span> <span class="c"># 有效，实际码取决于实现</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="布尔值">布尔值</h3>
@@ -1016,11 +1016,11 @@ invalid_float_3 = 3.e+20
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">table</span><span class="mi">-1</span><span class="p">]</span>
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">table-1</span><span class="p">]</span>
 <span class="nx">key1</span> <span class="p">=</span> <span class="s2">&#34;some string&#34;</span>
 <span class="nx">key2</span> <span class="p">=</span> <span class="mi">123</span>
 
-<span class="p">[</span><span class="nx">table</span><span class="mi">-2</span><span class="p">]</span>
+<span class="p">[</span><span class="nx">table-2</span><span class="p">]</span>
 <span class="nx">key1</span> <span class="p">=</span> <span class="s2">&#34;another string&#34;</span>
 <span class="nx">key2</span> <span class="p">=</span> <span class="mi">456</span>
 </code></pre></td></tr></table>

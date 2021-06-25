@@ -4,7 +4,14 @@
         <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
         <description>收集与整理 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 12 Jun 2021 13:39:00 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>Rust 镜像源</title>
+    <link>https://3ae.cn/article/2021/rustproxy/</link>
+    <pubDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/rustproxy/</guid>
+    <description><![CDATA[通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技]]></description>
+</item><item>
     <title>Go20210612 今日技术分享</title>
     <link>https://3ae.cn/article/2021/go20210612/</link>
     <pubDate>Sat, 12 Jun 2021 13:39:00 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210601/</guid>
     <description><![CDATA[2021-06-01 今日技术分享 发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA 优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA 图解 数据]]></description>
-</item><item>
-    <title>Go20210531 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210531/</link>
-    <pubDate>Mon, 31 May 2021 16:19:07 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210531/</guid>
-    <description><![CDATA[2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的]]></description>
 </item></channel>
 </rss>

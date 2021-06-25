@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 23 Jun 2021 12:23:58 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Rust 镜像源</title>
+    <link>https://3ae.cn/article/2021/rustproxy/</link>
+    <pubDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/rustproxy/</guid>
+    <description><![CDATA[通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技]]></description>
+</item><item>
     <title>给我来点酷炫玩意-Sharkle</title>
     <link>https://3ae.cn/article/2021/sharkle/</link>
     <pubDate>Wed, 23 Jun 2021 12:23:58 &#43;0800</pubDate>
@@ -139,12 +146,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210531/</guid>
     <description><![CDATA[2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的]]></description>
-</item><item>
-    <title>Go20210529 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210529/</link>
-    <pubDate>Sun, 30 May 2021 15:24:56 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210529/</guid>
-    <description><![CDATA[2021-05-29 今日技术分享 Go：近期两个开源免费好资源 https://mp.weixin.qq.com/s/wXrIztN5MXsNvBKg2LR3hA 再次探讨 Go 的无限缓冲的channel https://mp.weixin.qq.com/s/wZNLOywbQWdju_-7TN_48Q 读者问答：Go 编程怎么也有内存问题？ https://mp.weixin.qq.com/s/51xEfULa1cWaltkTkg1cUA validator库]]></description>
 </item></channel>
 </rss>
