@@ -35,7 +35,7 @@ find ~ -iname "*vue*"
 
 find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
 
-### mdfind
+### mdfind命令
 
 描述：通过 mdfind命令查找
 语法：mdfind -name 文件名
@@ -79,4 +79,4 @@ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlig
 ### 参考
 在 Mac 上的“终端”中执行命令和运行工具 [[1]](https://support.apple.com/zh-cn/guide/terminal/apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/mac)
 
-MAC命令快速全局查找文件或文件夹，支持模糊搜索 [[1]](https://blog.csdn.net/weixin_34403976/article/details/88844651)
+MAC命令快速全局查找文件或文件夹，支持模糊搜索 [[2]](https://blog.csdn.net/weixin_34403976/article/details/88844651)
