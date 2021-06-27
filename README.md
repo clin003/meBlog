@@ -4,7 +4,7 @@
 
 #   进入站点目录
 
-    cd LearnStack
+    cd meBlog
 
 #   安装皮肤
 
