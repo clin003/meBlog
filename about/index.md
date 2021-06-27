@@ -41,6 +41,10 @@ Gitee: [https://lyhuilin.gitee.io/](https://gitee.com/lyhuilin)
 
 Github: [https://github.com/clin003/meBlog](https://github.com/clin003/meBlog)
 
+### 我的微信公众号
+
+![白菜林的微信公众号](/weixingongzhonghao_258.jpg)
+
 ### 未来发展：
 
 未来很长，且慢慢耕耘。
