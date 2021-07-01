@@ -1,0 +1,79 @@
+# 跨域方案Nginx配置
+
+
+
+### 什么是浏览器同源策略？
+
+同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。
+
+同源是指"协议+域名+端口"三者相同，即便两个不同的域名指向同一个ip地址，也非同源。
+
+### 如何实现跨域？
+
+跨域是个比较古老的命题了，历史上跨域的实现手段有很多，我们现在主要介绍Nginx的跨域方案，其余的方案我们就不深入讨论了。
+
+### 方便的跨域方案Nginx
+
+nginx是一款极其强大的web服务器，其优点就是轻量级、启动快、高并发。
+
+现在的新项目中nginx几乎是首选，我们用node或者go开发的服务通常都需要经过nginx的反向代理。
+
+ 
+
+反向代理的原理很简单，即所有客户端的请求都必须先经过nginx的处理，nginx作为代理服务器再讲请求转发给node或者go服务，这样就规避了同源策略。
+
+```
+#进程, 可更具cpu数量调整
+worker_processes  1;
+
+events {
+    #连接数
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+
+    #连接超时时间，服务器会在这个时间过后关闭连接。
+    keepalive_timeout  10;
+
+    # gizp压缩
+    gzip  on;
+
+    # 直接请求nginx也是会报跨域错误的这里设置允许跨域
+    # 如果代理地址已经允许跨域则不需要这些, 否则报错(虽然这样nginx跨域就没意义了)
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Headers X-Requested-With;
+    add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
+
+    # srever模块配置是http模块中的一个子模块，用来定义一个虚拟访问主机
+    server {
+        listen       80;
+        server_name  localhost;
+        
+        # 根路径指到index.html
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        # localhost/api 的请求会被转发到192.168.0.103:8080
+        location /api {
+            rewrite ^/b/(.*)$ /$1 break; # 去除本地接口/api前缀, 否则会出现404
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_pass http://192.168.0.103:8080; # 转发地址
+        }
+        
+        # 重定向错误页面到/50x.html
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+```

@@ -4,7 +4,14 @@
         <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
         <description>收集与整理 - 分类 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 01 Jul 2021 18:58:23 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>跨域方案Nginx配置</title>
+    <link>https://3ae.cn/article/2021/nginx_cors_server_conf/</link>
+    <pubDate>Thu, 01 Jul 2021 18:58:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/nginx_cors_server_conf/</guid>
+    <description><![CDATA[什么是浏览器同源策略？ 同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。]]></description>
+</item><item>
     <title>Rust 镜像源</title>
     <link>https://3ae.cn/article/2021/rustproxy/</link>
     <pubDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210602/</guid>
     <description><![CDATA[2021-06-02 今日技术分享 推荐一本免费的 Go 新书：用 Go 讲架构的书 https://mp.weixin.qq.com/s/SoqxlvEOyV6EtjKTWGEyxw Go 每日一库之 fasttemplate https://mp.weixin.qq.com/s/_ZIB3H1kJwb8s53lIQ-7Sw 在容器里设置GOMAXPROCS的正确姿势 https://mp.weixin.qq.com/s/jVyKb_3YS9ETX4JmIuhWJA 自适应微服务治理背后的算法 https://mp.weixin.qq.com/s/OpF4JVWHA9W1v0yefeo56w]]></description>
-</item><item>
-    <title>Go20210601 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210601/</link>
-    <pubDate>Tue, 01 Jun 2021 10:13:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210601/</guid>
-    <description><![CDATA[2021-06-01 今日技术分享 发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA 优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA 图解 数据]]></description>
 </item></channel>
 </rss>

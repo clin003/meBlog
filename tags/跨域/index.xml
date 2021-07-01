@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>跨域 - 标签 - 白菜林</title>
+        <link>https://3ae.cn/tags/%E8%B7%A8%E5%9F%9F/</link>
+        <description>跨域 - 标签 - 白菜林</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Thu, 01 Jul 2021 18:58:23 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/%E8%B7%A8%E5%9F%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>跨域方案Nginx配置</title>
+    <link>https://3ae.cn/article/2021/nginx_cors_server_conf/</link>
+    <pubDate>Thu, 01 Jul 2021 18:58:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/nginx_cors_server_conf/</guid>
+    <description><![CDATA[什么是浏览器同源策略？ 同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。]]></description>
+</item></channel>
+</rss>
