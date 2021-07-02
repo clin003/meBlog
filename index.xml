@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 02 Jul 2021 21:01:31 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 02 Jul 2021 23:50:06 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>免费CDN：jsDelivr&#43;Github 使用方法</title>
+    <link>https://3ae.cn/article/2021/jsdelivr_github/</link>
+    <pubDate>Fri, 02 Jul 2021 23:50:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/jsdelivr_github/</guid>
+    <description><![CDATA[CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台]]></description>
+</item><item>
     <title>Ubuntu安装 qbittorrent-nox并启动</title>
     <link>https://3ae.cn/article/2021/qbittorrent/</link>
     <pubDate>Fri, 02 Jul 2021 21:01:31 &#43;0800</pubDate>
@@ -139,12 +146,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/tower-defense/</guid>
     <description><![CDATA[塔防游戏 可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就]]></description>
-</item><item>
-    <title>网页版红色警戒2-Red Alert 2: Chrono Divide</title>
-    <link>https://3ae.cn/article/2021/red-alert-2-chronodivide/</link>
-    <pubDate>Wed, 02 Jun 2021 19:22:30 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/red-alert-2-chronodivide/</guid>
-    <description><![CDATA[在线红警 又是一波人的集体回忆。。。网站高度还原了经典游戏——红色警戒2，原汁原味的画面和音效，仿佛又回到了那个电脑房的年代！ 传送门 https://game.chronodivide.com/ 玩法 网站]]></description>
 </item></channel>
 </rss>
