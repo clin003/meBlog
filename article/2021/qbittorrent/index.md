@@ -53,7 +53,7 @@ After=network.target
 
 [Service]
 User=root
-Type=forking
+Type=simple
 RemainAfterExit=yes
 ExecStart=/usr/bin/qbittorrent-nox -d
 
