@@ -4,9 +4,16 @@
         <link>https://3ae.cn/</link>
         <description>白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 02 Jul 2021 23:50:06 &#43;0800</lastBuildDate>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</lastBuildDate>
             <atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Ubuntu安装 Zlib</title>
+    <link>https://3ae.cn/article/2021/zlib/</link>
+    <pubDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/zlib/</guid>
+    <description><![CDATA[如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl]]></description>
+</item><item>
     <title>免费CDN：jsDelivr&#43;Github 使用方法</title>
     <link>https://3ae.cn/article/2021/jsdelivr_github/</link>
     <pubDate>Fri, 02 Jul 2021 23:50:06 &#43;0800</pubDate>
@@ -139,12 +146,5 @@
     <author>作者</author>
     <guid>https://3ae.cn/article/2021/go20210603/</guid>
     <description><![CDATA[2021-06-03 今日技术分享 竟然还在争论是否学Go？本文彻底终结该话题 https://mp.weixin.qq.com/s/2jYX2iMp0z7v09-AxdLDMg GM到GMP，Golang经历了什么？ https://mp.weixin.qq.com/s/RR3ducI2gK7JuLAzeILRzg 全面了解虚拟内存：更好学习Go https://mp.weixin.qq.com/s/g5I7un3-lpffAk6UFes8DA 搞 Go 要了解]]></description>
-</item><item>
-    <title>塔防游戏-YORG.io</title>
-    <link>https://3ae.cn/article/2021/tower-defense/</link>
-    <pubDate>Wed, 02 Jun 2021 19:52:08 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/tower-defense/</guid>
-    <description><![CDATA[塔防游戏 可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就]]></description>
 </item></channel>
 </rss>

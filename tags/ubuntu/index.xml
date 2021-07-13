@@ -4,7 +4,14 @@
         <link>https://3ae.cn/tags/ubuntu/</link>
         <description>Ubuntu - 标签 - 白菜林</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 02 Jul 2021 21:01:31 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/ubuntu/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/ubuntu/" rel="self" type="application/rss+xml" /><item>
+    <title>Ubuntu安装 Zlib</title>
+    <link>https://3ae.cn/article/2021/zlib/</link>
+    <pubDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://3ae.cn/article/2021/zlib/</guid>
+    <description><![CDATA[如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl]]></description>
+</item><item>
     <title>Ubuntu安装 qbittorrent-nox并启动</title>
     <link>https://3ae.cn/article/2021/qbittorrent/</link>
     <pubDate>Fri, 02 Jul 2021 21:01:31 &#43;0800</pubDate>
