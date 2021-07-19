@@ -6,6 +6,7 @@
     <description>Recent content in Github on 白菜林</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <copyright>baicai</copyright>
     <lastBuildDate>Fri, 02 Jul 2021 23:50:06 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>免费CDN：jsDelivr&#43;Github 使用方法</title>
@@ -13,7 +14,21 @@
       <pubDate>Fri, 02 Jul 2021 23:50:06 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/jsdelivr_github/</guid>
-      <description>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台</description>
+      <description>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。
+用 jsDelivr 免费CDN托管静态资源 国内的免费 CDN 不少，但需要备案 国外的免费 CDN 也不少，但在国内速度慢 但 jsDelivr 是一个特殊的存在，虽然是一家国外 CDN 但是有国内节点
+jsDelivr官网： https://www.jsdelivr.com
+ 放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
+ 使用步骤 1、新建Github仓库
+2、克隆Github仓库到本地
+执行以下命令：
+git clone 一键复制的仓库地址 3、上传资源
+复制需要上传的资源到本地git仓库（注：jsDelivr不支持加载超过20M的资源），在本地git仓库目录下，执行以下命令：
+git status #查看状态 git add . #添加所有文件到暂存区 git commit -m &amp;#39;第一次提交&amp;#39; #把文件提交到仓库 git push #推送至远程仓库 4、发布仓库
+点击release发布
+自定义发布版本号 5、通过jsDelivr引用资源
+使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径 例如：
+https://cdn.jsdelivr.net/gh/clin003/meBlog/index.htmlhttps://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.pnghttps://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css 注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
+// 加载任何Github发布、提交或分支https://cdn.jsdelivr.net/gh/user/repo@version/file// 加载 jQuery v3.2.1https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js// 使用版本范围而不是特定版本https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.jshttps://cdn.</description>
     </item>
     
   </channel>

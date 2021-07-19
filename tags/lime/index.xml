@@ -6,6 +6,7 @@
     <description>Recent content in LiME on 白菜林</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <copyright>baicai</copyright>
     <lastBuildDate>Wed, 26 May 2021 12:57:28 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/lime/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用开源工具进行 Linux 内存取证</title>
@@ -13,7 +14,14 @@
       <pubDate>Wed, 26 May 2021 12:57:28 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
-      <description>利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量</description>
+      <description>利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。
+ 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量关于运行应用、网络连接、内核模块、打开的文件以及几乎所有其他的内容信息，但这些信息每次计算机重启的时候都会被清除。
+内存取证是一种从内存中找到和抽取这些有价值的信息的方式。Volatility 是一种使用插件来处理这类信息的开源工具。但是，存在一个问题：在你处理这些信息前，必须将物理内存转储到一个文件中，而 Volatility 没有这种能力。
+因此，这篇文章分为两部分：
+ 第一部分是处理获取物理内存并将其转储到一个文件中。 第二部分使用 Volatility 从这个内存转储中读取并处理这些信息。  我在本教程中使用了以下测试系统，不过它可以在任何 Linux 发行版上工作：
+$ cat /etc/redhat-release Red Hat Enterprise Linux release 8.3 (Ootpa) $ $ uname -r 4.18.0-240.el8.x86_64 $ 注意事项： 部分 1 涉及到编译和加载一个内核模块。不要担心：它并不像听起来那么困难。一些指南：按照以下的步骤。不要在生产系统或你的主要计算机上尝试任何这些步骤。始终使用测试的虚拟机（VM）来尝试，直到你熟悉使用这些工具并理解它们的工作原理为止。 安装需要的包 在开始之前安装必要的工具。如果你经常使用基于 Debian 的发行版，可以使用 apt-get 命令。这些包大多数提供了需要的内核信息和工具来编译代码：
+$ yum install kernel-headers kernel-devel gcc elfutils-libelf-devel make git libdwarf-tools python2-devel.x86_64-y 部分 1：使用 LiME 获取内存并将其转储到一个文件中 在开始分析内存之前，你需要一个内存转储供你使用。在实际的取证活动中，这可能来自一个被破坏或者被入侵的系统。这些信息通常会被收集和存储来分析入侵是如何发生的及其影响。由于你可能没有可用的内存转储，你可以获取你的测试 VM 的内存转储，并使用它来执行内存取证。
+Linux 内存提取器（LiME）是一个在 Linux 系统上获取内存很常用的工具。使用以下命令获得 LiME：</description>
     </item>
     
   </channel>

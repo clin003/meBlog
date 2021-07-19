@@ -6,6 +6,7 @@
     <description>Recent content in mac命令行 on 白菜林</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <copyright>baicai</copyright>
     <lastBuildDate>Sun, 27 Jun 2021 10:04:44 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/mac%E5%91%BD%E4%BB%A4%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MAC命令快速模糊查找文件</title>
@@ -13,7 +14,14 @@
       <pubDate>Sun, 27 Jun 2021 10:04:44 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/mac_find/</guid>
-      <description>find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*” /** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全</description>
+      <description>find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*”
+/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */ find ~ -iname &amp;#34;vue-*.zip&amp;#34; /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &amp;#34;*vue*&amp;#34; /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
+mdfind命令 描述：通过 mdfind命令查找 语法：mdfind -name 文件名
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
+在 shell 中执行命令  你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面
+ 若要运行当前用户个人文件夹中的命令，请在前面加上文件夹说明符。例如，若要运行 MyCommandLineProg，请使用以下命令：
+% ~/MyCommandLineProg 若要打开一个 App，请使用打开命令：</description>
     </item>
     
   </channel>

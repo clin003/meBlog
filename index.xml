@@ -6,6 +6,7 @@
     <description>Recent content on 白菜林</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <copyright>baicai</copyright>
     <lastBuildDate>Mon, 12 Jul 2021 21:01:31 +0800</lastBuildDate><atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu安装 Zlib</title>
@@ -13,7 +14,13 @@
       <pubDate>Mon, 12 Jul 2021 21:01:31 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/zlib/</guid>
-      <description>如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl</description>
+      <description>如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
+ Zlib 是一个用于数据压缩的开源库。
+作为使用者，你可能会遇到需要安装 zlib（或 zlib-devel 包）作为另一个应用程序的依赖项的情况。
+但问题来了，如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
+sudo apt install zlib Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
+如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。
+在基于 Ubuntu 的 Linux 发行版上安装 Zlib 打开终端，使用以下命令：</description>
     </item>
     
     <item>
@@ -22,7 +29,21 @@
       <pubDate>Fri, 02 Jul 2021 23:50:06 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/jsdelivr_github/</guid>
-      <description>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台</description>
+      <description>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。
+用 jsDelivr 免费CDN托管静态资源 国内的免费 CDN 不少，但需要备案 国外的免费 CDN 也不少，但在国内速度慢 但 jsDelivr 是一个特殊的存在，虽然是一家国外 CDN 但是有国内节点
+jsDelivr官网： https://www.jsdelivr.com
+ 放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
+ 使用步骤 1、新建Github仓库
+2、克隆Github仓库到本地
+执行以下命令：
+git clone 一键复制的仓库地址 3、上传资源
+复制需要上传的资源到本地git仓库（注：jsDelivr不支持加载超过20M的资源），在本地git仓库目录下，执行以下命令：
+git status #查看状态 git add . #添加所有文件到暂存区 git commit -m &amp;#39;第一次提交&amp;#39; #把文件提交到仓库 git push #推送至远程仓库 4、发布仓库
+点击release发布
+自定义发布版本号 5、通过jsDelivr引用资源
+使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径 例如：
+https://cdn.jsdelivr.net/gh/clin003/meBlog/index.htmlhttps://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.pnghttps://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css 注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
+// 加载任何Github发布、提交或分支https://cdn.jsdelivr.net/gh/user/repo@version/file// 加载 jQuery v3.2.1https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js// 使用版本范围而不是特定版本https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.jshttps://cdn.</description>
     </item>
     
     <item>
@@ -31,7 +52,16 @@
       <pubDate>Fri, 02 Jul 2021 21:01:31 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/qbittorrent/</guid>
-      <description>Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent</description>
+      <description>Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent应用程序可用，它被称为Qbittorrent-Nox。
+注意：Web UI功能不仅限于Qbittorrent-Nox应用程序，此功能还可以与传统的Qbittorent Linux桌面应用程序一起使用
+安装qbittorrent 安装add-apt-repository命令 sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install software-properties-common -y 添加qbittorrent-nox的PPA软件源 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable 安装qbittorrent-nox（webui版） sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install qbittorrent-nox 设置开机启动 通过rc.local完成 如果是Ubuntu-16.10及其之后的版本需要先按下面的文章完成设置后，开机启动才会生效
+Ubuntu-18.04设置开机启动脚本 起因Ubuntu-16.10（不包括）之前的版本使用的是update-rc.d以及rc.local等方法设置开机启&amp;hellip;
+编辑rc.local脚本
+nano /etc/rc.local 在exit 0前面（前一行）添加以下内容并保存
+qbittorrent-nox -d 通过创建自定义服务实现 创建系统服务
+sudo apt-get install nano -y &amp;amp;&amp;amp; nano /etc/systemd/system/qbittorrent-nox.service 粘贴以下内容，并保存。
+[Unit]Description=qBittorrent-noxAfter=network.target[Service]User=rootType=simpleRemainAfterExit=yesExecStart=/usr/bin/qbittorrent-nox -d[Install]WantedBy=multi-user.target启动qbittorrent-nox并创建服务配置
+systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox</description>
     </item>
     
     <item>
@@ -40,7 +70,13 @@
       <pubDate>Thu, 01 Jul 2021 18:58:23 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/nginx_cors_server_conf/</guid>
-      <description>什么是浏览器同源策略？ 同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。</description>
+      <description>什么是浏览器同源策略？ 同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。
+同源是指&amp;quot;协议+域名+端口&amp;quot;三者相同，即便两个不同的域名指向同一个ip地址，也非同源。
+如何实现跨域？ 跨域是个比较古老的命题了，历史上跨域的实现手段有很多，我们现在主要介绍Nginx的跨域方案，其余的方案我们就不深入讨论了。
+方便的跨域方案Nginx nginx是一款极其强大的web服务器，其优点就是轻量级、启动快、高并发。
+现在的新项目中nginx几乎是首选，我们用node或者go开发的服务通常都需要经过nginx的反向代理。
+反向代理的原理很简单，即所有客户端的请求都必须先经过nginx的处理，nginx作为代理服务器再讲请求转发给node或者go服务，这样就规避了同源策略。
+#进程, 可更具cpu数量调整worker_processes 1;events {#连接数worker_connections 1024;}http {include mime.types;default_type application/octet-stream;sendfile on;#连接超时时间，服务器会在这个时间过后关闭连接。keepalive_timeout 10;# gizp压缩gzip on;# 直接请求nginx也是会报跨域错误的这里设置允许跨域# 如果代理地址已经允许跨域则不需要这些, 否则报错(虽然这样nginx跨域就没意义了)add_header Access-Control-Allow-Origin *;add_header Access-Control-Allow-Headers X-Requested-With;add_header Access-Control-Allow-Methods GET,POST,OPTIONS;# srever模块配置是http模块中的一个子模块，用来定义一个虚拟访问主机server {listen 80;server_name localhost;# 根路径指到index.htmllocation / {root html;index index.html index.htm;}# localhost/api 的请求会被转发到192.168.0.103:8080location /api {rewrite ^/b/(.</description>
     </item>
     
     <item>
@@ -49,7 +85,14 @@
       <pubDate>Sun, 27 Jun 2021 10:04:44 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/mac_find/</guid>
-      <description>find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*” /** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全</description>
+      <description>find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*”
+/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */ find ~ -iname &amp;#34;vue-*.zip&amp;#34; /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &amp;#34;*vue*&amp;#34; /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
+mdfind命令 描述：通过 mdfind命令查找 语法：mdfind -name 文件名
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
+在 shell 中执行命令  你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面
+ 若要运行当前用户个人文件夹中的命令，请在前面加上文件夹说明符。例如，若要运行 MyCommandLineProg，请使用以下命令：
+% ~/MyCommandLineProg 若要打开一个 App，请使用打开命令：</description>
     </item>
     
     <item>
@@ -58,7 +101,11 @@
       <pubDate>Fri, 25 Jun 2021 22:53:14 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/rustproxy/</guid>
-      <description>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技</description>
+      <description>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。
+crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/
+中国科技大学的：https://mirrors.ustc.edu.cn/help/crates.io-index.html
+清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
+上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index</description>
     </item>
     
     <item>
@@ -67,7 +114,9 @@
       <pubDate>Wed, 23 Jun 2021 12:23:58 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/sharkle/</guid>
-      <description>网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新</description>
+      <description>网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新页面，往往是一些用了平时不太多见的网页设计元素制作出来的页面演示，有时候也会有独到设计的网页游戏，或许还有些别的内容。这个网站收录的内容都挺不错，有些网站的质量完全可以拿出来单独写一篇文章。
+ 传送门 https://sharkle.com/
+方法 进入网站直接点击SHOW ME SOMETHING AWESOME即可欣赏！</description>
     </item>
     
     <item>
@@ -76,7 +125,10 @@
       <pubDate>Tue, 22 Jun 2021 22:48:53 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
-      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使</description>
+      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使用提供的应用程序提供代码签名证书，则它还支持对Windows安装程序进行签名。
+快速开始 启动命令提示符（cmd.exe），然后执行以下命令：
+C:\&amp;gt;cargo install cargo-wixC:\&amp;gt;cd Path\To\ProjectC:\Path\To\Project\&amp;gt;cargo wix initC:\Path\To\Project\&amp;gt;cargo wix该项目的Windows安装程序（msi）将位于C:\Path\To\Project\target\wix文件夹中。
+官方文档 https://crates.io/crates/cargo-wix</description>
     </item>
     
     <item>
@@ -85,7 +137,22 @@
       <pubDate>Mon, 21 Jun 2021 19:50:25 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/linux_deskreen/</guid>
-      <description>如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。 Deskreen：将任何设备变</description>
+      <description>如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。
+ Deskreen：将任何设备变成你的 Linux 系统的副屏 Deskreen 是一个自由开源的应用，可以让你使用任何带有 Web 浏览器的设备来作为电脑的副屏。
+如果你愿意，它还支持多个设备连接。
+Deskreen 很容易使用，当你的所有设备都连接到同一个 Wi-Fi 网络时，它可以正常工作。
+让我们来看看它的功能和工作原理。 Deskreen 的功能
+Deskreen 的功能包括以下要点：
+ 分享整个屏幕的能力 选择一个特定的应用窗口进行串流 翻转模式，将你的屏幕作为提词器使用 支持多种设备 高级视频质量设置 提供端对端加密 最小的系统要求 黑暗模式  没有一个冗长的功能列表，但对大多数用户来说应该是足够的。
+如何使用 Deskreen 应用？ Deskreen 使用分为三个简单的步骤，让我为你强调一下，以便你开始使用：
+首先，当你启动该应用时，它会显示一个二维码和一个 IP 地址，以帮助你用 Web 浏览器连接其他设备，以串流你的屏幕。
+你可以按你喜欢的方式，在你的辅助设备上的 Web 浏览器的帮助下建立连接。
+当你扫描二维码或在浏览器的地址栏中输入 IP 地址，你会在 Deskreen 应用上得到一个提示，允许或拒绝连接。除非是你不认识它，否则就允许吧。
+接下来，你将被要求选择你想要串流的内容（你的整个屏幕或特定的应用窗口）：
+你可以选择串流整个屏幕或选择你想串流的窗口。然而，并不是每个应用窗口都能被检测到。
+你只需要选择源并确认，就可以了。你应该注意到它在你的副屏（手机/桌面）上开始串流。
+Deskreen 还为你提供了管理连接设备的能力。因此，如果你需要断开任何会话或所有会话的连接，你可以从设置中进行操作。
+在 Linux 中安装 Deskreen 你会找到一个用于 Linux 机器的 DEB 包和 AppImage 文件。如果你不知道，可以通过我们的 安装 DEB 包 和 使用 AppImage 文件 指南来安装它。</description>
     </item>
     
     <item>
@@ -94,7 +161,9 @@
       <pubDate>Mon, 21 Jun 2021 16:57:16 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/the-zen-zone/</guid>
-      <description>网站为你营造了专注冥想的时间，通过三个简单的小游戏，你可以进入一个精神集中的状态，从而让大脑思维平静下来！ 传送门 https://thezen.zone/ 方法 进入网站直接开始冥想吧</description>
+      <description>网站为你营造了专注冥想的时间，通过三个简单的小游戏，你可以进入一个精神集中的状态，从而让大脑思维平静下来！
+ 传送门 https://thezen.zone/
+方法 进入网站直接开始冥想吧！</description>
     </item>
     
     <item>
@@ -103,7 +172,9 @@
       <pubDate>Mon, 14 Jun 2021 20:57:41 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/skylinewebcams/</guid>
-      <description>网站收录了全球范围内的公开实况摄像头，你可以看到世界各地的文化遗产、城市风光、人气景点！ 传送门 https://www.skylinewebcams.com/ 方法 网站支持中文，进入后直接观看！</description>
+      <description>网站收录了全球范围内的公开实况摄像头，你可以看到世界各地的文化遗产、城市风光、人气景点！
+ 传送门 https://www.skylinewebcams.com/
+方法 网站支持中文，进入后直接观看！</description>
     </item>
     
     <item>
@@ -112,7 +183,21 @@
       <pubDate>Sat, 12 Jun 2021 13:39:00 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210612/</guid>
-      <description>2021-06-12 今日技术分享 Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg 漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ 《Istio 大咖说》</description>
+      <description>2021-06-12 今日技术分享
+  Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg
+  Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg
+  漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ
+  《Istio 大咖说》第3期直播回放|如何让 Istio 变得更为高效和智能 https://mp.weixin.qq.com/s/k3tj6n6lcWfAbu_8k9l5eg
+  或许这是目前为止最好的 Git 教程了 https://mp.weixin.qq.com/s/MsAO29B05AizHHuOQe_p3g
+  曹大带我学 Go（6）—— 技术之外 https://mp.weixin.qq.com/s/OHljMca3k7m__puOUCrrtA
+  全网最牛X的！MySQL两阶段提交串讲！没有之一！ https://mp.weixin.qq.com/s/NNRH4TQcCQr4aQw7Cm6zLg
+  gRPC入门指南 — 简单RPC（一） https://mp.weixin.qq.com/s/GnDKAx9bLe90h0rvCQYb6g
+  面试题：mysql 一棵 B+ 树能存多少条数据？ https://mp.weixin.qq.com/s/ItFtW9OLt-x-J--IVzvJ_A
+  TCP 连接的前世今生 https://mp.weixin.qq.com/s/f3rDqiDe4isTIBx-RPPN4g
+  分享两个在开发中需注意的小点 https://mp.weixin.qq.com/s/-QCG61vh6NVJUWz6tOY7Gw
+  一文教你搞懂 Go 中栈操作 https://mp.weixin.qq.com/s/hU6Xmp5zeh9vgUEV5otjWg
+  kubernetes面试相关总结(下) https://mp.weixin.qq.com/s/Tc292lVE1Lue267N5RdunA
+  Go Runtime 的调度器 https://mp.</description>
     </item>
     
     <item>
@@ -121,7 +206,18 @@
       <pubDate>Wed, 09 Jun 2021 10:28:01 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210609/</guid>
-      <description>2021-06-09 今日技术分享 字节跳动打造的轮子：Go 表单验证器 https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw 16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g Go 每日一库之 reflect https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA 一个高逼格的 Go 招聘 https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A 云原生 CI/CD 框架 Tekton 初体验 https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A Go 简单分</description>
+      <description>2021-06-09 今日技术分享
+  字节跳动打造的轮子：Go 表单验证器 https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw
+  16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g
+  Go 每日一库之 reflect https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA
+  一个高逼格的 Go 招聘 https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A
+  云原生 CI/CD 框架 Tekton 初体验 https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A
+  Go 简单分布式系统 3.4 服务发现（2） https://mp.weixin.qq.com/s/dLtyKjJ5_p0aiyx9BMGEYg
+  Go 简单分布式系统 3.5 服务发现（3） https://mp.weixin.qq.com/s/SQbOS1xRECM2Oa-tXjEkfw
+  Go 每日一库之 ants（源码赏析） https://mp.weixin.qq.com/s/a84T6Hpbrhop7vQA01N1Bg
+  2021 中国 Go 语言开源贡献者峰会预告 https://mp.weixin.qq.com/s/-FWxWGVJEVe8JPPcGqHxgw
+  Go timer 是如何被调度的？ https://mp.weixin.qq.com/s/iseiQ20eIUR9i02fy1tFhg
+  2.5年写成的Go免费在线图书 https://mp.</description>
     </item>
     
     <item>
@@ -130,7 +226,19 @@
       <pubDate>Tue, 08 Jun 2021 10:35:19 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210608/</guid>
-      <description>2021-06-08 今日技术分享 Go 调度器的任务窃取（Work-Stealing） https://mp.weixin.qq.com/s/trBAi976eaaTDcSzpAqPkQ 通过实例理解Go逃逸分析 https://mp.weixin.qq.com/s/bR9shJGRXsRHJhh-GcY83A Go 凭什么不支持三元运算符？ https://mp.weixin.qq.com/s/LmHR7Y674dSo-Xa0tajL_w 一文搞懂如何实现 Go 超时</description>
+      <description>2021-06-08 今日技术分享
+  Go 调度器的任务窃取（Work-Stealing） https://mp.weixin.qq.com/s/trBAi976eaaTDcSzpAqPkQ
+  通过实例理解Go逃逸分析 https://mp.weixin.qq.com/s/bR9shJGRXsRHJhh-GcY83A
+  Go 凭什么不支持三元运算符？ https://mp.weixin.qq.com/s/LmHR7Y674dSo-Xa0tajL_w
+  一文搞懂如何实现 Go 超时控制 https://mp.weixin.qq.com/s/S4d9CJYmViJT8EbhyNCIMg
+  神奇的init函数 https://mp.weixin.qq.com/s/y-H0y1ahq8a_TgJ4c4otuQ
+  3 服务发现（1） https://mp.weixin.qq.com/s/QoDwEbl02nSHjRci8yRbyQ
+  ​手把手教你如何进行 Golang 单元测试 https://mp.weixin.qq.com/s/N5wby-aWWEPc7mHN_lN3lQ
+  主干开发、主干发布，CI 如何为大型项目提供最优解？ https://mp.weixin.qq.com/s/mQihX1VbEEArHpcx6s5KFQ
+  自制文件系统 —— 03 Go实战：hello world 的文件系统 https://mp.weixin.qq.com/s/Yf6yBoEQe6ijMlPgZ6P2sA
+  曹大带我学 Go（5）—— 哪里来的 goexit https://mp.weixin.qq.com/s/xrDZ2Z7KkHL0vZ3k6KGcyg
+  Code Review 引发的 Golang Memory Model 深入思考 https://juejin.cn/post/6970513766509182984
+  监控是手段，而不是目的 https://www.</description>
     </item>
     
     <item>
@@ -139,7 +247,19 @@
       <pubDate>Sat, 05 Jun 2021 18:54:29 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210605/</guid>
-      <description>2021-06-05 今日技术分享 Go: stringer 命令，通过代码生成提高效率 https://mp.weixin.qq.com/s/Ik3PxNRbddtbm6E-Xo_rdA 详解并发编程基础之原子操作(atomic包) https://mp.weixin.qq.com/s/-KE6jNKkVxNrm-e3laibzw 函数的不定参数你是这样用吗？ https://mp.weixin.qq.com/s/jvSbZ0_g_EFqaR2TmjjO8w 如何不 Review 每一行代码</description>
+      <description>2021-06-05 今日技术分享
+  Go: stringer 命令，通过代码生成提高效率 https://mp.weixin.qq.com/s/Ik3PxNRbddtbm6E-Xo_rdA
+  详解并发编程基础之原子操作(atomic包) https://mp.weixin.qq.com/s/-KE6jNKkVxNrm-e3laibzw
+  函数的不定参数你是这样用吗？ https://mp.weixin.qq.com/s/jvSbZ0_g_EFqaR2TmjjO8w
+  如何不 Review 每一行代码，同时保持代码不被写乱？ https://mp.weixin.qq.com/s/UtBkJYpQHIvRQ_AQnzxxMw
+  假如 Go 能说话，听听 GMP 的心声 https://mp.weixin.qq.com/s/eHXAPQkzwMTaLVrXESowBg
+  直播回放 | Istio 大咖说第 2 期：从微服务架构到 Istio—— 架构升级实践分享 https://mp.weixin.qq.com/s/huZaJVK5qXVrQFfDlha5zQ
+  惊！这个 Go 开源项目号称「不改一行代码做秒杀」 https://mp.weixin.qq.com/s/NSJmV-hBucaXoBAfD3TKLA
+  超全代码！详解Go中内存分配源码实现 https://mp.weixin.qq.com/s/_SYT7zWqvFnfH02cHFOgow
+  十个问题理解Linux epoll工作原理 https://mp.weixin.qq.com/s/h3CBZt2KEA-ScXFSKHaRBg
+  Pointer https://mp.weixin.qq.com/s/8qtHdw2JiRQ1cXlzbJ0ANA
+  基于 cdp 协议开发的浏览器自动化工具 rod https://go-rod.github.io/i18n/zh-CN/#/get-started/README
+  Go 重构和转换工具 https://github.</description>
     </item>
     
     <item>
@@ -148,7 +268,9 @@
       <pubDate>Sat, 05 Jun 2021 10:31:29 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
-      <description>Linux 常用命令 日期 $(date -d &amp;#39;1 day ago&amp;#39; &amp;#39;+%Y-%m-%d&amp;#39;) 常用方法 数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm fo</description>
+      <description>Linux 常用命令
+日期 $(date -d &amp;#39;1 day ago&amp;#39; &amp;#39;+%Y-%m-%d&amp;#39;) 常用方法
+数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i}day&amp;#34;) echo $_date done # for i in {1..10} do echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
     </item>
     
     <item>
@@ -157,7 +279,14 @@
       <pubDate>Sat, 05 Jun 2021 10:16:16 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/awk-nginx-access_log/</guid>
-      <description>awk 分析 nginx 运行日志常用指令 1.独立IP awk &amp;#39;{print $1}&amp;#39; access.log | sort -r |uniq -c | wc -l 2.统计PV awk &amp;#39;{print $6}&amp;#39; access.log | wc -l 3.查询访问最频繁的URL awk &amp;#39;{print $7}&amp;#39; access.log|sort | uniq -c |sort -n -k 1 -r|more 4.</description>
+      <description>awk 分析 nginx 运行日志常用指令
+1.独立IP
+awk &amp;#39;{print $1}&amp;#39; access.log | sort -r |uniq -c | wc -l 2.统计PV
+awk &amp;#39;{print $6}&amp;#39; access.log | wc -l 3.查询访问最频繁的URL
+awk &amp;#39;{print $7}&amp;#39; access.log|sort | uniq -c |sort -n -k 1 -r|more 4.查询访问最频繁的IP
+awk &amp;#39;{print $1}&amp;#39; access.log|sort | uniq -c |sort -n -k 1 -r|more 5.UV统计：
+awk &amp;#39;{print $6}&amp;#39; access.log | sort -r |uniq -c |wc -l 6.按小时统计
+cat access.log |awk &amp;#39;{print $4}&amp;#39; | awk -F &amp;#39;:&amp;#39; &amp;#39;{print $1,$2}&amp;#39;|uniq -c | awk &amp;#39;{print $2&amp;#34; &amp;#34;$3&amp;#34; &amp;#34;$1}&amp;#39; </description>
     </item>
     
     <item>
@@ -166,7 +295,14 @@
       <pubDate>Sat, 05 Jun 2021 02:59:55 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/toml/</guid>
-      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目</description>
+      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目中编辑配置文件。
+👉 本文来自 toml-lang 的中文翻译版本，本文收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在 toml.io 原项目仓库指出或修改错误。
+TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言。（Tom&amp;rsquo;s Obvious, Minimal Language）
+作者：Tom Preston-Werner、Pradyun Gedam 等人。
+宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
+TOML 被设计成可以无歧义地映射为哈希表。
+TOML 应该能很容易地被解析成各种语言中的数据结构。
+目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
     </item>
     
     <item>
@@ -175,7 +311,10 @@
       <pubDate>Sat, 05 Jun 2021 02:16:24 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/learn_rust/</guid>
-      <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大</description>
+      <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org
+Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指引页 和 Rust 官方文档主页 上，目前 Rust 官方团队已经将相关文档拆分到不同的仓库上：
+ 《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库  还有其他更多官方或其他非官方相关的文档：
+ 使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库  上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
     </item>
     
     <item>
@@ -184,7 +323,20 @@
       <pubDate>Thu, 03 Jun 2021 15:06:59 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210603/</guid>
-      <description>2021-06-03 今日技术分享 竟然还在争论是否学Go？本文彻底终结该话题 https://mp.weixin.qq.com/s/2jYX2iMp0z7v09-AxdLDMg GM到GMP，Golang经历了什么？ https://mp.weixin.qq.com/s/RR3ducI2gK7JuLAzeILRzg 全面了解虚拟内存：更好学习Go https://mp.weixin.qq.com/s/g5I7un3-lpffAk6UFes8DA 搞 Go 要了解</description>
+      <description>2021-06-03 今日技术分享
+  竟然还在争论是否学Go？本文彻底终结该话题 https://mp.weixin.qq.com/s/2jYX2iMp0z7v09-AxdLDMg
+  GM到GMP，Golang经历了什么？ https://mp.weixin.qq.com/s/RR3ducI2gK7JuLAzeILRzg
+  全面了解虚拟内存：更好学习Go https://mp.weixin.qq.com/s/g5I7un3-lpffAk6UFes8DA
+  搞 Go 要了解的 2 个 Header，你知道吗？ https://mp.weixin.qq.com/s/rGqM1wMlqQEoJSgyrgZNLg
+  我这样升级 Go 版本，你呢？ https://mp.weixin.qq.com/s/bGS5D0UYVp6BxSLjuZy0pg
+  软件工程能力漫谈 https://mp.weixin.qq.com/s/hJS5LJRZkMZmHm6g2R_jpw
+  Harbor 结合 Traefik 的 HA 安装配置 https://mp.weixin.qq.com/s/LGI7ZWSK8YGzPVddJxcAUA
+  如何设计 API 接口，实现统一格式返回？ https://mp.weixin.qq.com/s/6c6uapjIzJC9wmjUFyZuZA
+  【阿里巴巴】云原生布道师的机会，这要求。。。 https://mp.weixin.qq.com/s/3cQLB7hEp5snlFmc1ueAfA
+  Go 应用优化指北 https://mp.weixin.qq.com/s/KFT1hw02Zih1TMMlDWztCQ
+  Go语言如何实现可重入锁？ https://mp.weixin.qq.com/s/wBp4k7pJLNeSzyLVhGHLEA
+  自制文件系统 — 02 FUSE 框架，开发者的福音 https://mp.weixin.qq.com/s/HvbMxNiVudjNPRgYC8nXyg
+  深入浅出查询优化器 https://mp.</description>
     </item>
     
     <item>
@@ -193,7 +345,9 @@
       <pubDate>Wed, 02 Jun 2021 19:52:08 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/tower-defense/</guid>
-      <description>塔防游戏 可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就</description>
+      <description>塔防游戏  可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就停不下来。
+ 传送门 https://yorg.io/
+玩法 通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击</description>
     </item>
     
     <item>
@@ -202,7 +356,9 @@
       <pubDate>Wed, 02 Jun 2021 19:22:30 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/red-alert-2-chronodivide/</guid>
-      <description>在线红警 又是一波人的集体回忆。。。网站高度还原了经典游戏——红色警戒2，原汁原味的画面和音效，仿佛又回到了那个电脑房的年代！ 传送门 https://game.chronodivide.com/ 玩法 网站</description>
+      <description>在线红警  又是一波人的集体回忆。。。网站高度还原了经典游戏——红色警戒2，原汁原味的画面和音效，仿佛又回到了那个电脑房的年代！
+ 传送门 https://game.chronodivide.com/
+玩法 网站支持多人在线对战，注册登陆后即可开始！</description>
     </item>
     
     <item>
@@ -211,7 +367,19 @@
       <pubDate>Wed, 02 Jun 2021 10:09:05 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210602/</guid>
-      <description>2021-06-02 今日技术分享 推荐一本免费的 Go 新书：用 Go 讲架构的书 https://mp.weixin.qq.com/s/SoqxlvEOyV6EtjKTWGEyxw Go 每日一库之 fasttemplate https://mp.weixin.qq.com/s/_ZIB3H1kJwb8s53lIQ-7Sw 在容器里设置GOMAXPROCS的正确姿势 https://mp.weixin.qq.com/s/jVyKb_3YS9ETX4JmIuhWJA 自适应微服务治理背后的算法 https://mp.weixin.qq.com/s/OpF4JVWHA9W1v0yefeo56w</description>
+      <description>2021-06-02 今日技术分享
+  推荐一本免费的 Go 新书：用 Go 讲架构的书 https://mp.weixin.qq.com/s/SoqxlvEOyV6EtjKTWGEyxw
+  Go 每日一库之 fasttemplate https://mp.weixin.qq.com/s/_ZIB3H1kJwb8s53lIQ-7Sw
+  在容器里设置GOMAXPROCS的正确姿势 https://mp.weixin.qq.com/s/jVyKb_3YS9ETX4JmIuhWJA
+  自适应微服务治理背后的算法 https://mp.weixin.qq.com/s/OpF4JVWHA9W1v0yefeo56w
+  用 Rust 编写的 Git 极速终端 UI https://mp.weixin.qq.com/s/NlVq30gs6qcdg3CQBS8-IA
+  优雅地处理错误真是一门学问啊！ https://mp.weixin.qq.com/s/W_LsZtnjGIKQ-LB6EkRgBA
+  Go 每日一库之 reflect https://mp.weixin.qq.com/s/KoHYoQ0q9qVjOWLPAIWaAA
+  kubernetes面试相关总结(上) https://mp.weixin.qq.com/s/33cKjVFf7pERyRHQtDwXoQ
+  百度健康急招Gopher https://mp.weixin.qq.com/s/5zyEHVz258IgnIpjOfFADQ
+  16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/mnR_wADjyHtyjdkSwcnkSw
+  蚂蚁开源 OceanBase，开源分布式数据库又迎新玩家 https://mp.weixin.qq.com/s/iDBpa3w2iP8XUr9fb-QWoA
+  曹大带我学 Go（4）—— 初识 ast 的威力 https://mp.</description>
     </item>
     
     <item>
@@ -220,7 +388,20 @@
       <pubDate>Tue, 01 Jun 2021 10:13:03 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210601/</guid>
-      <description>2021-06-01 今日技术分享 发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA 优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA 图解 数据</description>
+      <description>2021-06-01 今日技术分享
+  发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA
+  Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg
+  Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA
+  优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA
+  Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA
+  图解 数据安全的3 种 IO 姿势 https://mp.weixin.qq.com/s/a-SQgKzVYVmJ-qWUXy7c8A
+  在容器里设置GOMAXPROCS的正确姿势 https://mp.weixin.qq.com/s/kbZsJncgVZv30_TwVrLyLQ
+  深挖Map的读写性能 https://mp.weixin.qq.com/s/quNpj1MQQwWCKeEENGinUg
+  消息队列解耦是骗小孩儿的 https://mp.weixin.qq.com/s/O0KGm3nVUSWMSKwHlPiJpg
+  17这个新特性竟然是6年前提出来的 https://mp.weixin.qq.com/s/8Ju2-daS0s-esDAezP-lZw
+  深度理解 golang map https://juejin.cn/post/6967274139065253902
+  sync.Pool 原理解析 https://juejin.cn/post/6965421491588431909
+  Kratos 学习笔记 https://juejin.</description>
     </item>
     
     <item>
@@ -229,7 +410,19 @@
       <pubDate>Mon, 31 May 2021 16:19:07 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210531/</guid>
-      <description>2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的</description>
+      <description>2021-05-30 今日技术分享
+  国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA
+  Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA
+  Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw
+  Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ
+  9 种开源的服务网格比较 https://mp.weixin.qq.com/s/3XwKE1pLgMkiH7xuQix25w
+  如何在 Go-kit 和 Service Mesh 中进行服务注册与发现？ https://mp.weixin.qq.com/s/TZoq5CRQ_QIYTG4W_cU4dg
+  K8s 工作负载图表工具 https://github.com/Trois-Six/k8s-diagrams
+  灵活的 Go http client 库-Sling https://mp.weixin.qq.com/s/liCnGt0-me4cv-1WAJSSBQ
+  go web client 单元测试实践 https://dev.to/chen/practical-unit-testing-web-client-in-go-1o2m
+  为什么Go引入泛型后不会改变Go惯用法？ http://www.jerf.org/iri/post/2955
+  GoLand 2021.2开发计划 https://blog.jetbrains.com/go/2021/05/28/goland-2021-2-early-access-program-is-open/
+  使用cobra和go实现shell命令补全 https://jmtirado.</description>
     </item>
     
     <item>
@@ -238,7 +431,20 @@
       <pubDate>Sun, 30 May 2021 15:24:56 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210529/</guid>
-      <description>2021-05-29 今日技术分享 Go：近期两个开源免费好资源 https://mp.weixin.qq.com/s/wXrIztN5MXsNvBKg2LR3hA 再次探讨 Go 的无限缓冲的channel https://mp.weixin.qq.com/s/wZNLOywbQWdju_-7TN_48Q 读者问答：Go 编程怎么也有内存问题？ https://mp.weixin.qq.com/s/51xEfULa1cWaltkTkg1cUA validator库</description>
+      <description>2021-05-29 今日技术分享
+  Go：近期两个开源免费好资源 https://mp.weixin.qq.com/s/wXrIztN5MXsNvBKg2LR3hA
+  再次探讨 Go 的无限缓冲的channel https://mp.weixin.qq.com/s/wZNLOywbQWdju_-7TN_48Q
+  读者问答：Go 编程怎么也有内存问题？ https://mp.weixin.qq.com/s/51xEfULa1cWaltkTkg1cUA
+  validator库你知多少？govalidator了解一下 https://mp.weixin.qq.com/s/FnvvREHWeN1UdRliFjxQ9A
+  睡前故事|用Bitmap与AST做一个配置化时长系统 https://mp.weixin.qq.com/s/th5HgpibwZkRlj1EzxmMTw
+  理论结合实践详解 B+ 树存储引擎（PPT）（多图） https://mp.weixin.qq.com/s/aSNdEkNdeCAC7O6b3coo-A
+  图解 | epoll怎么实现的 https://mp.weixin.qq.com/s/XW561JURm5zxsXHnD1lV6A
+  硬核！如何在容器中做时间漫游者 https://mp.weixin.qq.com/s/dTVwpi60_URx1P9c1OPEug
+  Pod Terminating 状态排查 https://mp.weixin.qq.com/s/IattDivoyFSWCq26IV457g
+  1 业务服务（1） https://mp.weixin.qq.com/s/GzoMpMIUWtM2qNFp5xNiWQ
+  NSQ 如何实现文件队列 https://reposkeeper.net/2020/11/nsq-disk-queue-implement.html
+  Go sync.Pool 浅析 https://blog.csdn.net/haohongfan/article/details/116978613
+  Golang 指针和 C++ 指针的简单剖析 https://juejin.cn/post/6967315069310861319</description>
     </item>
     
     <item>
@@ -247,7 +453,19 @@
       <pubDate>Sat, 29 May 2021 15:52:25 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210528/</guid>
-      <description>2021-05-28 今日技术分享 如何让 Go 的缓存库 BigCache 更好用？ https://mp.weixin.qq.com/s/Zn1rP18GtmZsbaRnRfJ8ug 在 Go 语言中，有时 nil 并不是一个 nil https://mp.weixin.qq.com/s/_REGCKxs0ymIdZXN5a6Tgg AWS 容器服务的安全实践 https://mp.weixin.qq.com/s/GYMXc4HXBGOGgA_7mdenhA 骚操作，这款工具可以把Kubernetes集</description>
+      <description>2021-05-28 今日技术分享
+  如何让 Go 的缓存库 BigCache 更好用？ https://mp.weixin.qq.com/s/Zn1rP18GtmZsbaRnRfJ8ug
+  在 Go 语言中，有时 nil 并不是一个 nil https://mp.weixin.qq.com/s/_REGCKxs0ymIdZXN5a6Tgg
+  AWS 容器服务的安全实践 https://mp.weixin.qq.com/s/GYMXc4HXBGOGgA_7mdenhA
+  骚操作，这款工具可以把Kubernetes集群打包成一个镜像 https://mp.weixin.qq.com/s/ssZSMqogjP6CTOKOOR2e5Q
+  总结 Kafka 背后的优秀设计 https://mp.weixin.qq.com/s/dfOP2MeBOqFqg_BdcJCYug
+  硬核！如何在容器中做时间漫游者 https://mp.weixin.qq.com/s/PtYKA-lviJO6A2sXfEaNWA
+  曹大带我学 Go（3）—— 如何用汇编打同事的脸 https://mp.weixin.qq.com/s/2Y3qPkysRLaWDcIyLOerZg
+  Go可用性(七) 总结: 一张图串联可用性知识点 https://mp.weixin.qq.com/s/OXopl6FpwtE6P-k0GEP9qA
+  Go 指针 https://sher-chowdhury.medium.com/pointers-in-go-507ec33446b0
+  Go 自定义 http 错误 https://dev.to/clavinjune/my-custom-http-error-in-golang-5ab
+  Go 语言 JSON 使用技巧 https://www.liwenzhou.com/posts/Go/json_tricks_in_go
+  Go 简单快速模板引擎 https://github.</description>
     </item>
     
     <item>
@@ -256,7 +474,21 @@
       <pubDate>Fri, 28 May 2021 12:54:47 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210527/</guid>
-      <description>2021-05-27 今日技术分享 为什么Go程序占用那么大的虚拟内存？ https://mp.weixin.qq.com/s/tkAWtSJ4ebAUcQG9AmeXWA 你不知道的 Go 之 string https://mp.weixin.qq.com/s/6miIgsZN_Fh79Aixv5BlTg 又吵起来了，Go 是传值还是传引用？ https://mp.weixin.qq.com/s/qsxvfiyZfRCtgTymO9LBZQ Go 编程怎么也有踩内存？ https://mp.weixin.qq.com/s/tXAP8_U63QLNj1h0ZMvXPw kubectl debug | 调试</description>
+      <description>2021-05-27 今日技术分享
+  为什么Go程序占用那么大的虚拟内存？ https://mp.weixin.qq.com/s/tkAWtSJ4ebAUcQG9AmeXWA
+  你不知道的 Go 之 string https://mp.weixin.qq.com/s/6miIgsZN_Fh79Aixv5BlTg
+  又吵起来了，Go 是传值还是传引用？ https://mp.weixin.qq.com/s/qsxvfiyZfRCtgTymO9LBZQ
+  Go 编程怎么也有踩内存？ https://mp.weixin.qq.com/s/tXAP8_U63QLNj1h0ZMvXPw
+  kubectl debug | 调试Kubernetes的最简方法 https://mp.weixin.qq.com/s/8uN2MySGlgxTed5vwqfFlA
+  果然，连流程控制都这么另类 https://mp.weixin.qq.com/s/tO8CFBDZ2UsOonqARxOQUA
+  带你走进云原生技术：云原生开放运维体系探索和实践 https://mp.weixin.qq.com/s/zasjqGBDjyeg91jVaa5Xwg
+  通用连接池帮你解决资源管理难题 https://mp.weixin.qq.com/s/X-xzEzlVrEKYo78eiHwDKw
+  Go 1.17新特性 https://mp.weixin.qq.com/s/T14M_s5qOA6LKvWGgNa0Ow
+  无限缓冲的channel(2) https://mp.weixin.qq.com/s/wDrOBRaPqHx6g-Ir-Yx8kA
+  如何运行并行功能测试 https://medium.com/fiverr-engineering/running-parallel-functional-tests-2f6609bfbf4e
+  Go 中一些不曾注意的点 https://arash-cordi.medium.com/dark-corners-of-go-4e29aafcd4b9
+  如何像专家一样编写 Golang 基准测试 https://hackernoon.com/how-to-write-benchmarks-in-golang-like-an-expert-0w1834gs
+  详解 Go 空结构体的 3 种使用场景 https://mp.</description>
     </item>
     
     <item>
@@ -265,7 +497,13 @@
       <pubDate>Thu, 27 May 2021 11:22:40 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/goproxy/</guid>
-      <description>Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/ goproxy.io：https://goproxy.io/ 百</description>
+      <description>Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/
+goproxy.io：https://goproxy.io/
+百度云BOS提供的：https://goproxy.baidu.com/
+阿里云提供的：https://mirrors.aliyun.com/goproxy/
+下载 Go 镜像（Golang Downloads Mirrors） 下载 Go 镜像：https://golang.google.cn/
+下载 Go 镜像：https://gomirrors.org/
+下载 Go 镜像：https://studygolang.com/dl</description>
     </item>
     
     <item>
@@ -274,7 +512,19 @@
       <pubDate>Wed, 26 May 2021 23:14:16 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210526/</guid>
-      <description>2021-05-26 今日技术分享 gRPC 可以不用 pb 而使用 JSON 吗？ https://mp.weixin.qq.com/s/oQ4aG0pIJmQFQd2TKGxsXg 什么？无限缓冲 channel。。。 https://mp.weixin.qq.com/s/0TJRcbaWlfwEjbKMKAxNAQ 10.0 有史以来性能最优 https://mp.weixin.qq.com/s/qJ7HQ2BVS6DEO6sPTJzeAA 最强 CNI 基准测试：Cilium 网络性能分析 https://mp.weixin.qq.com/s/NR7gDpp2i5gCRRwZjxaASA 使</description>
+      <description>2021-05-26 今日技术分享
+  gRPC 可以不用 pb 而使用 JSON 吗？ https://mp.weixin.qq.com/s/oQ4aG0pIJmQFQd2TKGxsXg
+  什么？无限缓冲 channel。。。 https://mp.weixin.qq.com/s/0TJRcbaWlfwEjbKMKAxNAQ
+  10.0 有史以来性能最优 https://mp.weixin.qq.com/s/qJ7HQ2BVS6DEO6sPTJzeAA
+  最强 CNI 基准测试：Cilium 网络性能分析 https://mp.weixin.qq.com/s/NR7gDpp2i5gCRRwZjxaASA
+  使用kubebuilder开发简单的Operator https://mp.weixin.qq.com/s/uhOIPfTs4o5MDKbdhh_kEQ
+  我这样升级 Go 版本，你呢？ https://mp.weixin.qq.com/s/jEhX5JHAo9L6iD3N54x6aA
+  B 站直播 | Istio 开源四周年回顾与展望 https://mp.weixin.qq.com/s/tYIP1_s1jHXu6j4mjLuJIw
+  PAAS平台开发的自我救赎 https://mp.weixin.qq.com/s/0vuneQ-rweCZ-kKLvhe_6g
+  Go 每日一库之 fasttemplate https://mp.weixin.qq.com/s/uNE94IBUmTp2PJ4boFz8OQ
+  60道重要的Kubernetes面试题 https://mp.weixin.qq.com/s/G1kNSmXLaAzAOQ-ja2pKVQ
+  Go 编码安全指南 https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md
+  私钥安全分发工具 cocert https://github.com/Dentrax/cocert</description>
     </item>
     
     <item>
@@ -283,7 +533,14 @@
       <pubDate>Wed, 26 May 2021 12:57:28 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
-      <description>利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量</description>
+      <description>利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。
+ 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量关于运行应用、网络连接、内核模块、打开的文件以及几乎所有其他的内容信息，但这些信息每次计算机重启的时候都会被清除。
+内存取证是一种从内存中找到和抽取这些有价值的信息的方式。Volatility 是一种使用插件来处理这类信息的开源工具。但是，存在一个问题：在你处理这些信息前，必须将物理内存转储到一个文件中，而 Volatility 没有这种能力。
+因此，这篇文章分为两部分：
+ 第一部分是处理获取物理内存并将其转储到一个文件中。 第二部分使用 Volatility 从这个内存转储中读取并处理这些信息。  我在本教程中使用了以下测试系统，不过它可以在任何 Linux 发行版上工作：
+$ cat /etc/redhat-release Red Hat Enterprise Linux release 8.3 (Ootpa) $ $ uname -r 4.18.0-240.el8.x86_64 $ 注意事项： 部分 1 涉及到编译和加载一个内核模块。不要担心：它并不像听起来那么困难。一些指南：按照以下的步骤。不要在生产系统或你的主要计算机上尝试任何这些步骤。始终使用测试的虚拟机（VM）来尝试，直到你熟悉使用这些工具并理解它们的工作原理为止。 安装需要的包 在开始之前安装必要的工具。如果你经常使用基于 Debian 的发行版，可以使用 apt-get 命令。这些包大多数提供了需要的内核信息和工具来编译代码：
+$ yum install kernel-headers kernel-devel gcc elfutils-libelf-devel make git libdwarf-tools python2-devel.x86_64-y 部分 1：使用 LiME 获取内存并将其转储到一个文件中 在开始分析内存之前，你需要一个内存转储供你使用。在实际的取证活动中，这可能来自一个被破坏或者被入侵的系统。这些信息通常会被收集和存储来分析入侵是如何发生的及其影响。由于你可能没有可用的内存转储，你可以获取你的测试 VM 的内存转储，并使用它来执行内存取证。
+Linux 内存提取器（LiME）是一个在 Linux 系统上获取内存很常用的工具。使用以下命令获得 LiME：</description>
     </item>
     
     <item>
@@ -292,7 +549,19 @@
       <pubDate>Tue, 25 May 2021 23:02:42 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210525/</guid>
-      <description>2021-05-25 今日技术分享 Go 中为什么应该使用接口 https://mp.weixin.qq.com/s/KqXI9ekYAZYd5oYmhqFH8Q 图解Go sync.Pool https://mp.weixin.qq.com/s/aiOjUcN89nxwEUJzVNkl3A 自制文件系统 — 01 文件系统的样子 https://mp.weixin.qq.com/s/0FpQGDzFh_D7IJi6z7oXjg 深入 Go 中各个高性能 JSON 解析库 https://mp.weixin.qq.com/s/FBT5QN_Pja6vRntWY0wFeA 【预告】理论结合实践详解 b+ 树存</description>
+      <description>2021-05-25 今日技术分享
+  Go 中为什么应该使用接口 https://mp.weixin.qq.com/s/KqXI9ekYAZYd5oYmhqFH8Q
+  图解Go sync.Pool https://mp.weixin.qq.com/s/aiOjUcN89nxwEUJzVNkl3A
+  自制文件系统 — 01 文件系统的样子 https://mp.weixin.qq.com/s/0FpQGDzFh_D7IJi6z7oXjg
+  深入 Go 中各个高性能 JSON 解析库 https://mp.weixin.qq.com/s/FBT5QN_Pja6vRntWY0wFeA
+  【预告】理论结合实践详解 b+ 树存储引擎（innodb、boltdb、buntdb） https://mp.weixin.qq.com/s/lAD6GmqjElmgXduSDA6kAg
+  懂得取舍才是缓存设计的真谛 https://mp.weixin.qq.com/s/CWV_rssaz3fTvi7AqEo92w
+  详解 Go 空结构体的 3 种使用场景 https://mp.weixin.qq.com/s/zbYIdB0HlYwYSQRXFFpqSg
+  配置化系统中的图模型 https://mp.weixin.qq.com/s/ZDW9mg_iYI6a8dkpo31Sdw
+  曹大带我学 Go（2）—— 迷惑的 goroutine 执行顺序 https://mp.weixin.qq.com/s/WWfm7Ui7g_gGlb8XkIZigg
+  Go可用性(六) 熔断 https://mp.weixin.qq.com/s/b5Wi1TqFVCCmpjvfmUcQBQ
+  懂得取舍才是缓存设计的真谛 https://my.oschina.net/kevwan/blog/5056791
+  immudb v1.0 released https://www.</description>
     </item>
     
     <item>
@@ -301,7 +570,18 @@
       <pubDate>Mon, 24 May 2021 23:38:04 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210524/</guid>
-      <description>2021-05-24 今日技术分享 2021 年 5 月程序员工资排行：Go的工资满意吗？ https://mp.weixin.qq.com/s/cX25jSXo_wI22x2CKWW2Cg Go语言爱好者周刊：第 96 期 — 用 Go 实现一个计算器 https://mp.weixin.qq.com/s/yKRK4cfcdJcdwh2u0tyi7w 源码级剖析new和make怎么用！</description>
+      <description>2021-05-24 今日技术分享
+  2021 年 5 月程序员工资排行：Go的工资满意吗？ https://mp.weixin.qq.com/s/cX25jSXo_wI22x2CKWW2Cg
+  Go语言爱好者周刊：第 96 期 — 用 Go 实现一个计算器 https://mp.weixin.qq.com/s/yKRK4cfcdJcdwh2u0tyi7w
+  源码级剖析new和make怎么用！ https://mp.weixin.qq.com/s/ClbdoJXPWlq0hP9ABzVJvQ
+  在 EKS 中实现基于 Promtail + Loki + Grafana 容器日志解决方案 https://mp.weixin.qq.com/s/Qotk0CNgsBrFy0Ot7AL0jQ
+  代码重构的原则和技巧 https://mp.weixin.qq.com/s/HlbURQBw35RUJOu5XEX9KA
+  深度探索Go语言（四）：包装方法 https://mp.weixin.qq.com/s/9KCIaWfka-z5GDEHfAnKzg
+  深度探索Go语言（五）：包装方法 https://mp.weixin.qq.com/s/yZpnWXfnrSPfAa6qXM4CUw
+  一本开源免费的 Go 进阶图书 https://mp.weixin.qq.com/s/C2y8WqjVnLXHRMYJa-hqvA
+  分布式链路跟踪中的traceid和spanid代表什么？ https://mp.weixin.qq.com/s/eKbFYwnH4vwgWm6_5sWs3w
+  使用gRPC改造Kubernetes通信 https://mp.weixin.qq.com/s/MUW_CcsXYH1RXQGfLcb6yw
+  什么技巧，能优化 Go 服务 40% 以上的 CPU？ https://mp.weixin.qq.com/s/1BUAy84aXOxWwHy0ZYOD1Q</description>
     </item>
     
     <item>
@@ -310,7 +590,11 @@
       <pubDate>Mon, 24 May 2021 00:39:20 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/linux_sed/</guid>
-      <description>很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有</description>
+      <description>很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有相似之处。虽然它们都能用于文本解析，但都有其特殊性。本文研究 sed 命令，它是一个 流编辑器。
+ 安装 sed 如果你使用的是 Linux、BSD 或 macOS，那么它们已经安装了 GNU 的或 BSD 的 sed。这些是原始 sed 命令的独特重新实现。虽然它们很相似，但也有一些细微的差别。本文已经在 Linux 和 NetBSD 版本上进行了测试，所以你可以使用你的计算机上找到的任何 sed，但是对于 BSD sed，你必须使用短选项（例如 -n 而不是 &amp;ndash;quiet）。
+GNU sed 通常被认为是功能最丰富的 sed，因此无论你是否运行 Linux，你可能都想要尝试一下。如果在 Ports 树中找不到 GNU sed（在非 Linux 系统上通常称为 gsed），你可以从 GNU 网站 下载源代码。 安装 GNU sed 的好处是，你可以使用它的额外功能，但是如果需要可移植性，还可以限制它以遵守 sed 的 POSIX 规范。
+MacOS 用户可以在 MacPorts 或 Homebrew 上找到 GNU sed。
+在 Windows 上，你可以通过 Chocolatey 来 安装 GNU sed。</description>
     </item>
     
     <item>
@@ -319,7 +603,19 @@
       <pubDate>Mon, 24 May 2021 00:26:25 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210523/</guid>
-      <description>2021-05-23 今日技术分享 用Go实现一个直播系统难吗？看看这个开源项目 https://mp.weixin.qq.com/s/5YPp7WFgVfPlGxim7tmQ5A Go语言数据争用与race原理 https://mp.weixin.qq.com/s/gGGg6wqQX5b1kEOeRbTQlA Go 标准库之 unsafe 包详解 https://mp.weixin.qq.com/s/Pj4Q_8sj2pCmXe2cHNqdvw Go - 开箱即用，WEB 界面一键</description>
+      <description>2021-05-23 今日技术分享
+  用Go实现一个直播系统难吗？看看这个开源项目 https://mp.weixin.qq.com/s/5YPp7WFgVfPlGxim7tmQ5A
+  Go语言数据争用与race原理 https://mp.weixin.qq.com/s/gGGg6wqQX5b1kEOeRbTQlA
+  Go 标准库之 unsafe 包详解 https://mp.weixin.qq.com/s/Pj4Q_8sj2pCmXe2cHNqdvw
+  Go - 开箱即用，WEB 界面一键安装，没有项目经验，可以拿这个练手 https://mp.weixin.qq.com/s/6RlAb7iWc3Tj6g7ttiBoRQ
+  Loki 源码分析之日志写入 https://mp.weixin.qq.com/s/9BKZvNANqGJwziygytJ1ag
+  无限缓冲的channel(1) https://mp.weixin.qq.com/s/ETfrSqQczbW2SnaFjoUx0A
+  基于 Kubernetes 的微服务项目设计与实现 https://mp.weixin.qq.com/s/BjDx-pDQsuj6p_X01Vw92g
+  假如 Go 能说话，听听 GMP 的心声 https://mp.weixin.qq.com/s/Tgf-JU9YDume4jRHex65NA
+  利用 eBPF 支撑大规模 Kubernetes Service https://mp.weixin.qq.com/s/BJHzU4LxLdLnNzOnAqIptg
+  Golang 中的适配器设计模式 https://www.smartscribs.com/adapter-design-pattern-in-golang/
+  假如 Go 能说话，听听 GMP 的心声 https://mp.weixin.qq.com/s/Tgf-JU9YDume4jRHex65NA
+  小函数的调用开销需要考虑吗?</description>
     </item>
     
     <item>
@@ -328,7 +624,19 @@
       <pubDate>Sat, 22 May 2021 00:36:08 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210521/</guid>
-      <description>2021-05-21 今日技术分享 优化 Golang 服务来减少 40% 以上的 CPU https://mp.weixin.qq.com/s/dgVv6p8HQtc-krPGEdU2cQ fuckdb 新功能上线，开箱即用、更加强大的代码生成器 https://mp.weixin.qq.com/s/ysOlv8xsc7wF7cPcV5pu7g Go 面试官问我如何实现面向对象？ https://mp.weixin.qq.com/s/2x4Sajv7HkAjWFPe4oD96g 一文搞懂缓存系统稳定</description>
+      <description>2021-05-21 今日技术分享
+  优化 Golang 服务来减少 40% 以上的 CPU https://mp.weixin.qq.com/s/dgVv6p8HQtc-krPGEdU2cQ
+  fuckdb 新功能上线，开箱即用、更加强大的代码生成器 https://mp.weixin.qq.com/s/ysOlv8xsc7wF7cPcV5pu7g
+  Go 面试官问我如何实现面向对象？ https://mp.weixin.qq.com/s/2x4Sajv7HkAjWFPe4oD96g
+  一文搞懂缓存系统稳定性 https://mp.weixin.qq.com/s/eNLB1BKZi4L3aNxbL0TqWQ
+  kubernetes 平台开发者的几个小技巧 https://mp.weixin.qq.com/s/RVYJd_3xzDps-1xFwtl01g
+  周刊题解：常量表达式这个规则应该了解下 https://mp.weixin.qq.com/s/8fG0OMvwKziMSRs8bZFj2Q
+  企业微信万亿级日志检索系统 https://mp.weixin.qq.com/s/opxvlddsSQctb3nwcxaW_g
+  曹大带我学 Go（1）——调度的本质 https://mp.weixin.qq.com/s/5E5V56wazp5gs9lrLvtopA
+  初探 Go 代码混淆 https://mp.weixin.qq.com/s/q9xUFQ7HdHAis70WrFHuOQ
+  优化 Golang 服务减少 40% 以上的 CPU https://mp.weixin.qq.com/s/dgVv6p8HQtc-krPGEdU2cQ
+  Go 实现 bridge 设计模式 https://www.smartscribs.com/bridge-design-pattern-in-golang/
+  Go 模板引擎 templ https://adrianhesketh.</description>
     </item>
     
     <item>
@@ -337,7 +645,8 @@
       <pubDate>Wed, 19 May 2021 19:15:33 +0800</pubDate>
       
       <guid>https://3ae.cn/donations/</guid>
-      <description>请扫下方二维码打赏一杯咖啡。 多少不重要，1元也是支持</description>
+      <description>请扫下方二维码打赏一杯咖啡。
+多少不重要，1元也是支持 </description>
     </item>
     
     <item>
@@ -346,7 +655,18 @@
       <pubDate>Tue, 18 May 2021 23:00:31 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210518/</guid>
-      <description>2021-05-18 今日技术分享 也许是你从来没用过的利器：GODEBUG https://mp.weixin.qq.com/s/lqOs34aMs7AYCxM_Jv0Hug 从0开发上线一个web项目（下） https://mp.weixin.qq.com/s/W5lHCgA_SzzyCoDaHDmz1Q 如何打造高性能的 Go 缓存库 https://mp.weixin.qq.com/s/G8LJ1HBuWoQfWV2dILi6Rg 【本周四预告】JetBr</description>
+      <description>2021-05-18 今日技术分享
+  也许是你从来没用过的利器：GODEBUG https://mp.weixin.qq.com/s/lqOs34aMs7AYCxM_Jv0Hug
+  从0开发上线一个web项目（下） https://mp.weixin.qq.com/s/W5lHCgA_SzzyCoDaHDmz1Q
+  如何打造高性能的 Go 缓存库 https://mp.weixin.qq.com/s/G8LJ1HBuWoQfWV2dILi6Rg
+  【本周四预告】JetBrains GoLand 2021.1 新特性介绍 https://mp.weixin.qq.com/s/9DbBwdkBvECl11jSd-hbYw
+  用 Go struct 不能犯的一个低级错误！ https://mp.weixin.qq.com/s/EKbsUwLABjpadxPZ9AJGTg
+  Go语言中new和make你使用哪个来分配内存？ https://mp.weixin.qq.com/s/XJ9O9O4KS3LbZL0jYnJHPg
+  同步secret和config到指定namespace https://mp.weixin.qq.com/s/i1fI58MhbWnPx7RFftLXkg
+  缓存数据一致性 - 架构师峰会演讲实录 https://mp.weixin.qq.com/s/DhIv9RACxa5igJTYg4N1mA
+  kubebuilder 进阶: 源码分析 https://mp.weixin.qq.com/s/mlpNUwoqcNdT0kAowb_zrQ    咱Gopher好香啊，输入法、搜索Top行业招Gopher，还不快到碗里来？ https://mp.weixin.qq.com/s/HY4CpoPqXroMhJJ250quZQ
+  如何管理多版本的 go https://lakefs.io/managing-multiple-go-versions-with-go/
+  一个 SQL 数据库只使用了 2000 行 golang 代码并且没有任何第三方依赖 https://github.com/auxten/go-sqldb</description>
     </item>
     
     <item>
@@ -355,7 +675,20 @@
       <pubDate>Mon, 17 May 2021 23:05:05 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210517/</guid>
-      <description>2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性</description>
+      <description>2021-05-17 今日技术分享
+  单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ
+  Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA
+  从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ
+  高性能 Go 代码工坊（Part7) https://mp.weixin.qq.com/s/ptUH-9dvRlA558SNakIbFQ
+  使用 Loki 进行日志报警(二) https://mp.weixin.qq.com/s/wO0w1f8ptZf4Rv1KQ6I1sw
+  用Kubernetes搭建Etcd集群和WebUI https://mp.weixin.qq.com/s/AkIvkW22dvqcdFXkiTpv8Q
+  Leetcode:House Robber II https://mp.weixin.qq.com/s/-mUMeklJdajaSxlpqJB0MA
+  深度探索Go语言（三）：动态派发 https://mp.weixin.qq.com/s/XLj_AKqETZy4cUBNiNZPBw
+  通过例子，让你彻底搞懂微服务的演化过程 https://mp.weixin.qq.com/s/wWBlrjUUn-tx0v7ZTkha1g
+  5月你好，第二股来喽 https://mp.weixin.qq.com/s/onnAaqM8GoaphEtZ-KHO6g
+  http.Client 的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg
+  unsafe.Pointer 和 uintptr 的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww
+  Common anti-patterns in Go https://mp.</description>
     </item>
     
     <item>
@@ -364,7 +697,20 @@
       <pubDate>Sun, 16 May 2021 23:37:59 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210516/</guid>
-      <description>2021-05-16 今日技术分享 面试官：说说unsafe.Pointer和uintptr的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww http.Client的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg 你不知道的 Go 之</description>
+      <description>2021-05-16 今日技术分享
+  面试官：说说unsafe.Pointer和uintptr的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww
+  http.Client的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg
+  你不知道的 Go 之 slice https://mp.weixin.qq.com/s/-VRyRg9d-65lNTFRPvoCLw
+  go每日新闻(2021-05-14)——Go语言内存分配 https://mp.weixin.qq.com/s/wembkRjdv8IErolT4IpnCg
+  说说常见数据库及中间件的主从设计 https://mp.weixin.qq.com/s/EXTdTsOcCuWpaNXOATpGFQ
+  i/o timeout ， 希望你不要踩到这个net/http包的坑 https://mp.weixin.qq.com/s/AKhRFKgs-I46Lnqhbk6Iog
+  Common anti-patterns in Go https://mp.weixin.qq.com/s/k-Use24-UCB3y_hV0tihVg
+  服务注册中心和配置中心的选择 https://mp.weixin.qq.com/s/4gOoYI9GsfauCcDoq_6Wxw
+  golang 并发底层实现竟然都是它！！！ https://mp.weixin.qq.com/s/7BeLEzqmA1IR-rjVig0Qbw
+  golang 编写的 GBA 模拟器 https://github.com/pokemium/magia
+  漫谈 Go 语言编译器（01） https://mp.weixin.qq.com/s/0q0k8gGX56SBKJvfMquQkQ
+  semaphore 的原理与实现 https://mp.weixin.qq.com/s/GB649snXQ5rDF2BXO9V55Q
+  pprof++：具有硬件性能监控的 Go 探查器 https://eng.</description>
     </item>
     
     <item>
@@ -373,7 +719,17 @@
       <pubDate>Sat, 15 May 2021 22:55:37 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210515/</guid>
-      <description>今日技术分享 Uber 使用 Go 的规模这么大？！都自己定制的 Go 编译器了 https://mp.weixin.qq.com/s/oJ6BD8AXbKKe_OBj9kCx6A Go：如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/5RhaUEk33kf4LkcZphyt_g grpc Go Client 源码分析 https://mp.weixin.qq.com/s/SQ22u7l17mWl2nQlSqvGXg 使用 Loki 进行日志报警(一) https://mp.weixin.qq.com/s/s4g_lg9k1QjGa-GLRfZtEg Go 程</description>
+      <description>今日技术分享
+  Uber 使用 Go 的规模这么大？！都自己定制的 Go 编译器了 https://mp.weixin.qq.com/s/oJ6BD8AXbKKe_OBj9kCx6A
+  Go：如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/5RhaUEk33kf4LkcZphyt_g
+  grpc Go Client 源码分析 https://mp.weixin.qq.com/s/SQ22u7l17mWl2nQlSqvGXg
+  使用 Loki 进行日志报警(一) https://mp.weixin.qq.com/s/s4g_lg9k1QjGa-GLRfZtEg
+  Go 程序运行时数据统计的可视化工具 statsviz https://mp.weixin.qq.com/s/gaQhIo544VHYeGcKq34GIw
+  Rust 劝退系列 06：常量 https://mp.weixin.qq.com/s/y5WJbP8qcvdm4WASXEEibQ
+  semaphore 的原理与实现 https://mp.weixin.qq.com/s/GB649snXQ5rDF2BXO9V55Q
+  kubebuilder 进阶: webhook https://mp.weixin.qq.com/s/CFggTa7E91Rf1N1EZZpOBA    【直播】5.15（周六）9:00 聊聊风控系统构建演进过程~欢迎扫码报名 https://mp.weixin.qq.com/s/KctKKf0VUCt0AppLyEEtrg
+  为什么 Go map 和 slice 是非线性安全的？ https://mp.weixin.qq.com/s/TzHvDdtfp0FZ9y1ndqeCRw
+  深度剖析 Go 的 nil https://mp.</description>
     </item>
     
     <item>
@@ -382,7 +738,19 @@
       <pubDate>Fri, 14 May 2021 22:58:55 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210514/</guid>
-      <description>今日技术分享 面试官：聊聊 defer 的工作原理。。。 https://mp.weixin.qq.com/s/oWlQU9c9z11CHdOwOMOHxA 深度解密Go语言之基于信号的抢占式调度 https://mp.weixin.qq.com/s/xdhv24Lh-7smOT5ESw2dBw 聊聊如何做技术分享 https://mp.weixin.qq.com/s/iRe1aGShDBeVhLhOSHwbMQ Uber 使用 Go 的规模这么大？！都自己定制的</description>
+      <description>今日技术分享
+  面试官：聊聊 defer 的工作原理。。。 https://mp.weixin.qq.com/s/oWlQU9c9z11CHdOwOMOHxA
+  深度解密Go语言之基于信号的抢占式调度 https://mp.weixin.qq.com/s/xdhv24Lh-7smOT5ESw2dBw
+  聊聊如何做技术分享 https://mp.weixin.qq.com/s/iRe1aGShDBeVhLhOSHwbMQ
+  Uber 使用 Go 的规模这么大？！都自己定制的 Go 编译器了 https://mp.weixin.qq.com/s/MO0WNlwecDVLx4QfWklamA
+  如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/Y1qWYdzNs8EXCFu_DtBH9g
+  薪资比肩北上广，你会考虑回老家吗？急招哦 https://mp.weixin.qq.com/s/koCxSjX8tXMMY3Yn8c4KpA
+  kubebuilder 进阶: 测试 https://mp.weixin.qq.com/s/tcLIx3E0LyRkNhPO0U8zmg    从0.5到1用golang上线一个web项目 https://mp.weixin.qq.com/s/ZqbDY3IjtH2s5_oeDvhQVQ
+  从0到0.5用golang写一个web项目 https://mp.weixin.qq.com/s/XXLFwlmOUaD7a3hftYCd2A
+  译文 Go 的抢占式调度 https://gocn.vip/topics/12062
+  深度解密 Go 语言之基于信号的抢占式调度 https://mp.weixin.qq.com/s/ESfbVoCGUIdpwFOfGyvz1w
+  使用 Golang 的交叉编译 https://linux.cn/article-13385-1.html
+  Go 无分支编码 https://mattnakama.com/blog/go-branchless-coding/</description>
     </item>
     
     <item>
@@ -391,7 +759,19 @@
       <pubDate>Thu, 13 May 2021 22:59:55 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210513/</guid>
-      <description>今日技术分享 Go：跨团队协作时如何共享对象 https://mp.weixin.qq.com/s/zJaruocUDSzld8ttDyawng template源码分析 https://mp.weixin.qq.com/s/HqcaFEXgQbcRyjYjI6oKGQ kubebuilder 实战: status &amp;amp; event https://mp.weixin.qq.com/s/JuRlClCX7TnQKaW-Rr3Z7g 如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/M88-VS_H7o754mw5Ra7BYg Prometheus 二次开发之 API 接口 https://mp.weixin.qq.com/s/K7ERtE2KKflYSA9KJOukYg 从TD</description>
+      <description>今日技术分享
+  Go：跨团队协作时如何共享对象 https://mp.weixin.qq.com/s/zJaruocUDSzld8ttDyawng
+  template源码分析 https://mp.weixin.qq.com/s/HqcaFEXgQbcRyjYjI6oKGQ
+  kubebuilder 实战: status &amp;amp; event https://mp.weixin.qq.com/s/JuRlClCX7TnQKaW-Rr3Z7g    如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/M88-VS_H7o754mw5Ra7BYg
+  Prometheus 二次开发之 API 接口 https://mp.weixin.qq.com/s/K7ERtE2KKflYSA9KJOukYg
+  从TDSQL，看分布式数据库的技术之美 https://mp.weixin.qq.com/s/CbzlPmGJCQKi3UmvwjFC1Q
+  Go Team Leader — rsc大神新开源了一个库，增强模板功能 https://mp.weixin.qq.com/s/3DFejimkPY9tg9QQL2QTqw
+  Wow，联通数科也招Gopher了 https://mp.weixin.qq.com/s/tVY3AuUOYEnMKi7Km4eBCw
+  Go 数组比切片好在哪？ https://mp.weixin.qq.com/s/zp1vdhGukEYKpzAdPt--Mw
+  Go 缓存系列之 go-cache https://mp.weixin.qq.com/s/dKlfwJ69s3fUBWYIV57hyg
+  Go 存储基础 — 内存结构体怎么写入文件？ https://mp.weixin.qq.com/s/mfNz7r76vZOOgiMSmuVeJA
+  深度解密Go语言之基于信号的抢占式调度 https://mp.weixin.qq.com/s/ESfbVoCGUIdpwFOfGyvz1w
+  实现无限缓存的 channel https://colobu.</description>
     </item>
     
     <item>
@@ -400,7 +780,11 @@
       <pubDate>Thu, 13 May 2021 21:31:19 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
-      <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以</description>
+      <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以允许程序员在不编译和运行应用程序的前提下运行 Swift 代码并实时查看结果。
+Swift 通过采用现代编程模式来避免大量常见编程错误：
+ 变量始终在使用前初始化。 检查数组索引超出范围的错误。 检查整数是否溢出。 可选值确保明确处理 nil 值。 内存被自动管理。 错误处理允许从意外故障控制恢复。  基础部分 常量和变量 声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。 示例：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
+// 这是一个注释 /* 这也是一个注释， 但是是多行的 */ /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
     </item>
     
     <item>
@@ -409,7 +793,12 @@
       <pubDate>Thu, 13 May 2021 14:35:47 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
-      <description>在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多</description>
+      <description>在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多步骤：
+  下载并安装必备软件 验证构建服务器上是否有新的测试软件包 获取并设置依赖软件包所需的 yum 仓库 下载并安装新的测试软件包（基于步骤 2） 获取并设置必需的 SSL 证书 设置测试环境，获取所需的 Git 仓库，更改配置，重新启动守护进程等 做其他需要做的事情  用脚本自动化 这些步骤非常常规，以至于有必要对其进行自动化并将脚本保存到中央位置（例如文件服务器），在需要时可以在此处下载脚本。为此，我编写了 100-120 行的 Bash shell 脚本，它为我完成了所有配置（包括错误检查）。这个脚本通过以下方式简化了我的工作流程：
+ 配置新的 Linux 系统（支持测试的架构） 登录系统并从中央位置下载自动化 shell 脚本 运行它来配置系统 开始测试  学习 Go 语言 我想学习 Go 语言 有一段时间了，将我心爱的 Shell 脚本转换为 Go 程序似乎是一个很好的项目，可以帮助我入门。它的语法看起来很简单，在尝试了一些测试程序后，我开始着手提高自己的知识并熟悉 Go 标准库。
+我花了一个星期的时间在笔记本电脑上编写 Go 程序。我经常在我的 x86 服务器上测试程序，清除错误并使程序健壮起来，一切都很顺利。
+直到完全转换到 Go 程序前，我继续依赖自己的 shell 脚本。然后，我将二进制文件推送到中央文件服务器上，以便每次配置新服务器时，我要做的就是获取二进制文件，将可执行标志打开，然后运行二进制文件。我对早期的结果很满意：
+$ wget http://file.example.com/&amp;lt;myuser&amp;gt;/bins/prepnode $ chmod +x .</description>
     </item>
     
     <item>
@@ -418,7 +807,17 @@
       <pubDate>Thu, 13 May 2021 12:50:05 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/linux_screen/</guid>
-      <description>学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘</description>
+      <description>学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。
+ 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘的。但随着你对 Linux 终端的进一步了解，你很快就会意识到它的高效和强大。不过，也不需要很长时间，你就会想让终端变得更加高效，除了将更多的终端放到你的终端，还有什么高好的方法能够提升你的终端效率呢？
+终端复用 终端的许多优点之一是它是一个集中控制的界面。它是一个能让你访问数百个应用程序的窗口，而你与每一个应用程序进行交互所需要的只是一个键盘。但是，现代计算机几乎总是有多余的处理能力，而且现代计算机专家喜欢多任务处理，导致一个窗口处理数百个应用程序的能力是相当有限的。
+解决这一问题的常见答案是终端复用：即将虚拟终端叠放在一起，然后在它们之间移动的能力。通过终端复用器，你保持了集中控制，但是当你进行多任务时，你能够进行终端切换。更好的是，你能够在终端中拆分屏幕，使得在同一时间显示多个屏幕窗口。
+选择合适的复用器 一些终端提供类似的功能，有标签式界面和分割式视图，但也有细微的差别。首先，这些终端的功能依赖于图形化的桌面环境。其次，许多图形化的终端功能需要鼠标交互或使用不方便的键盘快捷键。终端复用器的功能在文本控制台上和在图形桌面上一样好用，而且键位绑定是针对常见的终端序列设计的，很方便。
+现有两种流行的复用器：tmux 和 GNU Screen。尽管你与它们互动的方式略有不同，但它们做同样的事情，而且大多具有相同的功能。这篇文章是 GNU Screen 的入门指南。关于 tmux 的相关介绍，请阅读 Kevin Sonney 的 tmux 介绍。
+使用 GNU Screen GNU Screen 的基本用法很简单，通过 screen 命令启动，你将进入 Screen 会话的第 0 个窗口。在你决定需要一个新的终端提示符前，你可能很难注意到有什么变化。
+当一个终端窗口被某项活动占用（比如，你启动了文本编辑器 Vim 或 Jove 或者你在处理音视频，或运行批处理任务），你可以新建一个窗口。要打开一个新的窗口，按 Ctrl+A，释放，然后按 c。这将在你现有窗口的基础上创建一个新的窗口。
+你会知道当前你是在一个新的窗口中，因为你的终端除了默认的提示符外，似乎没有任何东西。当然，你的另一个终端仍然存在，它只是躲在新窗口的后面。要遍历打开的窗口，按 Ctrl+A，释放，然后按 n（表示下一个）或按 p（表示上一个）。在只打开两个窗口的情况下， n 和 p 的功能是一样的，但你可以随时打开更多的窗口（Ctrl+A，然后 c ），并在它们之间切换。
+分屏 GNU Screen 的默认行为更像移动设备的屏幕，而不是桌面：你一次只能看到一个窗口。如果你因为喜欢多任务而使用 GNU Screen ，那么只关注一个窗口可能看起来是一种退步。幸运的是，GNU Screen 可以让你把终端分成窗口中的窗口。
+要创建一个水平分割窗口，按 Ctrl+A，然后按 s 。这将把一个窗口置于另一个窗口之上，就像窗格一样。然而，在你告诉它要显示什么之前，分割的空间是没有用途的。因此，在创建一个分割窗后，你可以用 Ctrl+A ，然后用 Tab 移动到分割窗中。一旦进入，使用 Ctrl+A 然后 n 浏览所有可用的窗口，直到你想显示的内容出现在分割窗格中。</description>
     </item>
     
     <item>
@@ -427,7 +826,13 @@
       <pubDate>Wed, 12 May 2021 18:59:21 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/linux_cron/</guid>
-      <description>cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执</description>
+      <description>cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执行重复的任务，比如备份数据库或数据，使用最新的安全补丁更新系统，检查磁盘空间使用情况，发送电子邮件等等。 cron 作业可以按分钟、小时、日、月、星期或它们的任意组合运行。
+ cron 的一些优点 以下是使用 cron 作业的一些优点：
+你可以更好地控制作业的运行时间。例如，你可以精确到分钟、小时、天等。它消除了为循环任务逻辑而去写代码的需要，当你不再需要执行任务时，可以直接关闭它。作业在不执行时不会占用内存，因此你可以节省内存分配。如果一个作业执行失败并由于某种原因退出，它将在适当的时间再次运行。 安装 cron 守护进程 幸运的是，Fedora Linux 预先配置了运行重要的系统任务来保持系统更新，有几个实用程序可以运行任务例如 cron、anacron、at 和 batch 。本文只关注 cron 实用程序的安装。cron 和 cronie 包一起安装，cronie 包也提供 cron 服务。
+要确定软件包是否已经存在，使用 rpm 命令： $ rpm -q cronie Cronie-1.5.2-4.el8.x86_64
+如果安装了 cronie ，它将返回 cronie 包的全名。如果你的系统中没有安装，则会显示未安装。
+使用以下命令安装： $ dnf install cronie
+运行 cron 守护进程 cron 作业由 crond 服务来执行，它会读取配置文件中的信息。在将作业添加到配置文件之前，必须启动 crond 服务，或者安装它。什么是 crond 呢？crond 是 cron 守护程序的简称。要确定 crond 服务是否正在运行，输入以下命令：</description>
     </item>
     
     <item>
@@ -436,7 +841,19 @@
       <pubDate>Wed, 12 May 2021 03:33:46 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210512/</guid>
-      <description>今日技术分享 unsafe 包真的不安全吗？ https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg go-callvis 源码分析 https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw 深度探索Go语言（二）：动态派发 https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ 再一次看到了 Go 的节制：int128 类型要不要支持？ https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow Go 笔试题精</description>
+      <description>今日技术分享
+  unsafe 包真的不安全吗？ https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg
+  go-callvis 源码分析 https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw
+  深度探索Go语言（二）：动态派发 https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ
+  再一次看到了 Go 的节制：int128 类型要不要支持？ https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow
+  Go 笔试题精选 三： 19 道填空题 https://mp.weixin.qq.com/s/5Zd1DmQGDvjMySOUf7eFMg
+  在提赋能之前，先想想这5个问题 https://mp.weixin.qq.com/s/V8l7S7A-kRF_WDb7tlJJ0Q
+  代码无可避免腐化是因为这 5 个原因 https://mp.weixin.qq.com/s/IzDgV6AmK-2ph1ctcz9liA
+  kubebuilder 实战: CRUD https://mp.weixin.qq.com/s/UDA55y5RCpzyDvfSfs9d2w    实现无限缓存的channel https://colobu.com/2021/05/11/unbounded-channel-in-go/
+  轻轻松松打印网页并生成 pdf 文档 https://colobu.com/2021/05/05/generate-pdf-for-a-web-page-by-using-chromedp/
+  Go 1.16 的 signal.NotifyContext 让你的服务重启更优雅 https://juejin.cn/post/6960578101755510798
+  一种持锁被调度的情况 https://xargin.com/schedule-when-holding-lock-causes-latency-spike/
+  assembly 完全解析： https://segmentfault.</description>
     </item>
     
     <item>
@@ -445,7 +862,25 @@
       <pubDate>Tue, 11 May 2021 18:46:34 +0800</pubDate>
       
       <guid>https://3ae.cn/about/</guid>
-      <description>关于我 勤奋的代码搬运工。 为什么建立个人博客？ 宣传自己，这是一个信息爆炸、人人自我营销的时代，不懂得宣传自己，就得不到机会的垂青。 个人觉得IT</description>
+      <description>关于我 勤奋的代码搬运工。
+为什么建立个人博客？ 宣传自己，这是一个信息爆炸、人人自我营销的时代，不懂得宣传自己，就得不到机会的垂青。
+个人觉得IT从业者就应该有自己的博客网站，记录与分享自己的经验，收集有价值的文章。
+凭借互联网的媒介，结交志同道合的朋友，为未来的事业做准备。
+关于本站  Log something useless, but interesting!
+ 学习日记，点滴记录。
+也会收集和分享互联网上比较经典且具有价值的文章。
+站长是谁： 昵称：白菜林
+对于技术很爱折腾、很有热情的小哥。
+联系站长：77370751（微信/qq同号，备注来意）
+邮箱Email：77370751@qq.com
+交流QQ群：153690156
+给我留言：https://support.qq.com/product/325110
+我的主页 Gitee: https://lyhuilin.gitee.io/
+Github: https://github.com/clin003/meBlog
+我的微信公众号 未来发展： 未来很长，且慢慢耕耘。
+白菜林的博客小站历程： 2021年5月11日 白菜林的博客小站 建站并部署至Github page。  特别感谢 非常感谢每一位走进本站的同学对我们的大力支持，你们的走进是我坚持的动力！
+如果不介意,请把本站分享给您的同学朋友！
+我会一直努力，不求最好，只求更好！</description>
     </item>
     
     <item>
@@ -454,7 +889,7 @@
       <pubDate>Tue, 11 May 2021 14:00:54 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/hello_world/</guid>
-      <description>Hello World! 白菜林^_^</description>
+      <description>Hello World! 白菜林^_^ </description>
     </item>
     
     <item>
@@ -463,7 +898,18 @@
       <pubDate>Tue, 11 May 2021 07:42:44 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210511/</guid>
-      <description>今日技术分享 图解 Go 内存管理分配 https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ Go 刷 leetcode 之任务调度器 https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA 自己动手实现一个 kubectl exec https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ 云上细粒度访问管理的参考架构 https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug Go 工程师必学：Go 大杀器之跟踪剖析 trace</description>
+      <description>今日技术分享
+  图解 Go 内存管理分配 https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ
+  Go 刷 leetcode 之任务调度器 https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA
+  自己动手实现一个 kubectl exec https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ
+  云上细粒度访问管理的参考架构 https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug
+  Go 工程师必学：Go 大杀器之跟踪剖析 trace https://mp.weixin.qq.com/s/7DY0hDwidgx0zezP1ml3Ig
+  Go并发编程 — sync.Once 单实例模式的思考 https://mp.weixin.qq.com/s/nMHNujmbIx7uMqMtjUMTvQ
+  kustomize 简明教程 https://mp.weixin.qq.com/s/JDsDOYaACgyt97-Nz5ScDw    你不知道的 Go 之 slice https://mp.weixin.qq.com/s/aOIp7jeBWubT-u85vQJxzA
+  缓存系统稳定性 - 架构师峰会演讲实录 https://mp.weixin.qq.com/s/o0qUY5zUjBQuOkx_4XGB6Q
+  微服务的灾难 https://mp.weixin.qq.com/s/bY2s7wjfggSt77kj8exYLQ
+  利用 NATS JetStream 构建分布式事件流系统 https://shijuvar.medium.com/building-distributed-event-streaming-systems-in-go-with-nats-jetstream-3938e6dc7a13
+  100 行 Golang 代码构建一个简单的终端仿真器 https://ishuah.</description>
     </item>
     
   </channel>

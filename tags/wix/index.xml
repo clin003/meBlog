@@ -6,6 +6,7 @@
     <description>Recent content in wix on 白菜林</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <copyright>baicai</copyright>
     <lastBuildDate>Tue, 22 Jun 2021 22:48:53 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/wix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cargo Wix 创建Windows安装程序的cargo子命令</title>
@@ -13,7 +14,10 @@
       <pubDate>Tue, 22 Jun 2021 22:48:53 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
-      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使</description>
+      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使用提供的应用程序提供代码签名证书，则它还支持对Windows安装程序进行签名。
+快速开始 启动命令提示符（cmd.exe），然后执行以下命令：
+C:\&amp;gt;cargo install cargo-wixC:\&amp;gt;cd Path\To\ProjectC:\Path\To\Project\&amp;gt;cargo wix initC:\Path\To\Project\&amp;gt;cargo wix该项目的Windows安装程序（msi）将位于C:\Path\To\Project\target\wix文件夹中。
+官方文档 https://crates.io/crates/cargo-wix</description>
     </item>
     
   </channel>

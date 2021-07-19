@@ -6,6 +6,7 @@
     <description>Recent content in TOML on 白菜林</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <copyright>baicai</copyright>
     <lastBuildDate>Sat, 05 Jun 2021 02:59:55 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/toml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TOML 语言规范 1.0 正式版</title>
@@ -13,7 +14,14 @@
       <pubDate>Sat, 05 Jun 2021 02:59:55 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/toml/</guid>
-      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目</description>
+      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目中编辑配置文件。
+👉 本文来自 toml-lang 的中文翻译版本，本文收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在 toml.io 原项目仓库指出或修改错误。
+TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言。（Tom&amp;rsquo;s Obvious, Minimal Language）
+作者：Tom Preston-Werner、Pradyun Gedam 等人。
+宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
+TOML 被设计成可以无歧义地映射为哈希表。
+TOML 应该能很容易地被解析成各种语言中的数据结构。
+目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
     </item>
     
   </channel>

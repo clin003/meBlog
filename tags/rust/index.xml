@@ -6,6 +6,7 @@
     <description>Recent content in Rust on 白菜林</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <copyright>baicai</copyright>
     <lastBuildDate>Fri, 25 Jun 2021 22:53:14 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rust 镜像源</title>
@@ -13,7 +14,11 @@
       <pubDate>Fri, 25 Jun 2021 22:53:14 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/rustproxy/</guid>
-      <description>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技</description>
+      <description>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。
+crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/
+中国科技大学的：https://mirrors.ustc.edu.cn/help/crates.io-index.html
+清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
+上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index</description>
     </item>
     
     <item>
@@ -22,7 +27,10 @@
       <pubDate>Tue, 22 Jun 2021 22:48:53 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
-      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使</description>
+      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使用提供的应用程序提供代码签名证书，则它还支持对Windows安装程序进行签名。
+快速开始 启动命令提示符（cmd.exe），然后执行以下命令：
+C:\&amp;gt;cargo install cargo-wixC:\&amp;gt;cd Path\To\ProjectC:\Path\To\Project\&amp;gt;cargo wix initC:\Path\To\Project\&amp;gt;cargo wix该项目的Windows安装程序（msi）将位于C:\Path\To\Project\target\wix文件夹中。
+官方文档 https://crates.io/crates/cargo-wix</description>
     </item>
     
     <item>
@@ -31,7 +39,14 @@
       <pubDate>Sat, 05 Jun 2021 02:59:55 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/toml/</guid>
-      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目</description>
+      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目中编辑配置文件。
+👉 本文来自 toml-lang 的中文翻译版本，本文收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在 toml.io 原项目仓库指出或修改错误。
+TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言。（Tom&amp;rsquo;s Obvious, Minimal Language）
+作者：Tom Preston-Werner、Pradyun Gedam 等人。
+宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
+TOML 被设计成可以无歧义地映射为哈希表。
+TOML 应该能很容易地被解析成各种语言中的数据结构。
+目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
     </item>
     
     <item>
@@ -40,7 +55,10 @@
       <pubDate>Sat, 05 Jun 2021 02:16:24 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/learn_rust/</guid>
-      <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大</description>
+      <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org
+Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指引页 和 Rust 官方文档主页 上，目前 Rust 官方团队已经将相关文档拆分到不同的仓库上：
+ 《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库  还有其他更多官方或其他非官方相关的文档：
+ 使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库  上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
     </item>
     
     <item>
@@ -49,7 +67,20 @@
       <pubDate>Mon, 17 May 2021 23:05:05 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/go20210517/</guid>
-      <description>2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性</description>
+      <description>2021-05-17 今日技术分享
+  单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ
+  Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA
+  从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ
+  高性能 Go 代码工坊（Part7) https://mp.weixin.qq.com/s/ptUH-9dvRlA558SNakIbFQ
+  使用 Loki 进行日志报警(二) https://mp.weixin.qq.com/s/wO0w1f8ptZf4Rv1KQ6I1sw
+  用Kubernetes搭建Etcd集群和WebUI https://mp.weixin.qq.com/s/AkIvkW22dvqcdFXkiTpv8Q
+  Leetcode:House Robber II https://mp.weixin.qq.com/s/-mUMeklJdajaSxlpqJB0MA
+  深度探索Go语言（三）：动态派发 https://mp.weixin.qq.com/s/XLj_AKqETZy4cUBNiNZPBw
+  通过例子，让你彻底搞懂微服务的演化过程 https://mp.weixin.qq.com/s/wWBlrjUUn-tx0v7ZTkha1g
+  5月你好，第二股来喽 https://mp.weixin.qq.com/s/onnAaqM8GoaphEtZ-KHO6g
+  http.Client 的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg
+  unsafe.Pointer 和 uintptr 的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww
+  Common anti-patterns in Go https://mp.</description>
     </item>
     
   </channel>
