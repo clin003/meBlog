@@ -1,22 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>about - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/about/</link>
-        <description>about - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 11 May 2021 18:46:34 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/about/" rel="self" type="application/rss+xml" /><item>
-    <title>about me</title>
-    <link>https://3ae.cn/about/</link>
-    <pubDate>Tue, 11 May 2021 18:46:34 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/about/</guid>
-    <description><![CDATA[关于我 勤奋的代码搬运工。 为什么建立个人博客？ 宣传自己，这是一个信息爆炸、人人自我营销的时代，不懂得宣传自己，就得不到机会的垂青。 个人觉得IT]]></description>
-</item><item>
-    <title>Hello world</title>
-    <link>https://3ae.cn/article/2021/hello_world/</link>
-    <pubDate>Tue, 11 May 2021 14:00:54 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/hello_world/</guid>
-    <description><![CDATA[Hello World! 白菜林^_^]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>about on 白菜林</title>
+    <link>https://3ae.cn/tags/about/</link>
+    <description>Recent content in about on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 11 May 2021 18:46:34 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>about me</title>
+      <link>https://3ae.cn/about/</link>
+      <pubDate>Tue, 11 May 2021 18:46:34 +0800</pubDate>
+      
+      <guid>https://3ae.cn/about/</guid>
+      <description>关于我 勤奋的代码搬运工。 为什么建立个人博客？ 宣传自己，这是一个信息爆炸、人人自我营销的时代，不懂得宣传自己，就得不到机会的垂青。 个人觉得IT</description>
+    </item>
+    
+    <item>
+      <title>Hello world</title>
+      <link>https://3ae.cn/article/2021/hello_world/</link>
+      <pubDate>Tue, 11 May 2021 14:00:54 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/hello_world/</guid>
+      <description>Hello World! 白菜林^_^</description>
+    </item>
+    
+  </channel>
 </rss>

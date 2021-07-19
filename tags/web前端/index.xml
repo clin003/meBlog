@@ -1,15 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>web前端 - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/web%E5%89%8D%E7%AB%AF/</link>
-        <description>web前端 - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Wed, 23 Jun 2021 12:23:58 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/web%E5%89%8D%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
-    <title>给我来点酷炫玩意-Sharkle</title>
-    <link>https://3ae.cn/article/2021/sharkle/</link>
-    <pubDate>Wed, 23 Jun 2021 12:23:58 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/sharkle/</guid>
-    <description><![CDATA[网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web前端 on 白菜林</title>
+    <link>https://3ae.cn/tags/web%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in web前端 on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 23 Jun 2021 12:23:58 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/web%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>给我来点酷炫玩意-Sharkle</title>
+      <link>https://3ae.cn/article/2021/sharkle/</link>
+      <pubDate>Wed, 23 Jun 2021 12:23:58 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/sharkle/</guid>
+      <description>网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新</description>
+    </item>
+    
+  </channel>
 </rss>

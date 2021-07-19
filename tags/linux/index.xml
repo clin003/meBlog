@@ -1,64 +1,83 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>linux - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/linux/</link>
-        <description>linux - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/linux/" rel="self" type="application/rss+xml" /><item>
-    <title>Ubuntu安装 Zlib</title>
-    <link>https://3ae.cn/article/2021/zlib/</link>
-    <pubDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/zlib/</guid>
-    <description><![CDATA[如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl]]></description>
-</item><item>
-    <title>Ubuntu安装 qbittorrent-nox并启动</title>
-    <link>https://3ae.cn/article/2021/qbittorrent/</link>
-    <pubDate>Fri, 02 Jul 2021 21:01:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/qbittorrent/</guid>
-    <description><![CDATA[Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent]]></description>
-</item><item>
-    <title>用 Deskreen 将你的 Linux 屏幕镜像或串流到任何设备上</title>
-    <link>https://3ae.cn/article/2021/linux_deskreen/</link>
-    <pubDate>Mon, 21 Jun 2021 19:50:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_deskreen/</guid>
-    <description><![CDATA[如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。 Deskreen：将任何设备变]]></description>
-</item><item>
-    <title>Linux 常用命令</title>
-    <link>https://3ae.cn/article/2021/linux_cmd/</link>
-    <pubDate>Sat, 05 Jun 2021 10:31:29 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
-    <description><![CDATA[Linux 常用命令 日期 1 $(date -d &#39;1 day ago&#39; &#39;+%Y-%m-%d&#39;) 常用方法 数字格式化 1 part=`printf &#34;%03d&#34; $i` # 左补0 删除旧文件 1 2 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &#34;*.tar&#34;]]></description>
-</item><item>
-    <title>使用开源工具进行 Linux 内存取证</title>
-    <link>https://3ae.cn/article/2021/linux-memory-forensics/</link>
-    <pubDate>Wed, 26 May 2021 12:57:28 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
-    <description><![CDATA[利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量]]></description>
-</item><item>
-    <title>使用 sed 命令进行复制、剪切和粘贴</title>
-    <link>https://3ae.cn/article/2021/linux_sed/</link>
-    <pubDate>Mon, 24 May 2021 00:39:20 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_sed/</guid>
-    <description><![CDATA[很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有]]></description>
-</item><item>
-    <title>Linux/Mac 使用 GNU Screen 的小技巧</title>
-    <link>https://3ae.cn/article/2021/linux_screen/</link>
-    <pubDate>Thu, 13 May 2021 12:50:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_screen/</guid>
-    <description><![CDATA[学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘]]></description>
-</item><item>
-    <title>使用 cron 调度自动化任务</title>
-    <link>https://3ae.cn/article/2021/linux_cron/</link>
-    <pubDate>Wed, 12 May 2021 18:59:21 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_cron/</guid>
-    <description><![CDATA[cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on 白菜林</title>
+    <link>https://3ae.cn/tags/linux/</link>
+    <description>Recent content in linux on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 12 Jul 2021 21:01:31 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu安装 Zlib</title>
+      <link>https://3ae.cn/article/2021/zlib/</link>
+      <pubDate>Mon, 12 Jul 2021 21:01:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/zlib/</guid>
+      <description>如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu安装 qbittorrent-nox并启动</title>
+      <link>https://3ae.cn/article/2021/qbittorrent/</link>
+      <pubDate>Fri, 02 Jul 2021 21:01:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/qbittorrent/</guid>
+      <description>Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent</description>
+    </item>
+    
+    <item>
+      <title>用 Deskreen 将你的 Linux 屏幕镜像或串流到任何设备上</title>
+      <link>https://3ae.cn/article/2021/linux_deskreen/</link>
+      <pubDate>Mon, 21 Jun 2021 19:50:25 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_deskreen/</guid>
+      <description>如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。 Deskreen：将任何设备变</description>
+    </item>
+    
+    <item>
+      <title>Linux 常用命令</title>
+      <link>https://3ae.cn/article/2021/linux_cmd/</link>
+      <pubDate>Sat, 05 Jun 2021 10:31:29 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
+      <description>Linux 常用命令 日期 $(date -d &amp;#39;1 day ago&amp;#39; &amp;#39;+%Y-%m-%d&amp;#39;) 常用方法 数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm fo</description>
+    </item>
+    
+    <item>
+      <title>使用开源工具进行 Linux 内存取证</title>
+      <link>https://3ae.cn/article/2021/linux-memory-forensics/</link>
+      <pubDate>Wed, 26 May 2021 12:57:28 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
+      <description>利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量</description>
+    </item>
+    
+    <item>
+      <title>使用 sed 命令进行复制、剪切和粘贴</title>
+      <link>https://3ae.cn/article/2021/linux_sed/</link>
+      <pubDate>Mon, 24 May 2021 00:39:20 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_sed/</guid>
+      <description>很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有</description>
+    </item>
+    
+    <item>
+      <title>Linux/Mac 使用 GNU Screen 的小技巧</title>
+      <link>https://3ae.cn/article/2021/linux_screen/</link>
+      <pubDate>Thu, 13 May 2021 12:50:05 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_screen/</guid>
+      <description>学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘</description>
+    </item>
+    
+    <item>
+      <title>使用 cron 调度自动化任务</title>
+      <link>https://3ae.cn/article/2021/linux_cron/</link>
+      <pubDate>Wed, 12 May 2021 18:59:21 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_cron/</guid>
+      <description>cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执</description>
+    </item>
+    
+  </channel>
 </rss>

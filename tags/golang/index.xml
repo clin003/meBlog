@@ -1,78 +1,245 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Golang - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/golang/</link>
-        <description>Golang - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 12 Jun 2021 13:39:00 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/" rel="self" type="application/rss+xml" /><item>
-    <title>Go20210612 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210612/</link>
-    <pubDate>Sat, 12 Jun 2021 13:39:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210612/</guid>
-    <description><![CDATA[2021-06-12 今日技术分享 Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg 漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ 《Istio 大咖说》]]></description>
-</item><item>
-    <title>Go20210609 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210609/</link>
-    <pubDate>Wed, 09 Jun 2021 10:28:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210609/</guid>
-    <description><![CDATA[2021-06-09 今日技术分享 字节跳动打造的轮子：Go 表单验证器 https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw 16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g Go 每日一库之 reflect https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA 一个高逼格的 Go 招聘 https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A 云原生 CI/CD 框架 Tekton 初体验 https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A Go 简单分]]></description>
-</item><item>
-    <title>Go20210608 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210608/</link>
-    <pubDate>Tue, 08 Jun 2021 10:35:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210608/</guid>
-    <description><![CDATA[2021-06-08 今日技术分享 Go 调度器的任务窃取（Work-Stealing） https://mp.weixin.qq.com/s/trBAi976eaaTDcSzpAqPkQ 通过实例理解Go逃逸分析 https://mp.weixin.qq.com/s/bR9shJGRXsRHJhh-GcY83A Go 凭什么不支持三元运算符？ https://mp.weixin.qq.com/s/LmHR7Y674dSo-Xa0tajL_w 一文搞懂如何实现 Go 超时]]></description>
-</item><item>
-    <title>Go20210605 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210605/</link>
-    <pubDate>Sat, 05 Jun 2021 18:54:29 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210605/</guid>
-    <description><![CDATA[2021-06-05 今日技术分享 Go: stringer 命令，通过代码生成提高效率 https://mp.weixin.qq.com/s/Ik3PxNRbddtbm6E-Xo_rdA 详解并发编程基础之原子操作(atomic包) https://mp.weixin.qq.com/s/-KE6jNKkVxNrm-e3laibzw 函数的不定参数你是这样用吗？ https://mp.weixin.qq.com/s/jvSbZ0_g_EFqaR2TmjjO8w 如何不 Review 每一行代码]]></description>
-</item><item>
-    <title>Go20210603 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210603/</link>
-    <pubDate>Thu, 03 Jun 2021 15:06:59 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210603/</guid>
-    <description><![CDATA[2021-06-03 今日技术分享 竟然还在争论是否学Go？本文彻底终结该话题 https://mp.weixin.qq.com/s/2jYX2iMp0z7v09-AxdLDMg GM到GMP，Golang经历了什么？ https://mp.weixin.qq.com/s/RR3ducI2gK7JuLAzeILRzg 全面了解虚拟内存：更好学习Go https://mp.weixin.qq.com/s/g5I7un3-lpffAk6UFes8DA 搞 Go 要了解]]></description>
-</item><item>
-    <title>Go20210602 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210602/</link>
-    <pubDate>Wed, 02 Jun 2021 10:09:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210602/</guid>
-    <description><![CDATA[2021-06-02 今日技术分享 推荐一本免费的 Go 新书：用 Go 讲架构的书 https://mp.weixin.qq.com/s/SoqxlvEOyV6EtjKTWGEyxw Go 每日一库之 fasttemplate https://mp.weixin.qq.com/s/_ZIB3H1kJwb8s53lIQ-7Sw 在容器里设置GOMAXPROCS的正确姿势 https://mp.weixin.qq.com/s/jVyKb_3YS9ETX4JmIuhWJA 自适应微服务治理背后的算法 https://mp.weixin.qq.com/s/OpF4JVWHA9W1v0yefeo56w]]></description>
-</item><item>
-    <title>Go20210601 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210601/</link>
-    <pubDate>Tue, 01 Jun 2021 10:13:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210601/</guid>
-    <description><![CDATA[2021-06-01 今日技术分享 发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA 优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA 图解 数据]]></description>
-</item><item>
-    <title>Go20210531 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210531/</link>
-    <pubDate>Mon, 31 May 2021 16:19:07 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210531/</guid>
-    <description><![CDATA[2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的]]></description>
-</item><item>
-    <title>Go20210529 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210529/</link>
-    <pubDate>Sun, 30 May 2021 15:24:56 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210529/</guid>
-    <description><![CDATA[2021-05-29 今日技术分享 Go：近期两个开源免费好资源 https://mp.weixin.qq.com/s/wXrIztN5MXsNvBKg2LR3hA 再次探讨 Go 的无限缓冲的channel https://mp.weixin.qq.com/s/wZNLOywbQWdju_-7TN_48Q 读者问答：Go 编程怎么也有内存问题？ https://mp.weixin.qq.com/s/51xEfULa1cWaltkTkg1cUA validator库]]></description>
-</item><item>
-    <title>Go20210528 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210528/</link>
-    <pubDate>Sat, 29 May 2021 15:52:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210528/</guid>
-    <description><![CDATA[2021-05-28 今日技术分享 如何让 Go 的缓存库 BigCache 更好用？ https://mp.weixin.qq.com/s/Zn1rP18GtmZsbaRnRfJ8ug 在 Go 语言中，有时 nil 并不是一个 nil https://mp.weixin.qq.com/s/_REGCKxs0ymIdZXN5a6Tgg AWS 容器服务的安全实践 https://mp.weixin.qq.com/s/GYMXc4HXBGOGgA_7mdenhA 骚操作，这款工具可以把Kubernetes集]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on 白菜林</title>
+    <link>https://3ae.cn/tags/golang/</link>
+    <description>Recent content in Golang on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 12 Jun 2021 13:39:00 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go20210612 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210612/</link>
+      <pubDate>Sat, 12 Jun 2021 13:39:00 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210612/</guid>
+      <description>2021-06-12 今日技术分享 Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg 漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ 《Istio 大咖说》</description>
+    </item>
+    
+    <item>
+      <title>Go20210609 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210609/</link>
+      <pubDate>Wed, 09 Jun 2021 10:28:01 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210609/</guid>
+      <description>2021-06-09 今日技术分享 字节跳动打造的轮子：Go 表单验证器 https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw 16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g Go 每日一库之 reflect https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA 一个高逼格的 Go 招聘 https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A 云原生 CI/CD 框架 Tekton 初体验 https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A Go 简单分</description>
+    </item>
+    
+    <item>
+      <title>Go20210608 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210608/</link>
+      <pubDate>Tue, 08 Jun 2021 10:35:19 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210608/</guid>
+      <description>2021-06-08 今日技术分享 Go 调度器的任务窃取（Work-Stealing） https://mp.weixin.qq.com/s/trBAi976eaaTDcSzpAqPkQ 通过实例理解Go逃逸分析 https://mp.weixin.qq.com/s/bR9shJGRXsRHJhh-GcY83A Go 凭什么不支持三元运算符？ https://mp.weixin.qq.com/s/LmHR7Y674dSo-Xa0tajL_w 一文搞懂如何实现 Go 超时</description>
+    </item>
+    
+    <item>
+      <title>Go20210605 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210605/</link>
+      <pubDate>Sat, 05 Jun 2021 18:54:29 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210605/</guid>
+      <description>2021-06-05 今日技术分享 Go: stringer 命令，通过代码生成提高效率 https://mp.weixin.qq.com/s/Ik3PxNRbddtbm6E-Xo_rdA 详解并发编程基础之原子操作(atomic包) https://mp.weixin.qq.com/s/-KE6jNKkVxNrm-e3laibzw 函数的不定参数你是这样用吗？ https://mp.weixin.qq.com/s/jvSbZ0_g_EFqaR2TmjjO8w 如何不 Review 每一行代码</description>
+    </item>
+    
+    <item>
+      <title>Go20210603 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210603/</link>
+      <pubDate>Thu, 03 Jun 2021 15:06:59 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210603/</guid>
+      <description>2021-06-03 今日技术分享 竟然还在争论是否学Go？本文彻底终结该话题 https://mp.weixin.qq.com/s/2jYX2iMp0z7v09-AxdLDMg GM到GMP，Golang经历了什么？ https://mp.weixin.qq.com/s/RR3ducI2gK7JuLAzeILRzg 全面了解虚拟内存：更好学习Go https://mp.weixin.qq.com/s/g5I7un3-lpffAk6UFes8DA 搞 Go 要了解</description>
+    </item>
+    
+    <item>
+      <title>Go20210602 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210602/</link>
+      <pubDate>Wed, 02 Jun 2021 10:09:05 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210602/</guid>
+      <description>2021-06-02 今日技术分享 推荐一本免费的 Go 新书：用 Go 讲架构的书 https://mp.weixin.qq.com/s/SoqxlvEOyV6EtjKTWGEyxw Go 每日一库之 fasttemplate https://mp.weixin.qq.com/s/_ZIB3H1kJwb8s53lIQ-7Sw 在容器里设置GOMAXPROCS的正确姿势 https://mp.weixin.qq.com/s/jVyKb_3YS9ETX4JmIuhWJA 自适应微服务治理背后的算法 https://mp.weixin.qq.com/s/OpF4JVWHA9W1v0yefeo56w</description>
+    </item>
+    
+    <item>
+      <title>Go20210601 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210601/</link>
+      <pubDate>Tue, 01 Jun 2021 10:13:03 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210601/</guid>
+      <description>2021-06-01 今日技术分享 发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA 优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA 图解 数据</description>
+    </item>
+    
+    <item>
+      <title>Go20210531 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210531/</link>
+      <pubDate>Mon, 31 May 2021 16:19:07 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210531/</guid>
+      <description>2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的</description>
+    </item>
+    
+    <item>
+      <title>Go20210529 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210529/</link>
+      <pubDate>Sun, 30 May 2021 15:24:56 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210529/</guid>
+      <description>2021-05-29 今日技术分享 Go：近期两个开源免费好资源 https://mp.weixin.qq.com/s/wXrIztN5MXsNvBKg2LR3hA 再次探讨 Go 的无限缓冲的channel https://mp.weixin.qq.com/s/wZNLOywbQWdju_-7TN_48Q 读者问答：Go 编程怎么也有内存问题？ https://mp.weixin.qq.com/s/51xEfULa1cWaltkTkg1cUA validator库</description>
+    </item>
+    
+    <item>
+      <title>Go20210528 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210528/</link>
+      <pubDate>Sat, 29 May 2021 15:52:25 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210528/</guid>
+      <description>2021-05-28 今日技术分享 如何让 Go 的缓存库 BigCache 更好用？ https://mp.weixin.qq.com/s/Zn1rP18GtmZsbaRnRfJ8ug 在 Go 语言中，有时 nil 并不是一个 nil https://mp.weixin.qq.com/s/_REGCKxs0ymIdZXN5a6Tgg AWS 容器服务的安全实践 https://mp.weixin.qq.com/s/GYMXc4HXBGOGgA_7mdenhA 骚操作，这款工具可以把Kubernetes集</description>
+    </item>
+    
+    <item>
+      <title>Go20210527 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210527/</link>
+      <pubDate>Fri, 28 May 2021 12:54:47 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210527/</guid>
+      <description>2021-05-27 今日技术分享 为什么Go程序占用那么大的虚拟内存？ https://mp.weixin.qq.com/s/tkAWtSJ4ebAUcQG9AmeXWA 你不知道的 Go 之 string https://mp.weixin.qq.com/s/6miIgsZN_Fh79Aixv5BlTg 又吵起来了，Go 是传值还是传引用？ https://mp.weixin.qq.com/s/qsxvfiyZfRCtgTymO9LBZQ Go 编程怎么也有踩内存？ https://mp.weixin.qq.com/s/tXAP8_U63QLNj1h0ZMvXPw kubectl debug | 调试</description>
+    </item>
+    
+    <item>
+      <title>Goproxy</title>
+      <link>https://3ae.cn/article/2021/goproxy/</link>
+      <pubDate>Thu, 27 May 2021 11:22:40 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/goproxy/</guid>
+      <description>Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/ goproxy.io：https://goproxy.io/ 百</description>
+    </item>
+    
+    <item>
+      <title>Go20210526 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210526/</link>
+      <pubDate>Wed, 26 May 2021 23:14:16 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210526/</guid>
+      <description>2021-05-26 今日技术分享 gRPC 可以不用 pb 而使用 JSON 吗？ https://mp.weixin.qq.com/s/oQ4aG0pIJmQFQd2TKGxsXg 什么？无限缓冲 channel。。。 https://mp.weixin.qq.com/s/0TJRcbaWlfwEjbKMKAxNAQ 10.0 有史以来性能最优 https://mp.weixin.qq.com/s/qJ7HQ2BVS6DEO6sPTJzeAA 最强 CNI 基准测试：Cilium 网络性能分析 https://mp.weixin.qq.com/s/NR7gDpp2i5gCRRwZjxaASA 使</description>
+    </item>
+    
+    <item>
+      <title>Go20210525 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210525/</link>
+      <pubDate>Tue, 25 May 2021 23:02:42 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210525/</guid>
+      <description>2021-05-25 今日技术分享 Go 中为什么应该使用接口 https://mp.weixin.qq.com/s/KqXI9ekYAZYd5oYmhqFH8Q 图解Go sync.Pool https://mp.weixin.qq.com/s/aiOjUcN89nxwEUJzVNkl3A 自制文件系统 — 01 文件系统的样子 https://mp.weixin.qq.com/s/0FpQGDzFh_D7IJi6z7oXjg 深入 Go 中各个高性能 JSON 解析库 https://mp.weixin.qq.com/s/FBT5QN_Pja6vRntWY0wFeA 【预告】理论结合实践详解 b+ 树存</description>
+    </item>
+    
+    <item>
+      <title>Go20210524 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210524/</link>
+      <pubDate>Mon, 24 May 2021 23:38:04 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210524/</guid>
+      <description>2021-05-24 今日技术分享 2021 年 5 月程序员工资排行：Go的工资满意吗？ https://mp.weixin.qq.com/s/cX25jSXo_wI22x2CKWW2Cg Go语言爱好者周刊：第 96 期 — 用 Go 实现一个计算器 https://mp.weixin.qq.com/s/yKRK4cfcdJcdwh2u0tyi7w 源码级剖析new和make怎么用！</description>
+    </item>
+    
+    <item>
+      <title>Go20210523 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210523/</link>
+      <pubDate>Mon, 24 May 2021 00:26:25 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210523/</guid>
+      <description>2021-05-23 今日技术分享 用Go实现一个直播系统难吗？看看这个开源项目 https://mp.weixin.qq.com/s/5YPp7WFgVfPlGxim7tmQ5A Go语言数据争用与race原理 https://mp.weixin.qq.com/s/gGGg6wqQX5b1kEOeRbTQlA Go 标准库之 unsafe 包详解 https://mp.weixin.qq.com/s/Pj4Q_8sj2pCmXe2cHNqdvw Go - 开箱即用，WEB 界面一键</description>
+    </item>
+    
+    <item>
+      <title>Go20210521 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210521/</link>
+      <pubDate>Sat, 22 May 2021 00:36:08 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210521/</guid>
+      <description>2021-05-21 今日技术分享 优化 Golang 服务来减少 40% 以上的 CPU https://mp.weixin.qq.com/s/dgVv6p8HQtc-krPGEdU2cQ fuckdb 新功能上线，开箱即用、更加强大的代码生成器 https://mp.weixin.qq.com/s/ysOlv8xsc7wF7cPcV5pu7g Go 面试官问我如何实现面向对象？ https://mp.weixin.qq.com/s/2x4Sajv7HkAjWFPe4oD96g 一文搞懂缓存系统稳定</description>
+    </item>
+    
+    <item>
+      <title>Go20210518 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210518/</link>
+      <pubDate>Tue, 18 May 2021 23:00:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210518/</guid>
+      <description>2021-05-18 今日技术分享 也许是你从来没用过的利器：GODEBUG https://mp.weixin.qq.com/s/lqOs34aMs7AYCxM_Jv0Hug 从0开发上线一个web项目（下） https://mp.weixin.qq.com/s/W5lHCgA_SzzyCoDaHDmz1Q 如何打造高性能的 Go 缓存库 https://mp.weixin.qq.com/s/G8LJ1HBuWoQfWV2dILi6Rg 【本周四预告】JetBr</description>
+    </item>
+    
+    <item>
+      <title>Go20210517 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210517/</link>
+      <pubDate>Mon, 17 May 2021 23:05:05 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210517/</guid>
+      <description>2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性</description>
+    </item>
+    
+    <item>
+      <title>Go20210516 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210516/</link>
+      <pubDate>Sun, 16 May 2021 23:37:59 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210516/</guid>
+      <description>2021-05-16 今日技术分享 面试官：说说unsafe.Pointer和uintptr的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww http.Client的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg 你不知道的 Go 之</description>
+    </item>
+    
+    <item>
+      <title>Go20210515 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210515/</link>
+      <pubDate>Sat, 15 May 2021 22:55:37 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210515/</guid>
+      <description>今日技术分享 Uber 使用 Go 的规模这么大？！都自己定制的 Go 编译器了 https://mp.weixin.qq.com/s/oJ6BD8AXbKKe_OBj9kCx6A Go：如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/5RhaUEk33kf4LkcZphyt_g grpc Go Client 源码分析 https://mp.weixin.qq.com/s/SQ22u7l17mWl2nQlSqvGXg 使用 Loki 进行日志报警(一) https://mp.weixin.qq.com/s/s4g_lg9k1QjGa-GLRfZtEg Go 程</description>
+    </item>
+    
+    <item>
+      <title>Go20210514 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210514/</link>
+      <pubDate>Fri, 14 May 2021 22:58:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210514/</guid>
+      <description>今日技术分享 面试官：聊聊 defer 的工作原理。。。 https://mp.weixin.qq.com/s/oWlQU9c9z11CHdOwOMOHxA 深度解密Go语言之基于信号的抢占式调度 https://mp.weixin.qq.com/s/xdhv24Lh-7smOT5ESw2dBw 聊聊如何做技术分享 https://mp.weixin.qq.com/s/iRe1aGShDBeVhLhOSHwbMQ Uber 使用 Go 的规模这么大？！都自己定制的</description>
+    </item>
+    
+    <item>
+      <title>Go20210513 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210513/</link>
+      <pubDate>Thu, 13 May 2021 22:59:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210513/</guid>
+      <description>今日技术分享 Go：跨团队协作时如何共享对象 https://mp.weixin.qq.com/s/zJaruocUDSzld8ttDyawng template源码分析 https://mp.weixin.qq.com/s/HqcaFEXgQbcRyjYjI6oKGQ kubebuilder 实战: status &amp;amp; event https://mp.weixin.qq.com/s/JuRlClCX7TnQKaW-Rr3Z7g 如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/M88-VS_H7o754mw5Ra7BYg Prometheus 二次开发之 API 接口 https://mp.weixin.qq.com/s/K7ERtE2KKflYSA9KJOukYg 从TD</description>
+    </item>
+    
+    <item>
+      <title>使用 Golang 的交叉编译</title>
+      <link>https://3ae.cn/article/2021/go_cross_compilling/</link>
+      <pubDate>Thu, 13 May 2021 14:35:47 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
+      <description>在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多</description>
+    </item>
+    
+    <item>
+      <title>Go20210512 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210512/</link>
+      <pubDate>Wed, 12 May 2021 03:33:46 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210512/</guid>
+      <description>今日技术分享 unsafe 包真的不安全吗？ https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg go-callvis 源码分析 https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw 深度探索Go语言（二）：动态派发 https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ 再一次看到了 Go 的节制：int128 类型要不要支持？ https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow Go 笔试题精</description>
+    </item>
+    
+    <item>
+      <title>Go20210511 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210511/</link>
+      <pubDate>Tue, 11 May 2021 07:42:44 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210511/</guid>
+      <description>今日技术分享 图解 Go 内存管理分配 https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ Go 刷 leetcode 之任务调度器 https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA 自己动手实现一个 kubectl exec https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ 云上细粒度访问管理的参考架构 https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug Go 工程师必学：Go 大杀器之跟踪剖析 trace</description>
+    </item>
+    
+  </channel>
 </rss>

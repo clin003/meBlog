@@ -1,78 +1,452 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>所有文章 - 白菜林</title>
-        <link>https://3ae.cn/posts/</link>
-        <description>所有文章 | 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Ubuntu安装 Zlib</title>
-    <link>https://3ae.cn/article/2021/zlib/</link>
-    <pubDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/zlib/</guid>
-    <description><![CDATA[如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl]]></description>
-</item><item>
-    <title>免费CDN：jsDelivr&#43;Github 使用方法</title>
-    <link>https://3ae.cn/article/2021/jsdelivr_github/</link>
-    <pubDate>Fri, 02 Jul 2021 23:50:06 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/jsdelivr_github/</guid>
-    <description><![CDATA[CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台]]></description>
-</item><item>
-    <title>Ubuntu安装 qbittorrent-nox并启动</title>
-    <link>https://3ae.cn/article/2021/qbittorrent/</link>
-    <pubDate>Fri, 02 Jul 2021 21:01:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/qbittorrent/</guid>
-    <description><![CDATA[Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent]]></description>
-</item><item>
-    <title>跨域方案Nginx配置</title>
-    <link>https://3ae.cn/article/2021/nginx_cors_server_conf/</link>
-    <pubDate>Thu, 01 Jul 2021 18:58:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/nginx_cors_server_conf/</guid>
-    <description><![CDATA[什么是浏览器同源策略？ 同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。]]></description>
-</item><item>
-    <title>MAC命令快速模糊查找文件</title>
-    <link>https://3ae.cn/article/2021/mac_find/</link>
-    <pubDate>Sun, 27 Jun 2021 10:04:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/mac_find/</guid>
-    <description><![CDATA[find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*” 1 2 3 4 5 6 7 8 9 10 11 12 /** * 比如我要查找一个以‘vue-’开头的.zip]]></description>
-</item><item>
-    <title>Rust 镜像源</title>
-    <link>https://3ae.cn/article/2021/rustproxy/</link>
-    <pubDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/rustproxy/</guid>
-    <description><![CDATA[通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技]]></description>
-</item><item>
-    <title>给我来点酷炫玩意-Sharkle</title>
-    <link>https://3ae.cn/article/2021/sharkle/</link>
-    <pubDate>Wed, 23 Jun 2021 12:23:58 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/sharkle/</guid>
-    <description><![CDATA[网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新]]></description>
-</item><item>
-    <title>Cargo Wix 创建Windows安装程序的cargo子命令</title>
-    <link>https://3ae.cn/article/2021/cargo-wix/</link>
-    <pubDate>Tue, 22 Jun 2021 22:48:53 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
-    <description><![CDATA[cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使]]></description>
-</item><item>
-    <title>用 Deskreen 将你的 Linux 屏幕镜像或串流到任何设备上</title>
-    <link>https://3ae.cn/article/2021/linux_deskreen/</link>
-    <pubDate>Mon, 21 Jun 2021 19:50:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_deskreen/</guid>
-    <description><![CDATA[如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。 Deskreen：将任何设备变]]></description>
-</item><item>
-    <title>为你营造专注冥想的时间-The Zen Zone</title>
-    <link>https://3ae.cn/article/2021/the-zen-zone/</link>
-    <pubDate>Mon, 21 Jun 2021 16:57:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/the-zen-zone/</guid>
-    <description><![CDATA[网站为你营造了专注冥想的时间，通过三个简单的小游戏，你可以进入一个精神集中的状态，从而让大脑思维平静下来！ 传送门 https://thezen.zone/ 方法 进入网站直接开始冥想吧]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 白菜林</title>
+    <link>https://3ae.cn/posts/</link>
+    <description>Recent content in Posts on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 12 Jul 2021 21:01:31 +0800</lastBuildDate><atom:link href="https://3ae.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu安装 Zlib</title>
+      <link>https://3ae.cn/article/2021/zlib/</link>
+      <pubDate>Mon, 12 Jul 2021 21:01:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/zlib/</guid>
+      <description>如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl</description>
+    </item>
+    
+    <item>
+      <title>免费CDN：jsDelivr&#43;Github 使用方法</title>
+      <link>https://3ae.cn/article/2021/jsdelivr_github/</link>
+      <pubDate>Fri, 02 Jul 2021 23:50:06 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/jsdelivr_github/</guid>
+      <description>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu安装 qbittorrent-nox并启动</title>
+      <link>https://3ae.cn/article/2021/qbittorrent/</link>
+      <pubDate>Fri, 02 Jul 2021 21:01:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/qbittorrent/</guid>
+      <description>Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent</description>
+    </item>
+    
+    <item>
+      <title>跨域方案Nginx配置</title>
+      <link>https://3ae.cn/article/2021/nginx_cors_server_conf/</link>
+      <pubDate>Thu, 01 Jul 2021 18:58:23 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/nginx_cors_server_conf/</guid>
+      <description>什么是浏览器同源策略？ 同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。</description>
+    </item>
+    
+    <item>
+      <title>MAC命令快速模糊查找文件</title>
+      <link>https://3ae.cn/article/2021/mac_find/</link>
+      <pubDate>Sun, 27 Jun 2021 10:04:44 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/mac_find/</guid>
+      <description>find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*” /** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全</description>
+    </item>
+    
+    <item>
+      <title>Rust 镜像源</title>
+      <link>https://3ae.cn/article/2021/rustproxy/</link>
+      <pubDate>Fri, 25 Jun 2021 22:53:14 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/rustproxy/</guid>
+      <description>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技</description>
+    </item>
+    
+    <item>
+      <title>给我来点酷炫玩意-Sharkle</title>
+      <link>https://3ae.cn/article/2021/sharkle/</link>
+      <pubDate>Wed, 23 Jun 2021 12:23:58 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/sharkle/</guid>
+      <description>网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新</description>
+    </item>
+    
+    <item>
+      <title>Cargo Wix 创建Windows安装程序的cargo子命令</title>
+      <link>https://3ae.cn/article/2021/cargo-wix/</link>
+      <pubDate>Tue, 22 Jun 2021 22:48:53 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
+      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使</description>
+    </item>
+    
+    <item>
+      <title>用 Deskreen 将你的 Linux 屏幕镜像或串流到任何设备上</title>
+      <link>https://3ae.cn/article/2021/linux_deskreen/</link>
+      <pubDate>Mon, 21 Jun 2021 19:50:25 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_deskreen/</guid>
+      <description>如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。 Deskreen：将任何设备变</description>
+    </item>
+    
+    <item>
+      <title>为你营造专注冥想的时间-The Zen Zone</title>
+      <link>https://3ae.cn/article/2021/the-zen-zone/</link>
+      <pubDate>Mon, 21 Jun 2021 16:57:16 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/the-zen-zone/</guid>
+      <description>网站为你营造了专注冥想的时间，通过三个简单的小游戏，你可以进入一个精神集中的状态，从而让大脑思维平静下来！ 传送门 https://thezen.zone/ 方法 进入网站直接开始冥想吧</description>
+    </item>
+    
+    <item>
+      <title>全球高清实况摄像头-Skylinewebcams</title>
+      <link>https://3ae.cn/article/2021/skylinewebcams/</link>
+      <pubDate>Mon, 14 Jun 2021 20:57:41 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/skylinewebcams/</guid>
+      <description>网站收录了全球范围内的公开实况摄像头，你可以看到世界各地的文化遗产、城市风光、人气景点！ 传送门 https://www.skylinewebcams.com/ 方法 网站支持中文，进入后直接观看！</description>
+    </item>
+    
+    <item>
+      <title>Go20210612 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210612/</link>
+      <pubDate>Sat, 12 Jun 2021 13:39:00 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210612/</guid>
+      <description>2021-06-12 今日技术分享 Go：内存管理与内存清理 https://mp.weixin.qq.com/s/gTk2UcVCv4a0xuP44oqZhg Go看源码必会知识之unsafe包 https://mp.weixin.qq.com/s/dulgHWM-mjrYIdD9nHZyYg 漫画：寻找无序数组的第k大元素（文末送书） https://mp.weixin.qq.com/s/ycZ8Lh1mjzlrfZoN8lRvEQ 《Istio 大咖说》</description>
+    </item>
+    
+    <item>
+      <title>Go20210609 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210609/</link>
+      <pubDate>Wed, 09 Jun 2021 10:28:01 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210609/</guid>
+      <description>2021-06-09 今日技术分享 字节跳动打造的轮子：Go 表单验证器 https://mp.weixin.qq.com/s/Oc90iCYyZGj5uDKhj8eGWw 16 中的新函数 signal.NotifyContext 怎么用？ https://mp.weixin.qq.com/s/LLKgeGmhU_GpQQeivEvi1g Go 每日一库之 reflect https://mp.weixin.qq.com/s/3kE_M9jKTG14t3KIlkqhgA 一个高逼格的 Go 招聘 https://mp.weixin.qq.com/s/lFrmy68XTF79kO3iCD9l6A 云原生 CI/CD 框架 Tekton 初体验 https://mp.weixin.qq.com/s/ZI9vWJ4giVsMhxZYHjjd5A Go 简单分</description>
+    </item>
+    
+    <item>
+      <title>Go20210608 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210608/</link>
+      <pubDate>Tue, 08 Jun 2021 10:35:19 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210608/</guid>
+      <description>2021-06-08 今日技术分享 Go 调度器的任务窃取（Work-Stealing） https://mp.weixin.qq.com/s/trBAi976eaaTDcSzpAqPkQ 通过实例理解Go逃逸分析 https://mp.weixin.qq.com/s/bR9shJGRXsRHJhh-GcY83A Go 凭什么不支持三元运算符？ https://mp.weixin.qq.com/s/LmHR7Y674dSo-Xa0tajL_w 一文搞懂如何实现 Go 超时</description>
+    </item>
+    
+    <item>
+      <title>Go20210605 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210605/</link>
+      <pubDate>Sat, 05 Jun 2021 18:54:29 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210605/</guid>
+      <description>2021-06-05 今日技术分享 Go: stringer 命令，通过代码生成提高效率 https://mp.weixin.qq.com/s/Ik3PxNRbddtbm6E-Xo_rdA 详解并发编程基础之原子操作(atomic包) https://mp.weixin.qq.com/s/-KE6jNKkVxNrm-e3laibzw 函数的不定参数你是这样用吗？ https://mp.weixin.qq.com/s/jvSbZ0_g_EFqaR2TmjjO8w 如何不 Review 每一行代码</description>
+    </item>
+    
+    <item>
+      <title>Linux 常用命令</title>
+      <link>https://3ae.cn/article/2021/linux_cmd/</link>
+      <pubDate>Sat, 05 Jun 2021 10:31:29 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
+      <description>Linux 常用命令 日期 $(date -d &amp;#39;1 day ago&amp;#39; &amp;#39;+%Y-%m-%d&amp;#39;) 常用方法 数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm fo</description>
+    </item>
+    
+    <item>
+      <title>awk 分析 nginx 运行日志常用指令</title>
+      <link>https://3ae.cn/article/2021/awk-nginx-access_log/</link>
+      <pubDate>Sat, 05 Jun 2021 10:16:16 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/awk-nginx-access_log/</guid>
+      <description>awk 分析 nginx 运行日志常用指令 1.独立IP awk &amp;#39;{print $1}&amp;#39; access.log | sort -r |uniq -c | wc -l 2.统计PV awk &amp;#39;{print $6}&amp;#39; access.log | wc -l 3.查询访问最频繁的URL awk &amp;#39;{print $7}&amp;#39; access.log|sort | uniq -c |sort -n -k 1 -r|more 4.</description>
+    </item>
+    
+    <item>
+      <title>TOML 语言规范 1.0 正式版</title>
+      <link>https://3ae.cn/article/2021/toml/</link>
+      <pubDate>Sat, 05 Jun 2021 02:59:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/toml/</guid>
+      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目</description>
+    </item>
+    
+    <item>
+      <title>Rust 学习指南</title>
+      <link>https://3ae.cn/article/2021/learn_rust/</link>
+      <pubDate>Sat, 05 Jun 2021 02:16:24 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/learn_rust/</guid>
+      <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大</description>
+    </item>
+    
+    <item>
+      <title>Go20210603 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210603/</link>
+      <pubDate>Thu, 03 Jun 2021 15:06:59 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210603/</guid>
+      <description>2021-06-03 今日技术分享 竟然还在争论是否学Go？本文彻底终结该话题 https://mp.weixin.qq.com/s/2jYX2iMp0z7v09-AxdLDMg GM到GMP，Golang经历了什么？ https://mp.weixin.qq.com/s/RR3ducI2gK7JuLAzeILRzg 全面了解虚拟内存：更好学习Go https://mp.weixin.qq.com/s/g5I7un3-lpffAk6UFes8DA 搞 Go 要了解</description>
+    </item>
+    
+    <item>
+      <title>塔防游戏-YORG.io</title>
+      <link>https://3ae.cn/article/2021/tower-defense/</link>
+      <pubDate>Wed, 02 Jun 2021 19:52:08 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/tower-defense/</guid>
+      <description>塔防游戏 可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就</description>
+    </item>
+    
+    <item>
+      <title>网页版红色警戒2-Red Alert 2: Chrono Divide</title>
+      <link>https://3ae.cn/article/2021/red-alert-2-chronodivide/</link>
+      <pubDate>Wed, 02 Jun 2021 19:22:30 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/red-alert-2-chronodivide/</guid>
+      <description>在线红警 又是一波人的集体回忆。。。网站高度还原了经典游戏——红色警戒2，原汁原味的画面和音效，仿佛又回到了那个电脑房的年代！ 传送门 https://game.chronodivide.com/ 玩法 网站</description>
+    </item>
+    
+    <item>
+      <title>Go20210602 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210602/</link>
+      <pubDate>Wed, 02 Jun 2021 10:09:05 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210602/</guid>
+      <description>2021-06-02 今日技术分享 推荐一本免费的 Go 新书：用 Go 讲架构的书 https://mp.weixin.qq.com/s/SoqxlvEOyV6EtjKTWGEyxw Go 每日一库之 fasttemplate https://mp.weixin.qq.com/s/_ZIB3H1kJwb8s53lIQ-7Sw 在容器里设置GOMAXPROCS的正确姿势 https://mp.weixin.qq.com/s/jVyKb_3YS9ETX4JmIuhWJA 自适应微服务治理背后的算法 https://mp.weixin.qq.com/s/OpF4JVWHA9W1v0yefeo56w</description>
+    </item>
+    
+    <item>
+      <title>Go20210601 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210601/</link>
+      <pubDate>Tue, 01 Jun 2021 10:13:03 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210601/</guid>
+      <description>2021-06-01 今日技术分享 发现了众多 Go 好书 https://mp.weixin.qq.com/s/x6h8xpbn9kuV2wlk-wtULA Go语言爱好者周刊：第 97 期 https://mp.weixin.qq.com/s/6kXbi8OyubJv6opOomb4zg Go小知识：%v +v #v的区别 https://mp.weixin.qq.com/s/g4qgn1b_LvpvMqRZD-k8LA 优化 Kubernetes 横向扩缩容 HPA https://mp.weixin.qq.com/s/x_yID1QFt8vV7ioy_o5LlA Go语言内存逃逸之谜 https://mp.weixin.qq.com/s/zm5rp4DkgrWIduZAMhzNzA 图解 数据</description>
+    </item>
+    
+    <item>
+      <title>Go20210531 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210531/</link>
+      <pubDate>Mon, 31 May 2021 16:19:07 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210531/</guid>
+      <description>2021-05-30 今日技术分享 国外竟然有这么多公司使用 Go https://mp.weixin.qq.com/s/fKXIBfxvk1wgZMujuz9hWA Go 中如何让消息队列达到最大吞吐量？ https://mp.weixin.qq.com/s/K9qZVNP4AKsHNcrDyZq_eA Go 每日一库之 gotalk https://mp.weixin.qq.com/s/VnpQilljVokGssECVyFjWw Istio 完败？Linkerd 和 Istio 基准测试 https://mp.weixin.qq.com/s/7A7eXQONpiNdCrfwt1HfhQ 9 种开源的</description>
+    </item>
+    
+    <item>
+      <title>Go20210529 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210529/</link>
+      <pubDate>Sun, 30 May 2021 15:24:56 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210529/</guid>
+      <description>2021-05-29 今日技术分享 Go：近期两个开源免费好资源 https://mp.weixin.qq.com/s/wXrIztN5MXsNvBKg2LR3hA 再次探讨 Go 的无限缓冲的channel https://mp.weixin.qq.com/s/wZNLOywbQWdju_-7TN_48Q 读者问答：Go 编程怎么也有内存问题？ https://mp.weixin.qq.com/s/51xEfULa1cWaltkTkg1cUA validator库</description>
+    </item>
+    
+    <item>
+      <title>Go20210528 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210528/</link>
+      <pubDate>Sat, 29 May 2021 15:52:25 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210528/</guid>
+      <description>2021-05-28 今日技术分享 如何让 Go 的缓存库 BigCache 更好用？ https://mp.weixin.qq.com/s/Zn1rP18GtmZsbaRnRfJ8ug 在 Go 语言中，有时 nil 并不是一个 nil https://mp.weixin.qq.com/s/_REGCKxs0ymIdZXN5a6Tgg AWS 容器服务的安全实践 https://mp.weixin.qq.com/s/GYMXc4HXBGOGgA_7mdenhA 骚操作，这款工具可以把Kubernetes集</description>
+    </item>
+    
+    <item>
+      <title>Go20210527 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210527/</link>
+      <pubDate>Fri, 28 May 2021 12:54:47 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210527/</guid>
+      <description>2021-05-27 今日技术分享 为什么Go程序占用那么大的虚拟内存？ https://mp.weixin.qq.com/s/tkAWtSJ4ebAUcQG9AmeXWA 你不知道的 Go 之 string https://mp.weixin.qq.com/s/6miIgsZN_Fh79Aixv5BlTg 又吵起来了，Go 是传值还是传引用？ https://mp.weixin.qq.com/s/qsxvfiyZfRCtgTymO9LBZQ Go 编程怎么也有踩内存？ https://mp.weixin.qq.com/s/tXAP8_U63QLNj1h0ZMvXPw kubectl debug | 调试</description>
+    </item>
+    
+    <item>
+      <title>Goproxy</title>
+      <link>https://3ae.cn/article/2021/goproxy/</link>
+      <pubDate>Thu, 27 May 2021 11:22:40 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/goproxy/</guid>
+      <description>Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/ goproxy.io：https://goproxy.io/ 百</description>
+    </item>
+    
+    <item>
+      <title>Go20210526 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210526/</link>
+      <pubDate>Wed, 26 May 2021 23:14:16 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210526/</guid>
+      <description>2021-05-26 今日技术分享 gRPC 可以不用 pb 而使用 JSON 吗？ https://mp.weixin.qq.com/s/oQ4aG0pIJmQFQd2TKGxsXg 什么？无限缓冲 channel。。。 https://mp.weixin.qq.com/s/0TJRcbaWlfwEjbKMKAxNAQ 10.0 有史以来性能最优 https://mp.weixin.qq.com/s/qJ7HQ2BVS6DEO6sPTJzeAA 最强 CNI 基准测试：Cilium 网络性能分析 https://mp.weixin.qq.com/s/NR7gDpp2i5gCRRwZjxaASA 使</description>
+    </item>
+    
+    <item>
+      <title>使用开源工具进行 Linux 内存取证</title>
+      <link>https://3ae.cn/article/2021/linux-memory-forensics/</link>
+      <pubDate>Wed, 26 May 2021 12:57:28 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
+      <description>利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量</description>
+    </item>
+    
+    <item>
+      <title>Go20210525 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210525/</link>
+      <pubDate>Tue, 25 May 2021 23:02:42 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210525/</guid>
+      <description>2021-05-25 今日技术分享 Go 中为什么应该使用接口 https://mp.weixin.qq.com/s/KqXI9ekYAZYd5oYmhqFH8Q 图解Go sync.Pool https://mp.weixin.qq.com/s/aiOjUcN89nxwEUJzVNkl3A 自制文件系统 — 01 文件系统的样子 https://mp.weixin.qq.com/s/0FpQGDzFh_D7IJi6z7oXjg 深入 Go 中各个高性能 JSON 解析库 https://mp.weixin.qq.com/s/FBT5QN_Pja6vRntWY0wFeA 【预告】理论结合实践详解 b+ 树存</description>
+    </item>
+    
+    <item>
+      <title>Go20210524 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210524/</link>
+      <pubDate>Mon, 24 May 2021 23:38:04 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210524/</guid>
+      <description>2021-05-24 今日技术分享 2021 年 5 月程序员工资排行：Go的工资满意吗？ https://mp.weixin.qq.com/s/cX25jSXo_wI22x2CKWW2Cg Go语言爱好者周刊：第 96 期 — 用 Go 实现一个计算器 https://mp.weixin.qq.com/s/yKRK4cfcdJcdwh2u0tyi7w 源码级剖析new和make怎么用！</description>
+    </item>
+    
+    <item>
+      <title>使用 sed 命令进行复制、剪切和粘贴</title>
+      <link>https://3ae.cn/article/2021/linux_sed/</link>
+      <pubDate>Mon, 24 May 2021 00:39:20 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_sed/</guid>
+      <description>很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有</description>
+    </item>
+    
+    <item>
+      <title>Go20210523 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210523/</link>
+      <pubDate>Mon, 24 May 2021 00:26:25 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210523/</guid>
+      <description>2021-05-23 今日技术分享 用Go实现一个直播系统难吗？看看这个开源项目 https://mp.weixin.qq.com/s/5YPp7WFgVfPlGxim7tmQ5A Go语言数据争用与race原理 https://mp.weixin.qq.com/s/gGGg6wqQX5b1kEOeRbTQlA Go 标准库之 unsafe 包详解 https://mp.weixin.qq.com/s/Pj4Q_8sj2pCmXe2cHNqdvw Go - 开箱即用，WEB 界面一键</description>
+    </item>
+    
+    <item>
+      <title>Go20210521 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210521/</link>
+      <pubDate>Sat, 22 May 2021 00:36:08 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210521/</guid>
+      <description>2021-05-21 今日技术分享 优化 Golang 服务来减少 40% 以上的 CPU https://mp.weixin.qq.com/s/dgVv6p8HQtc-krPGEdU2cQ fuckdb 新功能上线，开箱即用、更加强大的代码生成器 https://mp.weixin.qq.com/s/ysOlv8xsc7wF7cPcV5pu7g Go 面试官问我如何实现面向对象？ https://mp.weixin.qq.com/s/2x4Sajv7HkAjWFPe4oD96g 一文搞懂缓存系统稳定</description>
+    </item>
+    
+    <item>
+      <title>Go20210518 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210518/</link>
+      <pubDate>Tue, 18 May 2021 23:00:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210518/</guid>
+      <description>2021-05-18 今日技术分享 也许是你从来没用过的利器：GODEBUG https://mp.weixin.qq.com/s/lqOs34aMs7AYCxM_Jv0Hug 从0开发上线一个web项目（下） https://mp.weixin.qq.com/s/W5lHCgA_SzzyCoDaHDmz1Q 如何打造高性能的 Go 缓存库 https://mp.weixin.qq.com/s/G8LJ1HBuWoQfWV2dILi6Rg 【本周四预告】JetBr</description>
+    </item>
+    
+    <item>
+      <title>Go20210517 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210517/</link>
+      <pubDate>Mon, 17 May 2021 23:05:05 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210517/</guid>
+      <description>2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性</description>
+    </item>
+    
+    <item>
+      <title>Go20210516 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210516/</link>
+      <pubDate>Sun, 16 May 2021 23:37:59 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210516/</guid>
+      <description>2021-05-16 今日技术分享 面试官：说说unsafe.Pointer和uintptr的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww http.Client的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg 你不知道的 Go 之</description>
+    </item>
+    
+    <item>
+      <title>Go20210515 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210515/</link>
+      <pubDate>Sat, 15 May 2021 22:55:37 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210515/</guid>
+      <description>今日技术分享 Uber 使用 Go 的规模这么大？！都自己定制的 Go 编译器了 https://mp.weixin.qq.com/s/oJ6BD8AXbKKe_OBj9kCx6A Go：如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/5RhaUEk33kf4LkcZphyt_g grpc Go Client 源码分析 https://mp.weixin.qq.com/s/SQ22u7l17mWl2nQlSqvGXg 使用 Loki 进行日志报警(一) https://mp.weixin.qq.com/s/s4g_lg9k1QjGa-GLRfZtEg Go 程</description>
+    </item>
+    
+    <item>
+      <title>Go20210514 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210514/</link>
+      <pubDate>Fri, 14 May 2021 22:58:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210514/</guid>
+      <description>今日技术分享 面试官：聊聊 defer 的工作原理。。。 https://mp.weixin.qq.com/s/oWlQU9c9z11CHdOwOMOHxA 深度解密Go语言之基于信号的抢占式调度 https://mp.weixin.qq.com/s/xdhv24Lh-7smOT5ESw2dBw 聊聊如何做技术分享 https://mp.weixin.qq.com/s/iRe1aGShDBeVhLhOSHwbMQ Uber 使用 Go 的规模这么大？！都自己定制的</description>
+    </item>
+    
+    <item>
+      <title>Go20210513 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210513/</link>
+      <pubDate>Thu, 13 May 2021 22:59:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210513/</guid>
+      <description>今日技术分享 Go：跨团队协作时如何共享对象 https://mp.weixin.qq.com/s/zJaruocUDSzld8ttDyawng template源码分析 https://mp.weixin.qq.com/s/HqcaFEXgQbcRyjYjI6oKGQ kubebuilder 实战: status &amp;amp; event https://mp.weixin.qq.com/s/JuRlClCX7TnQKaW-Rr3Z7g 如何优雅地实现并发编排任务 https://mp.weixin.qq.com/s/M88-VS_H7o754mw5Ra7BYg Prometheus 二次开发之 API 接口 https://mp.weixin.qq.com/s/K7ERtE2KKflYSA9KJOukYg 从TD</description>
+    </item>
+    
+    <item>
+      <title>Swift语法全面解析</title>
+      <link>https://3ae.cn/article/2021/swift-basic-syntax/</link>
+      <pubDate>Thu, 13 May 2021 21:31:19 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
+      <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以</description>
+    </item>
+    
+    <item>
+      <title>使用 Golang 的交叉编译</title>
+      <link>https://3ae.cn/article/2021/go_cross_compilling/</link>
+      <pubDate>Thu, 13 May 2021 14:35:47 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
+      <description>在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多</description>
+    </item>
+    
+    <item>
+      <title>Linux/Mac 使用 GNU Screen 的小技巧</title>
+      <link>https://3ae.cn/article/2021/linux_screen/</link>
+      <pubDate>Thu, 13 May 2021 12:50:05 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_screen/</guid>
+      <description>学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘</description>
+    </item>
+    
+    <item>
+      <title>使用 cron 调度自动化任务</title>
+      <link>https://3ae.cn/article/2021/linux_cron/</link>
+      <pubDate>Wed, 12 May 2021 18:59:21 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_cron/</guid>
+      <description>cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执</description>
+    </item>
+    
+    <item>
+      <title>Go20210512 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210512/</link>
+      <pubDate>Wed, 12 May 2021 03:33:46 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210512/</guid>
+      <description>今日技术分享 unsafe 包真的不安全吗？ https://mp.weixin.qq.com/s/rIqkKNUecvnZ6gadThf4gg go-callvis 源码分析 https://mp.weixin.qq.com/s/dUXXGd8hqEhKE_Cj4EY2Lw 深度探索Go语言（二）：动态派发 https://mp.weixin.qq.com/s/fhpKBRqhRAxFnESQ4vTbWQ 再一次看到了 Go 的节制：int128 类型要不要支持？ https://mp.weixin.qq.com/s/5uW2rcIEhFPCCTPqrhwOow Go 笔试题精</description>
+    </item>
+    
+    <item>
+      <title>Hello world</title>
+      <link>https://3ae.cn/article/2021/hello_world/</link>
+      <pubDate>Tue, 11 May 2021 14:00:54 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/hello_world/</guid>
+      <description>Hello World! 白菜林^_^</description>
+    </item>
+    
+    <item>
+      <title>Go20210511 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210511/</link>
+      <pubDate>Tue, 11 May 2021 07:42:44 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210511/</guid>
+      <description>今日技术分享 图解 Go 内存管理分配 https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ Go 刷 leetcode 之任务调度器 https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA 自己动手实现一个 kubectl exec https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ 云上细粒度访问管理的参考架构 https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug Go 工程师必学：Go 大杀器之跟踪剖析 trace</description>
+    </item>
+    
+  </channel>
 </rss>

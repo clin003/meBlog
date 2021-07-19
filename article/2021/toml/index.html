@@ -1,149 +1,138 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>TOML 语言规范 1.0 正式版 - 白菜林</title><meta name="Description" content="白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。"><meta property="og:title" content="TOML 语言规范 1.0 正式版" />
-<meta property="og:description" content="👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://3ae.cn/article/2021/toml/" /><meta property="og:image" content="https://3ae.cn/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-06-05T02:59:55+08:00" />
-<meta property="article:modified_time" content="2021-06-05T02:59:55+08:00" />
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.85.0" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://3ae.cn/logo.png"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="白菜林" />
+  <meta property="og:url" content="https://3ae.cn/article/2021/toml/" />
+  <link rel="canonical" href="https://3ae.cn/article/2021/toml/" /><link rel="dns-prefetch" href="https://cdn.jsdelivr.net/gh/clin003/meBlog" /><link rel="alternate" type="application/atom+xml" href="https://3ae.cnindex.xml" title="白菜林">
 
-<meta name="twitter:title" content="TOML 语言规范 1.0 正式版"/>
-<meta name="twitter:description" content="👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目"/>
-<meta name="application-name" content="白菜林">
-<meta name="apple-mobile-web-app-title" content="白菜林"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://3ae.cn/article/2021/toml/" /><link rel="prev" href="https://3ae.cn/article/2021/learn_rust/" /><link rel="next" href="https://3ae.cn/article/2021/awk-nginx-access_log/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.2a4fac315e6fcbfcde3ab5e799cd49ecd778838cf27902c7300e76683ec37cce.css" integrity="sha256-Kk&#43;sMV5vy/zeOrXnmc1J7Nd4g4zyeQLHMA52aD7DfM4="><link rel="stylesheet" href="/css/style.min.1e2694bed152fa2922dbe909a441838ed693d88b1330f97485bfa8ed78da42df.css" integrity="sha256-HiaUvtFS&#43;iki2&#43;kJpEGDjtaT2IsTMPl0hb&#43;o7XjaQt8="><link rel="stylesheet" href="/lib/fontawesome-free/all.min.b726a2cced0a9e28dc93be27ae974937e87d68df8b09baf2a4fca2ba5c5a0404.css" integrity="sha256-tyaizO0Knijck74nrpdJN&#43;h9aN&#43;LCbrypPyiulxaBAQ="><link rel="stylesheet" href="/lib/animate/animate.min.4c055e6d0d9ba2b8f1be4719110e92c1b9499ed0759f0d1c48fccd16a7b31dcf.css" integrity="sha256-TAVebQ2borjxvkcZEQ6SwblJntB1nw0cSPzNFqezHc8="><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "TOML 语言规范 1.0 正式版",
-        "inLanguage": "zh-CN",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https:\/\/3ae.cn\/article\/2021\/toml\/"
-        },"genre": "posts","keywords": "TOML, Rust","wordcount":  7656 ,
-        "url": "https:\/\/3ae.cn\/article\/2021\/toml\/","datePublished": "2021-06-05T02:59:55+08:00","dateModified": "2021-06-05T02:59:55+08:00","publisher": {
-            "@type": "Organization",
-            "name": ""},"author": {
-                "@type": "Person",
-                "name": "baicai"
-            },"description": ""
-    }
-    </script></head>
-    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+  <script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/3ae.cn"
+      },
+      "articleSection" : "posts",
+      "name" : "TOML 语言规范 1.0 正式版",
+      "headline" : "TOML 语言规范 1.0 正式版",
+      "description" : "👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目",
+      "inLanguage" : "en-US",
+      "author" : "白菜林",
+      "creator" : "白菜林",
+      "publisher": "白菜林",
+      "accountablePerson" : "白菜林",
+      "copyrightHolder" : "白菜林",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-06-05 02:59:55 \u002b0800 CST",
+      "dateModified" : "2021-06-05 02:59:55 \u002b0800 CST",
+      "url" : "https:\/\/3ae.cn\/article\/2021\/toml\/",
+      "keywords" : [ "TOML","Rust", ]
+  }
+</script>
+<title>TOML 语言规范 1.0 正式版</title>
+  <meta property="og:title" content="TOML 语言规范 1.0 正式版" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目" />
+  <meta name="description" content="👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目" />
+  <meta property="og:locale" content="zh-CN" />
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="白菜林"><span class="header-title-pre"><i class="far fa-kiss-wink-heart fa-fw"></i></span>白菜林</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://support.qq.com/product/325110" rel="noopener noreffer" target="_blank"> 反馈 </a><a class="menu-item" href="https://nav.3ae.cn" rel="noopener noreffer" target="_blank"> 网址导航 </a><a class="menu-item" href="/donations/"> 赞助 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="白菜林"><span class="header-title-pre"><i class="far fa-kiss-wink-heart fa-fw"></i></span>白菜林</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        取消
-                    </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://support.qq.com/product/325110" title="" rel="noopener noreffer" target="_blank">反馈</a><a class="menu-item" href="https://nav.3ae.cn" title="" rel="noopener noreffer" target="_blank">网址导航</a><a class="menu-item" href="/donations/" title="">赞助</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
-    </div>
+  
+    <style>body{font-family:bree serif,sans-serif;-webkit-font-smoothing:antialiased;margin:0 20px}article{max-width:800px;margin-left:auto;margin-right:auto}a{color:#000;text-decoration:none}a:hover{font-weight:600;text-decoration:underline}.post-ads{margin:50px 0}.markdown-body{font-size:18px;max-width:100%}.markdown-body a{text-decoration:underline;text-decoration-color:#000}.markdown-body pre{padding:16px;overflow:auto;border-radius:10px}.markdown-body code{padding:.2em .4em;font-size:85%;background-color:#f6f8fa;border-radius:6px}.markdown-body pre>code{padding:0;font-size:100%;background-color:inherit;border:0}.Chinese .markdown-body{line-height:200%}.site-date-catalog{font-size:2rem}.header-title{font-size:2rem;font-weight:700;margin-top:32px;font-family:bungee shade,sans-serif}.header-title a{text-decoration:none}.header-subtitle{color:#666}.header-items{margin:10px 0}.header-item{margin:0 5px}.header-line{width:100%;border-width:2px;border-color:#482936;border-style:solid none none none}.lang-switch{font-weight:600}#posts-list{min-height:600px}.posts-line{font-size:1.2rem;margin:12px 0}.posts-categories{font-size:.8rem;margin:auto;text-align:center}.posts-category{padding:3px 0;border:#000 2px solid;border-radius:5px}.site-footer{margin-top:50px}.site-footer-item{margin-right:12px}.post-content img{max-width:100%;display:block;margin-right:auto;margin-top:12px}.post-header{margin-bottom:50px}.post-title{font-size:2rem;font-weight:600}.post-tags{display:inline;font-weight:600;padding:2px 5px;margin-right:6px;border:#000 2px solid;border-radius:5px}.post-date{font-weight:800;font-style:italic}.post-author{float:right;font-weight:600}.page-content{min-height:60%}.post-content{margin-bottom:50px}.post-content p{hyphens:auto;line-height:1.8;text-justify:ideographic;margin-bottom:1em}.related-content{border-width:3px;border-style:solid;border-color:#000;padding:0 10px;margin-bottom:50px;margin-top:100px}.related-content li{margin:5px 0}.taxonomy-term{font-size:3rem}.gallery-img{text-align:center}.gallery-img span{text-align:center}.gallery-img-desc{font-size:.8em;font-weight:800}#disqus_thread{position:relative}#disqus_thread:after{content:"";display:block;height:55px;width:100%;position:absolute;bottom:0;background:#fff}@media screen and (max-width:600px){.header-title,.header-subtitle,.header-items{text-align:center}.posts-line{font-size:16px}.markdown-body{font-size:16px}.post-title{font-size:2rem}.post-content p{letter-spacing:.05em}}@media screen and (max-width:48em){.posts-category{display:none}}</style>
+  
+  
+    <style>.container,.container-fluid{margin-right:auto;margin-left:auto}.container-fluid{padding-right:2rem;padding-left:2rem}.row{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:initial;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-.5rem;margin-left:-.5rem}.row.reverse{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.col.reverse{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.col-xs,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-offset-0,.col-xs-offset-1,.col-xs-offset-10,.col-xs-offset-11,.col-xs-offset-12,.col-xs-offset-2,.col-xs-offset-3,.col-xs-offset-4,.col-xs-offset-5,.col-xs-offset-6,.col-xs-offset-7,.col-xs-offset-8,.col-xs-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-xs{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-xs-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-xs-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-xs-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-xs-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-xs-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-xs-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-xs-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-xs-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-xs-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-xs-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-xs-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-xs-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-xs-offset-0{margin-left:0}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-11{margin-left:91.66666667%}.start-xs{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-xs{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-xs{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-xs{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-xs{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-xs{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-xs{-ms-flex-pack:distribute;justify-content:space-around}.between-xs{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-xs{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-xs{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}@media only screen and (min-width:48em){.container{width:49rem}.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-offset-0,.col-sm-offset-1,.col-sm-offset-10,.col-sm-offset-11,.col-sm-offset-12,.col-sm-offset-2,.col-sm-offset-3,.col-sm-offset-4,.col-sm-offset-5,.col-sm-offset-6,.col-sm-offset-7,.col-sm-offset-8,.col-sm-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-sm{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-sm-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-sm-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-sm-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-sm-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-sm-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-sm-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-sm-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-sm-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-sm-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-sm-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-sm-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-sm-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-sm-offset-0{margin-left:0}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-11{margin-left:91.66666667%}.start-sm{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-sm{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-sm{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-sm{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-sm{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-sm{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-sm{-ms-flex-pack:distribute;justify-content:space-around}.between-sm{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-sm{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-sm{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}@media only screen and (min-width:64em){.container{width:65rem}.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-offset-0,.col-md-offset-1,.col-md-offset-10,.col-md-offset-11,.col-md-offset-12,.col-md-offset-2,.col-md-offset-3,.col-md-offset-4,.col-md-offset-5,.col-md-offset-6,.col-md-offset-7,.col-md-offset-8,.col-md-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-md{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-md-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-md-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-md-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-md-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-md-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-md-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-md-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-md-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-md-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-md-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-md-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-md-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-md-offset-0{margin-left:0}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-11{margin-left:91.66666667%}.start-md{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-md{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-md{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-md{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-md{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-md{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-md{-ms-flex-pack:distribute;justify-content:space-around}.between-md{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-md{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-md{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}@media only screen and (min-width:75em){.container{width:76rem}.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-offset-0,.col-lg-offset-1,.col-lg-offset-10,.col-lg-offset-11,.col-lg-offset-12,.col-lg-offset-2,.col-lg-offset-3,.col-lg-offset-4,.col-lg-offset-5,.col-lg-offset-6,.col-lg-offset-7,.col-lg-offset-8,.col-lg-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-lg{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-lg-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-lg-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-lg-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-lg-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-lg-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-lg-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-lg-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-lg-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-lg-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-lg-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-lg-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-lg-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-lg-offset-0{margin-left:0}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-11{margin-left:91.66666667%}.start-lg{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-lg{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-lg{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-lg{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-lg{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-lg{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-lg{-ms-flex-pack:distribute;justify-content:space-around}.between-lg{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-lg{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-lg{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}</style>
+  
+
+  
+
+  <link href="https://cdn.jsdelivr.net/gh/clin003/meBlog/index.xml" rel="alternate" type="application/rss+xml"
+    title="白菜林">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Bungee+Shade" rel="stylesheet">
+  
+  
+
+  
+  
+</head>
+
+
+<body>
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          
+<header>
+  <div class="header-title">
+    <a href="/"
+      >Baicai Lin</a
+    >
+  </div>
+  <div class="header-subtitle">Log something useless, but interesting.</div>
 </header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
+<div class="row end-md center-xs header-items">
+  
+  <div class="header-item">
+    <a href="/about/" target="_blank">关于</a>
+  </div>
+  
+  <div class="header-item">
+    <a href="https://support.qq.com/product/325110" target="_blank">反馈</a>
+  </div>
+  
+  <div class="header-item">
+    <a href="https://nav.3ae.cn" target="_blank">网址导航</a>
+  </div>
+  
+  <div class="header-item">
+    <a href="/donations/" target="_blank">赞助</a>
+  </div>
+  
+  <div class="header-item">
+    <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+  
 </div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
+<div class="row end-xs">
+   
 </div>
-<main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">目录</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">TOML 语言规范 1.0 正式版</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/clin003/meBlog" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>baicai</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/learn-rust/"><i class="far fa-folder fa-fw"></i>Learn Rust</a>&nbsp;<a href="/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/"><i class="far fa-folder fa-fw"></i>开发技能</a>&nbsp;<a href="/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/"><i class="far fa-folder fa-fw"></i>编程经验</a>&nbsp;<a href="/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/"><i class="far fa-folder fa-fw"></i>收集与整理</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-05">2021-06-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 7656 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 16 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="true">
-                <div class="details-summary toc-title">
-                    <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#宗旨">宗旨</a></li>
-        <li><a href="#目录">目录</a></li>
-        <li><a href="#规格">规格</a></li>
-        <li><a href="#注释">注释</a></li>
-        <li><a href="#键值对">键值对</a></li>
-        <li><a href="#键名">键名</a></li>
-        <li><a href="#字符串">字符串</a></li>
-        <li><a href="#整数">整数</a></li>
-        <li><a href="#浮点数">浮点数</a></li>
-        <li><a href="#布尔值">布尔值</a></li>
-        <li><a href="#坐标日期时刻">坐标日期时刻</a></li>
-        <li><a href="#各地日期时刻">各地日期时刻</a></li>
-        <li><a href="#各地日期">各地日期</a></li>
-        <li><a href="#各地时刻">各地时刻</a></li>
-        <li><a href="#数组">数组</a></li>
-        <li><a href="#表">表</a></li>
-        <li><a href="#内联表">内联表</a></li>
-        <li><a href="#表数组">表数组</a></li>
-        <li><a href="#文件扩展名">文件扩展名</a></li>
-        <li><a href="#mime-类型">MIME 类型</a></li>
-        <li><a href="#abnf-语法">ABNF 语法</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><p>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目中编辑配置文件。</p>
-<p>👉 本文来自 <a href="https://github.com/toml-lang/toml.io" target="_blank" rel="noopener noreffer">toml-lang 的中文翻译版本</a>，本文收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在 toml.io 原项目仓库指出或修改错误。</p>
+<div class="header-line"></div>
+
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">TOML 语言规范 1.0 正式版</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2021-06-05 02:59:55 CST">
+                05 Jun 2021
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+              <div class="post-author">
+                <a target="_blank" href="https://github.com/clin003/meBlog">@白菜林</a>
+              </div>
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+          <p>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目中编辑配置文件。</p>
+<p>👉 本文来自 <a href="https://github.com/toml-lang/toml.io">toml-lang 的中文翻译版本</a>，本文收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在 toml.io 原项目仓库指出或修改错误。</p>
 <h1 id="toml-v100">TOML v1.0.0</h1>
 <p>全称：Tom 的（语义）明显、（配置）最小化的语言。（Tom&rsquo;s Obvious, Minimal Language）<br>
 作者：Tom Preston-Werner、Pradyun Gedam 等人。</p>
@@ -153,25 +142,25 @@ TOML 被设计成可以无歧义地映射为哈希表。<br>
 TOML 应该能很容易地被解析成各种语言中的数据结构。</p>
 <h3 id="目录">目录</h3>
 <ul>
-<li><a href="#%e8%a7%84%e6%a0%bc" rel="">规格</a></li>
-<li><a href="#%e6%b3%a8%e9%87%8a" rel="">注释</a></li>
-<li><a href="#%e9%94%ae%e5%80%bc%e5%af%b9" rel="">键值对</a></li>
-<li><a href="#%e9%94%ae%e5%90%8d" rel="">键名</a></li>
-<li><a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2" rel="">字符串</a></li>
-<li><a href="#%e6%95%b4%e6%95%b0" rel="">整数</a></li>
-<li><a href="#%e6%b5%ae%e7%82%b9%e6%95%b0" rel="">浮点数</a></li>
-<li><a href="#%e5%b8%83%e5%b0%94%e5%80%bc" rel="">布尔值</a></li>
-<li><a href="#%e5%9d%90%e6%a0%87%e6%97%a5%e6%9c%9f%e6%97%b6%e5%88%bb" rel="">坐标日期时刻</a></li>
-<li><a href="#%e5%90%84%e5%9c%b0%e6%97%a5%e6%9c%9f%e6%97%b6%e5%88%bb" rel="">各地日期时刻</a></li>
-<li><a href="#%e5%90%84%e5%9c%b0%e6%97%a5%e6%9c%9f" rel="">各地日期</a></li>
-<li><a href="#%e5%90%84%e5%9c%b0%e6%97%b6%e5%88%bb" rel="">各地时刻</a></li>
-<li><a href="#%e6%95%b0%e7%bb%84" rel="">数组</a></li>
-<li><a href="#%e8%a1%a8" rel="">表</a></li>
-<li><a href="#%e5%86%85%e8%81%94%e8%a1%a8" rel="">内联表</a></li>
-<li><a href="#%e8%a1%a8%e6%95%b0%e7%bb%84" rel="">表数组</a></li>
-<li><a href="#%e6%96%87%e4%bb%b6%e6%89%a9%e5%b1%95%e5%90%8d" rel="">文件扩展名</a></li>
-<li><a href="#mime-%e7%b1%bb%e5%9e%8b" rel="">MIME 类型</a></li>
-<li><a href="#abnf-%e8%af%ad%e6%b3%95" rel="">ABNF 语法</a></li>
+<li><a href="#%E8%A7%84%E6%A0%BC">规格</a></li>
+<li><a href="#%E6%B3%A8%E9%87%8A">注释</a></li>
+<li><a href="#%E9%94%AE%E5%80%BC%E5%AF%B9">键值对</a></li>
+<li><a href="#%E9%94%AE%E5%90%8D">键名</a></li>
+<li><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2">字符串</a></li>
+<li><a href="#%E6%95%B4%E6%95%B0">整数</a></li>
+<li><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0">浮点数</a></li>
+<li><a href="#%E5%B8%83%E5%B0%94%E5%80%BC">布尔值</a></li>
+<li><a href="#%E5%9D%90%E6%A0%87%E6%97%A5%E6%9C%9F%E6%97%B6%E5%88%BB">坐标日期时刻</a></li>
+<li><a href="#%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E5%88%BB">各地日期时刻</a></li>
+<li><a href="#%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F">各地日期</a></li>
+<li><a href="#%E5%90%84%E5%9C%B0%E6%97%B6%E5%88%BB">各地时刻</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84">数组</a></li>
+<li><a href="#%E8%A1%A8">表</a></li>
+<li><a href="#%E5%86%85%E8%81%94%E8%A1%A8">内联表</a></li>
+<li><a href="#%E8%A1%A8%E6%95%B0%E7%BB%84">表数组</a></li>
+<li><a href="#%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D">文件扩展名</a></li>
+<li><a href="#mime-%E7%B1%BB%E5%9E%8B">MIME 类型</a></li>
+<li><a href="#abnf-%E8%AF%AD%E6%B3%95">ABNF 语法</a></li>
 </ul>
 <h3 id="规格">规格</h3>
 <ul>
@@ -182,228 +171,92 @@ TOML 应该能很容易地被解析成各种语言中的数据结构。</p>
 </ul>
 <h3 id="注释">注释</h3>
 <p>井字符将该行余下的部分标记为注释，除非它在字符串中。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 这是一个全行注释</span>
-<span class="nx">key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>  <span class="c"># 这是一个行末注释</span>
-<span class="nx">another</span> <span class="p">=</span> <span class="s2">&#34;# 这不是一个注释&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>除制表符以外的控制字符（U+0000 至 U+0008，U+000A 至 U+001F，U+007F）不允许出现在注释中。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 这是一个全行注释</span>
+<span style="color:#a6e22e">key</span> = <span style="color:#e6db74">&#34;value&#34;</span>  <span style="color:#75715e"># 这是一个行末注释</span>
+<span style="color:#a6e22e">another</span> = <span style="color:#e6db74">&#34;# 这不是一个注释&#34;</span>
+</code></pre></div><p>除制表符以外的控制字符（U+0000 至 U+0008，U+000A 至 U+001F，U+007F）不允许出现在注释中。</p>
 <h3 id="键值对">键值对</h3>
 <p>TOML 文档最基本的构成区块是键值对。</p>
 <p>键名在等号的左边而值在右边。<br>
 键名和键值周围的空白会被忽略。<br>
 键、等号和值必须在同一行（不过有些值可以跨多行）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>值必须是下述类型之一。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">key</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+</code></pre></div><p>值必须是下述类型之一。</p>
 <ul>
-<li><a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2" rel="">字符串</a></li>
-<li><a href="#%e6%95%b4%e6%95%b0" rel="">整数</a></li>
-<li><a href="#%e6%b5%ae%e7%82%b9%e6%95%b0" rel="">浮点数</a></li>
-<li><a href="#%e5%b8%83%e5%b0%94%e5%80%bc" rel="">布尔值</a></li>
-<li><a href="#%e5%9d%90%e6%a0%87%e6%97%a5%e6%9c%9f%e6%97%b6%e5%88%bb" rel="">坐标日期时刻</a></li>
-<li><a href="#%e5%90%84%e5%9c%b0%e6%97%a5%e6%9c%9f%e6%97%b6%e5%88%bb" rel="">各地日期时刻</a></li>
-<li><a href="#%e5%90%84%e5%9c%b0%e6%97%a5%e6%9c%9f" rel="">各地日期</a></li>
-<li><a href="#%e5%90%84%e5%9c%b0%e6%97%b6%e5%88%bb" rel="">各地时刻</a></li>
-<li><a href="#%e6%95%b0%e7%bb%84" rel="">数组</a></li>
-<li><a href="#%e5%86%85%e8%81%94%e8%a1%a8" rel="">内联表</a></li>
+<li><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2">字符串</a></li>
+<li><a href="#%E6%95%B4%E6%95%B0">整数</a></li>
+<li><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0">浮点数</a></li>
+<li><a href="#%E5%B8%83%E5%B0%94%E5%80%BC">布尔值</a></li>
+<li><a href="#%E5%9D%90%E6%A0%87%E6%97%A5%E6%9C%9F%E6%97%B6%E5%88%BB">坐标日期时刻</a></li>
+<li><a href="#%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E5%88%BB">各地日期时刻</a></li>
+<li><a href="#%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F">各地日期</a></li>
+<li><a href="#%E5%90%84%E5%9C%B0%E6%97%B6%E5%88%BB">各地时刻</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84">数组</a></li>
+<li><a href="#%E5%86%85%E8%81%94%E8%A1%A8">内联表</a></li>
 </ul>
 <p>不指定值是非法的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">key</span> <span class="p">=</span> <span class="c"># 非法</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>键值对后必须换行（或结束文件）。<br>
-（例外见<a href="#%e5%86%85%e8%81%94%e8%a1%a8" rel="">内联表</a>）</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">first = &#34;Tom&#34; last = &#34;Preston-Werner&#34; # 非法
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="键名">键名</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">key</span> = <span style="color:#75715e"># 非法</span>
+</code></pre></div><p>键值对后必须换行（或结束文件）。<br>
+（例外见<a href="#%E5%86%85%E8%81%94%E8%A1%A8">内联表</a>）</p>
+<pre><code>first = &quot;Tom&quot; last = &quot;Preston-Werner&quot; # 非法
+</code></pre><h3 id="键名">键名</h3>
 <p>键名可以是裸露的，引号引起来的，或点分隔的。</p>
 <p><strong>裸键</strong>只能包含 ASCII 字母，ASCII 数字，下划线和短横线（<code>A-Za-z0-9_-</code>）。<br>
 注意裸键允许仅由纯 ASCII 数字构成，例如 <code>1234</code>，但是是被理解为字符串的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-<span class="nx">bare_key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-<span class="nx">bare-key</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-<span class="mi">1234</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>引号键</strong>遵循与基本字符串或字面量字符串相同的规则并允许你使用更为广泛的键名。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">key</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+<span style="color:#a6e22e">bare_key</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+<span style="color:#a6e22e">bare-key</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+<span style="color:#ae81ff">1234</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+</code></pre></div><p><strong>引号键</strong>遵循与基本字符串或字面量字符串相同的规则并允许你使用更为广泛的键名。<br>
 除非明显必要，使用裸键方为最佳实践。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="s2">&#34;127.0.0.1&#34;</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-<span class="s2">&#34;character encoding&#34;</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-<span class="s2">&#34;ʎǝʞ&#34;</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-<span class="s1">&#39;key2&#39;</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-<span class="s1">&#39;quoted &#34;value&#34;&#39;</span> <span class="p">=</span> <span class="s2">&#34;value&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>裸键中不能为空，但空引号键是允许的（虽然不建议如此）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">=</span> <span class="s2">&#34;no key name&#34;</span>  <span class="c"># 非法</span>
-<span class="s2">&#34;&#34;</span> <span class="p">=</span> <span class="s2">&#34;blank&#34;</span>     <span class="c"># 合法但不鼓励</span>
-<span class="s1">&#39;&#39;</span> <span class="p">=</span> <span class="s1">&#39;blank&#39;</span>     <span class="c"># 合法但不鼓励</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>点分隔键</strong>是一系列通过点相连的裸键或引号键。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#e6db74">&#34;127.0.0.1&#34;</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+<span style="color:#e6db74">&#34;character encoding&#34;</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+<span style="color:#e6db74">&#34;ʎǝʞ&#34;</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+<span style="color:#e6db74">&#39;key2&#39;</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+<span style="color:#e6db74">&#39;quoted &#34;value&#34;&#39;</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+</code></pre></div><p>裸键中不能为空，但空引号键是允许的（虽然不建议如此）。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">= <span style="color:#e6db74">&#34;no key name&#34;</span>  <span style="color:#75715e"># 非法</span>
+<span style="color:#e6db74">&#34;&#34;</span> = <span style="color:#e6db74">&#34;blank&#34;</span>     <span style="color:#75715e"># 合法但不鼓励</span>
+<span style="color:#e6db74">&#39;&#39;</span> = <span style="color:#e6db74">&#39;blank&#39;</span>     <span style="color:#75715e"># 合法但不鼓励</span>
+</code></pre></div><p><strong>点分隔键</strong>是一系列通过点相连的裸键或引号键。<br>
 这允许了你将相近属性放在一起：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Orange&#34;</span>
-<span class="nx">physical</span><span class="p">.</span><span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;orange&#34;</span>
-<span class="nx">physical</span><span class="p">.</span><span class="nx">shape</span> <span class="p">=</span> <span class="s2">&#34;round&#34;</span>
-<span class="nx">site</span><span class="p">.</span><span class="s2">&#34;google.com&#34;</span> <span class="p">=</span> <span class="kc">true</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>等价于 JSON 的如下结构：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Orange&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;physical&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;color&#34;</span><span class="p">:</span> <span class="s2">&#34;orange&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;shape&#34;</span><span class="p">:</span> <span class="s2">&#34;round&#34;</span>
-  <span class="p">},</span>
-  <span class="nt">&#34;site&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;google.com&#34;</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>有关点分隔键定义表的详细信息，请参阅后文<a href="#%e8%a1%a8" rel="">表</a>一节。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Orange&#34;</span>
+<span style="color:#a6e22e">physical</span>.<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;orange&#34;</span>
+<span style="color:#a6e22e">physical</span>.<span style="color:#a6e22e">shape</span> = <span style="color:#e6db74">&#34;round&#34;</span>
+<span style="color:#a6e22e">site</span>.<span style="color:#e6db74">&#34;google.com&#34;</span> = <span style="color:#66d9ef">true</span>
+</code></pre></div><p>等价于 JSON 的如下结构：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Orange&#34;</span>,
+  <span style="color:#f92672">&#34;physical&#34;</span>: {
+    <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;orange&#34;</span>,
+    <span style="color:#f92672">&#34;shape&#34;</span>: <span style="color:#e6db74">&#34;round&#34;</span>
+  },
+  <span style="color:#f92672">&#34;site&#34;</span>: {
+    <span style="color:#f92672">&#34;google.com&#34;</span>: <span style="color:#66d9ef">true</span>
+  }
+}
+</code></pre></div><p>有关点分隔键定义表的详细信息，请参阅后文<a href="#%E8%A1%A8">表</a>一节。</p>
 <p>点分隔符周围的空白会被忽略。<br>
 不过，最佳实践是不要使用任何不必要的空白。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">fruit</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;banana&#34;</span>     <span class="c"># 这是最佳实践</span>
-<span class="nx">fruit</span><span class="p">.</span> <span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;yellow&#34;</span>    <span class="c"># 等同于 fruit.color</span>
-<span class="nx">fruit</span> <span class="p">.</span> <span class="nx">flavor</span> <span class="p">=</span> <span class="s2">&#34;banana&#34;</span>   <span class="c"># 等同于 fruit.flavor</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>缩进被作为空白对待而被忽略。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">fruit</span>.<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;banana&#34;</span>     <span style="color:#75715e"># 这是最佳实践</span>
+<span style="color:#a6e22e">fruit</span>. <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;yellow&#34;</span>    <span style="color:#75715e"># 等同于 fruit.color</span>
+<span style="color:#a6e22e">fruit</span> . <span style="color:#a6e22e">flavor</span> = <span style="color:#e6db74">&#34;banana&#34;</span>   <span style="color:#75715e"># 等同于 fruit.flavor</span>
+</code></pre></div><p>缩进被作为空白对待而被忽略。</p>
 <p>多次定义同一个键是非法的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 不要这样做
-name = &#34;Tom&#34;
-name = &#34;Pradyun&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>注意裸键和引号键是等价的：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 这是不可行的
-spelling = &#34;favorite&#34;
-&#34;spelling&#34; = &#34;favourite&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>只要一个键还没有被直接定义过，你就仍可以对它和它下属的键名赋值。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 这使“fruit”键作为表存在。
+<pre><code># 不要这样做
+name = &quot;Tom&quot;
+name = &quot;Pradyun&quot;
+</code></pre><p>注意裸键和引号键是等价的：</p>
+<pre><code># 这是不可行的
+spelling = &quot;favorite&quot;
+&quot;spelling&quot; = &quot;favourite&quot;
+</code></pre><p>只要一个键还没有被直接定义过，你就仍可以对它和它下属的键名赋值。</p>
+<pre><code># 这使“fruit”键作为表存在。
 fruit.apple.smooth = true
 
 # 所以接下来你可以像中这样对“fruit”表添加内容：
 fruit.orange = 2
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 以下是非法的
+</code></pre><pre><code># 以下是非法的
 
 # 这将 fruit.apple 的值定义为一个整数。
 fruit.apple = 1
@@ -411,522 +264,228 @@ fruit.apple = 1
 # 但接下来这将 fruit.apple 像表一样对待了。
 # 整数不能变成表。
 fruit.apple.smooth = true
-</code></pre></td></tr></table>
-</div>
-</div><p>不鼓励跳跃式地定义点分隔键。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 合法但不鼓励</span>
+</code></pre><p>不鼓励跳跃式地定义点分隔键。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 合法但不鼓励</span>
 
-<span class="nx">apple</span><span class="p">.</span><span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;水果&#34;</span>
-<span class="nx">orange</span><span class="p">.</span><span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;水果&#34;</span>
+<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;水果&#34;</span>
+<span style="color:#a6e22e">orange</span>.<span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;水果&#34;</span>
 
-<span class="nx">apple</span><span class="p">.</span><span class="nx">skin</span> <span class="p">=</span> <span class="s2">&#34;薄&#34;</span>
-<span class="nx">orange</span><span class="p">.</span><span class="nx">skin</span> <span class="p">=</span> <span class="s2">&#34;厚&#34;</span>
+<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">skin</span> = <span style="color:#e6db74">&#34;薄&#34;</span>
+<span style="color:#a6e22e">orange</span>.<span style="color:#a6e22e">skin</span> = <span style="color:#e6db74">&#34;厚&#34;</span>
 
-<span class="nx">apple</span><span class="p">.</span><span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;红&#34;</span>
-<span class="nx">orange</span><span class="p">.</span><span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;橙&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 建议</span>
+<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;红&#34;</span>
+<span style="color:#a6e22e">orange</span>.<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;橙&#34;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 建议</span>
 
-<span class="nx">apple</span><span class="p">.</span><span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;水果&#34;</span>
-<span class="nx">apple</span><span class="p">.</span><span class="nx">skin</span> <span class="p">=</span> <span class="s2">&#34;薄&#34;</span>
-<span class="nx">apple</span><span class="p">.</span><span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;红&#34;</span>
+<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;水果&#34;</span>
+<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">skin</span> = <span style="color:#e6db74">&#34;薄&#34;</span>
+<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;红&#34;</span>
 
-<span class="nx">orange</span><span class="p">.</span><span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;水果&#34;</span>
-<span class="nx">orange</span><span class="p">.</span><span class="nx">skin</span> <span class="p">=</span> <span class="s2">&#34;厚&#34;</span>
-<span class="nx">orange</span><span class="p">.</span><span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;红&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>由于裸键可以仅由 ASCII 整数组成，所以可能写出看起来像浮点数、但实际上是两部分的点分隔键。<br>
+<span style="color:#a6e22e">orange</span>.<span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;水果&#34;</span>
+<span style="color:#a6e22e">orange</span>.<span style="color:#a6e22e">skin</span> = <span style="color:#e6db74">&#34;厚&#34;</span>
+<span style="color:#a6e22e">orange</span>.<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;红&#34;</span>
+</code></pre></div><p>由于裸键可以仅由 ASCII 整数组成，所以可能写出看起来像浮点数、但实际上是两部分的点分隔键。<br>
 除非你有充分的理由（基本不太会），否则不要这样做。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="mf">3.14159</span> <span class="p">=</span> <span class="s2">&#34;派&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>上面的 TOML 对应以下 JSON。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span> <span class="nt">&#34;3&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&#34;14159&#34;</span><span class="p">:</span> <span class="s2">&#34;派&#34;</span> <span class="p">}</span> <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="字符串">字符串</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#ae81ff">3.14159</span> = <span style="color:#e6db74">&#34;派&#34;</span>
+</code></pre></div><p>上面的 TOML 对应以下 JSON。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;3&#34;</span>: { <span style="color:#f92672">&#34;14159&#34;</span>: <span style="color:#e6db74">&#34;派&#34;</span> } }
+</code></pre></div><h3 id="字符串">字符串</h3>
 <p>共有四种方式来表示字符串：基本字符串、多行基本字符串、字面量和多行字面量。<br>
 所有字符串都只能包含有效的 UTF-8 字符。</p>
 <p><strong>基本字符串</strong>由引号（<code>&quot;</code>）包裹。<br>
 任何 Unicode 字符都可以使用，除了那些必须转义的：引号，反斜杠，以及除制表符外的控制字符（U+0000 至 U+0008，U+000A 至 U+001F，U+007F）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">str</span> <span class="p">=</span> <span class="s2">&#34;我是一个字符串。\&#34;你可以把我引起来\&#34;。姓名\tJos\u00E9\n位置\t旧金山。&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>为了方便，一些流行的字符有其简便转义写法。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">\b         - backspace       (U+0008)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">str</span> = <span style="color:#e6db74">&#34;我是一个字符串。\&#34;你可以把我引起来\&#34;。姓名\tJos\u00E9\n位置\t旧金山。&#34;</span>
+</code></pre></div><p>为了方便，一些流行的字符有其简便转义写法。</p>
+<pre><code>\b         - backspace       (U+0008)
 \t         - tab             (U+0009)
 \n         - linefeed        (U+000A)
 \f         - form feed       (U+000C)
 \r         - carriage return (U+000D)
-\&#34;         - quote           (U+0022)
+\&quot;         - quote           (U+0022)
 \\         - backslash       (U+005C)
 \uXXXX     - unicode         (U+XXXX)
 \UXXXXXXXX - unicode         (U+XXXXXXXX)
-</code></pre></td></tr></table>
-</div>
-</div><p>任何 Unicode 字符都可以用 <code>\uXXXX</code> 或 <code>\UXXXXXXXX</code> 的形式来转义。<br>
-转义码必须是有效的 Unicode <a href="https://unicode.org/glossary/#unicode_scalar_value" target="_blank" rel="noopener noreffer">标量值</a>。</p>
+</code></pre><p>任何 Unicode 字符都可以用 <code>\uXXXX</code> 或 <code>\UXXXXXXXX</code> 的形式来转义。<br>
+转义码必须是有效的 Unicode <a href="https://unicode.org/glossary/#unicode_scalar_value">标量值</a>。</p>
 <p>所有上面未列出的其它转义序列都是保留的；如果用了，TOML 应当产生错误。</p>
 <p>有时你需要表示一小篇文本（例如译文）或者想要对非常长的字符串进行折行。<br>
 TOML 对此进行了简化。</p>
 <p><strong>多行基本字符串</strong>由三个引号包裹，允许折行。<br>
 紧随开头引号的那个换行会被去除。<br>
 其它空白和换行会被原样保留。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">str1</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">Roses are red
-</span><span class="s2">Violets are blue&#34;&#34;&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>TOML 解析器可以相对灵活地解析成对所在平台有效的换行字符。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 在 Unix 系统，上面的多行字符串可能等同于：</span>
-<span class="nx">str2</span> <span class="p">=</span> <span class="s2">&#34;Roses are red\nViolets are blue&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">str1</span> = <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">Roses are red
+</span><span style="color:#e6db74">Violets are blue&#34;&#34;&#34;</span>
+</code></pre></div><p>TOML 解析器可以相对灵活地解析成对所在平台有效的换行字符。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 在 Unix 系统，上面的多行字符串可能等同于：</span>
+<span style="color:#a6e22e">str2</span> = <span style="color:#e6db74">&#34;Roses are red\nViolets are blue&#34;</span>
 
-<span class="c"># 在 Windows 系统，它可能等价于：</span>
-<span class="nx">str3</span> <span class="p">=</span> <span class="s2">&#34;Roses are red\r\nViolets are blue&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>想书写长字符串却不想引入无关空白，可以用“行末反斜杠”。<br>
+<span style="color:#75715e"># 在 Windows 系统，它可能等价于：</span>
+<span style="color:#a6e22e">str3</span> = <span style="color:#e6db74">&#34;Roses are red\r\nViolets are blue&#34;</span>
+</code></pre></div><p>想书写长字符串却不想引入无关空白，可以用“行末反斜杠”。<br>
 当一行的最后一个非空白字符是未被转义的 <code>\</code> 时，它会连同它后面的所有空白（包括换行）一起被去除，直到下一个非空白字符或结束引号为止。<br>
 所有对基本字符串有效的转义序列，对多行基本字符串也同样适用。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 下列字符串的每一个字节都完全相同：</span>
-<span class="nx">str1</span> <span class="p">=</span> <span class="s2">&#34;The quick brown fox jumps over the lazy dog.&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 下列字符串的每一个字节都完全相同：</span>
+<span style="color:#a6e22e">str1</span> = <span style="color:#e6db74">&#34;The quick brown fox jumps over the lazy dog.&#34;</span>
 
-<span class="nx">str2</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">The quick brown \
-</span><span class="s2">
-</span><span class="s2">
-</span><span class="s2">  fox jumps over \
-</span><span class="s2">    the lazy dog.&#34;&#34;&#34;</span>
+<span style="color:#a6e22e">str2</span> = <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">The quick brown \
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">  fox jumps over \
+</span><span style="color:#e6db74">    the lazy dog.&#34;&#34;&#34;</span>
 
-<span class="nx">str3</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;\
-</span><span class="s2">       The quick brown \
-</span><span class="s2">       fox jumps over \
-</span><span class="s2">       the lazy dog.\
-</span><span class="s2">       &#34;&#34;&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>任何 Unicode 字符都可以使用，除了那些必须被转义的：反斜杠和除制表符、换行符、回车符外的控制字符（U+0000 至 U+0008，U+000B，U+000C，U+000E 至 U+001F，U+007F）。</p>
+<span style="color:#a6e22e">str3</span> = <span style="color:#e6db74">&#34;&#34;&#34;\
+</span><span style="color:#e6db74">       The quick brown \
+</span><span style="color:#e6db74">       fox jumps over \
+</span><span style="color:#e6db74">       the lazy dog.\
+</span><span style="color:#e6db74">       &#34;&#34;&#34;</span>
+</code></pre></div><p>任何 Unicode 字符都可以使用，除了那些必须被转义的：反斜杠和除制表符、换行符、回车符外的控制字符（U+0000 至 U+0008，U+000B，U+000C，U+000E 至 U+001F，U+007F）。</p>
 <p>你可以在多行基本字符串内的任何地方写一个引号或两个毗连的引号。<br>
 它们也可以写在紧邻界分符内的位置。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">str4</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;这有两个引号：&#34;&#34;。够简单。&#34;&#34;&#34;</span>
-<span class="c"># str5 = &#34;&#34;&#34;这有两个引号：&#34;&#34;&#34;。&#34;&#34;&#34;  # 非法</span>
-<span class="nx">str5</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;这有三个引号：&#34;&#34;\&#34;。&#34;&#34;&#34;</span>
-<span class="nx">str6</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;这有十五个引号：&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;。&#34;&#34;&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">str4</span> = <span style="color:#e6db74">&#34;&#34;&#34;这有两个引号：&#34;&#34;。够简单。&#34;&#34;&#34;</span>
+<span style="color:#75715e"># str5 = &#34;&#34;&#34;这有两个引号：&#34;&#34;&#34;。&#34;&#34;&#34;  # 非法</span>
+<span style="color:#a6e22e">str5</span> = <span style="color:#e6db74">&#34;&#34;&#34;这有三个引号：&#34;&#34;\&#34;。&#34;&#34;&#34;</span>
+<span style="color:#a6e22e">str6</span> = <span style="color:#e6db74">&#34;&#34;&#34;这有十五个引号：&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;&#34;&#34;\&#34;。&#34;&#34;&#34;</span>
 
-<span class="c"># &#34;这，&#34;她说，&#34;只是个无意义的条款。&#34;</span>
-<span class="nx">str7</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;&#34;</span><span class="err">这，</span><span class="s2">&#34;她说，&#34;</span><span class="err">只是个无意义的条款。</span><span class="s2">&#34;&#34;&#34;&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>如果你常常要指定 Windows 路径或正则表达式，那么必须转义反斜杠就马上成为啰嗦而易错的了。<br>
+<span style="color:#75715e"># &#34;这，&#34;她说，&#34;只是个无意义的条款。&#34;</span>
+<span style="color:#a6e22e">str7</span> = <span style="color:#e6db74">&#34;&#34;&#34;&#34;</span><span style="color:#960050;background-color:#1e0010">这，</span><span style="color:#e6db74">&#34;她说，&#34;</span><span style="color:#960050;background-color:#1e0010">只是个无意义的条款。</span><span style="color:#e6db74">&#34;&#34;&#34;&#34;</span>
+</code></pre></div><p>如果你常常要指定 Windows 路径或正则表达式，那么必须转义反斜杠就马上成为啰嗦而易错的了。<br>
 为了帮助搞定这点，TOML 支持字面量字符串，它完全不允许转义。</p>
 <p><strong>字面量字符串</strong>由单引号包裹。<br>
 类似于基本字符串，他们只能表现为单行：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 所见即所得。</span>
-<span class="nx">winpath</span>  <span class="p">=</span> <span class="s1">&#39;C:\Users\nodejs\templates&#39;</span>
-<span class="nx">winpath2</span> <span class="p">=</span> <span class="s1">&#39;\\ServerX\admin$\system32\&#39;
-</span><span class="s1">quoted   = &#39;</span><span class="nx">Tom</span> <span class="s2">&#34;Dubs&#34;</span> <span class="nx">Preston-Werner</span><span class="s1">&#39;
-</span><span class="s1">regex    = &#39;</span><span class="err">&lt;\</span><span class="nx">i</span><span class="err">\</span><span class="nx">c</span><span class="err">*\</span><span class="nx">s</span><span class="err">*&gt;&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>由于没有转义，无法在由单引号包裹的字面量字符串中写入单引号。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 所见即所得。</span>
+<span style="color:#a6e22e">winpath</span>  = <span style="color:#e6db74">&#39;C:\Users\nodejs\templates&#39;</span>
+<span style="color:#a6e22e">winpath2</span> = <span style="color:#e6db74">&#39;\\ServerX\admin$\system32\&#39;
+</span><span style="color:#e6db74">quoted   = &#39;</span><span style="color:#a6e22e">Tom</span> <span style="color:#e6db74">&#34;Dubs&#34;</span> <span style="color:#a6e22e">Preston-Werner</span><span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">regex    = &#39;</span><span style="color:#960050;background-color:#1e0010">&lt;\</span><span style="color:#a6e22e">i</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">c</span><span style="color:#960050;background-color:#1e0010">*\</span><span style="color:#a6e22e">s</span><span style="color:#960050;background-color:#1e0010">*&gt;&#39;</span>
+</code></pre></div><p>由于没有转义，无法在由单引号包裹的字面量字符串中写入单引号。<br>
 万幸，TOML 支持一种多行版本的字面量字符串来解决这个问题。</p>
 <p><strong>多行字面量字符串</strong>两侧各有三个单引号来包裹，允许换行。<br>
 类似于字面量字符串，无论任何转义都不存在。<br>
 紧随开始标记的那个换行会被剔除。<br>
 开始结束标记之间的所有其它内容会原样对待。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">regex2</span> <span class="p">=</span> <span class="s1">&#39;&#39;&#39;I [dw]on&#39;</span><span class="nx">t</span> <span class="nx">need</span> <span class="err">\</span><span class="nx">d</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span> <span class="nx">apples</span><span class="s1">&#39;&#39;&#39;
-</span><span class="s1">lines  = &#39;&#39;&#39;</span>
-<span class="err">原始字符串中的</span>
-<span class="err">第一个换行被剔除了。</span>
-   <span class="err">所有其它空白</span>
-   <span class="err">都保留了。</span>
-<span class="s1">&#39;&#39;</span><span class="err">&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>你可以在多行字面量字符串中的任何位置写一个或两个单引号，但三个以上的单引号序列不可以。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">quot15</span> <span class="p">=</span> <span class="s1">&#39;&#39;&#39;这有十五个引号：&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#39;&#39;&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">regex2</span> = <span style="color:#e6db74">&#39;&#39;&#39;I [dw]on&#39;</span><span style="color:#a6e22e">t</span> <span style="color:#a6e22e">need</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">d</span>{<span style="color:#ae81ff">2</span>} <span style="color:#a6e22e">apples</span><span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">lines  = &#39;&#39;&#39;</span>
+<span style="color:#960050;background-color:#1e0010">原始字符串中的</span>
+<span style="color:#960050;background-color:#1e0010">第一个换行被剔除了。</span>
+   <span style="color:#960050;background-color:#1e0010">所有其它空白</span>
+   <span style="color:#960050;background-color:#1e0010">都保留了。</span>
+<span style="color:#e6db74">&#39;&#39;</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
+</code></pre></div><p>你可以在多行字面量字符串中的任何位置写一个或两个单引号，但三个以上的单引号序列不可以。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">quot15</span> = <span style="color:#e6db74">&#39;&#39;&#39;这有十五个引号：&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#39;&#39;&#39;</span>
 
-<span class="c"># apos15 = &#39;&#39;&#39;这有十五个撇号：&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;  # 非法</span>
-<span class="nx">apos15</span> <span class="p">=</span> <span class="s2">&#34;这有十五个撇号：&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#34;</span>
+<span style="color:#75715e"># apos15 = &#39;&#39;&#39;这有十五个撇号：&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;  # 非法</span>
+<span style="color:#a6e22e">apos15</span> = <span style="color:#e6db74">&#34;这有十五个撇号：&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#34;</span>
 
-<span class="c"># &#39;那，&#39;她说，&#39;仍然没有意义。&#39;</span>
-<span class="nx">str</span> <span class="p">=</span> <span class="s1">&#39;&#39;&#39;&#39;</span><span class="err">那，</span><span class="s1">&#39;她说，&#39;</span><span class="err">仍然没有意义。</span><span class="s1">&#39;&#39;&#39;&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>除制表符以外的所有控制字符都不允许出现在字面量字符串中。<br>
+<span style="color:#75715e"># &#39;那，&#39;她说，&#39;仍然没有意义。&#39;</span>
+<span style="color:#a6e22e">str</span> = <span style="color:#e6db74">&#39;&#39;&#39;&#39;</span><span style="color:#960050;background-color:#1e0010">那，</span><span style="color:#e6db74">&#39;她说，&#39;</span><span style="color:#960050;background-color:#1e0010">仍然没有意义。</span><span style="color:#e6db74">&#39;&#39;&#39;&#39;</span>
+</code></pre></div><p>除制表符以外的所有控制字符都不允许出现在字面量字符串中。<br>
 因此，对于二进制数据，建议你使用 Base64 或其它合适的 ASCII 或 UTF-8 编码。<br>
 对那些编码的处理方式，将交由应用程序自己来确定。</p>
 <h3 id="整数">整数</h3>
 <p>整数是纯数字。<br>
 正数可以有加号前缀。<br>
 负数的前缀是减号。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">int1</span> <span class="p">=</span> <span class="mi">+99</span>
-<span class="nx">int2</span> <span class="p">=</span> <span class="mi">42</span>
-<span class="nx">int3</span> <span class="p">=</span> <span class="mi">0</span>
-<span class="nx">int4</span> <span class="p">=</span> <span class="mi">-17</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>对于大数，你可以在数字之间用下划线来增强可读性。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">int1</span> = <span style="color:#ae81ff">+99</span>
+<span style="color:#a6e22e">int2</span> = <span style="color:#ae81ff">42</span>
+<span style="color:#a6e22e">int3</span> = <span style="color:#ae81ff">0</span>
+<span style="color:#a6e22e">int4</span> = <span style="color:#ae81ff">-17</span>
+</code></pre></div><p>对于大数，你可以在数字之间用下划线来增强可读性。<br>
 每个下划线两侧必须至少有一个数字。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">int5</span> <span class="p">=</span> <span class="mi">1_000</span>
-<span class="nx">int6</span> <span class="p">=</span> <span class="mi">5_349_221</span>
-<span class="nx">int7</span> <span class="p">=</span> <span class="mi">53_49_221</span>  <span class="c"># 印度记数体系分组</span>
-<span class="nx">int8</span> <span class="p">=</span> <span class="mi">1_2_3_4_5</span>  <span class="c"># 合法但不鼓励</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>前导零是不允许的。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">int5</span> = <span style="color:#ae81ff">1_000</span>
+<span style="color:#a6e22e">int6</span> = <span style="color:#ae81ff">5_349_221</span>
+<span style="color:#a6e22e">int7</span> = <span style="color:#ae81ff">53_49_221</span>  <span style="color:#75715e"># 印度记数体系分组</span>
+<span style="color:#a6e22e">int8</span> = <span style="color:#ae81ff">1_2_3_4_5</span>  <span style="color:#75715e"># 合法但不鼓励</span>
+</code></pre></div><p>前导零是不允许的。<br>
 整数值 <code>-0</code> 与 <code>+0</code> 是有效的，并等同于无前缀的零。</p>
 <p>非负整数值也可以用十六进制、八进制或二进制来表示。<br>
 在这些格式中，<code>+</code> 不被允许，而（前缀后的）前导零是允许的。<br>
 十六进制值大小写不敏感。<br>
 数字间的下划线是允许的（但不能存在于前缀和值之间）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 带有 `0x` 前缀的十六进制</span>
-<span class="nx">hex1</span> <span class="p">=</span> <span class="mi">0</span><span class="nx">xDEADBEEF</span>
-<span class="nx">hex2</span> <span class="p">=</span> <span class="mi">0</span><span class="nx">xdeadbeef</span>
-<span class="nx">hex3</span> <span class="p">=</span> <span class="mi">0</span><span class="nx">xdead_beef</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 带有 `0x` 前缀的十六进制</span>
+<span style="color:#a6e22e">hex1</span> = <span style="color:#ae81ff">0</span><span style="color:#a6e22e">xDEADBEEF</span>
+<span style="color:#a6e22e">hex2</span> = <span style="color:#ae81ff">0</span><span style="color:#a6e22e">xdeadbeef</span>
+<span style="color:#a6e22e">hex3</span> = <span style="color:#ae81ff">0</span><span style="color:#a6e22e">xdead_beef</span>
 
-<span class="c"># 带有 `0o` 前缀的八进制</span>
-<span class="nx">oct1</span> <span class="p">=</span> <span class="mi">0</span><span class="nx">o01234567</span>
-<span class="nx">oct2</span> <span class="p">=</span> <span class="mi">0</span><span class="nx">o755</span> <span class="c"># 对于表示 Unix 文件权限很有用</span>
+<span style="color:#75715e"># 带有 `0o` 前缀的八进制</span>
+<span style="color:#a6e22e">oct1</span> = <span style="color:#ae81ff">0</span><span style="color:#a6e22e">o01234567</span>
+<span style="color:#a6e22e">oct2</span> = <span style="color:#ae81ff">0</span><span style="color:#a6e22e">o755</span> <span style="color:#75715e"># 对于表示 Unix 文件权限很有用</span>
 
-<span class="c"># 带有 `0b` 前缀的二进制</span>
-<span class="nx">bin1</span> <span class="p">=</span> <span class="mi">0</span><span class="nx">b11010110</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>任何 64 位有符号整数（从 −2^63 到 2^63−1）都应当被接受并无损处理。<br>
+<span style="color:#75715e"># 带有 `0b` 前缀的二进制</span>
+<span style="color:#a6e22e">bin1</span> = <span style="color:#ae81ff">0</span><span style="color:#a6e22e">b11010110</span>
+</code></pre></div><p>任何 64 位有符号整数（从 −2^63 到 2^63−1）都应当被接受并无损处理。<br>
 如果无法无损表现某个整数，则必须抛出错误。</p>
 <h3 id="浮点数">浮点数</h3>
 <p>浮点数应当被实现为 IEEE 754 binary64 值。</p>
 <p>一个浮点数由一个整数部分（遵从与十进制整数值相同的规则）后跟上一个小数部分和/或一个指数部分组成。<br>
 如果小数部分和指数部分兼有，那小数部分必须在指数部分前面。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 小数</span>
-<span class="nx">flt1</span> <span class="p">=</span> <span class="mf">+1.0</span>
-<span class="nx">flt2</span> <span class="p">=</span> <span class="mf">3.1415</span>
-<span class="nx">flt3</span> <span class="p">=</span> <span class="mf">-0.01</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 小数</span>
+<span style="color:#a6e22e">flt1</span> = <span style="color:#ae81ff">+1.0</span>
+<span style="color:#a6e22e">flt2</span> = <span style="color:#ae81ff">3.1415</span>
+<span style="color:#a6e22e">flt3</span> = <span style="color:#ae81ff">-0.01</span>
 
-<span class="c"># 指数</span>
-<span class="nx">flt4</span> <span class="p">=</span> <span class="mi">5</span><span class="nx">e</span><span class="mi">+22</span>
-<span class="nx">flt5</span> <span class="p">=</span> <span class="mi">1</span><span class="nx">e06</span>
-<span class="nx">flt6</span> <span class="p">=</span> <span class="mi">-2</span><span class="nx">E-2</span>
+<span style="color:#75715e"># 指数</span>
+<span style="color:#a6e22e">flt4</span> = <span style="color:#ae81ff">5</span><span style="color:#a6e22e">e</span><span style="color:#ae81ff">+22</span>
+<span style="color:#a6e22e">flt5</span> = <span style="color:#ae81ff">1</span><span style="color:#a6e22e">e06</span>
+<span style="color:#a6e22e">flt6</span> = <span style="color:#ae81ff">-2</span><span style="color:#a6e22e">E-2</span>
 
-<span class="c"># 都有</span>
-<span class="nx">flt7</span> <span class="p">=</span> <span class="mf">6.626</span><span class="nx">e-34</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>小数部分是一个小数点后跟一个或多个数字。</p>
+<span style="color:#75715e"># 都有</span>
+<span style="color:#a6e22e">flt7</span> = <span style="color:#ae81ff">6.626</span><span style="color:#a6e22e">e-34</span>
+</code></pre></div><p>小数部分是一个小数点后跟一个或多个数字。</p>
 <p>一个指数部分是一个 E（大小写均可）后跟一个整数部分（遵从与十进制整数值相同的规则，但可以包含前导零）。</p>
 <p>小数点，如果有用到的话，每侧必须紧邻至少一个数字。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 非法的浮点数
+<pre><code># 非法的浮点数
 invalid_float_1 = .7
 invalid_float_2 = 7.
 invalid_float_3 = 3.e+20
-</code></pre></td></tr></table>
-</div>
-</div><p>与整数相似，你可以使用下划线来增强可读性。<br>
+</code></pre><p>与整数相似，你可以使用下划线来增强可读性。<br>
 每个下划线必须被至少一个数字围绕。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">flt8</span> <span class="p">=</span> <span class="mf">224_617.445</span><span class="nx">_991_228</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>浮点数值 <code>-0.0</code> 与 <code>+0.0</code> 是有效的，并且应当遵从 IEEE 754。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">flt8</span> = <span style="color:#ae81ff">224_617.445</span><span style="color:#a6e22e">_991_228</span>
+</code></pre></div><p>浮点数值 <code>-0.0</code> 与 <code>+0.0</code> 是有效的，并且应当遵从 IEEE 754。</p>
 <p>特殊浮点值也能够表示。<br>
 它们是小写的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 无穷</span>
-<span class="nx">sf1</span> <span class="p">=</span> <span class="nx">inf</span>  <span class="c"># 正无穷</span>
-<span class="nx">sf2</span> <span class="p">=</span> <span class="err">+</span><span class="nx">inf</span> <span class="c"># 正无穷</span>
-<span class="nx">sf3</span> <span class="p">=</span> <span class="nx">-inf</span> <span class="c"># 负无穷</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 无穷</span>
+<span style="color:#a6e22e">sf1</span> = <span style="color:#a6e22e">inf</span>  <span style="color:#75715e"># 正无穷</span>
+<span style="color:#a6e22e">sf2</span> = <span style="color:#960050;background-color:#1e0010">+</span><span style="color:#a6e22e">inf</span> <span style="color:#75715e"># 正无穷</span>
+<span style="color:#a6e22e">sf3</span> = <span style="color:#a6e22e">-inf</span> <span style="color:#75715e"># 负无穷</span>
 
-<span class="c"># 非数</span>
-<span class="nx">sf4</span> <span class="p">=</span> <span class="nx">nan</span>  <span class="c"># 实际上对应信号非数码还是静默非数码，取决于实现</span>
-<span class="nx">sf5</span> <span class="p">=</span> <span class="err">+</span><span class="nx">nan</span> <span class="c"># 等同于 `nan`</span>
-<span class="nx">sf6</span> <span class="p">=</span> <span class="nx">-nan</span> <span class="c"># 有效，实际码取决于实现</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="布尔值">布尔值</h3>
+<span style="color:#75715e"># 非数</span>
+<span style="color:#a6e22e">sf4</span> = <span style="color:#a6e22e">nan</span>  <span style="color:#75715e"># 实际上对应信号非数码还是静默非数码，取决于实现</span>
+<span style="color:#a6e22e">sf5</span> = <span style="color:#960050;background-color:#1e0010">+</span><span style="color:#a6e22e">nan</span> <span style="color:#75715e"># 等同于 `nan`</span>
+<span style="color:#a6e22e">sf6</span> = <span style="color:#a6e22e">-nan</span> <span style="color:#75715e"># 有效，实际码取决于实现</span>
+</code></pre></div><h3 id="布尔值">布尔值</h3>
 <p>布尔值就是你所惯用的那样。<br>
 要小写。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">bool1</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="nx">bool2</span> <span class="p">=</span> <span class="kc">false</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="坐标日期时刻">坐标日期时刻</h3>
-<p>要准确地表示世上的一个特定时间，你可以使用指定了时区偏移量的 <a href="https://tools.ietf.org/html/rfc3339" target="_blank" rel="noopener noreffer">RFC 3339</a> 格式的日期时刻。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">odt1</span> <span class="p">=</span> <span class="ld">1979-05-27T07:32:00Z</span>
-<span class="nx">odt2</span> <span class="p">=</span> <span class="ld">1979-05-27T00:32:00-07:00</span>
-<span class="nx">odt3</span> <span class="p">=</span> <span class="mi">1979-05-27</span><span class="nx">T00</span><span class="err">:</span><span class="mi">32</span><span class="err">:</span><span class="mf">00.999999</span><span class="mi">-07</span><span class="err">:</span><span class="mi">00</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>出于可读性的目的，你可以用一个空格字符替代日期和时刻之间的 T（RFC 3339 的第 5.6 节中允许了这样做）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">odt4</span> <span class="p">=</span> <span class="mi">1979-05-27</span> <span class="mi">07</span><span class="err">:</span><span class="mi">32</span><span class="err">:</span><span class="mi">00</span><span class="nx">Z</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>毫秒级的精度是必须的。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">bool1</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#a6e22e">bool2</span> = <span style="color:#66d9ef">false</span>
+</code></pre></div><h3 id="坐标日期时刻">坐标日期时刻</h3>
+<p>要准确地表示世上的一个特定时间，你可以使用指定了时区偏移量的 <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> 格式的日期时刻。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">odt1</span> = <span style="color:#e6db74">1979-05-27T07:32:00Z</span>
+<span style="color:#a6e22e">odt2</span> = <span style="color:#e6db74">1979-05-27T00:32:00-07:00</span>
+<span style="color:#a6e22e">odt3</span> = <span style="color:#ae81ff">1979-05-27</span><span style="color:#a6e22e">T00</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">32</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">00.999999</span><span style="color:#ae81ff">-07</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">00</span>
+</code></pre></div><p>出于可读性的目的，你可以用一个空格字符替代日期和时刻之间的 T（RFC 3339 的第 5.6 节中允许了这样做）。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">odt4</span> = <span style="color:#ae81ff">1979-05-27</span> <span style="color:#ae81ff">07</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">32</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">00</span><span style="color:#a6e22e">Z</span>
+</code></pre></div><p>毫秒级的精度是必须的。<br>
 更高精度的小数秒取决于实现。<br>
 如果它的值超出了实现所支持的精度，那超出的部分必须被舍弃，而不能四舍五入。</p>
 <h3 id="各地日期时刻">各地日期时刻</h3>
-<p>如果你省略了 <a href="https://tools.ietf.org/html/rfc3339" target="_blank" rel="noopener noreffer">RFC 3339</a> 日期时刻中的时区偏移量，这表示该日期时刻的使用并不涉及时区偏移。<br>
+<p>如果你省略了 <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> 日期时刻中的时区偏移量，这表示该日期时刻的使用并不涉及时区偏移。<br>
 在没有其它信息的情况下，并不知道它究竟该被转化成世上的哪一刻。<br>
 如果仍被要求转化，那结果将取决于实现。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">ldt1</span> <span class="p">=</span> <span class="mi">1979-05-27</span><span class="nx">T07</span><span class="err">:</span><span class="mi">32</span><span class="err">:</span><span class="mi">00</span>
-<span class="nx">ldt2</span> <span class="p">=</span> <span class="mi">1979-05-27</span><span class="nx">T00</span><span class="err">:</span><span class="mi">32</span><span class="err">:</span><span class="mf">00.999999</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>毫秒级的精度是必须的。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">ldt1</span> = <span style="color:#ae81ff">1979-05-27</span><span style="color:#a6e22e">T07</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">32</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">00</span>
+<span style="color:#a6e22e">ldt2</span> = <span style="color:#ae81ff">1979-05-27</span><span style="color:#a6e22e">T00</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">32</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">00.999999</span>
+</code></pre></div><p>毫秒级的精度是必须的。<br>
 更高精度的小数秒取决于实现。<br>
 如果它的值超出了实现所支持的精度，那多余的部分必须被舍弃，而不能四舍五入。</p>
 <h3 id="各地日期">各地日期</h3>
-<p>如果你只写了 <a href="https://tools.ietf.org/html/rfc3339" target="_blank" rel="noopener noreffer">RFC 3339</a> 日期时刻中的日期部分，那它表示一整天，同时也不涉及时区偏移。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">ld1</span> <span class="p">=</span> <span class="mi">1979-05-27</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="各地时刻">各地时刻</h3>
-<p>如果你只写了 <a href="https://tools.ietf.org/html/rfc3339" target="_blank" rel="noopener noreffer">RFC 3339</a> 日期时刻中的时刻部分，它将只表示一天之中的那个时刻，而与任何特定的日期无关、亦不涉及时区偏移。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">lt1</span> <span class="p">=</span> <span class="mi">07</span><span class="err">:</span><span class="mi">32</span><span class="err">:</span><span class="mi">00</span>
-<span class="nx">lt2</span> <span class="p">=</span> <span class="mi">00</span><span class="err">:</span><span class="mi">32</span><span class="err">:</span><span class="mf">00.999999</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>毫秒级的精度是必须的。<br>
+<p>如果你只写了 <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> 日期时刻中的日期部分，那它表示一整天，同时也不涉及时区偏移。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">ld1</span> = <span style="color:#ae81ff">1979-05-27</span>
+</code></pre></div><h3 id="各地时刻">各地时刻</h3>
+<p>如果你只写了 <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> 日期时刻中的时刻部分，它将只表示一天之中的那个时刻，而与任何特定的日期无关、亦不涉及时区偏移。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">lt1</span> = <span style="color:#ae81ff">07</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">32</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">00</span>
+<span style="color:#a6e22e">lt2</span> = <span style="color:#ae81ff">00</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">32</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">00.999999</span>
+</code></pre></div><p>毫秒级的精度是必须的。<br>
 更高精度的小数秒取决于实现。<br>
 如果它的值超出了实现所支持的精度，那多余的部分必须被舍弃，而不能四舍五入。</p>
 <h3 id="数组">数组</h3>
@@ -935,298 +494,121 @@ invalid_float_3 = 3.e+20
 子元素由逗号分隔。<br>
 数组可以包含与键值对所允许的相同数据类型的值。<br>
 可以混合不同类型的值。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">integers</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span>
-<span class="nx">colors</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">&#34;红&#34;</span><span class="p">,</span> <span class="s2">&#34;黄&#34;</span><span class="p">,</span> <span class="s2">&#34;绿&#34;</span> <span class="p">]</span>
-<span class="nx">nested_array_of_ints</span> <span class="p">=</span> <span class="p">[</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="p">]</span>
-<span class="nx">nested_mixed_array</span> <span class="p">=</span> <span class="p">[</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">],</span> <span class="p">[</span><span class="s2">&#34;a&#34;</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">]</span> <span class="p">]</span>
-<span class="nx">string_array</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">&#34;所有的&#34;</span><span class="p">,</span> <span class="s1">&#39;字符串&#39;</span><span class="p">,</span> <span class="s2">&#34;&#34;&#34;是相同的&#34;&#34;&#34;</span><span class="p">,</span> <span class="s1">&#39;&#39;&#39;类型&#39;&#39;&#39;</span> <span class="p">]</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">integers</span> = [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span> ]
+<span style="color:#a6e22e">colors</span> = [ <span style="color:#e6db74">&#34;红&#34;</span>, <span style="color:#e6db74">&#34;黄&#34;</span>, <span style="color:#e6db74">&#34;绿&#34;</span> ]
+<span style="color:#a6e22e">nested_array_of_ints</span> = [ [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span> ], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>] ]
+<span style="color:#a6e22e">nested_mixed_array</span> = [ [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span> ], [<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>] ]
+<span style="color:#a6e22e">string_array</span> = [ <span style="color:#e6db74">&#34;所有的&#34;</span>, <span style="color:#e6db74">&#39;字符串&#39;</span>, <span style="color:#e6db74">&#34;&#34;&#34;是相同的&#34;&#34;&#34;</span>, <span style="color:#e6db74">&#39;&#39;&#39;类型&#39;&#39;&#39;</span> ]
 
-<span class="c"># 允许混合类型的数组</span>
-<span class="nx">numbers</span> <span class="p">=</span> <span class="p">[</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span> <span class="p">]</span>
-<span class="nx">contributors</span> <span class="p">=</span> <span class="p">[</span>
-  <span class="s2">&#34;Foo Bar &lt;foo@example.com&gt;&#34;</span><span class="p">,</span>
-  <span class="p">{</span> <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Baz Qux&#34;</span><span class="p">,</span> <span class="nx">email</span> <span class="p">=</span> <span class="s2">&#34;bazqux@example.com&#34;</span><span class="p">,</span> <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://example.com/bazqux&#34;</span> <span class="p">}</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>数组可以跨行。<br>
+<span style="color:#75715e"># 允许混合类型的数组</span>
+<span style="color:#a6e22e">numbers</span> = [ <span style="color:#ae81ff">0.1</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span> ]
+<span style="color:#a6e22e">contributors</span> = [
+  <span style="color:#e6db74">&#34;Foo Bar &lt;foo@example.com&gt;&#34;</span>,
+  { <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Baz Qux&#34;</span>, <span style="color:#a6e22e">email</span> = <span style="color:#e6db74">&#34;bazqux@example.com&#34;</span>, <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://example.com/bazqux&#34;</span> }
+]
+</code></pre></div><p>数组可以跨行。<br>
 数组的最后一个值后面可以有终逗号（也称为尾逗号）。<br>
 值、逗号、结束括号前可以存在任意数量的换行和注释。<br>
 数组值和逗号之间的缩进被作为空白对待而被忽略。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">integers2</span> <span class="p">=</span> <span class="p">[</span>
-  <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
-<span class="p">]</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">integers2</span> = [
+  <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>
+]
 
-<span class="nx">integers3</span> <span class="p">=</span> <span class="p">[</span>
-  <span class="mi">1</span><span class="p">,</span>
-  <span class="mi">2</span><span class="p">,</span> <span class="c"># 这是可以的</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="表">表</h3>
+<span style="color:#a6e22e">integers3</span> = [
+  <span style="color:#ae81ff">1</span>,
+  <span style="color:#ae81ff">2</span>, <span style="color:#75715e"># 这是可以的</span>
+]
+</code></pre></div><h3 id="表">表</h3>
 <p>表（也被称为哈希表或字典）是键值对的集合。<br>
 它们由表头定义，连同方括号作为单独的行出现。<br>
 看得出表头不同于数组，因为数组只有值。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">table</span><span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>在它下方，直至下一个表头或文件结束，都是这个表的键值对。<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">table</span>]
+</code></pre></div><p>在它下方，直至下一个表头或文件结束，都是这个表的键值对。<br>
 表不保证保持键值对的指定顺序。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">table-1</span><span class="p">]</span>
-<span class="nx">key1</span> <span class="p">=</span> <span class="s2">&#34;some string&#34;</span>
-<span class="nx">key2</span> <span class="p">=</span> <span class="mi">123</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">table-1</span>]
+<span style="color:#a6e22e">key1</span> = <span style="color:#e6db74">&#34;some string&#34;</span>
+<span style="color:#a6e22e">key2</span> = <span style="color:#ae81ff">123</span>
 
-<span class="p">[</span><span class="nx">table-2</span><span class="p">]</span>
-<span class="nx">key1</span> <span class="p">=</span> <span class="s2">&#34;another string&#34;</span>
-<span class="nx">key2</span> <span class="p">=</span> <span class="mi">456</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>表名的规则与键名相同（见前文<a href="#%e9%94%ae%e5%90%8d" rel="">键名</a>定义）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">dog</span><span class="p">.</span><span class="s2">&#34;tater.man&#34;</span><span class="p">]</span>
-<span class="nx">type</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;pug&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>等价于 JSON 的如下结构：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span> <span class="nt">&#34;dog&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&#34;tater.man&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;pug&#34;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>键名周围的空格会被忽略。<br>
+[<span style="color:#a6e22e">table-2</span>]
+<span style="color:#a6e22e">key1</span> = <span style="color:#e6db74">&#34;another string&#34;</span>
+<span style="color:#a6e22e">key2</span> = <span style="color:#ae81ff">456</span>
+</code></pre></div><p>表名的规则与键名相同（见前文<a href="#%E9%94%AE%E5%90%8D">键名</a>定义）。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">dog</span>.<span style="color:#e6db74">&#34;tater.man&#34;</span>]
+<span style="color:#a6e22e">type</span>.<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;pug&#34;</span>
+</code></pre></div><p>等价于 JSON 的如下结构：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;dog&#34;</span>: { <span style="color:#f92672">&#34;tater.man&#34;</span>: { <span style="color:#f92672">&#34;type&#34;</span>: { <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;pug&#34;</span> } } } }
+</code></pre></div><p>键名周围的空格会被忽略。<br>
 然而，最佳实践还是不要有任何多余的空白。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">a</span><span class="p">.</span><span class="nx">b</span><span class="p">.</span><span class="nx">c</span><span class="p">]</span>            <span class="c"># 这是最佳实践</span>
-<span class="p">[</span> <span class="nx">d</span><span class="p">.</span><span class="nx">e</span><span class="p">.</span><span class="nx">f</span> <span class="p">]</span>          <span class="c"># 等同于 [d.e.f]</span>
-<span class="p">[</span> <span class="nx">g</span> <span class="p">.</span>  <span class="nx">h</span>  <span class="p">.</span> <span class="nx">i</span> <span class="p">]</span>    <span class="c"># 等同于 [g.h.i]</span>
-<span class="p">[</span> <span class="nx">j</span> <span class="p">.</span> <span class="s2">&#34;ʞ&#34;</span> <span class="p">.</span> <span class="s1">&#39;l&#39;</span> <span class="p">]</span>  <span class="c"># 等同于 [j.&#34;ʞ&#34;.&#39;l&#39;]</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>缩进被作为空白对待而被忽略。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">c</span>]            <span style="color:#75715e"># 这是最佳实践</span>
+[ <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">f</span> ]          <span style="color:#75715e"># 等同于 [d.e.f]</span>
+[ <span style="color:#a6e22e">g</span> .  <span style="color:#a6e22e">h</span>  . <span style="color:#a6e22e">i</span> ]    <span style="color:#75715e"># 等同于 [g.h.i]</span>
+[ <span style="color:#a6e22e">j</span> . <span style="color:#e6db74">&#34;ʞ&#34;</span> . <span style="color:#e6db74">&#39;l&#39;</span> ]  <span style="color:#75715e"># 等同于 [j.&#34;ʞ&#34;.&#39;l&#39;]</span>
+</code></pre></div><p>缩进被作为空白对待而被忽略。</p>
 <p>你不必层层完整地写出你不想写的所有途径的父表。<br>
 TOML 知道该怎么办。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># [x] 你</span>
-<span class="c"># [x.y] 不</span>
-<span class="c"># [x.y.z] 需要这些</span>
-<span class="p">[</span><span class="nx">x</span><span class="p">.</span><span class="nx">y</span><span class="p">.</span><span class="nx">z</span><span class="p">.</span><span class="nx">w</span><span class="p">]</span> <span class="c"># 来让这生效</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># [x] 你</span>
+<span style="color:#75715e"># [x.y] 不</span>
+<span style="color:#75715e"># [x.y.z] 需要这些</span>
+[<span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">y</span>.<span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">w</span>] <span style="color:#75715e"># 来让这生效</span>
 
-<span class="p">[</span><span class="nx">x</span><span class="p">]</span> <span class="c"># 后置父表定义是可以的</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>空表是允许的，只要里面没有键值对就行了。</p>
+[<span style="color:#a6e22e">x</span>] <span style="color:#75715e"># 后置父表定义是可以的</span>
+</code></pre></div><p>空表是允许的，只要里面没有键值对就行了。</p>
 <p>类似于键名，你不能重复定义一个表。<br>
 这样做是非法的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 不要这样做
+<pre><code># 不要这样做
 
 [fruit]
-apple = &#34;红&#34;
+apple = &quot;红&quot;
 
 [fruit]
-orange = &#34;橙&#34;
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 也不要这样做
+orange = &quot;橙&quot;
+</code></pre><pre><code># 也不要这样做
 
 [fruit]
-apple = &#34;红&#34;
+apple = &quot;红&quot;
 
 [fruit.apple]
-texture = &#34;光滑&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>不鼓励无序地定义表。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 有效但不鼓励</span>
-<span class="p">[</span><span class="nx">fruit</span><span class="p">.</span><span class="nx">apple</span><span class="p">]</span>
-<span class="p">[</span><span class="nx">animal</span><span class="p">]</span>
-<span class="p">[</span><span class="nx">fruit</span><span class="p">.</span><span class="nx">orange</span><span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 推荐</span>
-<span class="p">[</span><span class="nx">fruit</span><span class="p">.</span><span class="nx">apple</span><span class="p">]</span>
-<span class="p">[</span><span class="nx">fruit</span><span class="p">.</span><span class="nx">orange</span><span class="p">]</span>
-<span class="p">[</span><span class="nx">animal</span><span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>顶层表，又被称为根表，于文档开始处开始并在第一个表头（或文件结束处）前结束。<br>
+texture = &quot;光滑&quot;
+</code></pre><p>不鼓励无序地定义表。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 有效但不鼓励</span>
+[<span style="color:#a6e22e">fruit</span>.<span style="color:#a6e22e">apple</span>]
+[<span style="color:#a6e22e">animal</span>]
+[<span style="color:#a6e22e">fruit</span>.<span style="color:#a6e22e">orange</span>]
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 推荐</span>
+[<span style="color:#a6e22e">fruit</span>.<span style="color:#a6e22e">apple</span>]
+[<span style="color:#a6e22e">fruit</span>.<span style="color:#a6e22e">orange</span>]
+[<span style="color:#a6e22e">animal</span>]
+</code></pre></div><p>顶层表，又被称为根表，于文档开始处开始并在第一个表头（或文件结束处）前结束。<br>
 不同于其它表，它没有名字且无法后置。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 顶层表开始。</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Fido&#34;</span>
-<span class="nx">breed</span> <span class="p">=</span> <span class="s2">&#34;pug&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># 顶层表开始。</span>
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Fido&#34;</span>
+<span style="color:#a6e22e">breed</span> = <span style="color:#e6db74">&#34;pug&#34;</span>
 
-<span class="c"># 顶层表结束。</span>
-<span class="p">[</span><span class="nx">owner</span><span class="p">]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Regina Dogman&#34;</span>
-<span class="nx">member_since</span> <span class="p">=</span> <span class="mi">1999-08-04</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>点分隔键为最后一个键名前的每个键名创建并定义一个表，倘若这些表尚未被创建的话。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">fruit</span><span class="p">.</span><span class="nx">apple</span><span class="p">.</span><span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;red&#34;</span>
-<span class="c"># 定义一个名为 fruit 的表</span>
-<span class="c"># 定义一个名为 fruit.apple 的表</span>
+<span style="color:#75715e"># 顶层表结束。</span>
+[<span style="color:#a6e22e">owner</span>]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Regina Dogman&#34;</span>
+<span style="color:#a6e22e">member_since</span> = <span style="color:#ae81ff">1999-08-04</span>
+</code></pre></div><p>点分隔键为最后一个键名前的每个键名创建并定义一个表，倘若这些表尚未被创建的话。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">fruit</span>.<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;red&#34;</span>
+<span style="color:#75715e"># 定义一个名为 fruit 的表</span>
+<span style="color:#75715e"># 定义一个名为 fruit.apple 的表</span>
 
-<span class="nx">fruit</span><span class="p">.</span><span class="nx">apple</span><span class="p">.</span><span class="nx">taste</span><span class="p">.</span><span class="nx">sweet</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="c"># 定义一个名为 fruit.apple.taste 的表</span>
-<span class="c"># fruit 和 fruit.apple 已经创建过了</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>由于表不能定义多于一次，不允许使用 <code>[table]</code> 头重定义这样的表。<br>
+<span style="color:#a6e22e">fruit</span>.<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">taste</span>.<span style="color:#a6e22e">sweet</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#75715e"># 定义一个名为 fruit.apple.taste 的表</span>
+<span style="color:#75715e"># fruit 和 fruit.apple 已经创建过了</span>
+</code></pre></div><p>由于表不能定义多于一次，不允许使用 <code>[table]</code> 头重定义这样的表。<br>
 同样地，使用点分隔键来重定义已经以 <code>[table]</code> 形式定义过的表也是不允许的。<br>
 不过，<code>[table]</code> 形式可以被用来定义通过点分隔键定义的表中的子表。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">fruit</span><span class="p">]</span>
-<span class="nx">apple</span><span class="p">.</span><span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;红&#34;</span>
-<span class="nx">apple</span><span class="p">.</span><span class="nx">taste</span><span class="p">.</span><span class="nx">sweet</span> <span class="p">=</span> <span class="kc">true</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">fruit</span>]
+<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;红&#34;</span>
+<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">taste</span>.<span style="color:#a6e22e">sweet</span> = <span style="color:#66d9ef">true</span>
 
-<span class="c"># [fruit.apple]  # 非法</span>
-<span class="c"># [fruit.apple.taste]  # 非法</span>
+<span style="color:#75715e"># [fruit.apple]  # 非法</span>
+<span style="color:#75715e"># [fruit.apple.taste]  # 非法</span>
 
-<span class="p">[</span><span class="nx">fruit</span><span class="p">.</span><span class="nx">apple</span><span class="p">.</span><span class="nx">texture</span><span class="p">]</span>  <span class="c"># 你可以添加子表</span>
-<span class="nx">smooth</span> <span class="p">=</span> <span class="kc">true</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="内联表">内联表</h3>
+[<span style="color:#a6e22e">fruit</span>.<span style="color:#a6e22e">apple</span>.<span style="color:#a6e22e">texture</span>]  <span style="color:#75715e"># 你可以添加子表</span>
+<span style="color:#a6e22e">smooth</span> = <span style="color:#66d9ef">true</span>
+</code></pre></div><h3 id="内联表">内联表</h3>
 <p>内联表提供了一种更为紧凑的语法来表示表。<br>
 对于否则就很啰嗦的成组数据，这尤其有用。<br>
 内联表被完整地定义在花括号之中：<code>{</code> 和 <code>}</code>。<br>
@@ -1238,357 +620,208 @@ texture = &#34;光滑&#34;
 不允许花括号中出现任何换行，除非在值中它们合法。<br>
 即便如此，也强烈不建议把一个内联表搞成纵跨多行的样子。<br>
 如果你发现自己真的需要，那意味着你应该使用标准表。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">name</span> <span class="p">=</span> <span class="p">{</span> <span class="nx">first</span> <span class="p">=</span> <span class="s2">&#34;Tom&#34;</span><span class="p">,</span> <span class="nx">last</span> <span class="p">=</span> <span class="s2">&#34;Preston-Werner&#34;</span> <span class="p">}</span>
-<span class="nx">point</span> <span class="p">=</span> <span class="p">{</span> <span class="nx">x</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">y</span> <span class="p">=</span> <span class="mi">2</span> <span class="p">}</span>
-<span class="nx">animal</span> <span class="p">=</span> <span class="p">{</span> <span class="nx">type</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;pug&#34;</span> <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>上述内联表等同于下面的标准表定义：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">name</span><span class="p">]</span>
-<span class="nx">first</span> <span class="p">=</span> <span class="s2">&#34;Tom&#34;</span>
-<span class="nx">last</span> <span class="p">=</span> <span class="s2">&#34;Preston-Werner&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">name</span> = { <span style="color:#a6e22e">first</span> = <span style="color:#e6db74">&#34;Tom&#34;</span>, <span style="color:#a6e22e">last</span> = <span style="color:#e6db74">&#34;Preston-Werner&#34;</span> }
+<span style="color:#a6e22e">point</span> = { <span style="color:#a6e22e">x</span> = <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">y</span> = <span style="color:#ae81ff">2</span> }
+<span style="color:#a6e22e">animal</span> = { <span style="color:#a6e22e">type</span>.<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;pug&#34;</span> }
+</code></pre></div><p>上述内联表等同于下面的标准表定义：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">name</span>]
+<span style="color:#a6e22e">first</span> = <span style="color:#e6db74">&#34;Tom&#34;</span>
+<span style="color:#a6e22e">last</span> = <span style="color:#e6db74">&#34;Preston-Werner&#34;</span>
 
-<span class="p">[</span><span class="nx">point</span><span class="p">]</span>
-<span class="nx">x</span> <span class="p">=</span> <span class="mi">1</span>
-<span class="nx">y</span> <span class="p">=</span> <span class="mi">2</span>
+[<span style="color:#a6e22e">point</span>]
+<span style="color:#a6e22e">x</span> = <span style="color:#ae81ff">1</span>
+<span style="color:#a6e22e">y</span> = <span style="color:#ae81ff">2</span>
 
-<span class="p">[</span><span class="nx">animal</span><span class="p">]</span>
-<span class="nx">type</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;pug&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>内联表是独立自足的，在内部定义全部的键与子表。<br>
+[<span style="color:#a6e22e">animal</span>]
+<span style="color:#a6e22e">type</span>.<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;pug&#34;</span>
+</code></pre></div><p>内联表是独立自足的，在内部定义全部的键与子表。<br>
 不能在括号以外的地方，再添加键与子表。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">product</span><span class="p">]</span>
-<span class="nx">type</span> <span class="p">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Nail&#34;</span> <span class="p">}</span>
-<span class="c"># type.edible = false  # 非法</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>类似地，内联表不能被用于向一个已定义的表添加键或子表。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">product</span><span class="p">]</span>
-<span class="nx">type</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Nail&#34;</span>
-<span class="c"># type = { edible = false }  # 非法</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="表数组">表数组</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">product</span>]
+<span style="color:#a6e22e">type</span> = { <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Nail&#34;</span> }
+<span style="color:#75715e"># type.edible = false  # 非法</span>
+</code></pre></div><p>类似地，内联表不能被用于向一个已定义的表添加键或子表。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">product</span>]
+<span style="color:#a6e22e">type</span>.<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Nail&#34;</span>
+<span style="color:#75715e"># type = { edible = false }  # 非法</span>
+</code></pre></div><h3 id="表数组">表数组</h3>
 <p>最后一个还没讲到的语法允许你写表数组。<br>
 这可以通过把表名写在双方括号里的表头来表示。<br>
 表头的第一例定义了这个数组及其首个表元素，而后续的每个则在该数组中创建并定义一个新的表元素。<br>
 这些表按出现顺序插入该数组。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">products</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Hammer&#34;</span>
-<span class="nx">sku</span> <span class="p">=</span> <span class="mi">738594937</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">products</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Hammer&#34;</span>
+<span style="color:#a6e22e">sku</span> = <span style="color:#ae81ff">738594937</span>
 
-<span class="p">[[</span><span class="nx">products</span><span class="p">]]</span>  <span class="c"># 数组里的空表</span>
+[[<span style="color:#a6e22e">products</span>]]  <span style="color:#75715e"># 数组里的空表</span>
 
-<span class="p">[[</span><span class="nx">products</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Nail&#34;</span>
-<span class="nx">sku</span> <span class="p">=</span> <span class="mi">284758393</span>
+[[<span style="color:#a6e22e">products</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Nail&#34;</span>
+<span style="color:#a6e22e">sku</span> = <span style="color:#ae81ff">284758393</span>
 
-<span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;gray&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>等价于 JSON 的如下结构。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;products&#34;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span> <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Hammer&#34;</span><span class="p">,</span> <span class="nt">&#34;sku&#34;</span><span class="p">:</span> <span class="mi">738594937</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Nail&#34;</span><span class="p">,</span> <span class="nt">&#34;sku&#34;</span><span class="p">:</span> <span class="mi">284758393</span><span class="p">,</span> <span class="nt">&#34;color&#34;</span><span class="p">:</span> <span class="s2">&#34;gray&#34;</span> <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>任何对表数组的引用都指向该数组里最近定义的表元素。<br>
+<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;gray&#34;</span>
+</code></pre></div><p>等价于 JSON 的如下结构。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;products&#34;</span>: [
+    { <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Hammer&#34;</span>, <span style="color:#f92672">&#34;sku&#34;</span>: <span style="color:#ae81ff">738594937</span> },
+    { },
+    { <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Nail&#34;</span>, <span style="color:#f92672">&#34;sku&#34;</span>: <span style="color:#ae81ff">284758393</span>, <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;gray&#34;</span> }
+  ]
+}
+</code></pre></div><p>任何对表数组的引用都指向该数组里最近定义的表元素。<br>
 这允许你在最近的表内定义子表，甚至子表数组。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">fruits</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;apple&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">fruits</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;apple&#34;</span>
 
-<span class="p">[</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">physical</span><span class="p">]</span>  <span class="c"># 子表</span>
-<span class="nx">color</span> <span class="p">=</span> <span class="s2">&#34;red&#34;</span>
-<span class="nx">shape</span> <span class="p">=</span> <span class="s2">&#34;round&#34;</span>
+[<span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">physical</span>]  <span style="color:#75715e"># 子表</span>
+<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;red&#34;</span>
+<span style="color:#a6e22e">shape</span> = <span style="color:#e6db74">&#34;round&#34;</span>
 
-<span class="p">[[</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">varieties</span><span class="p">]]</span>  <span class="c"># 嵌套表数组</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;red delicious&#34;</span>
+[[<span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">varieties</span>]]  <span style="color:#75715e"># 嵌套表数组</span>
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;red delicious&#34;</span>
 
-<span class="p">[[</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">varieties</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;granny smith&#34;</span>
+[[<span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">varieties</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;granny smith&#34;</span>
 
-<span class="p">[[</span><span class="nx">fruits</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;banana&#34;</span>
+[[<span style="color:#a6e22e">fruits</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;banana&#34;</span>
 
-<span class="p">[[</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">varieties</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;plantain&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>上述 TOML 等价于 JSON 的如下结构。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;fruits&#34;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;physical&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;color&#34;</span><span class="p">:</span> <span class="s2">&#34;red&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;shape&#34;</span><span class="p">:</span> <span class="s2">&#34;round&#34;</span>
-      <span class="p">},</span>
-      <span class="nt">&#34;varieties&#34;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;red delicious&#34;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;granny smith&#34;</span> <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;banana&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;varieties&#34;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;plantain&#34;</span> <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>如果一个表或表数组的父级是一个数组元素，该元素必须在定义子级前先定义。<br>
+[[<span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">varieties</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;plantain&#34;</span>
+</code></pre></div><p>上述 TOML 等价于 JSON 的如下结构。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;fruits&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;apple&#34;</span>,
+      <span style="color:#f92672">&#34;physical&#34;</span>: {
+        <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;red&#34;</span>,
+        <span style="color:#f92672">&#34;shape&#34;</span>: <span style="color:#e6db74">&#34;round&#34;</span>
+      },
+      <span style="color:#f92672">&#34;varieties&#34;</span>: [
+        { <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;red delicious&#34;</span> },
+        { <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;granny smith&#34;</span> }
+      ]
+    },
+    {
+      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;banana&#34;</span>,
+      <span style="color:#f92672">&#34;varieties&#34;</span>: [
+        { <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;plantain&#34;</span> }
+      ]
+    }
+  ]
+}
+</code></pre></div><p>如果一个表或表数组的父级是一个数组元素，该元素必须在定义子级前先定义。<br>
 顺序颠倒的行为，必须在解析时报错。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 非法的 TOML 文档
+<pre><code># 非法的 TOML 文档
 [fruit.physical]  # 子表，但它应该隶属于哪个父元素？
-color = &#34;red&#34;
-shape = &#34;round&#34;
+color = &quot;red&quot;
+shape = &quot;round&quot;
 
 [[fruit]]  # 解析器必须在发现“fruit”是数组而非表时抛出错误
-name = &#34;apple&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>若试图向一个静态定义的数组追加内容，即便数组尚且为空，也必须在解析时报错。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 非法的 TOML 文档
+name = &quot;apple&quot;
+</code></pre><p>若试图向一个静态定义的数组追加内容，即便数组尚且为空，也必须在解析时报错。</p>
+<pre><code># 非法的 TOML 文档
 fruits = []
 
 [[fruits]] # 不允许
-</code></pre></td></tr></table>
-</div>
-</div><p>若试图用已经确定为数组的名称定义表，必须在解析时报错。<br>
+</code></pre><p>若试图用已经确定为数组的名称定义表，必须在解析时报错。<br>
 将数组重定义为普通表的行为，也必须在解析时报错。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 非法的 TOML 文档
+<pre><code># 非法的 TOML 文档
 [[fruits]]
-name = &#34;apple&#34;
+name = &quot;apple&quot;
 
 [[fruits.varieties]]
-name = &#34;red delicious&#34;
+name = &quot;red delicious&quot;
 
 # 非法：该表与之前的表数组相冲突
 [fruits.varieties]
-name = &#34;granny smith&#34;
+name = &quot;granny smith&quot;
 
 [fruits.physical]
-color = &#34;red&#34;
-shape = &#34;round&#34;
+color = &quot;red&quot;
+shape = &quot;round&quot;
 
 # 非法：该表数组与之前的表相冲突
 [[fruits.physical]]
-color = &#34;green&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>你也可以适当使用内联表：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">points</span> <span class="p">=</span> <span class="p">[</span> <span class="p">{</span> <span class="nx">x</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">y</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">z</span> <span class="p">=</span> <span class="mi">3</span> <span class="p">},</span>
-           <span class="p">{</span> <span class="nx">x</span> <span class="p">=</span> <span class="mi">7</span><span class="p">,</span> <span class="nx">y</span> <span class="p">=</span> <span class="mi">8</span><span class="p">,</span> <span class="nx">z</span> <span class="p">=</span> <span class="mi">9</span> <span class="p">},</span>
-           <span class="p">{</span> <span class="nx">x</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">y</span> <span class="p">=</span> <span class="mi">4</span><span class="p">,</span> <span class="nx">z</span> <span class="p">=</span> <span class="mi">8</span> <span class="p">}</span> <span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="文件扩展名">文件扩展名</h3>
+color = &quot;green&quot;
+</code></pre><p>你也可以适当使用内联表：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">points</span> = [ { <span style="color:#a6e22e">x</span> = <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">y</span> = <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">z</span> = <span style="color:#ae81ff">3</span> },
+           { <span style="color:#a6e22e">x</span> = <span style="color:#ae81ff">7</span>, <span style="color:#a6e22e">y</span> = <span style="color:#ae81ff">8</span>, <span style="color:#a6e22e">z</span> = <span style="color:#ae81ff">9</span> },
+           { <span style="color:#a6e22e">x</span> = <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">y</span> = <span style="color:#ae81ff">4</span>, <span style="color:#a6e22e">z</span> = <span style="color:#ae81ff">8</span> } ]
+</code></pre></div><h3 id="文件扩展名">文件扩展名</h3>
 <p>TOML 文件应当使用 <code>.toml</code> 扩展名。</p>
 <h3 id="mime-类型">MIME 类型</h3>
 <p>在互联网上传输 TOML 文件时，恰当的 MIME 类型是 <code>application/toml</code>。</p>
 <h3 id="abnf-语法">ABNF 语法</h3>
-<p>TOML 语法的严谨说明，由一个 <a href="https://github.com/toml-lang/toml/blob/1.0.0/toml.abnf" target="_blank" rel="noopener noreffer">ABNF 文件</a>另行提供。</p>
-</div><div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>更新于 2021-06-05</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line">
-            <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/article/2021/toml/index.md" target="_blank">阅读原始文档</a>
-                        </span></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://3ae.cn/article/2021/toml/" data-title="TOML 语言规范 1.0 正式版" data-hashtags="TOML,Rust"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://3ae.cn/article/2021/toml/" data-hashtag="TOML"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="https://3ae.cn/article/2021/toml/"><i class="fab fa-linkedin fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Instapaper" data-sharer="instapaper" data-url="https://3ae.cn/article/2021/toml/" data-title="TOML 语言规范 1.0 正式版" data-description=""><i data-svg-src="/lib/simple-icons/icons/instapaper.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Pocket" data-sharer="pocket" data-url="https://3ae.cn/article/2021/toml/"><i class="fab fa-get-pocket fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://3ae.cn/article/2021/toml/" data-title="TOML 语言规范 1.0 正式版" data-ralateuid="lyhuilin"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://3ae.cn/article/2021/toml/" data-title="TOML 语言规范 1.0 正式版"><i class="fab fa-evernote fa-fw"></i></a></span>
-            </div>
-        </div>
-    </div>
+<p>TOML 语法的严谨说明，由一个 <a href="https://github.com/toml-lang/toml/blob/1.0.0/toml.abnf">ABNF 文件</a>另行提供。</p>
 
-    <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/toml/">TOML</a>,&nbsp;<a href="/tags/rust/">Rust</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
-        </section>
-    </div>
+        </div>
 
-    <div class="post-nav"><a href="/article/2021/learn_rust/" class="prev" rel="prev" title="Rust 学习指南"><i class="fas fa-angle-left fa-fw"></i>Rust 学习指南</a>
-            <a href="/article/2021/awk-nginx-access_log/" class="next" rel="next" title="awk 分析 nginx 运行日志常用指令">awk 分析 nginx 运行日志常用指令<i class="fas fa-angle-right fa-fw"></i></a></div>
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            
+            <div class="post-tags">
+              <a href="/tags/toml/">
+                TOML
+              </a>
+            </div>
+            
+            <div class="post-tags">
+              <a href="/tags/rust/">
+                Rust
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        
+          <div class="row">
+            <div class="col-xs-12">
+              
+            </div>
+          </div>
+
+          
+
+<div class="related-content">
+  <h3>Related Posts</h3>
+  <ul>
+    
+    <li><a href="/article/2021/learn_rust/">Rust 学习指南</a></li>
+    
+    <li><a href="/article/2021/go20210517/">Go20210517 今日技术分享</a></li>
+    
+  </ul>
 </div>
-</article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/clin003/meBlog" target="_blank">baicai</a></span></div>
-        </div>
-    </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
-            </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.83d2c4be21429a6cef2c092c196964cdccf38cbe4f39171c67e7a8f10c6a4585.css" integrity="sha256-g9LEviFCmmzvLAksGWlkzczzjL5PORccZ&#43;eo8QxqRYU="><link rel="stylesheet" href="/lib/katex/copy-tex.min.d48d43b8d4d2f95eca78538681a96abcf115c70a069d8cbdff877584834e15cc.css" integrity="sha256-1I1DuNTS&#43;V7KeFOGgalqvPEVxwoGnYy9/4d1hINOFcw="><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.adf0d4e8468fc715a1802c36ffde0be850e44b63408ad9a18510e15190f16fa9.js" integrity="sha256-rfDU6EaPxxWhgCw2/94L6FDkS2NAitmhhRDhUZDxb6k="></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.8859b6b08e22fcedffc390cf0ad0277cbc03e5114e9eb507030e03f72fcf9ef8.js" integrity="sha256-iFm2sI4i/O3/w5DPCtAnfLwD5RFOnrUHAw4D9y/Pnvg="></script><script type="text/javascript" src="/lib/lunr/lunr.min.ed3e8bffe3502debff130154fc29cc0ff2e7e978a635b6c37fc7dd236975a983.js" integrity="sha256-7T6L/&#43;NQLev/EwFU/CnMD/Ln6XimNbbDf8fdI2l1qYM="></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.d73a55668c9df0f2cbb2b14c7d57d14b50f71837e9d511144b75347e84c12ff8.js" integrity="sha256-1zpVZoyd8PLLsrFMfVfRS1D3GDfp1REUS3U0foTBL/g="></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.e9abb2f5c7c0f738290cd8a5ff2ce1cf5deac6942f44ce5dd89c9ab1ae27006a.js" integrity="sha256-6auy9cfA9zgpDNil/yzhz13qxpQvRM5d2Jyasa4nAGo="></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js" integrity="sha256-SYZ2w06yJehTV6sM4Zw8EkTzvQv1leVoTRudUOpPvEI="></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.d1c077a0d2c2fffa378c65d45894c78d917c5275aa113389d51bef6efaff87c1.js" integrity="sha256-0cB3oNLC//o3jGXUWJTHjZF8UnWqETOJ1Rvvbvr/h8E="></script><script type="text/javascript" src="/lib/sharer/sharer.min.73956988a603dde38a27beccd2d62429de847bc78adea990e97d1e60563d0ef8.js" integrity="sha256-c5VpiKYD3eOKJ77M0tYkKd6Ee8eK3qmQ6X0eYFY9Dvg="></script><script type="text/javascript" src="/lib/katex/katex.min.17f5dd6b9f123dd7140abfb18521b3f4c036cd004f6f40121182a8865f140877.js" integrity="sha256-F/Xda58SPdcUCr&#43;xhSGz9MA2zQBPb0ASEYKohl8UCHc="></script><script type="text/javascript" src="/lib/katex/auto-render.min.f74776a677f0d2be0af0264058f928e2ba455d0b19bc985304660d922a43a6b2.js" integrity="sha256-90d2pnfw0r4K8CZAWPko4rpFXQsZvJhTBGYNkipDprI="></script><script type="text/javascript" src="/lib/katex/copy-tex.min.2ab2237329021bc443986c8327f6e61357fb68a54e5d233d224023718c02207d.js" integrity="sha256-KrIjcykCG8RDmGyDJ/bmE1f7aKVOXSM9IkAjcYwCIH0="></script><script type="text/javascript" src="/lib/katex/mhchem.min.5cea356d6025c5a2f18c454c83ec5674dbb04fab1cd1d75569e77788c6b6f888.js" integrity="sha256-XOo1bWAlxaLxjEVMg&#43;xWdNuwT6sc0ddVaed3iMa2&#43;Ig="></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.09729ab43fbb7b49c065c597d41bb70983c7852ea77794a00b8f78099b049b43.js" integrity="sha256-CXKatD&#43;7e0nAZcWX1Bu3CYPHhS6nd5SgC494CZsEm0M="></script></body>
+
+
+          
+          
+          <div style="height: 50px;"></div>
+          
+        
+
+        <div class="site-footer">
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  
+
+<script>
+  
+  
+    
+    
+  
+</script>
+
+  
+
+</body>
+
 </html>

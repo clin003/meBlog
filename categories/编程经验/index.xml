@@ -1,43 +1,56 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>编程经验 - 分类 - 白菜林</title>
-        <link>https://3ae.cn/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/</link>
-        <description>编程经验 - 分类 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/" rel="self" type="application/rss+xml" /><item>
-    <title>Rust 镜像源</title>
-    <link>https://3ae.cn/article/2021/rustproxy/</link>
-    <pubDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/rustproxy/</guid>
-    <description><![CDATA[通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技]]></description>
-</item><item>
-    <title>TOML 语言规范 1.0 正式版</title>
-    <link>https://3ae.cn/article/2021/toml/</link>
-    <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/toml/</guid>
-    <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
-</item><item>
-    <title>Goproxy</title>
-    <link>https://3ae.cn/article/2021/goproxy/</link>
-    <pubDate>Thu, 27 May 2021 11:22:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/goproxy/</guid>
-    <description><![CDATA[Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/ goproxy.io：https://goproxy.io/ 百]]></description>
-</item><item>
-    <title>Swift语法全面解析</title>
-    <link>https://3ae.cn/article/2021/swift-basic-syntax/</link>
-    <pubDate>Thu, 13 May 2021 21:31:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
-    <description><![CDATA[Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以]]></description>
-</item><item>
-    <title>使用 Golang 的交叉编译</title>
-    <link>https://3ae.cn/article/2021/go_cross_compilling/</link>
-    <pubDate>Thu, 13 May 2021 14:35:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
-    <description><![CDATA[在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程经验 on 白菜林</title>
+    <link>https://3ae.cn/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/</link>
+    <description>Recent content in 编程经验 on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 Jun 2021 22:53:14 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E7%BC%96%E7%A8%8B%E7%BB%8F%E9%AA%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust 镜像源</title>
+      <link>https://3ae.cn/article/2021/rustproxy/</link>
+      <pubDate>Fri, 25 Jun 2021 22:53:14 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/rustproxy/</guid>
+      <description>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技</description>
+    </item>
+    
+    <item>
+      <title>TOML 语言规范 1.0 正式版</title>
+      <link>https://3ae.cn/article/2021/toml/</link>
+      <pubDate>Sat, 05 Jun 2021 02:59:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/toml/</guid>
+      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目</description>
+    </item>
+    
+    <item>
+      <title>Goproxy</title>
+      <link>https://3ae.cn/article/2021/goproxy/</link>
+      <pubDate>Thu, 27 May 2021 11:22:40 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/goproxy/</guid>
+      <description>Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/ goproxy.io：https://goproxy.io/ 百</description>
+    </item>
+    
+    <item>
+      <title>Swift语法全面解析</title>
+      <link>https://3ae.cn/article/2021/swift-basic-syntax/</link>
+      <pubDate>Thu, 13 May 2021 21:31:19 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
+      <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以</description>
+    </item>
+    
+    <item>
+      <title>使用 Golang 的交叉编译</title>
+      <link>https://3ae.cn/article/2021/go_cross_compilling/</link>
+      <pubDate>Thu, 13 May 2021 14:35:47 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
+      <description>在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多</description>
+    </item>
+    
+  </channel>
 </rss>

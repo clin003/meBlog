@@ -1,43 +1,56 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Rust - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/rust/</link>
-        <description>Rust - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/rust/" rel="self" type="application/rss+xml" /><item>
-    <title>Rust 镜像源</title>
-    <link>https://3ae.cn/article/2021/rustproxy/</link>
-    <pubDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/rustproxy/</guid>
-    <description><![CDATA[通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技]]></description>
-</item><item>
-    <title>Cargo Wix 创建Windows安装程序的cargo子命令</title>
-    <link>https://3ae.cn/article/2021/cargo-wix/</link>
-    <pubDate>Tue, 22 Jun 2021 22:48:53 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
-    <description><![CDATA[cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使]]></description>
-</item><item>
-    <title>TOML 语言规范 1.0 正式版</title>
-    <link>https://3ae.cn/article/2021/toml/</link>
-    <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/toml/</guid>
-    <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
-</item><item>
-    <title>Rust 学习指南</title>
-    <link>https://3ae.cn/article/2021/learn_rust/</link>
-    <pubDate>Sat, 05 Jun 2021 02:16:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/learn_rust/</guid>
-    <description><![CDATA[了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大]]></description>
-</item><item>
-    <title>Go20210517 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210517/</link>
-    <pubDate>Mon, 17 May 2021 23:05:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210517/</guid>
-    <description><![CDATA[2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on 白菜林</title>
+    <link>https://3ae.cn/tags/rust/</link>
+    <description>Recent content in Rust on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 Jun 2021 22:53:14 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust 镜像源</title>
+      <link>https://3ae.cn/article/2021/rustproxy/</link>
+      <pubDate>Fri, 25 Jun 2021 22:53:14 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/rustproxy/</guid>
+      <description>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技</description>
+    </item>
+    
+    <item>
+      <title>Cargo Wix 创建Windows安装程序的cargo子命令</title>
+      <link>https://3ae.cn/article/2021/cargo-wix/</link>
+      <pubDate>Tue, 22 Jun 2021 22:48:53 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
+      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使</description>
+    </item>
+    
+    <item>
+      <title>TOML 语言规范 1.0 正式版</title>
+      <link>https://3ae.cn/article/2021/toml/</link>
+      <pubDate>Sat, 05 Jun 2021 02:59:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/toml/</guid>
+      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目</description>
+    </item>
+    
+    <item>
+      <title>Rust 学习指南</title>
+      <link>https://3ae.cn/article/2021/learn_rust/</link>
+      <pubDate>Sat, 05 Jun 2021 02:16:24 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/learn_rust/</guid>
+      <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大</description>
+    </item>
+    
+    <item>
+      <title>Go20210517 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210517/</link>
+      <pubDate>Mon, 17 May 2021 23:05:05 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210517/</guid>
+      <description>2021-05-17 今日技术分享 单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA 从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ 高性</description>
+    </item>
+    
+  </channel>
 </rss>

@@ -1,29 +1,38 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Mac - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/mac/</link>
-        <description>Mac - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sun, 27 Jun 2021 10:04:44 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/mac/" rel="self" type="application/rss+xml" /><item>
-    <title>MAC命令快速模糊查找文件</title>
-    <link>https://3ae.cn/article/2021/mac_find/</link>
-    <pubDate>Sun, 27 Jun 2021 10:04:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/mac_find/</guid>
-    <description><![CDATA[find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*” 1 2 3 4 5 6 7 8 9 10 11 12 /** * 比如我要查找一个以‘vue-’开头的.zip]]></description>
-</item><item>
-    <title>使用 sed 命令进行复制、剪切和粘贴</title>
-    <link>https://3ae.cn/article/2021/linux_sed/</link>
-    <pubDate>Mon, 24 May 2021 00:39:20 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_sed/</guid>
-    <description><![CDATA[很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有]]></description>
-</item><item>
-    <title>Linux/Mac 使用 GNU Screen 的小技巧</title>
-    <link>https://3ae.cn/article/2021/linux_screen/</link>
-    <pubDate>Thu, 13 May 2021 12:50:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/linux_screen/</guid>
-    <description><![CDATA[学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on 白菜林</title>
+    <link>https://3ae.cn/tags/mac/</link>
+    <description>Recent content in Mac on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 27 Jun 2021 10:04:44 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MAC命令快速模糊查找文件</title>
+      <link>https://3ae.cn/article/2021/mac_find/</link>
+      <pubDate>Sun, 27 Jun 2021 10:04:44 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/mac_find/</guid>
+      <description>find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*” /** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全</description>
+    </item>
+    
+    <item>
+      <title>使用 sed 命令进行复制、剪切和粘贴</title>
+      <link>https://3ae.cn/article/2021/linux_sed/</link>
+      <pubDate>Mon, 24 May 2021 00:39:20 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_sed/</guid>
+      <description>很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有</description>
+    </item>
+    
+    <item>
+      <title>Linux/Mac 使用 GNU Screen 的小技巧</title>
+      <link>https://3ae.cn/article/2021/linux_screen/</link>
+      <pubDate>Thu, 13 May 2021 12:50:05 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/linux_screen/</guid>
+      <description>学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘</description>
+    </item>
+    
+  </channel>
 </rss>

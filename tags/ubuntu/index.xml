@@ -1,22 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Ubuntu - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/ubuntu/</link>
-        <description>Ubuntu - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/ubuntu/" rel="self" type="application/rss+xml" /><item>
-    <title>Ubuntu安装 Zlib</title>
-    <link>https://3ae.cn/article/2021/zlib/</link>
-    <pubDate>Mon, 12 Jul 2021 21:01:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/zlib/</guid>
-    <description><![CDATA[如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl]]></description>
-</item><item>
-    <title>Ubuntu安装 qbittorrent-nox并启动</title>
-    <link>https://3ae.cn/article/2021/qbittorrent/</link>
-    <pubDate>Fri, 02 Jul 2021 21:01:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/qbittorrent/</guid>
-    <description><![CDATA[Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on 白菜林</title>
+    <link>https://3ae.cn/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 12 Jul 2021 21:01:31 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu安装 Zlib</title>
+      <link>https://3ae.cn/article/2021/zlib/</link>
+      <pubDate>Mon, 12 Jul 2021 21:01:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/zlib/</guid>
+      <description>如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。 Zlib 是一个用于数据压缩的开源库。 作为使用者，你可能会遇到需要安装 zl</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu安装 qbittorrent-nox并启动</title>
+      <link>https://3ae.cn/article/2021/qbittorrent/</link>
+      <pubDate>Fri, 02 Jul 2021 21:01:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/qbittorrent/</guid>
+      <description>Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent</description>
+    </item>
+    
+  </channel>
 </rss>

@@ -1,22 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>开发技能 - 分类 - 白菜林</title>
-        <link>https://3ae.cn/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/</link>
-        <description>开发技能 - 分类 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/" rel="self" type="application/rss+xml" /><item>
-    <title>TOML 语言规范 1.0 正式版</title>
-    <link>https://3ae.cn/article/2021/toml/</link>
-    <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/toml/</guid>
-    <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
-</item><item>
-    <title>Swift语法全面解析</title>
-    <link>https://3ae.cn/article/2021/swift-basic-syntax/</link>
-    <pubDate>Thu, 13 May 2021 21:31:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
-    <description><![CDATA[Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发技能 on 白菜林</title>
+    <link>https://3ae.cn/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/</link>
+    <description>Recent content in 开发技能 on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 05 Jun 2021 02:59:55 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TOML 语言规范 1.0 正式版</title>
+      <link>https://3ae.cn/article/2021/toml/</link>
+      <pubDate>Sat, 05 Jun 2021 02:59:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/toml/</guid>
+      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目</description>
+    </item>
+    
+    <item>
+      <title>Swift语法全面解析</title>
+      <link>https://3ae.cn/article/2021/swift-basic-syntax/</link>
+      <pubDate>Thu, 13 May 2021 21:31:19 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
+      <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以</description>
+    </item>
+    
+  </channel>
 </rss>
