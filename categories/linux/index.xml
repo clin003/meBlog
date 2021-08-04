@@ -7,7 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Sat, 05 Jun 2021 10:31:29 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Aug 2021 16:12:56 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 df 命令查看 Linux 上的可用磁盘空间</title>
+      <link>https://3ae.cn/article/2021/check-disk-space-linux-df/</link>
+      <pubDate>Wed, 04 Aug 2021 16:12:56 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/check-disk-space-linux-df/</guid>
+      <description>磁盘空间已经不像计算机早期那样珍贵，但无论你有多少磁盘空间，总有耗尽的可能。计算机需要一些磁盘空间才能启动运行，所以为了确保你没有在无意间用尽了所有的硬盘空间，偶尔检查一下是非常必要的。在 Linux 终端，你可以用 df 命令来做这件事。
+df 命令可以显示文件系统中可用的磁盘空间。
+要想使输出结果易于阅读，你可以加上 &amp;ndash;human-readable（或其简写 -h）选项：
+$ df --human-readable Filesystem Size Used Avail Use% Mounted on /dev/sda1 1.0T 525G 500G 52% / 在这个例子中，计算机的磁盘已经用了 52%，还有 500 GB 可用空间。
+由于 Linux 从整体上看待所有挂载设备的文件系统，df 命令会展示出连接到计算机上的每个存储设备的详细信息。如果你有很多磁盘，那么输出结果将会反映出来：
+$ df --human-readable Filesystem Size Used Avail Use% Mounted on /dev/root 110G 45G 61G 43% / devtmpfs 12G 0 12G 0% /dev tmpfs 12G 848K 12G 1% /run /dev/sda1 1.6T 1.3T 191G 87% /home /dev/sdb1 917G 184G 687G 22% /penguin /dev/sdc1 57G 50G 4.</description>
+    </item>
+    
     <item>
       <title>Linux 常用命令</title>
       <link>https://3ae.cn/article/2021/linux_cmd/</link>

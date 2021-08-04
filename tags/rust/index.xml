@@ -61,27 +61,5 @@ Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指
  使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库  上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
     </item>
     
-    <item>
-      <title>Go20210517 今日技术分享</title>
-      <link>https://3ae.cn/article/2021/go20210517/</link>
-      <pubDate>Mon, 17 May 2021 23:05:05 +0800</pubDate>
-      
-      <guid>https://3ae.cn/article/2021/go20210517/</guid>
-      <description>2021-05-17 今日技术分享
-  单机内存内缓存怎么做？go-cache 了解下 https://mp.weixin.qq.com/s/LzfLySMPtbCO91q87UKRcQ
-  Go语言爱好者周刊：第 95 期 — 自信点，这道题一定会 https://mp.weixin.qq.com/s/yBUlIhhGNSDUv7_J8Y0NmA
-  从0写一个 Go Web 服务 (上) https://mp.weixin.qq.com/s/vNUBJERfgmeV_qk_cdFoVQ
-  高性能 Go 代码工坊（Part7) https://mp.weixin.qq.com/s/ptUH-9dvRlA558SNakIbFQ
-  使用 Loki 进行日志报警(二) https://mp.weixin.qq.com/s/wO0w1f8ptZf4Rv1KQ6I1sw
-  用Kubernetes搭建Etcd集群和WebUI https://mp.weixin.qq.com/s/AkIvkW22dvqcdFXkiTpv8Q
-  Leetcode:House Robber II https://mp.weixin.qq.com/s/-mUMeklJdajaSxlpqJB0MA
-  深度探索Go语言（三）：动态派发 https://mp.weixin.qq.com/s/XLj_AKqETZy4cUBNiNZPBw
-  通过例子，让你彻底搞懂微服务的演化过程 https://mp.weixin.qq.com/s/wWBlrjUUn-tx0v7ZTkha1g
-  5月你好，第二股来喽 https://mp.weixin.qq.com/s/onnAaqM8GoaphEtZ-KHO6g
-  http.Client 的连接行为控制详解 https://mp.weixin.qq.com/s/2fAj_8vEQYLxddllqjsYFg
-  unsafe.Pointer 和 uintptr 的区别和联系 https://mp.weixin.qq.com/s/l-ZQws4SH4QsvMhmJddiww
-  Common anti-patterns in Go https://mp.</description>
-    </item>
-    
   </channel>
 </rss>
