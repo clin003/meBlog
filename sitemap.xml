@@ -12,11 +12,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
-    <loc>https://3ae.cn/tags/golang/</loc>
-    <lastmod>2021-08-04T16:12:56+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url><url>
     <loc>https://3ae.cn/categories/linux/</loc>
     <lastmod>2021-08-04T16:12:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -339,6 +334,11 @@
   </url><url>
     <loc>https://3ae.cn/article/2021/red-alert-2-chronodivide/</loc>
     <lastmod>2021-06-02T19:22:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url><url>
+    <loc>https://3ae.cn/tags/golang/</loc>
+    <lastmod>2021-05-27T11:22:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
