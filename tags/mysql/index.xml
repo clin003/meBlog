@@ -1,15 +1,32 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Mysql - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/mysql/</link>
-        <description>Mysql - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 18 May 2021 23:00:31 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/mysql/" rel="self" type="application/rss+xml" /><item>
-    <title>Go20210518 今日技术分享</title>
-    <link>https://3ae.cn/article/2021/go20210518/</link>
-    <pubDate>Tue, 18 May 2021 23:00:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/go20210518/</guid>
-    <description><![CDATA[2021-05-18 今日技术分享 也许是你从来没用过的利器：GODEBUG https://mp.weixin.qq.com/s/lqOs34aMs7AYCxM_Jv0Hug 从0开发上线一个web项目（下） https://mp.weixin.qq.com/s/W5lHCgA_SzzyCoDaHDmz1Q 如何打造高性能的 Go 缓存库 https://mp.weixin.qq.com/s/G8LJ1HBuWoQfWV2dILi6Rg 【本周四预告】JetBr]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on 白菜林</title>
+    <link>https://3ae.cn/tags/mysql/</link>
+    <description>Recent content in Mysql on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>baicai</copyright>
+    <lastBuildDate>Tue, 18 May 2021 23:00:31 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go20210518 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210518/</link>
+      <pubDate>Tue, 18 May 2021 23:00:31 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210518/</guid>
+      <description>2021-05-18 今日技术分享
+  也许是你从来没用过的利器：GODEBUG https://mp.weixin.qq.com/s/lqOs34aMs7AYCxM_Jv0Hug
+  从0开发上线一个web项目（下） https://mp.weixin.qq.com/s/W5lHCgA_SzzyCoDaHDmz1Q
+  如何打造高性能的 Go 缓存库 https://mp.weixin.qq.com/s/G8LJ1HBuWoQfWV2dILi6Rg
+  【本周四预告】JetBrains GoLand 2021.1 新特性介绍 https://mp.weixin.qq.com/s/9DbBwdkBvECl11jSd-hbYw
+  用 Go struct 不能犯的一个低级错误！ https://mp.weixin.qq.com/s/EKbsUwLABjpadxPZ9AJGTg
+  Go语言中new和make你使用哪个来分配内存？ https://mp.weixin.qq.com/s/XJ9O9O4KS3LbZL0jYnJHPg
+  同步secret和config到指定namespace https://mp.weixin.qq.com/s/i1fI58MhbWnPx7RFftLXkg
+  缓存数据一致性 - 架构师峰会演讲实录 https://mp.weixin.qq.com/s/DhIv9RACxa5igJTYg4N1mA
+  kubebuilder 进阶: 源码分析 https://mp.weixin.qq.com/s/mlpNUwoqcNdT0kAowb_zrQ    咱Gopher好香啊，输入法、搜索Top行业招Gopher，还不快到碗里来？ https://mp.weixin.qq.com/s/HY4CpoPqXroMhJJ250quZQ
+  如何管理多版本的 go https://lakefs.io/managing-multiple-go-versions-with-go/
+  一个 SQL 数据库只使用了 2000 行 golang 代码并且没有任何第三方依赖 https://github.com/auxten/go-sqldb</description>
+    </item>
+    
+  </channel>
 </rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>微服务 on 白菜林</title>
+    <link>https://3ae.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
+    <description>Recent content in 微服务 on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>baicai</copyright>
+    <lastBuildDate>Tue, 11 May 2021 07:42:44 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go20210511 今日技术分享</title>
+      <link>https://3ae.cn/article/2021/go20210511/</link>
+      <pubDate>Tue, 11 May 2021 07:42:44 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/go20210511/</guid>
+      <description>今日技术分享
+  图解 Go 内存管理分配 https://mp.weixin.qq.com/s/bMr4lZgf-Fn1oaOSPPSDIQ
+  Go 刷 leetcode 之任务调度器 https://mp.weixin.qq.com/s/oI441vsKhYninXJjg3t3yA
+  自己动手实现一个 kubectl exec https://mp.weixin.qq.com/s/VmEcIYfsUbgh-p4RCssGFQ
+  云上细粒度访问管理的参考架构 https://mp.weixin.qq.com/s/3sfWGKFa1POMFcWYJbk6Ug
+  Go 工程师必学：Go 大杀器之跟踪剖析 trace https://mp.weixin.qq.com/s/7DY0hDwidgx0zezP1ml3Ig
+  Go并发编程 — sync.Once 单实例模式的思考 https://mp.weixin.qq.com/s/nMHNujmbIx7uMqMtjUMTvQ
+  kustomize 简明教程 https://mp.weixin.qq.com/s/JDsDOYaACgyt97-Nz5ScDw    你不知道的 Go 之 slice https://mp.weixin.qq.com/s/aOIp7jeBWubT-u85vQJxzA
+  缓存系统稳定性 - 架构师峰会演讲实录 https://mp.weixin.qq.com/s/o0qUY5zUjBQuOkx_4XGB6Q
+  微服务的灾难 https://mp.weixin.qq.com/s/bY2s7wjfggSt77kj8exYLQ
+  利用 NATS JetStream 构建分布式事件流系统 https://shijuvar.medium.com/building-distributed-event-streaming-systems-in-go-with-nats-jetstream-3938e6dc7a13
+  100 行 Golang 代码构建一个简单的终端仿真器 https://ishuah.</description>
+    </item>
+    
+  </channel>
+</rss>
