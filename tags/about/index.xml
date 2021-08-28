@@ -1,22 +1,49 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>about - 标签 - 白菜林</title>
-        <link>https://3ae.cn/tags/about/</link>
-        <description>about - 标签 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Tue, 11 May 2021 18:46:34 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/tags/about/" rel="self" type="application/rss+xml" /><item>
-    <title>about me</title>
-    <link>https://3ae.cn/about/</link>
-    <pubDate>Tue, 11 May 2021 18:46:34 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/about/</guid>
-    <description><![CDATA[关于我 勤奋的代码搬运工。 为什么建立个人博客？ 宣传自己，这是一个信息爆炸、人人自我营销的时代，不懂得宣传自己，就得不到机会的垂青。 个人觉得IT]]></description>
-</item><item>
-    <title>Hello world</title>
-    <link>https://3ae.cn/article/2021/hello_world/</link>
-    <pubDate>Tue, 11 May 2021 14:00:54 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/hello_world/</guid>
-    <description><![CDATA[Hello World! 白菜林^_^]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>about on 白菜林</title>
+    <link>https://3ae.cn/tags/about/</link>
+    <description>Recent content in about on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>baicai</copyright>
+    <lastBuildDate>Tue, 11 May 2021 18:46:34 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>about me</title>
+      <link>https://3ae.cn/about/</link>
+      <pubDate>Tue, 11 May 2021 18:46:34 +0800</pubDate>
+      
+      <guid>https://3ae.cn/about/</guid>
+      <description>关于我 一个勤奋的代码搬运工。
+为什么建立个人博客？ 宣传自己，这是一个信息爆炸、人人自我营销的时代，不懂得宣传自己，就得不到机会的垂青。
+个人觉得IT从业者就应该有自己的博客网站，记录与分享自己的经验，收集有价值的文章。
+凭借互联网的媒介，结交志同道合的朋友，为未来的事业做准备。
+关于本站 Log something useless, but interesting!
+学习日记，点滴记录。
+也会收集和分享互联网上比较经典且具有价值的文章。
+站长是谁： 昵称：白菜林
+对于技术很爱折腾、很有热情的小哥。
+联系站长：77370751（微信/qq同号，备注来意）
+邮箱Email：77370751@qq.com
+交流QQ群：153690156
+给我留言：https://support.qq.com/product/325110
+我的主页 Gitee: https://gitee.com/lyhuilin
+Github: https://github.com/clin003/meBlog
+NavXin: https://www.nav.xin
+我的微信公众号    未来发展： 未来很长，且慢慢耕耘。
+白菜林的博客小站历程： 2021年5月11日 白菜林的博客小站 建站并部署至Github page。  特别感谢 非常感谢每一位走进本站的同学对我们的大力支持，你们的走进是我坚持的动力！
+如果不介意,请把本站分享给您的同学朋友！
+我会一直努力，不求最好，只求更好！</description>
+    </item>
+    
+    <item>
+      <title>Hello world</title>
+      <link>https://3ae.cn/article/2021/hello_world/</link>
+      <pubDate>Tue, 11 May 2021 14:00:54 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/hello_world/</guid>
+      <description>Hello World! 白菜林^_^  </description>
+    </item>
+    
+  </channel>
 </rss>

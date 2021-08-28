@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2021/tcpdump_icmp-echo/" />
+	<link rel="canonical" href="https://3ae.cn/article/2021/tcpdump_icmp-echo/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>如何知道谁在ping我？</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1630157435">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>如何知道谁在ping我？</h1>
+			<b><time>2021.08.28 21:14</time></b>
+		       
+		           <a href="/tags/tcpdump">tcpdump</a>
+        	       
+		           <a href="/tags/linux">linux</a>
+        	       
+		           <a href="/tags/ubuntu">Ubuntu</a>
+        	       
+
+			<div>
+				<blockquote>
+<p>tcpdump 是 Linux 上可用的最强大和使用最广泛的 命令行 数据包嗅探器(包分析器)工具。</p>
+</blockquote>
+<p>在您要监控的计算机的终端应用程序中：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo tcpdump -i ethX icmp and icmp<span style="color:#f92672">[</span>icmptype<span style="color:#f92672">]=</span>icmp-echo
+</code></pre></div><p>选项：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-n avoid a <span style="color:#f92672">(</span>potentially slow<span style="color:#f92672">)</span> reverse DNS query
+−i interface
+icmp<span style="color:#f92672">[</span>icmptype<span style="color:#f92672">]=</span>icmp-echo    To print all ICMP packets that are echo requests/replies
+</code></pre></div><p>它将开始侦听 ethX 并等待到达的数据包。</p>
+<p>示例：我有 2 台 pc win7 192.168.0.8 , Ubuntu 192.168.0.57 它将监控到达的数据包：
+在Win上：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ping 192.168.0.57
+</code></pre></div><p>在 Ubuntu 上：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tcpdump -i eth0 icmp and icmp<span style="color:#f92672">[</span>icmptype<span style="color:#f92672">]=</span>icmp-echo -n
+</code></pre></div><p>参考：nixCraft<a href="1">http://www.cyberciti.biz/howto/question/man/tcpdump-man-page-with-examples.php</a></p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2021/tcpdump_icmp-echo/">如何知道谁在ping我？</a></li>
+				
+				<li><a href="/article/2021/check-disk-space-linux-df/">使用 df 命令查看 Linux 上的可用磁盘空间</a></li>
+				
+				<li><a href="/article/2021/zlib/">Ubuntu安装 Zlib</a></li>
+				
+				<li><a href="/article/2021/jsdelivr_github/">免费CDN：jsDelivr&#43;Github 使用方法</a></li>
+				
+				<li><a href="/article/2021/qbittorrent/">Ubuntu安装 qbittorrent-nox并启动</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2021 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>

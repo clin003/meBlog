@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2021/check-disk-space-linux-df/" />
+	<link rel="canonical" href="https://3ae.cn/article/2021/check-disk-space-linux-df/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>使用 df 命令查看 Linux 上的可用磁盘空间</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1630157435">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>使用 df 命令查看 Linux 上的可用磁盘空间</h1>
+			<b><time>2021.08.04 16:12</time></b>
+		       
+		           <a href="/tags/df">df</a>
+        	       
+
+			<div>
+				<p>磁盘空间已经不像计算机早期那样珍贵，但无论你有多少磁盘空间，总有耗尽的可能。计算机需要一些磁盘空间才能启动运行，所以为了确保你没有在无意间用尽了所有的硬盘空间，偶尔检查一下是非常必要的。在 Linux 终端，你可以用 df 命令来做这件事。</p>
+<p>df 命令可以显示文件系统中可用的磁盘空间。</p>
+<p>要想使输出结果易于阅读，你可以加上 &ndash;human-readable（或其简写 -h）选项：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1       1.0T  525G  500G  52% /
+</code></pre></div><p>在这个例子中，计算机的磁盘已经用了 52%，还有 500 GB 可用空间。</p>
+<p>由于 Linux 从整体上看待所有挂载设备的文件系统，df 命令会展示出连接到计算机上的每个存储设备的详细信息。如果你有很多磁盘，那么输出结果将会反映出来：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       110G   45G   61G  43% /
+devtmpfs         12G     <span style="color:#ae81ff">0</span>   12G   0% /dev
+tmpfs            12G  848K   12G   1% /run
+/dev/sda1       1.6T  1.3T  191G  87% /home
+/dev/sdb1       917G  184G  687G  22% /penguin
+/dev/sdc1        57G   50G  4.5G  92% /sneaker
+/dev/sdd1       3.7T  2.4T  1.3T  65% /tux
+</code></pre></div><p>在这个例子中，计算机的 /home 目录已经用了 87%，剩下 191 GB 的可用空间。</p>
+<h3 id="查看总的可用磁盘空间">查看总的可用磁盘空间</h3>
+<p>如果你的文件系统确实很复杂，而你希望看到所有磁盘的总空间，可以使用 &ndash;total 选项：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable --total
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       110G   45G   61G  43% /
+devtmpfs         12G     <span style="color:#ae81ff">0</span>   12G   0% /dev
+tmpfs            12G  848K   12G   1% /run
+/dev/sda1       1.6T  1.3T  191G  87% /home
+/dev/sdb1       917G  184G  687G  22% /penguin
+/dev/sdc1        57G   50G  4.5G  92% /sneaker
+/dev/sdd1       3.7T  2.4T  1.3T  65% /tux
+total           6.6T  4.0T  2.5T  62% -
+</code></pre></div><p>输出的最后一行展示了文件系统的总空间、已用总空间、可用总空间。</p>
+<h3 id="查看磁盘空间使用情况">查看磁盘空间使用情况</h3>
+<p>如果你想大概了解哪些文件占用了磁盘空间，请阅读我们关于 du 命令[1] 的文章。</p>
+<p>via:
+<a href="https://opensource.com/article/21/7/check-disk-space-linux-df">https://opensource.com/article/21/7/check-disk-space-linux-df</a>
+<a href="https://linux.cn/article-13646-1.html">https://linux.cn/article-13646-1.html</a></p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2021/tcpdump_icmp-echo/">如何知道谁在ping我？</a></li>
+				
+				<li><a href="/article/2021/check-disk-space-linux-df/">使用 df 命令查看 Linux 上的可用磁盘空间</a></li>
+				
+				<li><a href="/article/2021/zlib/">Ubuntu安装 Zlib</a></li>
+				
+				<li><a href="/article/2021/jsdelivr_github/">免费CDN：jsDelivr&#43;Github 使用方法</a></li>
+				
+				<li><a href="/article/2021/qbittorrent/">Ubuntu安装 qbittorrent-nox并启动</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2021 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>

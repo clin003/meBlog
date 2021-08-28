@@ -1,166 +1,102 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Golang - 标签 - 白菜林</title><meta name="Description" content="白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。"><meta property="og:title" content="Golang" />
-<meta property="og:description" content="白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://3ae.cn/tags/golang/" /><meta property="og:image" content="https://3ae.cn/logo.png"/>
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://3ae.cn/logo.png"/>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/tags/golang/" />
+	<link rel="canonical" href="https://3ae.cn/tags/golang/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>Golang</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1630157435">
+	
+	<link rel="alternate" type="application/rss+xml" href="/tags/golang/index.xml" title="白菜林">
+	
+</head>
 
-<meta name="twitter:title" content="Golang"/>
-<meta name="twitter:description" content="白菜林：对于一门学科，学的最多的人就是那个必须要把所学的东西教授给别人的人。"/>
-<meta name="application-name" content="白菜林">
-<meta name="apple-mobile-web-app-title" content="白菜林"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://3ae.cn/tags/golang/" /><link rel="alternate" href="/tags/golang/index.xml" type="application/rss+xml" title="白菜林">
-    <link rel="feed" href="/tags/golang/index.xml" type="application/rss+xml" title="白菜林"><link rel="stylesheet" href="/lib/normalize/normalize.min.055364f5be272caa092b0e6654c165828707f8ab971e2656383a6d6392bc345e.css" integrity="sha256-BVNk9b4nLKoJKw5mVMFlgocH&#43;KuXHiZWODptY5K8NF4="><link rel="stylesheet" href="/css/style.min.1e2694bed152fa2922dbe909a441838ed693d88b1330f97485bfa8ed78da42df.css" integrity="sha256-HiaUvtFS&#43;iki2&#43;kJpEGDjtaT2IsTMPl0hb&#43;o7XjaQt8="><link rel="stylesheet" href="/lib/fontawesome-free/all.min.876d023d9d10c97941b80c3b03e2a5b94631ff7a4af9cee5604a6a2d39718d84.css" integrity="sha256-h20CPZ0QyXlBuAw7A&#43;KluUYx/3pK&#43;c7lYEpqLTlxjYQ="><link rel="stylesheet" href="/lib/animate/animate.min.3c770e90f98eb21b0c042fafb49755af93306fbaf42e449524f94fae9fc83295.css" integrity="sha256-PHcOkPmOshsMBC&#43;vtJdVr5Mwb7r0LkSVJPlPrp/IMpU="></head>
-    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
-
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="白菜林"><span class="header-title-pre"><i class="far fa-kiss-wink-heart fa-fw"></i></span>白菜林</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://support.qq.com/product/325110" rel="noopener noreffer" target="_blank"> 反馈 </a><a class="menu-item" href="https://nav.3ae.cn" rel="noopener noreffer" target="_blank"> 网址导航 </a><a class="menu-item" href="/donations/"> 打赏 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="白菜林"><span class="header-title-pre"><i class="far fa-kiss-wink-heart fa-fw"></i></span>白菜林</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        取消
-                    </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://support.qq.com/product/325110" title="" rel="noopener noreffer" target="_blank">反馈</a><a class="menu-item" href="https://nav.3ae.cn" title="" rel="noopener noreffer" target="_blank">网址导航</a><a class="menu-item" href="/donations/" title="">打赏</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
-    </div>
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
 </header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-                <div class="container"><div class="page archive"><h2 class="single-title animated pulse faster"><i class="fas fa-tag fa-fw"></i>&nbsp;Golang</h2><h3 class="group-title">2021</h3><article class="archive-item">
-                        <a href="/article/2021/go20210612/" class="archive-item-link">Go20210612 今日技术分享</a>
-                        <span class="archive-item-date">06-12</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210609/" class="archive-item-link">Go20210609 今日技术分享</a>
-                        <span class="archive-item-date">06-09</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210608/" class="archive-item-link">Go20210608 今日技术分享</a>
-                        <span class="archive-item-date">06-08</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210605/" class="archive-item-link">Go20210605 今日技术分享</a>
-                        <span class="archive-item-date">06-05</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210603/" class="archive-item-link">Go20210603 今日技术分享</a>
-                        <span class="archive-item-date">06-03</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210602/" class="archive-item-link">Go20210602 今日技术分享</a>
-                        <span class="archive-item-date">06-02</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210601/" class="archive-item-link">Go20210601 今日技术分享</a>
-                        <span class="archive-item-date">06-01</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210531/" class="archive-item-link">Go20210531 今日技术分享</a>
-                        <span class="archive-item-date">05-31</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210529/" class="archive-item-link">Go20210529 今日技术分享</a>
-                        <span class="archive-item-date">05-30</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210528/" class="archive-item-link">Go20210528 今日技术分享</a>
-                        <span class="archive-item-date">05-29</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210527/" class="archive-item-link">Go20210527 今日技术分享</a>
-                        <span class="archive-item-date">05-28</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/goproxy/" class="archive-item-link">Goproxy</a>
-                        <span class="archive-item-date">05-27</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210526/" class="archive-item-link">Go20210526 今日技术分享</a>
-                        <span class="archive-item-date">05-26</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210525/" class="archive-item-link">Go20210525 今日技术分享</a>
-                        <span class="archive-item-date">05-25</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210524/" class="archive-item-link">Go20210524 今日技术分享</a>
-                        <span class="archive-item-date">05-24</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210523/" class="archive-item-link">Go20210523 今日技术分享</a>
-                        <span class="archive-item-date">05-24</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210521/" class="archive-item-link">Go20210521 今日技术分享</a>
-                        <span class="archive-item-date">05-22</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210518/" class="archive-item-link">Go20210518 今日技术分享</a>
-                        <span class="archive-item-date">05-18</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210517/" class="archive-item-link">Go20210517 今日技术分享</a>
-                        <span class="archive-item-date">05-17</span>
-                    </article><article class="archive-item">
-                        <a href="/article/2021/go20210516/" class="archive-item-link">Go20210516 今日技术分享</a>
-                        <span class="archive-item-date">05-16</span>
-                    </article><ul class="pagination"><li class="page-item active">
-                    <span class="page-link">
-                        <a href="/tags/golang/">1</a>
-                    </span>
-                </li><li class="page-item ">
-                    <span class="page-link">
-                        <a href="/tags/golang/page/2/">2</a>
-                    </span>
-                </li></ul></div></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/clin003/meBlog" target="_blank">baicai</a></span></div>
-        </div>
-    </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
-            </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.4710034e669c7ff17f823f9ba12cf8a36582d65b007f79cbc4a3c11d7db2e4ca.css" integrity="sha256-RxADTmacf/F/gj&#43;boSz4o2WC1lsAf3nLxKPBHX2y5Mo="><link rel="stylesheet" href="/lib/katex/copy-tex.min.bf9ff4137fec38f6255419e142d0883c9c52090885d746f80eee12b273d9b3e0.css" integrity="sha256-v5/0E3/sOPYlVBnhQtCIPJxSCQiF10b4Du4SsnPZs&#43;A="><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.bcff85fb5e00d68802850b393ac7792c997f722f536f38e26638c46dca8e5eb6.js" integrity="sha256-vP&#43;F&#43;14A1ogChQs5Osd5LJl/ci9TbzjiZjjEbcqOXrY="></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.615590a2ca2b667afa7c02ef396f5500b62e22795ddbb46448f90494605d09a5.js" integrity="sha256-YVWQosorZnr6fALvOW9VALYuInld27RkSPkElGBdCaU="></script><script type="text/javascript" src="/lib/lunr/lunr.min.df84a2d58ea594c04a3371b48d020b55ea10284c2ec636e4e331965d7313e29b.js" integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps="></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.115461812ca5b093f9bcc2f15d2693a6c90e8fe38dabf2375e5f18e1c348d97c.js" integrity="sha256-EVRhgSylsJP5vMLxXSaTpskOj&#43;ONq/I3Xl8Y4cNI2Xw="></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.b3aab24bd69b746d28f433f4a82ecfa1556a75ba5ef9f4caa2bcc7ab8d327c14.js" integrity="sha256-s6qyS9abdG0o9DP0qC7PoVVqdbpe&#43;fTKorzHq40yfBQ="></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.8a7739925f4c03586479852df840b7061948832a7fda30c8c812d2ea4dd4c4f2.js" integrity="sha256-inc5kl9MA1hkeYUt&#43;EC3BhlIgyp/2jDIyBLS6k3UxPI="></script><script type="text/javascript" src="/lib/sharer/sharer.min.9c88f86c7f0820287113f6236200459832693656e80d7556cc80a93dfbd45813.js" integrity="sha256-nIj4bH8IIChxE/YjYgBFmDJpNlboDXVWzICpPfvUWBM="></script><script type="text/javascript" src="/lib/katex/katex.min.17f5dd6b9f123dd7140abfb18521b3f4c036cd004f6f40121182a8865f140877.js" integrity="sha256-F/Xda58SPdcUCr&#43;xhSGz9MA2zQBPb0ASEYKohl8UCHc="></script><script type="text/javascript" src="/lib/katex/auto-render.min.f74776a677f0d2be0af0264058f928e2ba455d0b19bc985304660d922a43a6b2.js" integrity="sha256-90d2pnfw0r4K8CZAWPko4rpFXQsZvJhTBGYNkipDprI="></script><script type="text/javascript" src="/lib/katex/copy-tex.min.2ab2237329021bc443986c8327f6e61357fb68a54e5d233d224023718c02207d.js" integrity="sha256-KrIjcykCG8RDmGyDJ/bmE1f7aKVOXSM9IkAjcYwCIH0="></script><script type="text/javascript" src="/lib/katex/mhchem.min.5cea356d6025c5a2f18c454c83ec5674dbb04fab1cd1d75569e77788c6b6f888.js" integrity="sha256-XOo1bWAlxaLxjEVMg&#43;xWdNuwT6sc0ddVaed3iMa2&#43;Ig="></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.f51938f3065a40ee841bcb558e4330e31fd26c0ea55343fff8770b88b0319a3c.js" integrity="sha256-9Rk48wZaQO6EG8tVjkMw4x/SbA6lU0P/&#43;HcLiLAxmjw="></script></body>
+	
+	<main>
+		
+		
+		<div>
+			<h1>Golang</h1>
+			
+		</div>
+		
+		
+		<ul>
+		    
+		    <li>
+		        <div class="post-title">
+				
+				    <a href="/article/2021/goproxy/">Goproxy</a>
+				
+		        </div>
+		    </li>
+		    
+		    <li>
+		        <div class="post-title">
+				
+				    <a href="/article/2021/go_cross_compilling/">使用 Golang 的交叉编译</a>
+				
+		        </div>
+		    </li>
+		    
+		</ul>
+		<div>
+
+1 of 1
+
+</div>
+
+	</main>
+
+	<footer>
+	<p>&copy; 2021 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
 </html>

@@ -1,36 +1,65 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Learn Rust - 分类 - 白菜林</title>
-        <link>https://3ae.cn/categories/learn-rust/</link>
-        <description>Learn Rust - 分类 - 白菜林</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hi@lyhuilin.com (baicai)</managingEditor>
-            <webMaster>hi@lyhuilin.com (baicai)</webMaster><lastBuildDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</lastBuildDate><atom:link href="https://3ae.cn/categories/learn-rust/" rel="self" type="application/rss+xml" /><item>
-    <title>Rust 镜像源</title>
-    <link>https://3ae.cn/article/2021/rustproxy/</link>
-    <pubDate>Fri, 25 Jun 2021 22:53:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/rustproxy/</guid>
-    <description><![CDATA[通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。 crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/ 中国科技]]></description>
-</item><item>
-    <title>Cargo Wix 创建Windows安装程序的cargo子命令</title>
-    <link>https://3ae.cn/article/2021/cargo-wix/</link>
-    <pubDate>Tue, 22 Jun 2021 22:48:53 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
-    <description><![CDATA[cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使]]></description>
-</item><item>
-    <title>TOML 语言规范 1.0 正式版</title>
-    <link>https://3ae.cn/article/2021/toml/</link>
-    <pubDate>Sat, 05 Jun 2021 02:59:55 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/toml/</guid>
-    <description><![CDATA[👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目]]></description>
-</item><item>
-    <title>Rust 学习指南</title>
-    <link>https://3ae.cn/article/2021/learn_rust/</link>
-    <pubDate>Sat, 05 Jun 2021 02:16:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://3ae.cn/article/2021/learn_rust/</guid>
-    <description><![CDATA[了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org Rust 官方文档 Rust 语言的学习或参考文档大]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn Rust on 白菜林</title>
+    <link>https://3ae.cn/categories/learn-rust/</link>
+    <description>Recent content in Learn Rust on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>baicai</copyright>
+    <lastBuildDate>Fri, 25 Jun 2021 22:53:14 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/learn-rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust 镜像源</title>
+      <link>https://3ae.cn/article/2021/rustproxy/</link>
+      <pubDate>Fri, 25 Jun 2021 22:53:14 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/rustproxy/</guid>
+      <description>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。
+crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/
+中国科技大学的：https://mirrors.ustc.edu.cn/help/crates.io-index.html
+清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
+上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index</description>
+    </item>
+    
+    <item>
+      <title>Cargo Wix 创建Windows安装程序的cargo子命令</title>
+      <link>https://3ae.cn/article/2021/cargo-wix/</link>
+      <pubDate>Tue, 22 Jun 2021 22:48:53 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/cargo-wix/</guid>
+      <description>cargo-wix：创建Windows安装程序的cargo子命令 它使用二进制项目的发行版中的构建Windows安装程序（msi）。 如果可以使用提供的应用程序提供代码签名证书，则它还支持对Windows安装程序进行签名。
+快速开始 启动命令提示符（cmd.exe），然后执行以下命令：
+C:\&amp;gt;cargo install cargo-wix C:\&amp;gt;cd Path\To\Project C:\Path\To\Project\&amp;gt;cargo wix init C:\Path\To\Project\&amp;gt;cargo wix 该项目的Windows安装程序（msi）将位于C:\Path\To\Project\target\wix文件夹中。
+官方文档 https://crates.io/crates/cargo-wix</description>
+    </item>
+    
+    <item>
+      <title>TOML 语言规范 1.0 正式版</title>
+      <link>https://3ae.cn/article/2021/toml/</link>
+      <pubDate>Sat, 05 Jun 2021 02:59:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/toml/</guid>
+      <description>👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目中编辑配置文件。
+👉 本文来自 toml-lang 的中文翻译版本，本文收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在 toml.io 原项目仓库指出或修改错误。
+TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言。（Tom&amp;rsquo;s Obvious, Minimal Language）
+作者：Tom Preston-Werner、Pradyun Gedam 等人。
+宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
+TOML 被设计成可以无歧义地映射为哈希表。
+TOML 应该能很容易地被解析成各种语言中的数据结构。
+目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
+    </item>
+    
+    <item>
+      <title>Rust 学习指南</title>
+      <link>https://3ae.cn/article/2021/learn_rust/</link>
+      <pubDate>Sat, 05 Jun 2021 02:16:24 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/learn_rust/</guid>
+      <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org
+Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指引页 和 Rust 官方文档主页 上，目前 Rust 官方团队已经将相关文档拆分到不同的仓库上：
+ 《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库  还有其他更多官方或其他非官方相关的文档：
+ 使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库  上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
+    </item>
+    
+  </channel>
 </rss>
