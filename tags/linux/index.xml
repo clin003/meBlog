@@ -20,7 +20,7 @@ sudo tcpdump -i ethX icmp and icmp[icmptype]=icmp-echo 选项：
 -n avoid a (potentially slow) reverse DNS query −i interface icmp[icmptype]=icmp-echo To print all ICMP packets that are echo requests/replies 它将开始侦听 ethX 并等待到达的数据包。
 示例：我有 2 台 pc win7 192.168.0.8 , Ubuntu 192.168.0.57 它将监控到达的数据包： 在Win上：
 ping 192.168.0.57 在 Ubuntu 上：
-tcpdump -i eth0 icmp and icmp[icmptype]=icmp-echo -n  参考：nixCraft[1]</description>
+tcpdump -i eth0 icmp and icmp[icmptype]=icmp-echo -n 参考：nixCraft[1]</description>
     </item>
     
     <item>
