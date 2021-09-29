@@ -7,7 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Wed, 04 Aug 2021 16:12:56 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Sep 2021 16:19:42 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ubuntu上安装firefox</title>
+      <link>https://3ae.cn/article/2021/ubuntu_firefox-install/</link>
+      <pubDate>Wed, 29 Sep 2021 16:19:42 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2021/ubuntu_firefox-install/</guid>
+      <description>卸载原来Firefox sudo apt-get purge firefox  或 sudo apt-get remove firefox
+下载最新Firefox二进制压缩包 wget -O ~/firefox.tar.bz2 &amp;quot;https://download.mozilla.org/?product=firefox-latest&amp;amp;os=linux64&amp;quot;  解压并移动到/opt目录 sudo tar xjf ~/firefox.tar.bz2 -C /opt/  创建软链接 sudo ln -s /opt/firefox/firefox /usr/lib/firefox/firefox  在/usr/lib/中创建一个firefox可执行链接文件，该文件指向/opt中firefox可执行主程序位置。
+启动firefox 终端启动Firefox
+firefox  创建桌面快捷方式 进入/usr/share/applications目录
+touch firefox.desktop nano firefox.desktop  添加内容：
+[Desktop Entry] Name=firefox Comment=firefox Exec=/opt/firefox/firefox Icon=/opt/firefox/browser/chrome/icons/default/default128.png Terminal=false Type=Application Categories=Application; Encoding=UTF-8 StartupNotify=true  卸载Firefox 通过上面方法安装的Firefox，如果想删除，可以在终端种输入以下命令：
+sudo rm -rf /opt/firefox sudo rm /usr/share/applications/firefox.desktop  </description>
+    </item>
+    
     <item>
       <title>使用 df 命令查看 Linux 上的可用磁盘空间</title>
       <link>https://3ae.cn/article/2021/check-disk-space-linux-df/</link>

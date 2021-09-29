@@ -6,13 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="白菜林" />
-	<meta property="og:url" content="https://3ae.cn/article/2021/rustproxy/" />
-	<link rel="canonical" href="https://3ae.cn/article/2021/rustproxy/" /><style type=text/css>
+	<meta property="og:url" content="https://3ae.cn/article/2021/ubuntu_firefox-install/" />
+	<link rel="canonical" href="https://3ae.cn/article/2021/ubuntu_firefox-install/" /><style type=text/css>
 		body {
 			font-family: monospace;
 		}
 	</style>
-	<title>Rust 镜像源</title>
+	<title>ubuntu上安装firefox</title>
 	
 	
 	<meta name="author" content="白菜林">
@@ -51,21 +51,57 @@
 	
 	<main>
 		<article>
-			<h1>Rust 镜像源</h1>
-			<b><time>2021.06.25 22:53</time></b>
+			<h1>ubuntu上安装firefox</h1>
+			<b><time>2021.09.29 16:19</time></b>
 		       
-		           <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
+		           <a href="/tags/firefox">firefox</a>
         	       
-		           <a href="/tags/rust">Rust</a>
+		           <a href="/tags/ubuntu">ubuntu</a>
         	       
 
 			<div>
-				<p>通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。</p>
-<h3 id="cratesio-和-rustup-的国内镜像源">crates.io 和 rustup 的国内镜像源</h3>
-<p>字节跳动提供的：https://rsproxy.cn/</p>
-<p>中国科技大学的：https://mirrors.ustc.edu.cn/help/crates.io-index.html</p>
-<p>清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/</p>
-<p>上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index</p>
+				<h2 id="卸载原来firefox">卸载原来Firefox</h2>
+<pre><code>sudo apt-get purge firefox
+</code></pre>
+<p>或
+sudo apt-get remove firefox</p>
+<h2 id="下载最新firefox二进制压缩包">下载最新Firefox二进制压缩包</h2>
+<pre><code>wget -O ~/firefox.tar.bz2 &quot;https://download.mozilla.org/?product=firefox-latest&amp;os=linux64&quot;
+</code></pre>
+<h2 id="解压并移动到opt目录">解压并移动到/opt目录</h2>
+<pre><code>sudo tar xjf ~/firefox.tar.bz2 -C /opt/
+</code></pre>
+<h2 id="创建软链接">创建软链接</h2>
+<pre><code>sudo ln -s /opt/firefox/firefox /usr/lib/firefox/firefox
+</code></pre>
+<p>在/usr/lib/中创建一个firefox可执行链接文件，该文件指向/opt中firefox可执行主程序位置。</p>
+<h2 id="启动firefox">启动firefox</h2>
+<p>终端启动Firefox</p>
+<pre><code>firefox
+</code></pre>
+<h2 id="创建桌面快捷方式">创建桌面快捷方式</h2>
+<p>进入/usr/share/applications目录</p>
+<pre><code>touch firefox.desktop
+
+nano firefox.desktop
+</code></pre>
+<p>添加内容：</p>
+<pre><code>[Desktop Entry]
+Name=firefox
+Comment=firefox
+Exec=/opt/firefox/firefox
+Icon=/opt/firefox/browser/chrome/icons/default/default128.png
+Terminal=false
+Type=Application
+Categories=Application;
+Encoding=UTF-8
+StartupNotify=true
+</code></pre>
+<h2 id="卸载firefox">卸载Firefox</h2>
+<p>通过上面方法安装的Firefox，如果想删除，可以在终端种输入以下命令：</p>
+<pre><code>sudo rm -rf /opt/firefox
+sudo rm /usr/share/applications/firefox.desktop
+</code></pre>
 
 			</div>
 		</article>
