@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://3ae.cn/categories/</loc>
-    <lastmod>2021-08-28T21:14:41+08:00</lastmod>
+    <lastmod>2021-09-29T11:48:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url><url>
+    <loc>https://3ae.cn/categories/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</loc>
+    <lastmod>2021-09-29T11:48:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url><url>
+    <loc>https://3ae.cn/links/</loc>
+    <lastmod>2021-09-29T11:48:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url><url>
+    <loc>https://3ae.cn/</loc>
+    <lastmod>2021-09-29T11:48:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
@@ -38,11 +53,6 @@
     <priority>0.9</priority>
   </url><url>
     <loc>https://3ae.cn/article/2021/tcpdump_icmp-echo/</loc>
-    <lastmod>2021-08-28T21:14:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://3ae.cn/</loc>
     <lastmod>2021-08-28T21:14:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

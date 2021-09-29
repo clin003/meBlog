@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Sat, 28 Aug 2021 21:14:41 +0800</lastBuildDate><atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Sep 2021 11:48:42 +0800</lastBuildDate><atom:link href="https://3ae.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>友情链接</title>
+      <link>https://3ae.cn/links/</link>
+      <pubDate>Wed, 29 Sep 2021 11:48:42 +0800</pubDate>
+      
+      <guid>https://3ae.cn/links/</guid>
+      <description>1.申请链接请先在贵站的首页做好本站的友情链接（本站名称：白菜林，本站地址：https://3ae.cn/）。
+2.优先交换电脑网络和学习类的网站以及博客的友情链接。
+3.做好链接后可与我联系，本站将在7个工作日内回复。
+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; 小姐姐在线播放
+以上为本站的友情链接，排各不分先后 (每周检测一次) </description>
+    </item>
+    
     <item>
       <title>如何知道谁在ping我？</title>
       <link>https://3ae.cn/article/2021/tcpdump_icmp-echo/</link>
