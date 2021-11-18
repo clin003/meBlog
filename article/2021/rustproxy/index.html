@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -66,7 +66,36 @@
 <p>中国科技大学的：https://mirrors.ustc.edu.cn/help/crates.io-index.html</p>
 <p>清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/</p>
 <p>上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index</p>
+<h3 id="更换国内源">更换国内源</h3>
+<p>更换为国内源，否则安装太慢了。
+新建文件：~/.cargo/config，内容替换为如下，replace-with 这行可自己 ping 文件中各个国内源头，看哪个源快用哪个：</p>
+<pre tabindex="0"><code class="language-conf" data-lang="conf">[source.crates-io]
+registry = &quot;https://github.com/rust-lang/crates.io-index&quot;
 
+# 替换成你偏好的镜像源
+replace-with = 'sjtu'
+
+# 清华大学
+[source.tuna]
+registry = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&quot;
+
+# 中国科学技术大学
+[source.ustc]
+registry = &quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;
+
+# 上海交通大学
+[source.sjtu]
+registry = &quot;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&quot;
+
+# rustcc社区
+[source.rustcc]
+registry = &quot;git://crates.rustcc.cn/crates.io-index&quot;
+
+# 字节跳动
+[source.rsproxy]
+registry = &quot;https://rsproxy.cn/crates.io-index&quot;
+
+</code></pre>
 			</div>
 		</article>
 	</main>

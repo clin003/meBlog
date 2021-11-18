@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -81,7 +81,7 @@ swift 支持代码预览（playgrounds），这个特性可以允许程序员在
 <h4 id="常量和变量">常量和变量</h4>
 <p>声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> maximumNumberOfLoginAttempts = <span style="color:#ae81ff">10</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> maximumNumberOfLoginAttempts = <span style="color:#ae81ff">10</span>
 <span style="color:#66d9ef">var</span> currentLoginAttempt = <span style="color:#ae81ff">0</span>
 
 <span style="color:#75715e">// 类型注解</span>
@@ -89,7 +89,7 @@ swift 支持代码预览（playgrounds），这个特性可以允许程序员在
 </code></pre></div><h4 id="注释">注释</h4>
 <p>单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 这是一个注释</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 这是一个注释</span>
 
 <span style="color:#75715e">/* 这也是一个注释，
 </span><span style="color:#75715e">但是是多行的 */</span>
@@ -100,7 +100,7 @@ swift 支持代码预览（playgrounds），这个特性可以允许程序员在
 </code></pre></div><h4 id="分号">分号</h4>
 <p>Swift 并不强制要求你在每条语句的结尾处使用分号（;）。
 同一行内写多条独立的语句必须用分号分隔。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> cat = <span style="color:#e6db74">&#34;🐱&#34;</span>; print(cat)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> cat = <span style="color:#e6db74">&#34;🐱&#34;</span>; print(cat)
 <span style="color:#75715e">// 输出“🐱”</span>
 </code></pre></div><h4 id="标识符">标识符</h4>
 <p>标识符就是给变量、常量、方法、函数、枚举、结构体、类、协议等指定的名字。构成标识符的字母均有一定的规范，Swift语言中标识符的命名规则如下：</p>
@@ -118,7 +118,7 @@ swift 支持代码预览（playgrounds），这个特性可以允许程序员在
 <p>例如： userName、User_Name、_sys_val、身高等为合法的标识符，而2mail、room#和class为非法的标识符。</p>
 <p>注意:Swift中的字母采用的是Unicode编码。Unicode叫做统一编码制，它包含了亚洲文字编码，如中文、日文、韩文等字符，甚至是我们在聊天工具中使用的表情符号</p>
 <p>如果一定要使用关键字作为标识符，可以在关键字前后添加重音符号（`），例如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> `<span style="color:#66d9ef">class</span>` = <span style="color:#e6db74">&#34;xiaobai&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> `<span style="color:#66d9ef">class</span>` = <span style="color:#e6db74">&#34;xiaobai&#34;</span>
 </code></pre></div><h4 id="关键字">关键字</h4>
 <p>关键字是类似于标识符的保留字符序列，除非用重音符号（`）将其括起来，否则不能用作标识符。关键字是对编译器具有特殊意义的预定义保留标识符。常见的关键字有以下4种。
 <strong>与声明有关的关键字</strong></p>
@@ -152,64 +152,64 @@ weak 	willSet
 <h4 id="swift-空格">Swift 空格</h4>
 <p>Swift对空格的使用有一定的要求。
 在Swift中，运算符不能直接跟在变量或常量的后面。例如下面的代码会报错：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> a= <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> a= <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
 </code></pre></div><p>错误信息是：</p>
 <p><code>error: prefix/postfix '=' is reserved</code></p>
 <p>意思大概是等号直接跟在前面或后面这种用法是保留的。</p>
 <p>下面的代码还是会报错（继续注意空格）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> a = <span style="color:#ae81ff">1</span><span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> a = <span style="color:#ae81ff">1</span><span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
 </code></pre></div><p>错误信息是：</p>
 <p><code>error: consecutive statements on a line must be separated by ';'</code></p>
 <p>这是因为Swift认为到1+这个语句就结束了，2就是下一个语句了。</p>
 <p>只有这样写才不会报错：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> a = <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>;  <span style="color:#75715e">// 编码规范推荐使用这种写法</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> a = <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>;  <span style="color:#75715e">// 编码规范推荐使用这种写法</span>
 <span style="color:#66d9ef">let</span> b = <span style="color:#ae81ff">3</span><span style="color:#f92672">+</span><span style="color:#ae81ff">4</span> <span style="color:#75715e">// 这样也是OK的</span>
 </code></pre></div><h4 id="整数浮点数">整数、浮点数</h4>
 <p>统一使用 Int 可以提高代码的可复用性，避免不同类型数字之间的转换， 并且匹配数字的类型推断。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> minValue = UInt8.min  <span style="color:#75715e">// minValue 为 0，是 UInt8 类型</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> minValue = UInt8.min  <span style="color:#75715e">// minValue 为 0，是 UInt8 类型</span>
 <span style="color:#66d9ef">let</span> maxValue = UInt8.max  <span style="color:#75715e">// maxValue 为 255，是 UInt8 类型</span>
 </code></pre></div><h4 id="类型安全和类型推断">类型安全和类型推断</h4>
 <p>Swift 是一门类型安全的语言，这意味着 Swift 可以让你清楚地知道值的类型。
 如果你没有显式指定类型，Swift 会使用类型推断来选择合适的类型。（int、double）。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> meaningOfLife = <span style="color:#ae81ff">42</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> meaningOfLife = <span style="color:#ae81ff">42</span>
 <span style="color:#75715e">// meaningOfLife 会被推测为 Int 类型</span>
 
 <span style="color:#66d9ef">let</span> pi = <span style="color:#ae81ff">3.14159</span>
 <span style="color:#75715e">// pi 会被推测为 Double 类型</span>
 </code></pre></div><h4 id="数值型字面量数值型类型转换">数值型字面量、数值型类型转换</h4>
 <p>示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> decimalInteger = <span style="color:#ae81ff">17</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> decimalInteger = <span style="color:#ae81ff">17</span>
 <span style="color:#66d9ef">let</span> binaryInteger = <span style="color:#ae81ff">0b10001</span>       <span style="color:#75715e">// 二进制的17</span>
 <span style="color:#66d9ef">let</span> octalInteger = <span style="color:#ae81ff">0o21</span>           <span style="color:#75715e">// 八进制的17</span>
 <span style="color:#66d9ef">let</span> hexadecimalInteger = <span style="color:#ae81ff">0x11</span>     <span style="color:#75715e">// 十六进制的17</span>
 </code></pre></div><h4 id="类型别名">类型别名</h4>
 <p>类型别名（type aliases）就是给现有类型定义另一个名字。你可以使用 typealias 关键字来定义类型别名。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">typealias</span> AudioSample = UInt16
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">typealias</span> AudioSample = UInt16
 <span style="color:#66d9ef">var</span> maxAmplitudeFound = AudioSample.min
 <span style="color:#75715e">// maxAmplitudeFound 现在是 0</span>
 </code></pre></div><h4 id="布尔值">布尔值</h4>
 <p>示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> orangesAreOrange = <span style="color:#66d9ef">true</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> orangesAreOrange = <span style="color:#66d9ef">true</span>
 <span style="color:#66d9ef">let</span> turnipsAreDelicious = <span style="color:#66d9ef">false</span>
 </code></pre></div><h4 id="元组">元组</h4>
 <p>元组（tuples）把多个值组合成一个复合值。元组内的值可以是任意类型，并不要求是相同类型。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> http404Error = (<span style="color:#ae81ff">404</span>, <span style="color:#e6db74">&#34;Not Found&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> http404Error = (<span style="color:#ae81ff">404</span>, <span style="color:#e6db74">&#34;Not Found&#34;</span>)
 <span style="color:#75715e">// http404Error 的类型是 (Int, String)，值是 (404, &#34;Not Found&#34;)</span>
 </code></pre></div><h4 id="可选类型">可选类型</h4>
 <p>使用可选类型（optionals）来处理值可能缺失的情况。可选类型表示两种可能：或者有值， 你可以解析可选类型访问这个值， 或者根本没有值。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> serverResponseCode: Int? = <span style="color:#ae81ff">404</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> serverResponseCode: Int? = <span style="color:#ae81ff">404</span>
 <span style="color:#75715e">// serverResponseCode 包含一个可选的 Int 值 404</span>
 serverResponseCode = <span style="color:#66d9ef">nil</span>
 <span style="color:#75715e">// serverResponseCode 现在不包含值</span>
 </code></pre></div><h4 id="错误处理">错误处理</h4>
 <p>错误处理，应对程序执行中可能会遇到的错误条件。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">makeASandwich</span>() <span style="color:#66d9ef">throws</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">makeASandwich</span>() <span style="color:#66d9ef">throws</span> {
     <span style="color:#75715e">// ...</span>
 }
 
@@ -223,7 +223,7 @@ serverResponseCode = <span style="color:#66d9ef">nil</span>
 }
 </code></pre></div><h4 id="断言和先决条件">断言和先决条件</h4>
 <p>断言和先决条件，是在运行时所做的检查。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> age = <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> age = <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>
 assert(age <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;A person&#39;s age cannot be less than zero&#34;</span>)
 <span style="color:#75715e">// 因为 age &lt; 0，所以断言会触发</span>
 </code></pre></div><h4 id="基本运算符">基本运算符</h4>
@@ -234,7 +234,7 @@ assert(age <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">
 半开区间运算符（a..&lt;b）定义一个从 a 到 b 但不包括 b 的区间。
 闭区间操作符有另一个表达形式，可以表达往一侧无限延伸的区间，(a&hellip;，&hellip;b)。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> names = [<span style="color:#e6db74">&#34;Anna&#34;</span>, <span style="color:#e6db74">&#34;Alex&#34;</span>, <span style="color:#e6db74">&#34;Brian&#34;</span>, <span style="color:#e6db74">&#34;Jack&#34;</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> names = [<span style="color:#e6db74">&#34;Anna&#34;</span>, <span style="color:#e6db74">&#34;Alex&#34;</span>, <span style="color:#e6db74">&#34;Brian&#34;</span>, <span style="color:#e6db74">&#34;Jack&#34;</span>]
 <span style="color:#66d9ef">let</span> count = names.count
 <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0.</span>.&lt;count {
     print(<span style="color:#e6db74">&#34;第 </span><span style="color:#e6db74">\(</span>i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">)</span><span style="color:#e6db74"> 个人叫 </span><span style="color:#e6db74">\(</span>names[i]<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
@@ -250,7 +250,7 @@ assert(age <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">
 字符串插值是一种构建新字符串的方式，可以在其中包含常量、变量、字面量和表达式。可以在已有字符串中插入常量、变量、字面量和表达式从而形成更长的字符串。
 Swift 提供了三种方式来比较文本值：字符串字符相等、前缀相等和后缀相等。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 多行字符串字面量</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 多行字符串字面量</span>
 <span style="color:#66d9ef">let</span> quotation = <span style="color:#e6db74">&#34;&#34;&#34;
 </span><span style="color:#e6db74">The White Rabbit put on his spectacles.  &#34;</span>Where shall I begin,
 please your Majesty?<span style="color:#e6db74">&#34; he asked.
@@ -291,7 +291,7 @@ print(catString)
 集合操作，可以高效地完成集合的一些基本操作，比如把两个集合组合到一起，判断两个集合共有元素，或者判断两个集合是否全包含，部分包含或者不相交。
 字典是一种无序的集合，它存储的是键值对之间的关系，其所有键的值需要是相同的类型，所有值的类型也需要相同。每个值（value）都关联唯一的键（key），键作为字典中这个值数据的标识符。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 集合</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 集合</span>
 <span style="color:#66d9ef">var</span> someInts = [Int]()
 print(<span style="color:#e6db74">&#34;someInts is of type [Int] with </span><span style="color:#e6db74">\(</span>someInts.count<span style="color:#e6db74">)</span><span style="color:#e6db74"> items.&#34;</span>)
 <span style="color:#75715e">// 打印“someInts is of type [Int] with 0 items.”</span>
@@ -314,7 +314,7 @@ print(<span style="color:#e6db74">&#34;someInts is of type [Int] with </span><sp
 <p>像 if 语句一样，guard 的执行取决于一个表达式的布尔值。我们可以使用 guard 语句来要求条件必须为真时，以执行 guard 语句后的代码。不同于 if 语句，一个 guard 语句总是有一个 else 从句，如果条件不为真则执行 else 从句中的代码。
 Swift 内置支持检查 API 可用性，编译器使用 SDK 中的可用信息来验证我们的代码中使用的所有 API 在项目指定的部署目标上是否可用。如果我们尝试使用一个不可用的 API，Swift 会在编译时报错。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> names = [<span style="color:#e6db74">&#34;Anna&#34;</span>, <span style="color:#e6db74">&#34;Alex&#34;</span>, <span style="color:#e6db74">&#34;Brian&#34;</span>, <span style="color:#e6db74">&#34;Jack&#34;</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> names = [<span style="color:#e6db74">&#34;Anna&#34;</span>, <span style="color:#e6db74">&#34;Alex&#34;</span>, <span style="color:#e6db74">&#34;Brian&#34;</span>, <span style="color:#e6db74">&#34;Jack&#34;</span>]
 <span style="color:#66d9ef">for</span> name <span style="color:#66d9ef">in</span> names {
     print(<span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74">!&#34;</span>)
 }
@@ -356,7 +356,7 @@ greet(person: [<span style="color:#e6db74">&#34;name&#34;</span>: <span style="c
 <p>可选元组返回类型。
 定义一个输入输出参数时，在参数定义前加 inout 关键字。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 函数</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 函数</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">greet</span>(person: String) -&gt; String {
     <span style="color:#66d9ef">let</span> greeting = <span style="color:#e6db74">&#34;Hello, &#34;</span> <span style="color:#f92672">+</span> person <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;!&#34;</span>
     <span style="color:#66d9ef">return</span> greeting
@@ -402,7 +402,7 @@ print(greet(person: <span style="color:#e6db74">&#34;Bill&#34;</span>, from: <sp
 <p>如果你需要将一个很长的闭包表达式作为最后一个参数传递给函数，将这个闭包替换成为尾随闭包的形式很有用。
 闭包可以在其被定义的上下文中捕获常量或变量。即使定义这些常量和变量的原作用域已经不存在，闭包仍然可以在闭包函数体内引用和修改这些值。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 闭包表达式语法</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 闭包表达式语法</span>
 { (parameters) -&gt; <span style="color:#66d9ef">return</span> type <span style="color:#66d9ef">in</span>
     statements
 }
@@ -454,7 +454,7 @@ print(customersInLine.count)
 <strong>枚举语法，使用 Switch 语句匹配枚举值，枚举成员的遍历，关联值，原始值（默认值），递归枚举（indirect）</strong></p>
 <p>可以定义 Swift 枚举来存储任意类型的关联值，每个枚举成员的关联值类型可以各不相同。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 枚举语法</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 枚举语法</span>
 <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">SomeEnumeration</span> {
     <span style="color:#75715e">// 枚举定义放在这里</span>
 }
@@ -524,7 +524,7 @@ print(evaluate(product))
 <p><strong>结构体和类对比，结构体和枚举是值类型，类是引用类型</strong></p>
 <p>结构体和类作为一种通用而又灵活的结构，成为了人们构建代码的基础。你可以使用定义常量、变量和函数的语法，为你的结构体和类定义属性、添加方法。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 类和结构体</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 类和结构体</span>
 <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">SomeStructure</span> {
     <span style="color:#75715e">// 在这里定义结构体</span>
 }
@@ -553,7 +553,7 @@ print(evaluate(product))
 <p>属性包装器在管理属性如何存储和定义属性的代码之间添加了一个分隔层。
 类型属性也是通过点运算符来访问。但是，类型属性是通过类型本身来访问，而不是通过实例。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 属性</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 属性</span>
 <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Point</span> {
     <span style="color:#66d9ef">var</span> x = <span style="color:#ae81ff">0.0</span>, y = <span style="color:#ae81ff">0.0</span>
 }
@@ -597,7 +597,7 @@ print(<span style="color:#e6db74">&#34;square.origin is now at (</span><span sty
 类、结构体、枚举都可以定义实例方法；实例方法为给定类型的实例封装了具体的任务与功能。
 类、结构体、枚举也可以定义类型方法；类型方法与类型本身相关联。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 方法</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 方法</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Counter</span> {
     <span style="color:#66d9ef">var</span> count = <span style="color:#ae81ff">0</span>
     <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">increment</span>() {
@@ -613,7 +613,7 @@ print(<span style="color:#e6db74">&#34;square.origin is now at (</span><span sty
 </code></pre></div><h4 id="下标">下标</h4>
 <p>下标可以定义在类、结构体和枚举中，是访问集合、列表或序列中元素的快捷方式
 下标语法（subscript），下标用法，下标选项，类型下标（static）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">subscript</span>(index: Int) -&gt; Int {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">subscript</span>(index: Int) -&gt; Int {
     <span style="color:#66d9ef">get</span> {
       <span style="color:#75715e">// 返回一个适当的 Int 类型的值</span>
     }
@@ -649,7 +649,7 @@ print(mars)
 <p><strong>定义一个基类，子类生成，重写(override)，防止重写(final)</strong></p>
 <p>不继承于其它类的类，称之为基类。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 继承</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 继承</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SomeClass</span>: SomeSuperclass {
     <span style="color:#75715e">// 这里是子类的定义</span>
 }
@@ -686,7 +686,7 @@ Swift 为类类型提供了两种构造器来确保实例中所有存储型属�
 可以在一个类，结构体或是枚举类型的定义中，添加一个或多个可失败构造器。其语法为在 init 关键字后面添加问号（init?）。
 必要构造器，在类的构造器前添加 required 修饰符表明所有该类的子类都必须实现该构造器。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 构造过程</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 构造过程</span>
 <span style="color:#66d9ef">init</span>() {
     <span style="color:#75715e">// 在此处执行构造过程</span>
 }
@@ -718,7 +718,7 @@ print(<span style="color:#e6db74">&#34;The default temperature is </span><span s
 <p>析构器只适用于类类型，当一个类的实例被释放之前，析构器会被立即调用。析构器用关键字 deinit 来标示，类似于构造器要用 init 来标示。
 Swift 会自动释放不再需要的实例以释放资源。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 析构过程</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 析构过程</span>
 <span style="color:#66d9ef">deinit</span> {
     <span style="color:#75715e">// 执行析构过程</span>
 }
@@ -751,7 +751,7 @@ Swift 会自动释放不再需要的实例以释放资源。
 <p>可选链式调用是一种可以在当前值可能为 nil 的可选值上请求和调用属性、方法及下标的方法。
 通过在想调用的属性、方法，或下标的可选值后面放一个问号（?），可以定义一个可选链。类似在可选值后面放一个叹号（!）来强制展开它的值。它们的主要区别在于当可选值为空时可选链式调用只会调用失败，然而强制展开将会触发运行时错误。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
     <span style="color:#66d9ef">var</span> residence: Residence?
 }
 
@@ -784,7 +784,7 @@ john.residence = Residence()
 Swift 中有 4 种处理错误的方式。可以把函数抛出的错误传递给调用此函数的代码（throws）、用 do-catch 语句处理错误、将错误作为可选类型处理（try?）、或者断言此错误根本不会发生（try!）。
 defer 语句将代码的执行延迟到当前的作用域退出之前。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 错误处理</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 错误处理</span>
 <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">VendingMachineError</span>: Error {
     <span style="color:#66d9ef">case</span> invalidSelection                     <span style="color:#75715e">//选择无效</span>
     <span style="color:#66d9ef">case</span> insufficientFunds(coinsNeeded: Int) <span style="color:#75715e">//金额不足</span>
@@ -835,7 +835,7 @@ Swift 为不确定类型提供了两种特殊的类型别名：</p>
 </li>
 </ul>
 <p>示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 类型转换</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 类型转换</span>
 <span style="color:#75715e">// 一个基类 MediaItem</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MediaItem</span> {
  <span style="color:#66d9ef">var</span> name: String
@@ -898,7 +898,7 @@ print(<span style="color:#e6db74">&#34;Media library contains </span><span style
 <strong>嵌套类型实践，引用嵌套类型</strong></p>
 <p>要在一个类型中嵌套另一个类型，将嵌套类型的定义写在其外部类型的 {} 内，而且可以根据需要定义多级嵌套。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 嵌套类型</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 嵌套类型</span>
 stuct BlackjackCard {
  <span style="color:#75715e">// 嵌套的 Suit 枚举</span>
  <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Suit</span>: Character {
@@ -967,7 +967,7 @@ print(<span style="color:#e6db74">&#34;theAceOfSpades: </span><span style="color
 </li>
 </ul>
 <p>扩展语法:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">SomeType</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">SomeType</span> {
   <span style="color:#75715e">// 在这里给 SomeType 添加新的功能</span>
 }
 </code></pre></div><p>扩展可以给现有类型添加计算型实例属性和计算型类属性。
@@ -976,7 +976,7 @@ print(<span style="color:#e6db74">&#34;theAceOfSpades: </span><span style="color
 扩展可以给现有的类型添加新的下标。
 扩展可以给现有的类，结构体，还有枚举添加新的嵌套类型。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 扩展的语法</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 扩展的语法</span>
 <span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">SomeType</span> {
   <span style="color:#75715e">// 在这里给 SomeType 添加新的功能</span>
 }
@@ -1034,7 +1034,7 @@ someInt.square()
 类、结构体或枚举都可以遵循协议，并为协议定义的这些要求提供具体实现。
 协议语法，属性要求，方法要求，异变方法要求，构造器要求，协议作为类型，委托，协议类型的集合，协议的继承，类专属的协议，协议合成，检查协议一致性，可选的协议要求，协议扩展，</p>
 <p>协议语法</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">SomeProtocol</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">SomeProtocol</span> {
     <span style="color:#75715e">// 这里是协议的定义部分</span>
 }
 </code></pre></div><p>协议可以要求遵循协议的类型提供特定名称和类型的实例属性或类型属性。
@@ -1043,7 +1043,7 @@ someInt.square()
 协议可以要求遵循协议的类型实现指定的构造器。
 委托是一种设计模式，它允许类或结构体将一些需要它们负责的功能委托给其他类型的实例。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 协议语法</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 协议语法</span>
 <span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">SomeProtocol</span> {
     <span style="color:#75715e">// 这里是协议的定义部分</span>
 }
@@ -1094,7 +1094,7 @@ someInt.square()
 你可避免编写重复的代码，而是用一种清晰抽象的方式来表达代码的意图。
 <strong>泛型函数，类型参数，命名类型参数，泛型类型，泛型扩展，类型约束，关联类型</strong></p>
 <p>示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">swapTwoInts</span>(<span style="color:#66d9ef">_</span> a: <span style="color:#66d9ef">inout</span> Int, <span style="color:#66d9ef">_</span> b: <span style="color:#66d9ef">inout</span> Int) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">swapTwoInts</span>(<span style="color:#66d9ef">_</span> a: <span style="color:#66d9ef">inout</span> Int, <span style="color:#66d9ef">_</span> b: <span style="color:#66d9ef">inout</span> Int) {
     <span style="color:#66d9ef">let</span> temporaryA = a
     a = b
     b = temporaryA
@@ -1127,7 +1127,7 @@ swapTwoValues(&amp;someString, &amp;anotherString)
 如果函数中有多个地方返回了不透明类型，那么所有可能的返回值都必须是同一类型。返回不透明类型和返回协议类型主要区别，就在于是否需要保证类型一致性。
 一个不透明类型只能对应一个具体的类型，即便函数调用者并不能知道是哪一种类型；协议类型可以同时对应多个类型，只要它们都遵循同一协议。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">Shape</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">Shape</span> {
     <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">draw</span>() -&gt; String
 }
 
@@ -1172,7 +1172,7 @@ Swift提供了两种办法用来解决你在使用类的属性时所遇到的循
 </li>
 </ul>
 <p>示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 自动引用计数实践</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// 自动引用计数实践</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
     <span style="color:#66d9ef">let</span> name: String
     <span style="color:#66d9ef">init</span>(name: String) {
@@ -1248,7 +1248,7 @@ john = <span style="color:#66d9ef">nil</span>
 <p>默认情况下，Swift 会阻止你代码里不安全的行为。
 理解内存访问冲突，In-Out 参数的访问冲突，方法里 self 的访问冲突，属性的访问冲突</p>
 <p>示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">balance</span>(<span style="color:#66d9ef">_</span> x: <span style="color:#66d9ef">inout</span> Int, <span style="color:#66d9ef">_</span> y: <span style="color:#66d9ef">inout</span> Int) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">balance</span>(<span style="color:#66d9ef">_</span> x: <span style="color:#66d9ef">inout</span> Int, <span style="color:#66d9ef">_</span> y: <span style="color:#66d9ef">inout</span> Int) {
     <span style="color:#66d9ef">let</span> sum = x <span style="color:#f92672">+</span> y
     x = sum <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
     y = sum <span style="color:#f92672">-</span> x
@@ -1277,7 +1277,7 @@ balance(&amp;playerOneScore, &amp;playerOneScore)
 <p>open 为最高访问级别（限制最少），private 为最低访问级别（限制最多）。
 open 只能作用于类和类的成员，它和 public 的区别主要在于 open 限定的类和成员能够在模块外能被继承和重写。
 示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SomePublicClass</span> {}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SomePublicClass</span> {}
 <span style="color:#66d9ef">internal</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SomeInternalClass</span> {}
 fileprivate <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SomeFilePrivateClass</span> {}
 <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SomePrivateClass</span> {}
@@ -1310,7 +1310,7 @@ fileprivate <span style="color:#66d9ef">class</span> <span style="color:#a6e22e"
 <p>Swift还提供了数种可以对数值进行复杂运算的高级运算符。它们包含了位运算符和移位运算符。
 <strong>位运算符、溢出运算符、优先级和结合性、运算符函数、自定义运算符</strong></p>
 <p>示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> initialBits: UInt8 = <span style="color:#ae81ff">0b00001111</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> initialBits: UInt8 = <span style="color:#ae81ff">0b00001111</span>
 <span style="color:#66d9ef">let</span> invertedBits = <span style="color:#f92672">~</span>initialBits <span style="color:#75715e">// 等于 0b11110000</span>
 
 <span style="color:#66d9ef">var</span> potentialOverflow = Int16.max

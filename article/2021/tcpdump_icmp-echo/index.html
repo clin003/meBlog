@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -66,17 +66,17 @@
 <p>tcpdump 是 Linux 上可用的最强大和使用最广泛的 命令行 数据包嗅探器(包分析器)工具。</p>
 </blockquote>
 <p>在您要监控的计算机的终端应用程序中：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo tcpdump -i ethX icmp and icmp<span style="color:#f92672">[</span>icmptype<span style="color:#f92672">]=</span>icmp-echo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo tcpdump -i ethX icmp and icmp<span style="color:#f92672">[</span>icmptype<span style="color:#f92672">]=</span>icmp-echo
 </code></pre></div><p>选项：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-n avoid a <span style="color:#f92672">(</span>potentially slow<span style="color:#f92672">)</span> reverse DNS query
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-n avoid a <span style="color:#f92672">(</span>potentially slow<span style="color:#f92672">)</span> reverse DNS query
 −i interface
 icmp<span style="color:#f92672">[</span>icmptype<span style="color:#f92672">]=</span>icmp-echo    To print all ICMP packets that are echo requests/replies
 </code></pre></div><p>它将开始侦听 ethX 并等待到达的数据包。</p>
 <p>示例：我有 2 台 pc win7 192.168.0.8 , Ubuntu 192.168.0.57 它将监控到达的数据包：
 在Win上：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ping 192.168.0.57
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ping 192.168.0.57
 </code></pre></div><p>在 Ubuntu 上：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tcpdump -i eth0 icmp and icmp<span style="color:#f92672">[</span>icmptype<span style="color:#f92672">]=</span>icmp-echo -n
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tcpdump -i eth0 icmp and icmp<span style="color:#f92672">[</span>icmptype<span style="color:#f92672">]=</span>icmp-echo -n
 </code></pre></div><!-- raw HTML omitted -->
 <p>参考：nixCraft<a href="http://www.cyberciti.biz/howto/question/man/tcpdump-man-page-with-examples.php">[1]</a></p>
 

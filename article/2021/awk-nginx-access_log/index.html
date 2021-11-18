@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -62,17 +62,17 @@
 			<div>
 				<p>awk 分析 nginx 运行日志常用指令</p>
 <p>1.独立IP</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $1}&#39;</span> access.log | sort -r |uniq -c | wc -l
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $1}&#39;</span> access.log | sort -r |uniq -c | wc -l
 </code></pre></div><p>2.统计PV</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $6}&#39;</span> access.log | wc -l
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $6}&#39;</span> access.log | wc -l
 </code></pre></div><p>3.查询访问最频繁的URL</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $7}&#39;</span> access.log|sort | uniq -c |sort -n -k <span style="color:#ae81ff">1</span> -r|more
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $7}&#39;</span> access.log|sort | uniq -c |sort -n -k <span style="color:#ae81ff">1</span> -r|more
 </code></pre></div><p>4.查询访问最频繁的IP</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $1}&#39;</span> access.log|sort | uniq -c |sort -n -k <span style="color:#ae81ff">1</span> -r|more
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $1}&#39;</span> access.log|sort | uniq -c |sort -n -k <span style="color:#ae81ff">1</span> -r|more
 </code></pre></div><p>5.UV统计：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $6}&#39;</span> access.log | sort -r |uniq -c |wc -l
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;{print $6}&#39;</span> access.log | sort -r |uniq -c |wc -l
 </code></pre></div><p>6.按小时统计</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat access.log |awk <span style="color:#e6db74">&#39;{print $4}&#39;</span> | awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;{print $1,$2}&#39;</span>|uniq -c | awk <span style="color:#e6db74">&#39;{print $2&#34; &#34;$3&#34; &#34;$1}&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat access.log |awk <span style="color:#e6db74">&#39;{print $4}&#39;</span> | awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;{print $1,$2}&#39;</span>|uniq -c | awk <span style="color:#e6db74">&#39;{print $2&#34; &#34;$3&#34; &#34;$1}&#39;</span>
 </code></pre></div>
 			</div>
 		</article>

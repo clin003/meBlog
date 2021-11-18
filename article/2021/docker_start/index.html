@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -72,27 +72,27 @@
 <p>1.4 dockerhub查找镜像源地址：https://hub.docker.com</p>
 <h2 id="二-docker的使用">二. docker的使用</h2>
 <h3 id="11-查看版本">1.1 查看版本</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker --version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker --version
 
 docker-compose --version 
 
 docker-machine --version
 </code></pre></div><h3 id="12-查看docker系统信息包括镜像和容器的数量等">1.2 查看docker系统信息（包括镜像和容器的数量等）</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker info
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker info
 </code></pre></div><h3 id="13-帮助命令">1.3 帮助命令</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker help
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker help
 </code></pre></div><h3 id="14-查看-cpu的状况">1.4 查看 cpu的状况</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stats
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stats
 </code></pre></div><h2 id="三-docker的基本命令">三. docker的基本命令</h2>
 <p>镜像相关命令：</p>
 <h3 id="11-查看镜像可用版本nginx为例">1.1 查看镜像可用版本（nginx为例）</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker search nginx
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker search nginx
 </code></pre></div><h3 id="12-下载一个镜像">1.2 下载一个镜像</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker pull nginx:latest <span style="color:#75715e">#（：后面跟镜像版本）</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker pull nginx:latest <span style="color:#75715e">#（：后面跟镜像版本）</span>
 </code></pre></div><h3 id="13-运行一个nginx服务器">1.3 运行一个nginx服务器</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d -p 81:80 --name webserver nginx
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d -p 81:80 --name webserver nginx
 </code></pre></div><p>可选项：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#--name webserver ：容器名称，用来区分容器</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#--name webserver ：容器名称，用来区分容器</span>
 
 <span style="color:#75715e">#-p 81:80 ：端口进行映射，将本地的81端口映射到容器内部的80端口</span>
 
@@ -108,13 +108,13 @@ docker-machine --version
 </code></pre></div><p>注意：后台启动运行，必须要有一个前台进程，docker发现没有应用，就会自动停止</p>
 <p>重点：数据卷挂载分为具名/匿名/指定路径挂载，容器数据卷挂载可以实现数据共享，容器的持久化和同步操作，可以使用docker volume 查看卷的情况，可以使用volumes-from实现多个容器之间的数据共享。</p>
 <h3 id="14-停止nginx服务">1.4 停止nginx服务</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stop webserver<span style="color:#f92672">(</span>容器ID<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stop webserver<span style="color:#f92672">(</span>容器ID<span style="color:#f92672">)</span>
 </code></pre></div><h3 id="15-删除nginx服务">1.5 删除nginx服务</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm webserver
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm webserver
 </code></pre></div><h3 id="16-启动重启nginx服务">1.6 启动/重启nginx服务</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker start/restart webserver
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker start/restart webserver
 </code></pre></div><h3 id="17-列出所有镜像列表包含了-仓库名标签镜像-id创建时间-以及-所占用的空间">1.7 列出所有镜像(列表包含了 仓库名、标签、镜像 ID、创建时间 以及 所占用的空间)</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker images ls
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker images ls
 </code></pre></div><p>说明：</p>
 <pre><code>REPOSITORY 镜像的仓库源
 
@@ -127,28 +127,28 @@ CREATED 镜像的创建时间
 SIZE 镜像的大小
 </code></pre>
 <p>可选项：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-a：列出所有的镜像
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-a：列出所有的镜像
 
 -q：只显示镜像的id
 </code></pre></div><p>注意：镜像ID是唯一标识，一个镜像可以对应多个标签</p>
 <h3 id="18-查看镜像容器数据卷所占用的空间">1.8 查看镜像、容器、数据卷所占用的空间</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker system df
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker system df
 </code></pre></div><h3 id="19-删除镜像">1.9 删除镜像</h3>
 <p>指定镜像：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi <span style="color:#f92672">[</span>镜像名称/镜像短ID/镜像长ID/镜像摘要<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi <span style="color:#f92672">[</span>镜像名称/镜像短ID/镜像长ID/镜像摘要<span style="color:#f92672">]</span>
 </code></pre></div><p>多个镜像：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi 镜像ID 镜像ID 镜像ID
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi 镜像ID 镜像ID 镜像ID
 </code></pre></div><p>全部镜像：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi <span style="color:#66d9ef">$(</span>docker images -aq<span style="color:#66d9ef">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi <span style="color:#66d9ef">$(</span>docker images -aq<span style="color:#66d9ef">)</span>
 </code></pre></div><h3 id="20-删除docker-images-ls-命令配合-删除所有仓库名为redis的镜像">2.0 删除docker images ls 命令配合 删除所有仓库名为redis的镜像</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker  rmi <span style="color:#66d9ef">$(</span>docker images ls -q redis<span style="color:#66d9ef">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker  rmi <span style="color:#66d9ef">$(</span>docker images ls -q redis<span style="color:#66d9ef">)</span>
 </code></pre></div><h3 id="21-查看镜像运行记录">2.1 查看镜像运行记录</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker history 镜像id
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker history 镜像id
 </code></pre></div><p>容器相关命令</p>
 <h3 id="11-列出容器">1.1 列出容器</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker ps 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker ps 
 </code></pre></div><p>可选项：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#-a：显示所有的容器，包括未运行的</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#-a：显示所有的容器，包括未运行的</span>
 
 <span style="color:#75715e">#-l：显示最近创建的容器</span>
 
@@ -156,40 +156,40 @@ SIZE 镜像的大小
 
 <span style="color:#75715e">#-q：只显示容器的编号</span>
 </code></pre></div><h3 id="12-进入容器">1.2 进入容器</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker exec -it <span style="color:#f92672">[</span>容器名称<span style="color:#f92672">]</span> /bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker exec -it <span style="color:#f92672">[</span>容器名称<span style="color:#f92672">]</span> /bin/bash
 
 docker atthch 容器id
 </code></pre></div><p>区别：docker exec 进入容器后开启一个新的终端，可以在里面操作；docker attach 进入容器正在执行的终端，不会启动新的进程</p>
 <h3 id="13-退出容器">1.3 退出容器</h3>
 <p>容器停止退回主机</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exit 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exit 
 </code></pre></div><p>容器不停止推出</p>
 <pre><code>ctrl+p+q 
 </code></pre>
 <h3 id="14-删除容器">1.4 删除容器</h3>
 <p>指定容器：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm <span style="color:#f92672">[</span>容器id<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm <span style="color:#f92672">[</span>容器id<span style="color:#f92672">]</span>
 </code></pre></div><p>多个容器：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm 容器id 容器id 容器id
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm 容器id 容器id 容器id
 </code></pre></div><p>所有容器：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm <span style="color:#66d9ef">$(</span>docker ps -aq<span style="color:#66d9ef">)</span>    
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm <span style="color:#66d9ef">$(</span>docker ps -aq<span style="color:#66d9ef">)</span>    
 
 docker ps -a -q|xargs docker rm
 </code></pre></div><p>注意：不能删除正在运行的容器，要删除正在运行的容器需要加 -f 参数，docker rm -f 容器id</p>
 <h3 id="15-启动重启容器">1.5 启动/重启容器</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker start/restart 容器id
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker start/restart 容器id
 </code></pre></div><h3 id="16-停止强制停止容器">1.6 停止/强制停止容器</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stop/kill 容器id
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker stop/kill 容器id
 </code></pre></div><h3 id="17-查看容器日志">1.7 查看容器日志</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker logs -f -t --tail <span style="color:#ae81ff">100</span> 容器id 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker logs -f -t --tail <span style="color:#ae81ff">100</span> 容器id 
 
 <span style="color:#75715e">#--tail后面必须加参数条数</span>
 </code></pre></div><h3 id="18-查看容器中的进程信息">1.8 查看容器中的进程信息</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker top 容器id
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker top 容器id
 </code></pre></div><h3 id="19-查看容器的元数据重要命令">1.9 查看容器的元数据（重要命令）</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect 容器id
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect 容器id
 </code></pre></div><h3 id="20-从容器上拷贝数据到主机上">2.0 从容器上拷贝数据到主机上</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker cp 容器id:容器内路径 主机路径
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker cp 容器id:容器内路径 主机路径
 </code></pre></div><h2 id="四-dockerfile的指令">四. Dockerfile的指令</h2>
 <pre><code>FROM 基础镜像，一切从这里开始
 

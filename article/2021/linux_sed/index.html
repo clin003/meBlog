@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -84,25 +84,25 @@ Line two
 <h3 id="复制数据到保留空间">复制数据到保留空间</h3>
 <p>要将内容放置在 sed 的保留空间，使用 <code>h</code> 或 <code>H</code> 命令。小写的 <code>h</code> 告诉 sed 覆盖保留空间中的当前内容，而大写的 <code>H</code> 告诉 sed 将数据追加到保留空间中已经存在的内容之后。</p>
 <p>单独使用，什么都看不到：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed --quiet -e <span style="color:#e6db74">&#39;/three/ h&#39;</span> example.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed --quiet -e <span style="color:#e6db74">&#39;/three/ h&#39;</span> example.txt
 $
 </code></pre></div><p><code>--quiet</code>（缩写为 <code>-n</code>）选项禁止显示所有输出，但 sed 执行了我的搜索需求。在这种情况下，sed 选择包含字符串 three 的任何行，并将其复制到保留空间。我没有告诉 sed 打印任何东西，所以没有输出。</p>
 <h3 id="从保留空间复制数据">从保留空间复制数据</h3>
 <p>要了解保留空间，你可以从保留空间复制内容，然后使用 g 命令将其放入模式空间，观察会发生什么：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/h&#39;</span> -e <span style="color:#e6db74">&#39;g;p&#39;</span> example.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/h&#39;</span> -e <span style="color:#e6db74">&#39;g;p&#39;</span> example.txt
 
 Line three
 Line three
 </code></pre></div><p>第一个空白行是因为当 sed 第一次复制内容到模式空间时，保留空间为空。</p>
 <p>接下来的两行包含 <code>Line three</code> 是因为这是从第二行开始的保留空间。</p>
 <p>该命令使用两个唯一的脚本（-e）纯粹是为了帮助提高可读性和组织性。将步骤划分为单独的脚本可能会很有用，但是从技术上讲，以下命令与一个脚本语句一样有效：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/h ; g ; p&#39;</span> example.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/h ; g ; p&#39;</span> example.txt
 
 Line three
 Line three
 </code></pre></div><h3 id="将数据追加到模式空间">将数据追加到模式空间</h3>
 <p><code>G</code> 命令会将一个换行符和保留空间的内容添加到模式空间。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/h&#39;</span> -e <span style="color:#e6db74">&#39;G;p&#39;</span> example.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/h&#39;</span> -e <span style="color:#e6db74">&#39;G;p&#39;</span> example.txt
 Line one
 
 Line three
@@ -112,7 +112,7 @@ Line three
 </code></pre></div><p>此输出的前两行同时包含模式空间（<code>Line one</code>）的内容和空的保留空间。接下来的两行与搜索文本（<code>three</code>）匹配，因此它既包含模式空间又包含保留空间。第三行的保留空间没有变化，因此在模式空间（<code>Line two</code>）的末尾是保留空间（仍然是 <code>Line three</code>）。</p>
 <h3 id="用-sed-剪切和粘贴">用 sed 剪切和粘贴</h3>
 <p>现在你知道了如何将字符串从模式空间转到保留空间并再次返回，你可以设计一个 sed 脚本来复制、删除，然后在文档中粘贴一行。例如，将示例文件的 Line three 挪至第三行，sed 可以解决这个问题：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/ h&#39;</span> -e <span style="color:#e6db74">&#39;/three/ d&#39;</span> <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/ h&#39;</span> -e <span style="color:#e6db74">&#39;/three/ d&#39;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-e <span style="color:#e6db74">&#39;/two/ G;p&#39;</span> example.txt
 Line one
 Line two
@@ -125,19 +125,19 @@ Line three
 <p>任务完成。</p>
 <h3 id="使用-sed-编写脚本">使用 sed 编写脚本</h3>
 <p>再说一次，使用单独的脚本语句纯粹是为了视觉和心理上的简单。剪切和粘贴命令作为一个脚本同样有效：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/ h ; /three/ d ; /two/ G ; p&#39;</span> example.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sed -n -e <span style="color:#e6db74">&#39;/three/ h ; /three/ d ; /two/ G ; p&#39;</span> example.txt
 Line one
 Line two
 Line three
 </code></pre></div><p>它甚至可以写在一个专门的脚本文件中：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/sed -nf
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/sed -nf
 </span><span style="color:#75715e"></span>
 /three/h
 /three/d
 /two/ G
 p
 </code></pre></div><p>要运行该脚本，将其加入可执行权限，然后用示例文件尝试：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod +x myscript.sed
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod +x myscript.sed
 $ ./myscript.sed example.txt
 Line one
 Line two

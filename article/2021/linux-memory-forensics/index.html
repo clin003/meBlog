@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -77,7 +77,7 @@
 <li>第二部分使用 Volatility 从这个内存转储中读取并处理这些信息。</li>
 </ul>
 <p>我在本教程中使用了以下测试系统，不过它可以在任何 Linux 发行版上工作：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/redhat-release
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /etc/redhat-release
 Red Hat Enterprise Linux release 8.3 <span style="color:#f92672">(</span>Ootpa<span style="color:#f92672">)</span>
 $
 $ uname -r
@@ -93,11 +93,11 @@ $
 </code></pre>
 <h2 id="安装需要的包">安装需要的包</h2>
 <p>在开始之前安装必要的工具。如果你经常使用基于 Debian 的发行版，可以使用 apt-get 命令。这些包大多数提供了需要的内核信息和工具来编译代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ yum install kernel-headers kernel-devel gcc elfutils-libelf-devel make git libdwarf-tools python2-devel.x86_64-y
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ yum install kernel-headers kernel-devel gcc elfutils-libelf-devel make git libdwarf-tools python2-devel.x86_64-y
 </code></pre></div><h2 id="部分-1使用-lime-获取内存并将其转储到一个文件中">部分 1：使用 LiME 获取内存并将其转储到一个文件中</h2>
 <p>在开始分析内存之前，你需要一个内存转储供你使用。在实际的取证活动中，这可能来自一个被破坏或者被入侵的系统。这些信息通常会被收集和存储来分析入侵是如何发生的及其影响。由于你可能没有可用的内存转储，你可以获取你的测试 VM 的内存转储，并使用它来执行内存取证。</p>
 <p>Linux 内存提取器（LiME）是一个在 Linux 系统上获取内存很常用的工具。使用以下命令获得 LiME：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/504ensicsLabs/LiME.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/504ensicsLabs/LiME.git
 $
 $ cd LiME/src/
 $
@@ -106,7 +106,7 @@ deflate.c  disk.c  hash.c  lime.h  main.c  Makefile  Makefile.sample  tcp.c
 $
 </code></pre></div><h3 id="构建-lime-内核模块">构建 LiME 内核模块</h3>
 <p>在 src 文件夹下运行 make 命令。这会创建一个以 .ko 为扩展名的内核模块。理想情况下，在 make 结束时，lime.ko 文件会使用格式 lime-<!-- raw HTML omitted -->.ko 被重命名。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ make
 make -C /lib/modules/4.18.0-240.el8.x86_64/build M<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/root/LiME/src&#34;</span> modules
 make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/usr/src/kernels/4.18.0-240.el8.x86_64&#39;</span>
 
@@ -125,7 +125,7 @@ lime-4.18.0-240.el8.x86_64.ko: ELF 64-bit LSB relocatable, x86-64, version <span
 $
 </code></pre></div><h3 id="加载lime-内核模块">加载LiME 内核模块</h3>
 <p>现在是时候加载内核模块来获取系统内存了。insmod 命令会帮助加载内核模块；模块一旦被加载，会在你的系统上读取主内存（RAM）并且将内存的内容转储到命令行所提供的 path 目录下的文件中。另一个重要的参数是 format；保持 lime 的格式，如下所示。在插入内核模块之后，使用 lsmod 命令验证它是否真的被加载。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsmod  | grep lime
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsmod  | grep lime
 $
 $ insmod ./lime-4.18.0-240.el8.x86_64.ko <span style="color:#e6db74">&#34;path=../RHEL8.3_64bit.mem format=lime&#34;</span>
 $
@@ -133,7 +133,7 @@ $ lsmod  | grep lime
 lime                   <span style="color:#ae81ff">16384</span>  <span style="color:#ae81ff">0</span>
 $
 </code></pre></div><p>你应该看到给 path 命令的文件已经创建好了，而且文件大小与你系统的物理内存（RAM）大小相同（并不奇怪）。一旦你有了内存转储，你就可以使用 rmmod 命令删除该内核模块：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$
 $ ls -l ~/LiME/RHEL8.3_64bit.mem
 -r--r--r--. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">4294544480</span> Apr <span style="color:#ae81ff">17</span> 14:47 /root/LiME/RHEL8.3_64bit.mem
 $
@@ -151,7 +151,7 @@ $ lsmod  | grep lime
 $
 </code></pre></div><h3 id="内存转储中是什么">内存转储中是什么？</h3>
 <p>这个内存转储文件只是原始数据，就像使用 file 命令可以看到的一样。你不可能通过手动去理解它；是的，在这里边有一些 ASCII 字符，但是你无法用编辑器打开这个文件并把它读出来。hexdump 的输出显示，最初的几个字节是 EmiL；这是因为你的请求格式在上面的命令行中是 lime：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file ~/LiME/RHEL8.3_64bit.mem
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ file ~/LiME/RHEL8.3_64bit.mem
 /root/LiME/RHEL8.3_64bit.mem: data
 $
 
@@ -169,7 +169,7 @@ $ hexdump -C ~/LiME/RHEL8.3_64bit.mem | head
 $
 </code></pre></div><h2 id="部分-2获得-volatility-并使用它来分析你的内存转储">部分 2：获得 Volatility 并使用它来分析你的内存转储</h2>
 <p>现在你有了要分析的示例内存转储，使用下面的命令获取 Volatility 软件。Volatility 已经用 Python 3 重写了，但是本教程使用的是用 Python 2 写的原始的 Volatility 包。如果你想用 Volatility 3 进行实验，可以从合适的 Git 仓库下载它，并在以下命令中使用 Python 3 而不是 Python 2：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/volatilityfoundation/volatility.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/volatilityfoundation/volatility.git
 $
 $ cd volatility/
 $
@@ -178,18 +178,18 @@ AUTHORS.txt    contrib      LEGAL.txt    Makefile     PKG-INFO     pyinstaller.s
 CHANGELOG.txt  CREDITS.txt  LICENSE.txt  MANIFEST.in  pyinstaller  README.txt        setup.py   volatility
 $
 </code></pre></div><p>Volatility 使用两个 Python 库来实现某些功能，所以使用以下命令来安装它们。否则，在你运行 Volatility 工具时，你可能看到一些导入错误；你可以忽略它们，除非你正在运行的插件需要这些库；这种情况下，工具将会报错：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip2 install pycrypto
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip2 install pycrypto
 $ pip2 install distorm3
 </code></pre></div><h3 id="列出-volatility-的-linux-配置文件">列出 Volatility 的 Linux 配置文件</h3>
 <p>你将要运行的第一个 Volatility 命令列出了可用的 Linux 配置文件，运行 Volatility 命令的主要入口点是 vol.py 脚本。使用 Python 2 解释器调用它并提供 &ndash;info 选项。为了缩小输出，查找以 Linux 开头的字符串。正如你所看到的，并没有很多 Linux 配置文件被列出：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py --info  | grep ^Linux
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py --info  | grep ^Linux
 Volatility Foundation Volatility Framework 2.6.1
 LinuxAMD64PagedMemory          - Linux-specific AMD 64-bit address space.
 $
 </code></pre></div><h3 id="构建你自己的-linux-配置文件">构建你自己的 Linux 配置文件</h3>
 <p>Linux 发行版是多种多样的，并且是为不同架构而构建的。这就是为什么配置文件是必要的 —— Volatility 在提取信息前必须知道内存转储是从哪个系统和架构获得的。有一些 Volatility 命令可以找到这些信息；但是这个方法很费时。为了加快速度，可以使用以下命令构建一个自定义的 Linux 配置文件：</p>
 <p>移动到 Volatility 仓库的 tools/linux目录下，运行 make 命令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd tools/linux/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd tools/linux/
 $
 $ pwd
 /root/volatility/tools/linux
@@ -204,7 +204,7 @@ make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: E
 make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/usr/src/kernels/4.18.0-240.el8.x86_64&#39;</span>
 $
 </code></pre></div><p>你应该看到一个新的 module.dwarf 文件。你也需要 /boot 目录下的 System.map 文件，因为它包含了所有与当前运行的内核相关的符号：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
 kcore  Makefile  Makefile.enterprise  module.c  module.dwarf
 $
 $ ls -l module.dwarf
@@ -215,7 +215,7 @@ $ ls -l /boot/System.map-4.18.0-240.el8.x86_64
 $
 $
 </code></pre></div><p>要创建一个自定义配置文件，移动回到 Volatility 目录并且运行下面的命令。第一个参数提供了一个自定义 .zip 文件，文件名是你自己命名的。我经常使用操作系统和内核版本来命名。下一个参数是前边创建的 module.dwarf 文件，最后一个参数是 /boot 目录下的 System.map 文件：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$
 $ cd volatility/
 $
 $ zip volatility/plugins/overlays/linux/Redhat8.3_4.18.0-240.zip tools/linux/module.dwarf /boot/System.map-4.18.0-240.el8.x86_64
@@ -223,7 +223,7 @@ $ zip volatility/plugins/overlays/linux/Redhat8.3_4.18.0-240.zip tools/linux/mod
   adding: boot/System.map-4.18.0-240.el8.x86_64 <span style="color:#f92672">(</span>deflated 79%<span style="color:#f92672">)</span>
 $
 </code></pre></div><p>现在自定义配置文件就准备好了，所以在前边给出的位置检查一下 .zip 文件是否被创建好。如果你想知道 Volatility 是否检测到这个自定义配置文件，再一次运行 &ndash;info 命令。现在，你应该可以在下边的列出的内容中看到新的配置文件：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$
 $ ls -l volatility/plugins/overlays/linux/Redhat8.3_4.18.0-240.zip
 -rw-r--r--. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">1190360</span> Apr <span style="color:#ae81ff">17</span> 15:20 volatility/plugins/overlays/linux/Redhat8.3_4.18.0-240.zip
 $
@@ -235,15 +235,15 @@ $
 $
 </code></pre></div><h3 id="开始使用-volatility">开始使用 Volatility</h3>
 <p>现在你已经准备好去做一些真正的内存取证了。记住，Volatility 是由自定义的插件组成的，你可以针对内存转储来获得信息。命令的通用格式是：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python2 vol.py -f &lt;memory-dump-file-taken-by-Lime&gt; &lt;plugin-name&gt; --profile<span style="color:#f92672">=</span>&lt;name-of-our-custom-profile&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python2 vol.py -f &lt;memory-dump-file-taken-by-Lime&gt; &lt;plugin-name&gt; --profile<span style="color:#f92672">=</span>&lt;name-of-our-custom-profile&gt;
 </code></pre></div><p>有了这些信息，运行 linux_banner 插件来看看你是否可从内存转储中识别正确的发行版信息：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_banner --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_banner --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
 Volatility Foundation Volatility Framework 2.6.1
 Linux version 4.18.0-240.el8.x86_64 <span style="color:#f92672">([</span>mockbuild@vm09.test.com<span style="color:#f92672">][</span>4<span style="color:#f92672">])</span> <span style="color:#f92672">(</span>gcc version 8.3.1 <span style="color:#ae81ff">20191121</span> <span style="color:#f92672">(</span>Red Hat 8.3.1-5<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>GCC<span style="color:#f92672">))</span> <span style="color:#75715e">#1 SMP Wed Sep 23 05:13:10 EDT 2020</span>
 $
 </code></pre></div><h3 id="找到-linux-插件">找到 Linux 插件</h3>
 <p>到现在都很顺利，所以现在你可能对如何找到所有 Linux 插件的名字比较好奇。有一个简单的技巧：运行 &ndash;info 命令并抓取 linux_ 字符串。有各种各样的插件可用于不同的用途。这里列出一部分：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py --info  | grep linux_
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py --info  | grep linux_
 Volatility Foundation Volatility Framework 2.6.1
 linux_apihooks             - Checks <span style="color:#66d9ef">for</span> userland apihooks
 linux_arp                  - Print the ARP table
@@ -257,7 +257,7 @@ linux_volshell             - Shell in the memory image
 linux_yarascan             - A shell in the Linux memory image
 $
 </code></pre></div><p>使用 linux_psaux 插件检查内存转储时系统上正在运行哪些进程。注意列表中的最后一个命令：它是你在转储之前运行的 insmod 命令。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_psaux --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_psaux --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
 Volatility Foundation Volatility Framework 2.6.1
 Pid    Uid    Gid    Arguments                                                      
 <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">0</span>      /usr/lib/systemd/systemd --switched-root --system --deserialize <span style="color:#ae81ff">18</span>
@@ -281,7 +281,7 @@ Pid    Uid    Gid    Arguments
 <span style="color:#ae81ff">228576</span> <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">0</span>                                                                      
 $
 </code></pre></div><p>想要知道系统的网络状态吗？运行 linux_netstat 插件来找到在内存转储期间网络连接的状态：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_netstat --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_netstat --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
 Volatility Foundation Volatility Framework 2.6.1
 UNIX <span style="color:#ae81ff">18113</span>              systemd/1     /run/systemd/private
 UNIX <span style="color:#ae81ff">11411</span>              systemd/1     /run/systemd/notify
@@ -292,7 +292,7 @@ UNIX <span style="color:#ae81ff">11416</span>              systemd/1
 &lt;&lt; 删节 &gt;&gt;
 $
 </code></pre></div><p>接下来，使用 linux_mount 插件来看在内存转储期间哪些文件系统被挂载：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_mount --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_mount --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
 Volatility Foundation Volatility Framework 2.6.1
 tmpfs                     /sys/fs/cgroup                      tmpfs        ro,nosuid,nodev,noexec                  
 cgroup                    /sys/fs/cgroup/pids                 cgroup       rw,relatime,nosuid,nodev,noexec        
@@ -312,7 +312,7 @@ cgroup                    /sys/fs/cgroup/cpuset               cgroup       rw,re
 mqueue                    /dev/mqueue                         mqueue       rw,relatime                            
 $
 </code></pre></div><p>好奇哪些内核模块被加载了吗？Volatility 也为这个提供了一个插件 linux_lsmod：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_lsmod --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_lsmod --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
 Volatility Foundation Volatility Framework 2.6.1
 ffffffffc0535040 lime <span style="color:#ae81ff">20480</span>
 ffffffffc0530540 binfmt_misc <span style="color:#ae81ff">20480</span>
@@ -325,7 +325,7 @@ ffffffffc0258180 dm_log <span style="color:#ae81ff">20480</span>
 ffffffffc024bbc0 dm_mod <span style="color:#ae81ff">151552</span>
 $
 </code></pre></div><p>想知道哪些文件被哪些进程打开了吗？使用 linux_bash 插件可以列出这些信息：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_bash --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64 -v
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_bash --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64 -v
 Volatility Foundation Volatility Framework 2.6.1
 Pid      Name                 Command Time                   Command
 -------- -------------------- ------------------------------ -------
@@ -347,7 +347,7 @@ Pid      Name                 Command Time                   Command
   <span style="color:#ae81ff">227298</span> bash                 2021-04-17 18:40:30 UTC+0000   ls
 $
 </code></pre></div><p>想知道哪些文件被哪些进程打开了吗？使用 linux_lsof 插件可以列出这些信息：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_lsof --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_lsof --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64
 Volatility Foundation Volatility Framework 2.6.1
 Offset             Name                           Pid      FD       Path
 ------------------ ------------------------------ -------- -------- ----
@@ -369,7 +369,7 @@ Offset             Name                           Pid      FD       Path
 $
 </code></pre></div><h3 id="访问-linux-插件脚本位置">访问 Linux 插件脚本位置</h3>
 <p>通过读取内存转储和处理这些信息，你可以获得更多的信息。如果你会 Python，并且好奇这些信息是如何被处理的，可以到存储所有插件的目录，选择一个你感兴趣的，并看看 Volatility 是如何获得这些信息的：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls volatility/plugins/linux/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls volatility/plugins/linux/
 apihooks.py              common.py            kernel_opened_files.py   malfind.py          psaux.py
 apihooks.pyc             common.pyc           kernel_opened_files.pyc  malfind.pyc         psaux.pyc
 arp.py                   cpuinfo.py           keyboard_notifiers.py    mount_cache.py      psenv.py
@@ -389,7 +389,7 @@ linux_malfind              - Looks for suspicious process mappings
 linux_truecrypt_passphrase - Recovers cached Truecrypt passphrases
 </code></pre>
 <p>Volatility 也允许你在内存转储中打开一个 shell，所以你可以运行 shell 命令来代替上面所有命令，并获得相同的信息：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_volshell --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64 -v
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python2 vol.py -f ~/LiME/RHEL8.3_64bit.mem linux_volshell --profile<span style="color:#f92672">=</span>LinuxRedhat8_3_4_18_0-240x64 -v
 Volatility Foundation Volatility Framework 2.6.1
 Current context: process systemd, pid<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> DTB<span style="color:#f92672">=</span>0x1042dc000
 Welcome to volshell! Current memory image is:

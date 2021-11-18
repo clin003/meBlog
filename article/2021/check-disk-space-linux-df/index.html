@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -61,12 +61,12 @@
 				<p>磁盘空间已经不像计算机早期那样珍贵，但无论你有多少磁盘空间，总有耗尽的可能。计算机需要一些磁盘空间才能启动运行，所以为了确保你没有在无意间用尽了所有的硬盘空间，偶尔检查一下是非常必要的。在 Linux 终端，你可以用 df 命令来做这件事。</p>
 <p>df 命令可以显示文件系统中可用的磁盘空间。</p>
 <p>要想使输出结果易于阅读，你可以加上 &ndash;human-readable（或其简写 -h）选项：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda1       1.0T  525G  500G  52% /
 </code></pre></div><p>在这个例子中，计算机的磁盘已经用了 52%，还有 500 GB 可用空间。</p>
 <p>由于 Linux 从整体上看待所有挂载设备的文件系统，df 命令会展示出连接到计算机上的每个存储设备的详细信息。如果你有很多磁盘，那么输出结果将会反映出来：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root       110G   45G   61G  43% /
 devtmpfs         12G     <span style="color:#ae81ff">0</span>   12G   0% /dev
@@ -78,7 +78,7 @@ tmpfs            12G  848K   12G   1% /run
 </code></pre></div><p>在这个例子中，计算机的 /home 目录已经用了 87%，剩下 191 GB 的可用空间。</p>
 <h3 id="查看总的可用磁盘空间">查看总的可用磁盘空间</h3>
 <p>如果你的文件系统确实很复杂，而你希望看到所有磁盘的总空间，可以使用 &ndash;total 选项：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable --total
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ df --human-readable --total
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root       110G   45G   61G  43% /
 devtmpfs         12G     <span style="color:#ae81ff">0</span>   12G   0% /dev

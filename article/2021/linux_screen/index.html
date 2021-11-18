@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1635558167">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1637209080">
 	
 	
 </head>
@@ -86,7 +86,7 @@
 <p>GNU Screen 使用基于 <code>Ctrl+A</code> 的快捷键。根据你的习惯，这可能会让你感觉非常自然，也可能非常不方便，因为你可能会用 <code>Ctrl+A</code> 来移动到一行的开头。无论怎样，GNU Screen 允许通过 <code>.screenrc</code> 配置文件进行各种定制。你可以用这个来改变触发键的绑定（称为 “转义” 键绑定）。</p>
 <p><code>escape ^jJ</code></p>
 <p>你还可以添加一个状态行，以帮助你在 Screen 会话中保持自己不迷失。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e"># status bar, with current window highlighted</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e"># status bar, with current window highlighted</span>
     hardstatus alwayslastline
     hardstatus string <span style="color:#e6db74">&#39;%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]&#39;</span>
 
