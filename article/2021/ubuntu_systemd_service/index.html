@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2021/ubuntu_systemd_service/" />
+	<link rel="canonical" href="https://3ae.cn/article/2021/ubuntu_systemd_service/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>Ubuntu使用systemd配置开机运行service</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1638379280">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>Ubuntu使用systemd配置开机运行service</h1>
+			<b><time>2021.12.01 22:44</time></b>
+		       
+		           <a href="/tags/ubuntu">ubuntu</a>
+        	       
+
+			<div>
+				<h2 id="systemd">systemd</h2>
+<p>Systemd 是 Linux 系统工具，用来启动守护进程，已成为大多数发行版的标准配置。</p>
+<h2 id="由来">由来</h2>
+<p>历史上，Linux 的启动一直采用init进程。</p>
+<p>下面的命令用来启动服务。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    $ sudo /etc/init.d/apache2 start
+    <span style="color:#75715e"># 或者</span>
+    $ service apache2 start
+</code></pre></div><p>这种方法有两个缺点。</p>
+<p>一是启动时间长。init进程是串行启动，只有前一个进程启动完，才会启动下一个进程。</p>
+<p>二是启动脚本复杂。init进程只是执行启动脚本，不管其他事情。脚本需要自己处理各种情况，这往往使得脚本变得很长。</p>
+<h2 id="systemd-概述">Systemd 概述</h2>
+<p>Systemd 就是为了解决这些问题而诞生的。它的设计目标是，为系统的启动和管理提供一套完整的解决方案。</p>
+<p>根据 Linux 惯例，字母d是守护进程（daemon）的缩写。 Systemd 这个名字的含义，就是它要守护整个系统。</p>
+<p>使用了 Systemd，就不需要再用init了。Systemd 取代了initd，成为系统的第一个进程（PID 等于 1），其他进程都是它的子进程。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    $ systemctl --version
+</code></pre></div><p>上面的命令查看 Systemd 的版本。</p>
+<h2 id="使用-systemd-实现开机执行-shell-脚本">使用 systemd 实现开机执行 Shell 脚本</h2>
+<h3 id="通用操作步骤">通用操作步骤</h3>
+<p>创建希望开机马上执行的脚本，本文举例脚本存放位置为 /home/navxin/Example/startup.sh，脚本内容如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span><span style="color:#75715e"># 开机时在脚本的同级目录下创建一个名为 StartupTouch.txt 的文件</span>
+touch /home/navxin/Example/startup.sh.txt
+</code></pre></div><h3 id="开机执行的脚本需增加可执行权限才能被-systemd-运行使用如下命令">开机执行的脚本需增加可执行权限才能被 systemd 运行，使用如下命令</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x /home/navxin/Example/startup.sh
+chmod g+x /home/navxin/Example/startup.sh
+</code></pre></div><h3 id="进入-systemd-放置-service-的目录在该目录下可看到大量服务配置文件命令如下">进入 systemd 放置 service 的目录，在该目录下可看到大量服务配置文件，命令如下</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 进入 systemd 的 service 目录</span>
+cd /usr/lib/systemd/system
+<span style="color:#75715e"># 查看文件列表</span>
+ls -al
+</code></pre></div><pre><code>在该目录创建一个新的 .service 文件用于配置开机启动脚本，本例中的文件名为 StartupExample.service，所执行命令和文件中的配置内容如下：
+</code></pre>
+<h3 id="创建服务配置文件">创建服务配置文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo touch /usr/lib/systemd/system/StartupExample.service
+</code></pre></div><p>以下为 StartupExample.service 配置文件的内容</p>
+<pre tabindex="0"><code>[Unit]
+Description=Startup Example
+
+[Service]
+ExecStart=/home/navxin/Example/startup.sh
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><h3 id="尝试手动运行新创建的-service使用如下命令">尝试手动运行新创建的 service，使用如下命令：</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 手动运行 StartupExample.service</span>
+sudo systemctl start StartupExample.service
+<span style="color:#75715e"># 查看运行日志</span>
+systemctl status StartupExample.service
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e"># 删除刚测试服务时创建的文件</span>
+    rm -f /home/navxin/Example/startup.sh.txt
+    <span style="color:#75715e"># 设置服务为 enable 状态，使之能开机运行</span>
+    sudo systemctl enable StartupExample.service
+    <span style="color:#75715e"># 重启机器</span>
+    systemctl reboot
+</code></pre></div><h2 id="附注unit">附注：Unit</h2>
+<p>Systemd 可以管理所有系统资源。不同的资源统称为 Unit（单位）。</p>
+<p>Unit 一共分成12种。</p>
+<pre><code>    Service unit：系统服务
+    Target unit：多个 Unit 构成的一个组
+    Device Unit：硬件设备
+    Mount Unit：文件系统的挂载点
+    Automount Unit：自动挂载点
+    Path Unit：文件或路径
+    Scope Unit：不是由 Systemd 启动的外部进程
+    Slice Unit：进程组
+    Snapshot Unit：Systemd 快照，可以切回某个快照
+    Socket Unit：进程间通信的 socket
+    Swap Unit：swap 文件
+    Timer Unit：定时器
+</code></pre>
+<p>systemctl list-units命令可以查看当前系统的所有 Unit 。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e"># 列出正在运行的 Unit</span>
+    $ systemctl list-units
+
+    <span style="color:#75715e"># 列出所有Unit，包括没有找到配置文件的或者启动失败的</span>
+    $ systemctl list-units --all
+
+    <span style="color:#75715e"># 列出所有没有运行的 Unit</span>
+    $ systemctl list-units --all --state<span style="color:#f92672">=</span>inactive
+
+    <span style="color:#75715e"># 列出所有加载失败的 Unit</span>
+    $ systemctl list-units --failed
+
+    <span style="color:#75715e"># 列出所有正在运行的、类型为 service 的 Unit</span>
+    $ systemctl list-units --type<span style="color:#f92672">=</span>service
+
+    <span style="color:#75715e"># 列出所有正在运行的、类型为  mount 的 Unit</span>
+    $systemctl list-units --type<span style="color:#f92672">=</span>mount
+
+    <span style="color:#75715e"># 命令用于列出所有配置文件。</span>
+    $systemctl list-unit-files
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    $systemctl list-unit-files --type<span style="color:#f92672">=</span>mount
+</code></pre></div><p>修改 myadmin.service文件，增加语句</p>
+<pre tabindex="0"><code>    After=network-online.target remote-fs.target nss-lookup.target navxin-kn1.mount
+    Wants=network-online.target
+</code></pre><p>全部文件内容如下(部分内容参考nginx.service)：</p>
+<pre tabindex="0"><code class="language-conf" data-lang="conf">    # /lib/systemd/system/myadmin.service
+    [Unit]
+    Description=Start myAdmin web server
+    Documentation=https://www.lyhuilin.com/
+    After=network-online.target remote-fs.target nss-lookup.target navxin-kn1.mount
+    Wants=network-online.target
+
+    [Service]
+    Environment=&quot;WELCOME=Baicai myAdmin Base Environment.&quot;
+    ExecStartPre=/bin/echo ${WELCOME}
+    ExecStart=/baicai/systemdStart/my_admin/my_admin -c /baicai/systemdStart/my_admin/conf/config.yaml
+    ExecStop=/bin/kill -s TERM ${MAINPID}
+
+    [Install]
+    WantedBy=multi-user.target
+
+</code></pre>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2021/ubuntu_systemd_service/">Ubuntu使用systemd配置开机运行service</a></li>
+				
+				<li><a href="/article/2021/docker_start/">安装docker及简单的使用</a></li>
+				
+				<li><a href="/article/2021/ubuntu_firefox-install/">ubuntu上安装firefox</a></li>
+				
+				<li><a href="/article/2021/tcpdump_icmp-echo/">如何知道谁在ping我？</a></li>
+				
+				<li><a href="/article/2021/check-disk-space-linux-df/">使用 df 命令查看 Linux 上的可用磁盘空间</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2021 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://3ae.cn/links/"><b>友情链接</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>

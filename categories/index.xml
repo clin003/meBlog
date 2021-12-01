@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Tue, 05 Oct 2021 17:21:06 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 22:44:28 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://3ae.cn/categories/linux/</link>
+      <pubDate>Wed, 01 Dec 2021 22:44:28 +0800</pubDate>
+      
+      <guid>https://3ae.cn/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using Software</title>
+      <link>https://3ae.cn/categories/using-software/</link>
+      <pubDate>Wed, 01 Dec 2021 22:44:28 +0800</pubDate>
+      
+      <guid>https://3ae.cn/categories/using-software/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>docker</title>
       <link>https://3ae.cn/categories/docker/</link>
@@ -23,24 +41,6 @@
       <pubDate>Tue, 05 Oct 2021 17:21:06 +0800</pubDate>
       
       <guid>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://3ae.cn/categories/linux/</link>
-      <pubDate>Wed, 29 Sep 2021 16:19:42 +0800</pubDate>
-      
-      <guid>https://3ae.cn/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Using Software</title>
-      <link>https://3ae.cn/categories/using-software/</link>
-      <pubDate>Wed, 29 Sep 2021 16:19:42 +0800</pubDate>
-      
-      <guid>https://3ae.cn/categories/using-software/</guid>
       <description></description>
     </item>
     
