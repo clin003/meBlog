@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2021/docker_postgres/" />
+	<link rel="canonical" href="https://3ae.cn/article/2021/docker_postgres/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>Docker 运行 postgreSQL</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1639032058">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>Docker 运行 postgreSQL</h1>
+			<b><time>2021.12.09 14:19</time></b>
+		       
+		           <a href="/tags/docker">Docker</a>
+        	       
+
+			<div>
+				<ol>
+<li>
+<p>安装docker，可参考 <a href="/article/2021/docker_start/">安装docker及简单的使用</a> 或 百度解决；</p>
+</li>
+<li>
+<p>拉取postgreSQL的docker镜像文件：</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    docker pull postgres
+</code></pre></div><ol start="3">
+<li>创建 docker volume，名字为“dv_pgdata&quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    docker volume create dv_pgdata
+</code></pre></div><ol start="4">
+<li>启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD<span style="color:#f92672">=</span>xxxxxx -p 5432:5432 -d postgres
+</code></pre></div><ol start="5">
+<li>这时候查看已存在的docker volume:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker volume ls
+</code></pre></div><ol start="6">
+<li>查看volume信息：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cn2d6@navxin-desktop:~$ docker inspect dv_pgdata
+</code></pre></div><ol start="7">
+<li>在宿主机，也可以直接查看volume里的内容：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data
+cn2d6@navxin-desktop:~$ ll
+</code></pre></div><ol start="8">
+<li>查看postgresql：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cn2d6@navxin-desktop:~$docker exec -it <span style="color:#ae81ff">618</span> bash
+root@618f1a4128ee:/# psql -U postgres
+</code></pre></div><ol start="9">
+<li>更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker pull dpage/pgadmin4
+docker run --name pgadmin -p 5080:80 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e <span style="color:#e6db74">&#39;PGADMIN_DEFAULT_EMAIL=hi@nav.xin&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e <span style="color:#e6db74">&#39;PGADMIN_DEFAULT_PASSWORD=xxxxxx&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e <span style="color:#e6db74">&#39;PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION=True&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e <span style="color:#e6db74">&#39;PGADMIN_CONFIG_LOGIN_BANNER=&#34;Authorised users only!&#34;&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e <span style="color:#e6db74">&#39;PGADMIN_CONFIG_CONSOLE_LOG_LEVEL=10&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -d dpage/pgadmin4
+</code></pre></div><h3 id="更多参考">更多参考：</h3>
+<p><a href="/article/2021/docker_start/">安装docker及简单的使用</a>
+<a href="https://hub.docker.com/_/postgres?tab=description">postgres</a>
+<a href="https://hub.docker.com/r/dpage/pgadmin4">dpage/pgadmin4</a></p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2021/docker_postgres/">Docker 运行 postgreSQL</a></li>
+				
+				<li><a href="/article/2021/ubuntu_systemd_service/">Ubuntu使用systemd配置开机运行service</a></li>
+				
+				<li><a href="/article/2021/docker_start/">安装docker及简单的使用</a></li>
+				
+				<li><a href="/article/2021/ubuntu_firefox-install/">ubuntu上安装firefox</a></li>
+				
+				<li><a href="/article/2021/tcpdump_icmp-echo/">如何知道谁在ping我？</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2021 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://3ae.cn/links/"><b>友情链接</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>

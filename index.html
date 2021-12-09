@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1638379352">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1639032058">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -53,6 +53,23 @@
 	
 	<main>
 		
+		
+			<article>
+	<h1><a href="https://3ae.cn/article/2021/docker_postgres/">Docker 运行 postgreSQL</a></h1>
+	<b><time>2021.12.09 14:19</time></b>
+	
+	<a href="/tags/docker">Docker</a>
+	
+	<div>
+		安装docker，可参考 安装docker及简单的使用 或 百度解决；
+  拉取postgreSQL的docker镜像文件：
+  docker pull postgres 创建 docker volume，名字为“dv_pgdata&quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）：  docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面：  docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume:  docker volume ls 查看volume信息：  cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容：  cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql：  cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。  docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \  -e &#39;PGADMIN_DEFAULT_EMAIL=hi@nav.
+		
+			<a href="https://3ae.cn/article/2021/docker_postgres/">Read more...</a>
+		
+	</div>
+</article>
+
 		
 			<article>
 	<h1><a href="https://3ae.cn/article/2021/ubuntu_systemd_service/">Ubuntu使用systemd配置开机运行service</a></h1>
@@ -279,35 +296,9 @@ systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox
 </article>
 
 		
-			<article>
-	<h1><a href="https://3ae.cn/article/2021/mac_find/">MAC命令快速模糊查找文件</a></h1>
-	<b><time>2021.06.27 10:04</time></b>
-	
-	<a href="/tags/mac%E5%91%BD%E4%BB%A4%E8%A1%8C">mac命令行</a>
-	
-	<a href="/tags/mac">mac</a>
-	
-	<a href="/tags/find">find</a>
-	
-	<div>
-		find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*”
-/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */ find ~ -iname &#34;vue-*.zip&#34; /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &#34;*vue*&#34; /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
-mdfind命令 描述：通过 mdfind命令查找 语法：mdfind -name 文件名
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
-在 shell 中执行命令  你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面
- 若要运行当前用户个人文件夹中的命令，请在前面加上文件夹说明符。例如，若要运行 MyCommandLineProg，请使用以下命令：
-% ~/MyCommandLineProg 若要打开一个 App，请使用打开命令：
-		
-			<a href="https://3ae.cn/article/2021/mac_find/">Read more...</a>
-		
-	</div>
-</article>
-
-		
 		<div>
 
-1 of 3
+1 of 4
 
 	<a href="/page/2/">Next Page</a>
 
