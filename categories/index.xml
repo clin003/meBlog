@@ -7,29 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Thu, 09 Dec 2021 14:19:08 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>docker</title>
-      <link>https://3ae.cn/categories/docker/</link>
-      <pubDate>Thu, 09 Dec 2021 14:19:08 +0800</pubDate>
-      
-      <guid>https://3ae.cn/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>收集与整理</title>
-      <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
-      <pubDate>Thu, 09 Dec 2021 14:19:08 +0800</pubDate>
-      
-      <guid>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 30 Jan 2022 15:19:12 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
       <link>https://3ae.cn/categories/linux/</link>
-      <pubDate>Wed, 01 Dec 2021 22:44:28 +0800</pubDate>
+      <pubDate>Sun, 30 Jan 2022 15:19:12 +0800</pubDate>
       
       <guid>https://3ae.cn/categories/linux/</guid>
       <description></description>
@@ -38,9 +20,27 @@
     <item>
       <title>Using Software</title>
       <link>https://3ae.cn/categories/using-software/</link>
-      <pubDate>Wed, 01 Dec 2021 22:44:28 +0800</pubDate>
+      <pubDate>Sun, 30 Jan 2022 15:19:12 +0800</pubDate>
       
       <guid>https://3ae.cn/categories/using-software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>收集与整理</title>
+      <link>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</link>
+      <pubDate>Sun, 30 Jan 2022 15:19:12 +0800</pubDate>
+      
+      <guid>https://3ae.cn/categories/%E6%94%B6%E9%9B%86%E4%B8%8E%E6%95%B4%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://3ae.cn/categories/docker/</link>
+      <pubDate>Thu, 09 Dec 2021 14:19:08 +0800</pubDate>
+      
+      <guid>https://3ae.cn/categories/docker/</guid>
       <description></description>
     </item>
     

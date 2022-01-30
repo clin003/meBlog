@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2022/ubuntu_wechat-install/" />
+	<link rel="canonical" href="https://3ae.cn/article/2022/ubuntu_wechat-install/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>ubuntu上安装微信(wechat)</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1643528047">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>ubuntu上安装微信(wechat)</h1>
+			<b><time>2022.01.30 15:19</time></b>
+		       
+		           <a href="/tags/ubuntu">ubuntu</a>
+        	       
+		           <a href="/tags/wechat">wechat</a>
+        	       
+		           <a href="/tags/weixin">weixin</a>
+        	       
+
+			<div>
+				<h2 id="介绍">介绍</h2>
+<p>由于微信官网 <a href="https://weixin.qq.com/">https://weixin.qq.com/</a> 没有linux版本的下载和安装方法，但微信确实提供了优麒麟发行版的官方版本，所以就有了下面的安装方法。</p>
+<h2 id="安装方法">安装方法</h2>
+<p>打开优麒麟应用商店官网，然后下载应用，就看到微信了
+<a href="https://www.ubuntukylin.com/applications/106-cn.html">https://www.ubuntukylin.com/applications/106-cn.html</a>
+下载deb包，用命令sudo dpkg -i ，就能安装上了，而且可以用。
+这是linux原生的，功能少点，但比wine的要轻巧不少。</p>
+<h2 id="安装方法2">安装方法2</h2>
+<p>下载链接在方法1中，优麒麟应用商店微信应用页面右键 “64位下载” ——&gt; “复制链接”
+终端下载Deb安装：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    wget  -O ~/weixin.deb <span style="color:#e6db74">&#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&#34;</span>
+
+    sudo dpkg -i ~/weixin.deb
+</code></pre></div>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2022/ubuntu_wechat-install/">ubuntu上安装微信(wechat)</a></li>
+				
+				<li><a href="/article/2021/docker_postgres/">Docker 运行 postgreSQL</a></li>
+				
+				<li><a href="/article/2021/ubuntu_systemd_service/">Ubuntu使用systemd配置开机运行service</a></li>
+				
+				<li><a href="/article/2021/docker_start/">安装docker及简单的使用</a></li>
+				
+				<li><a href="/article/2021/ubuntu_firefox-install/">ubuntu上安装firefox</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://3ae.cn/links/"><b>友情链接</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>

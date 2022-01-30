@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1639054129">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1643528047">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -53,6 +53,31 @@
 	
 	<main>
 		
+		
+			<article>
+	<h1><a href="https://3ae.cn/article/2021/nginx_cors_server_conf/">跨域方案Nginx配置</a></h1>
+	<b><time>2021.07.01 18:58</time></b>
+	
+	<a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
+	
+	<a href="/tags/%E8%B7%A8%E5%9F%9F">跨域</a>
+	
+	<a href="/tags/cors">CORS</a>
+	
+	<div>
+		什么是浏览器同源策略？ 同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。
+同源是指&quot;协议+域名+端口&quot;三者相同，即便两个不同的域名指向同一个ip地址，也非同源。
+如何实现跨域？ 跨域是个比较古老的命题了，历史上跨域的实现手段有很多，我们现在主要介绍Nginx的跨域方案，其余的方案我们就不深入讨论了。
+方便的跨域方案Nginx nginx是一款极其强大的web服务器，其优点就是轻量级、启动快、高并发。
+现在的新项目中nginx几乎是首选，我们用node或者go开发的服务通常都需要经过nginx的反向代理。
+反向代理的原理很简单，即所有客户端的请求都必须先经过nginx的处理，nginx作为代理服务器再讲请求转发给node或者go服务，这样就规避了同源策略。
+#进程, 可更具cpu数量调整 worker_processes 1; events { #连接数 worker_connections 1024; } http { include mime.types; default_type application/octet-stream; sendfile on; #连接超时时间，服务器会在这个时间过后关闭连接。 keepalive_timeout 10; # gizp压缩 gzip on; # 直接请求nginx也是会报跨域错误的这里设置允许跨域 # 如果代理地址已经允许跨域则不需要这些, 否则报错(虽然这样nginx跨域就没意义了) add_header Access-Control-Allow-Origin *; add_header Access-Control-Allow-Headers X-Requested-With; add_header Access-Control-Allow-Methods GET,POST,OPTIONS; # srever模块配置是http模块中的一个子模块，用来定义一个虚拟访问主机 server { listen 80; server_name localhost; # 根路径指到index.html location / { root html; index index.html index.htm; } # localhost/api 的请求会被转发到192.168.0.103:8080 location /api { rewrite ^/b/(.
+		
+			<a href="https://3ae.cn/article/2021/nginx_cors_server_conf/">Read more...</a>
+		
+	</div>
+</article>
+
 		
 			<article>
 	<h1><a href="https://3ae.cn/article/2021/mac_find/">MAC命令快速模糊查找文件</a></h1>
@@ -249,30 +274,6 @@ cat access.log |awk &#39;{print $4}&#39; | awk -F &#39;:&#39; &#39;{print $1,$2}
 </article>
 
 		
-			<article>
-	<h1><a href="https://3ae.cn/article/2021/toml/">TOML 语言规范 1.0 正式版</a></h1>
-	<b><time>2021.06.05 02:59</time></b>
-	
-	<a href="/tags/toml">TOML</a>
-	
-	<a href="/tags/rust">Rust</a>
-	
-	<div>
-		👉 TOML 语言广泛用于 Rust 项目当中，cargo new 一个新项目时都会新建一个 toml 的配置文件，所以学习 Rust 过程中也有必要熟悉 TOML 语言的相关语法，从而熟练在 Rust 项目中编辑配置文件。
-👉 本文来自 toml-lang 的中文翻译版本，本文收录在此处，只是方便 Rust 学习者统一查阅，若是发现有任何错误或需要完善地方，请在 toml.io 原项目仓库指出或修改错误。
-TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言。（Tom&rsquo;s Obvious, Minimal Language）
-作者：Tom Preston-Werner、Pradyun Gedam 等人。
-宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
-TOML 被设计成可以无歧义地映射为哈希表。
-TOML 应该能很容易地被解析成各种语言中的数据结构。
-目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。
-		
-			<a href="https://3ae.cn/article/2021/toml/">Read more...</a>
-		
-	</div>
-</article>
-
-		
 		<div>
 
 	<a href="/">Previous Page</a>
@@ -286,7 +287,7 @@ TOML 应该能很容易地被解析成各种语言中的数据结构。
 	</main>
 
 	<footer>
-	<p>&copy; 2021 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<p>&copy; 2022 <a href="https://3ae.cn"><b>baicai</b></a>.
 	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
 	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
 	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.

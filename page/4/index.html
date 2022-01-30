@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1639054129">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1643528047">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -55,6 +55,31 @@
 		
 		
 			<article>
+	<h1><a href="https://3ae.cn/article/2021/linux_cron/">使用 cron 调度自动化任务</a></h1>
+	<b><time>2021.05.12 18:59</time></b>
+	
+	<a href="/tags/cron">cron</a>
+	
+	<a href="/tags/linux">linux</a>
+	
+	<a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%BB%E5%8A%A1">自动化任务</a>
+	
+	<div>
+		cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执行重复的任务，比如备份数据库或数据，使用最新的安全补丁更新系统，检查磁盘空间使用情况，发送电子邮件等等。 cron 作业可以按分钟、小时、日、月、星期或它们的任意组合运行。
+ cron 的一些优点 以下是使用 cron 作业的一些优点：
+你可以更好地控制作业的运行时间。例如，你可以精确到分钟、小时、天等。 它消除了为循环任务逻辑而去写代码的需要，当你不再需要执行任务时，可以直接关闭它。 作业在不执行时不会占用内存，因此你可以节省内存分配。 如果一个作业执行失败并由于某种原因退出，它将在适当的时间再次运行。  安装 cron 守护进程 幸运的是，Fedora Linux 预先配置了运行重要的系统任务来保持系统更新，有几个实用程序可以运行任务例如 cron、anacron、at 和 batch 。本文只关注 cron 实用程序的安装。cron 和 cronie 包一起安装，cronie 包也提供 cron 服务。
+要确定软件包是否已经存在，使用 rpm 命令： $ rpm -q cronie Cronie-1.5.2-4.el8.x86_64
+如果安装了 cronie ，它将返回 cronie 包的全名。如果你的系统中没有安装，则会显示未安装。
+使用以下命令安装： $ dnf install cronie
+运行 cron 守护进程 cron 作业由 crond 服务来执行，它会读取配置文件中的信息。在将作业添加到配置文件之前，必须启动 crond 服务，或者安装它。什么是 crond 呢？crond 是 cron 守护程序的简称。要确定 crond 服务是否正在运行，输入以下命令：
+		
+			<a href="https://3ae.cn/article/2021/linux_cron/">Read more...</a>
+		
+	</div>
+</article>
+
+		
+			<article>
 	<h1><a href="https://3ae.cn/article/2021/hello_world/">Hello world</a></h1>
 	<b><time>2021.05.11 14:00</time></b>
 	
@@ -78,7 +103,7 @@
 	</main>
 
 	<footer>
-	<p>&copy; 2021 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<p>&copy; 2022 <a href="https://3ae.cn"><b>baicai</b></a>.
 	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
 	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
 	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.

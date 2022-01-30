@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1639054129">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1643528047">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -53,6 +53,26 @@
 	
 	<main>
 		
+		
+			<article>
+	<h1><a href="https://3ae.cn/article/2022/ubuntu_wechat-install/">ubuntu上安装微信(wechat)</a></h1>
+	<b><time>2022.01.30 15:19</time></b>
+	
+	<a href="/tags/ubuntu">ubuntu</a>
+	
+	<a href="/tags/wechat">wechat</a>
+	
+	<a href="/tags/weixin">weixin</a>
+	
+	<div>
+		介绍 由于微信官网 https://weixin.qq.com/ 没有linux版本的下载和安装方法，但微信确实提供了优麒麟发行版的官方版本，所以就有了下面的安装方法。
+安装方法 打开优麒麟应用商店官网，然后下载应用，就看到微信了 https://www.ubuntukylin.com/applications/106-cn.html 下载deb包，用命令sudo dpkg -i ，就能安装上了，而且可以用。 这是linux原生的，功能少点，但比wine的要轻巧不少。
+安装方法2 下载链接在方法1中，优麒麟应用商店微信应用页面右键 “64位下载” ——&gt; “复制链接” 终端下载Deb安装：
+wget -O ~/weixin.deb &#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&#34; sudo dpkg -i ~/weixin.deb 
+		
+	</div>
+</article>
+
 		
 			<article>
 	<h1><a href="https://3ae.cn/article/2021/docker_postgres/">Docker 运行 postgreSQL</a></h1>
@@ -271,31 +291,6 @@ systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox
 </article>
 
 		
-			<article>
-	<h1><a href="https://3ae.cn/article/2021/nginx_cors_server_conf/">跨域方案Nginx配置</a></h1>
-	<b><time>2021.07.01 18:58</time></b>
-	
-	<a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
-	
-	<a href="/tags/%E8%B7%A8%E5%9F%9F">跨域</a>
-	
-	<a href="/tags/cors">CORS</a>
-	
-	<div>
-		什么是浏览器同源策略？ 同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。
-同源是指&quot;协议+域名+端口&quot;三者相同，即便两个不同的域名指向同一个ip地址，也非同源。
-如何实现跨域？ 跨域是个比较古老的命题了，历史上跨域的实现手段有很多，我们现在主要介绍Nginx的跨域方案，其余的方案我们就不深入讨论了。
-方便的跨域方案Nginx nginx是一款极其强大的web服务器，其优点就是轻量级、启动快、高并发。
-现在的新项目中nginx几乎是首选，我们用node或者go开发的服务通常都需要经过nginx的反向代理。
-反向代理的原理很简单，即所有客户端的请求都必须先经过nginx的处理，nginx作为代理服务器再讲请求转发给node或者go服务，这样就规避了同源策略。
-#进程, 可更具cpu数量调整 worker_processes 1; events { #连接数 worker_connections 1024; } http { include mime.types; default_type application/octet-stream; sendfile on; #连接超时时间，服务器会在这个时间过后关闭连接。 keepalive_timeout 10; # gizp压缩 gzip on; # 直接请求nginx也是会报跨域错误的这里设置允许跨域 # 如果代理地址已经允许跨域则不需要这些, 否则报错(虽然这样nginx跨域就没意义了) add_header Access-Control-Allow-Origin *; add_header Access-Control-Allow-Headers X-Requested-With; add_header Access-Control-Allow-Methods GET,POST,OPTIONS; # srever模块配置是http模块中的一个子模块，用来定义一个虚拟访问主机 server { listen 80; server_name localhost; # 根路径指到index.html location / { root html; index index.html index.htm; } # localhost/api 的请求会被转发到192.168.0.103:8080 location /api { rewrite ^/b/(.
-		
-			<a href="https://3ae.cn/article/2021/nginx_cors_server_conf/">Read more...</a>
-		
-	</div>
-</article>
-
-		
 		<div>
 
 1 of 4
@@ -307,7 +302,7 @@ systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox
 	</main>
 
 	<footer>
-	<p>&copy; 2021 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<p>&copy; 2022 <a href="https://3ae.cn"><b>baicai</b></a>.
 	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
 	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
 	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.
