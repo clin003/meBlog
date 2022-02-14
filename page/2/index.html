@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1643529491">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1644832046">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -53,6 +53,34 @@
 	
 	<main>
 		
+		
+			<article>
+	<h1><a href="https://3ae.cn/article/2021/qbittorrent/">Ubuntu安装 qbittorrent-nox并启动</a></h1>
+	<b><time>2021.07.02 21:01</time></b>
+	
+	<a href="/tags/qbittorrent">qBittorrent</a>
+	
+	<a href="/tags/linux">linux</a>
+	
+	<a href="/tags/ubuntu">Ubuntu</a>
+	
+	<div>
+		Qbittorrent-Nox 要在Linux上使用Qbittorrent Web UI，你无需安装完整的Qbittorent桌面应用程序，有一个基于终端的Qbittorrent应用程序可用，它被称为Qbittorrent-Nox。
+注意：Web UI功能不仅限于Qbittorrent-Nox应用程序，此功能还可以与传统的Qbittorent Linux桌面应用程序一起使用
+安装qbittorrent 安装add-apt-repository命令 sudo apt-get update &amp;&amp; sudo apt-get install software-properties-common -y 添加qbittorrent-nox的PPA软件源 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable 安装qbittorrent-nox（webui版） sudo apt-get update &amp;&amp; sudo apt-get install qbittorrent-nox 设置开机启动 通过rc.local完成 如果是Ubuntu-16.10及其之后的版本需要先按下面的文章完成设置后，开机启动才会生效
+Ubuntu-18.04设置开机启动脚本 起因Ubuntu-16.10（不包括）之前的版本使用的是update-rc.d以及rc.local等方法设置开机启&hellip;
+编辑rc.local脚本
+nano /etc/rc.local 在exit 0前面（前一行）添加以下内容并保存
+qbittorrent-nox -d 通过创建自定义服务实现 创建系统服务
+sudo apt-get install nano -y &amp;&amp; nano /etc/systemd/system/qbittorrent-nox.service 粘贴以下内容，并保存。
+[Unit] Description=qBittorrent-nox After=network.target [Service] User=root Type=simple RemainAfterExit=yes ExecStart=/usr/bin/qbittorrent-nox -d [Install] WantedBy=multi-user.target 启动qbittorrent-nox并创建服务配置
+systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox
+		
+			<a href="https://3ae.cn/article/2021/qbittorrent/">Read more...</a>
+		
+	</div>
+</article>
+
 		
 			<article>
 	<h1><a href="https://3ae.cn/article/2021/nginx_cors_server_conf/">跨域方案Nginx配置</a></h1>
@@ -247,28 +275,6 @@ Deskreen 还为你提供了管理连接设备的能力。因此，如果你需�
 数字格式化 part=`printf &#34;%03d&#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &#34;*.tar&#34; |xargs rm for循环 for ((i=0;i&lt;10;i++)) do _date=$(date +%Y-%m-%d -d &#34;${i}day&#34;) echo $_date done # for i in {1..10} do echo $i done 文件合并 find ./ -name &#34;item*&#34; | xargs sed &#39;a\&#39; &gt; all.txt find ./ -name &#34;item*&#34; | xargs cat &gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.
 		
 			<a href="https://3ae.cn/article/2021/linux_cmd/">Read more...</a>
-		
-	</div>
-</article>
-
-		
-			<article>
-	<h1><a href="https://3ae.cn/article/2021/awk-nginx-access_log/">awk 分析 nginx 运行日志常用指令</a></h1>
-	<b><time>2021.06.05 10:16</time></b>
-	
-	<a href="/tags/shell%E8%84%9A%E6%9C%AC">Shell脚本</a>
-	
-	<a href="/tags/awk">awk</a>
-	
-	<div>
-		awk 分析 nginx 运行日志常用指令
-1.独立IP
-awk &#39;{print $1}&#39; access.log | sort -r |uniq -c | wc -l 2.统计PV
-awk &#39;{print $6}&#39; access.log | wc -l 3.查询访问最频繁的URL
-awk &#39;{print $7}&#39; access.log|sort | uniq -c |sort -n -k 1 -r|more 4.查询访问最频繁的IP
-awk &#39;{print $1}&#39; access.log|sort | uniq -c |sort -n -k 1 -r|more 5.UV统计：
-awk &#39;{print $6}&#39; access.log | sort -r |uniq -c |wc -l 6.按小时统计
-cat access.log |awk &#39;{print $4}&#39; | awk -F &#39;:&#39; &#39;{print $1,$2}&#39;|uniq -c | awk &#39;{print $2&#34; &#34;$3&#34; &#34;$1}&#39; 
 		
 	</div>
 </article>

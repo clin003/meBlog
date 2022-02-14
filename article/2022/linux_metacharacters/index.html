@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2022/linux_metacharacters/" />
+	<link rel="canonical" href="https://3ae.cn/article/2022/linux_metacharacters/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>在 Linux 命令行中使用的 6 个元字符</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1644832046">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>在 Linux 命令行中使用的 6 个元字符</h1>
+			<b><time>2022.02.14 17:37</time></b>
+		       
+
+			<div>
+				<pre><code>在 Linux 命令行上使用元字符是提高生产力的一个好方法。
+</code></pre>
+<p>许多 Linux 电脑是无头运行的，你可以在命令行上完成所有的管理任务。它使用许多所有人都熟悉的基本命令，如 ls、ls-l、ls-l、cd、pwd、top 等等。</p>
+<pre><code>Linux 上的 Shell 元字符
+</code></pre>
+<p>你可以通过使用元字符来扩展这些命令。</p>
+<h3 id="管道符-">管道符 |</h3>
+<p>假设我想知道我的系统上运行的 Firefox 的所有实例。我可以使用带有 -ef 参数的 ps 命令来列出我系统上运行的所有程序实例。现在我想只看那些涉及 Firefox 的实例。我使用了我最喜欢的元字符之一，管道符 |，将其结果送到 grep，用它来搜索模式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ps -ef | grep firefox
+</code></pre></div><h3 id="输出重定向-">输出重定向 &gt;</h3>
+<p>另一个我最喜欢的元字符是输出重定向 &gt;。我用它来打印 dmesg 命令结果中所有 AMD 相关的结果。你可能会发现这在硬件故障排除中很有帮助：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dmesg | grep amd &gt; amd.txt
+$ cat amd.txt
+<span style="color:#f92672">[</span> 0.897<span style="color:#f92672">]</span> amd_uncore: <span style="color:#ae81ff">4</span> amd_df counters detected
+<span style="color:#f92672">[</span> 0.897<span style="color:#f92672">]</span> amd_uncore: <span style="color:#ae81ff">6</span> amd_l3 counters detected
+<span style="color:#f92672">[</span> 0.898<span style="color:#f92672">]</span> perf/amd_iommu: Detected AMD IOMMU <span style="color:#75715e">#0 (2 banks, 4 counters/bank).</span>
+</code></pre></div><h3 id="星号-">星号 *</h3>
+<p>星号 *（通配符）是寻找具有相同扩展名的文件时我的最爱，如 .jpg 或 .png。我首先进入我的系统中的 Picture 目录，并使用类似以下的命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls *.png
+BlountScreenPicture.png
+DisplaySettings.png
+EbookStats.png
+StrategicPlanMenu.png
+Screenshot from 01-24 19-35-05.png
+</code></pre></div><h3 id="波浪号-">波浪号 ~</h3>
+<p>波浪号 ~ 是在 Linux 系统上通过输入以下命令快速返回你的家目录的一种方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd ~
+$ pwd
+/home/don
+</code></pre></div><h3 id="美元符号-">美元符号 $</h3>
+<p>$ 符号作为一个元字符有不同的含义。当用于匹配模式时，它意味着任何以给定字符串结尾的字符串。例如，当同时使用元字符 | 和 $ 时：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls | grep png$
+BlountScreenPicture.png
+DisplaySettings.png
+EbookStats.png
+StrategicPlanMenu.png
+Screenshot from 01-24 19-35-05.png
+</code></pre></div><h3 id="上尖号-">上尖号 ^</h3>
+<p>符号 ^ 将结果限制在以给定字符串开始的项目上。例如，当同时使用元字符 | 和 ^ 时：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls | grep ^Screen
+Screenshot from 01-24 19-35-05.png
+</code></pre></div><p>这些元字符中有许多是通往 正则表达式 的大门，所以还有很多东西可以探索。你最喜欢的 Linux 元字符是什么，它们是如何节省你的工作的？</p>
+<p>via:
+<a href="https://opensource.com/article/22/2/metacharacters-linux">1</a>
+<a href="https://linux.cn/article-14270-1.html">2</a></p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2022/linux_metacharacters/">在 Linux 命令行中使用的 6 个元字符</a></li>
+				
+				<li><a href="/article/2022/ubuntu_wechat-install/">ubuntu上安装微信(wechat)</a></li>
+				
+				<li><a href="/article/2021/docker_postgres/">Docker 运行 postgreSQL</a></li>
+				
+				<li><a href="/article/2021/ubuntu_systemd_service/">Ubuntu使用systemd配置开机运行service</a></li>
+				
+				<li><a href="/article/2021/docker_start/">安装docker及简单的使用</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://3ae.cn/links/"><b>友情链接</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>

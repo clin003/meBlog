@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Sun, 30 Jan 2022 15:19:12 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/using-software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 17:37:24 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/using-software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Linux 命令行中使用的 6 个元字符</title>
+      <link>https://3ae.cn/article/2022/linux_metacharacters/</link>
+      <pubDate>Mon, 14 Feb 2022 17:37:24 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2022/linux_metacharacters/</guid>
+      <description>在 Linux 命令行上使用元字符是提高生产力的一个好方法。  许多 Linux 电脑是无头运行的，你可以在命令行上完成所有的管理任务。它使用许多所有人都熟悉的基本命令，如 ls、ls-l、ls-l、cd、pwd、top 等等。
+Linux 上的 Shell 元字符  你可以通过使用元字符来扩展这些命令。
+管道符 | 假设我想知道我的系统上运行的 Firefox 的所有实例。我可以使用带有 -ef 参数的 ps 命令来列出我系统上运行的所有程序实例。现在我想只看那些涉及 Firefox 的实例。我使用了我最喜欢的元字符之一，管道符 |，将其结果送到 grep，用它来搜索模式：
+$ ps -ef | grep firefox 输出重定向 &amp;gt; 另一个我最喜欢的元字符是输出重定向 &amp;gt;。我用它来打印 dmesg 命令结果中所有 AMD 相关的结果。你可能会发现这在硬件故障排除中很有帮助：
+$ dmesg | grep amd &amp;gt; amd.txt $ cat amd.txt [ 0.897] amd_uncore: 4 amd_df counters detected [ 0.897] amd_uncore: 6 amd_l3 counters detected [ 0.898] perf/amd_iommu: Detected AMD IOMMU #0 (2 banks, 4 counters/bank).</description>
+    </item>
+    
     <item>
       <title>ubuntu上安装微信(wechat)</title>
       <link>https://3ae.cn/article/2022/ubuntu_wechat-install/</link>
