@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <head>
-	<meta name="generator" content="Hugo 0.89.3" />
+	<meta name="generator" content="Hugo 0.93.1" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1644832046">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1647088144">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -53,6 +53,39 @@
 	
 	<main>
 		
+		
+			<article>
+	<h1><a href="https://3ae.cn/article/2021/jsdelivr_github/">免费CDN：jsDelivr&#43;Github 使用方法</a></h1>
+	<b><time>2021.07.02 23:50</time></b>
+	
+	<a href="/tags/jsdelivr">jsDelivr</a>
+	
+	<a href="/tags/github">Github</a>
+	
+	<a href="/tags/cdn">CDN</a>
+	
+	<div>
+		CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。
+用 jsDelivr 免费CDN托管静态资源 国内的免费 CDN 不少，但需要备案 国外的免费 CDN 也不少，但在国内速度慢 但 jsDelivr 是一个特殊的存在，虽然是一家国外 CDN 但是有国内节点
+jsDelivr官网： https://www.jsdelivr.com
+ 放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
+ 使用步骤 1、新建Github仓库
+2、克隆Github仓库到本地
+执行以下命令：
+git clone 一键复制的仓库地址 3、上传资源
+复制需要上传的资源到本地git仓库（注：jsDelivr不支持加载超过20M的资源），在本地git仓库目录下，执行以下命令：
+git status #查看状态 git add . #添加所有文件到暂存区 git commit -m &#39;第一次提交&#39; #把文件提交到仓库 git push #推送至远程仓库 4、发布仓库
+点击release发布
+自定义发布版本号 5、通过jsDelivr引用资源
+使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径 例如：
+https://cdn.jsdelivr.net/gh/clin003/meBlog/index.html https://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.png https://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css  注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
+// 加载任何Github发布、提交或分支 https://cdn.jsdelivr.net/gh/user/repo@version/file // 加载 jQuery v3.2.1 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js // 使用版本范围而不是特定版本 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js https://cdn.
+		
+			<a href="https://3ae.cn/article/2021/jsdelivr_github/">Read more...</a>
+		
+	</div>
+</article>
+
 		
 			<article>
 	<h1><a href="https://3ae.cn/article/2021/qbittorrent/">Ubuntu安装 qbittorrent-nox并启动</a></h1>
@@ -119,13 +152,11 @@ systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox
 	
 	<div>
 		find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*”
-/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */ find ~ -iname &#34;vue-*.zip&#34; /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &#34;*vue*&#34; /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
+/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */   find ~ -iname &#34;vue-*.zip&#34;  /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &#34;*vue*&#34;  /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
 mdfind命令 描述：通过 mdfind命令查找 语法：mdfind -name 文件名
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue  /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
 在 shell 中执行命令  你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面
- 若要运行当前用户个人文件夹中的命令，请在前面加上文件夹说明符。例如，若要运行 MyCommandLineProg，请使用以下命令：
-% ~/MyCommandLineProg 若要打开一个 App，请使用打开命令：
 		
 			<a href="https://3ae.cn/article/2021/mac_find/">Read more...</a>
 		
@@ -148,7 +179,7 @@ crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.
 清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
 上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index
 更换国内源 更换为国内源，否则安装太慢了。 新建文件：~/.cargo/config，内容替换为如下，replace-with 这行可自己 ping 文件中各个国内源头，看哪个源快用哪个：
-[source.crates-io] registry = &quot;https://github.com/rust-lang/crates.io-index&quot; # 替换成你偏好的镜像源 replace-with = 'sjtu' # 清华大学 [source.tuna] registry = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&quot; # 中国科学技术大学 [source.ustc] registry = &quot;git://mirrors.ustc.edu.cn/crates.io-index&quot; # 上海交通大学 [source.sjtu] registry = &quot;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&quot; # rustcc社区 [source.rustcc] registry = &quot;git://crates.rustcc.cn/crates.io-index&quot; # 字节跳动 [source.rsproxy] registry = &quot;https://rsproxy.cn/crates.io-index&quot; 
+[source.crates-io] registry = &#34;https://github.com/rust-lang/crates.io-index&#34; # 替换成你偏好的镜像源 replace-with = &#39;sjtu&#39; # 清华大学 [source.tuna] registry = &#34;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&#34; # 中国科学技术大学 [source.ustc] registry = &#34;git://mirrors.ustc.edu.cn/crates.io-index&#34; # 上海交通大学 [source.sjtu] registry = &#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&#34; # rustcc社区 [source.rustcc] registry = &#34;git://crates.rustcc.cn/crates.io-index&#34; # 字节跳动 [source.rsproxy] registry = &#34;https://rsproxy.cn/crates.io-index&#34; 
 		
 	</div>
 </article>
@@ -256,25 +287,6 @@ Deskreen 还为你提供了管理连接设备的能力。因此，如果你需�
 		网站收录了全球范围内的公开实况摄像头，你可以看到世界各地的文化遗产、城市风光、人气景点！
  传送门 https://www.skylinewebcams.com/
 方法 网站支持中文，进入后直接观看！
-		
-	</div>
-</article>
-
-		
-			<article>
-	<h1><a href="https://3ae.cn/article/2021/linux_cmd/">Linux 常用命令</a></h1>
-	<b><time>2021.06.05 10:31</time></b>
-	
-	<a href="/tags/shell%E8%84%9A%E6%9C%AC">Shell脚本</a>
-	
-	<a href="/tags/linux">linux</a>
-	
-	<div>
-		Linux 常用命令
-日期 $(date -d &#39;1 day ago&#39; &#39;+%Y-%m-%d&#39;) 常用方法
-数字格式化 part=`printf &#34;%03d&#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &#34;*.tar&#34; |xargs rm for循环 for ((i=0;i&lt;10;i++)) do _date=$(date +%Y-%m-%d -d &#34;${i}day&#34;) echo $_date done # for i in {1..10} do echo $i done 文件合并 find ./ -name &#34;item*&#34; | xargs sed &#39;a\&#39; &gt; all.txt find ./ -name &#34;item*&#34; | xargs cat &gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.
-		
-			<a href="https://3ae.cn/article/2021/linux_cmd/">Read more...</a>
 		
 	</div>
 </article>

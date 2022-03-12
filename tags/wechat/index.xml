@@ -17,7 +17,7 @@
       <description>介绍 由于微信官网 https://weixin.qq.com/ 没有linux版本的下载和安装方法，但微信确实提供了优麒麟发行版的官方版本，所以就有了下面的安装方法。
 安装方法 打开优麒麟应用商店官网，然后下载应用，就看到微信了 https://www.ubuntukylin.com/applications/106-cn.html 下载deb包，用命令sudo dpkg -i ，就能安装上了，而且可以用。 这是linux原生的，功能少点，但比wine的要轻巧不少。
 安装方法2 下载链接在方法1中，优麒麟应用商店微信应用页面右键 “64位下载” ——&amp;gt; “复制链接” 终端下载Deb安装：
-wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34; sudo dpkg -i ~/weixin.deb </description>
+ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34;   sudo dpkg -i ~/weixin.deb </description>
     </item>
     
   </channel>

@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Mon, 14 Feb 2022 17:37:24 +0800</lastBuildDate><atom:link href="https://3ae.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Mar 2022 20:22:55 +0800</lastBuildDate><atom:link href="https://3ae.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>上传公钥实现ssh登录</title>
+      <link>https://3ae.cn/article/2022/linux_ssh_copy_id/</link>
+      <pubDate>Sat, 12 Mar 2022 20:22:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2022/linux_ssh_copy_id/</guid>
+      <description>生成密钥和公钥 如果之前已经存在就不用重新生成了
+$ ssh-keygen -t rsa 上传公钥 $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.0.1 其中root 服务器用户， 192.168.0.1 是服务器ip。之后按照提示输入密码即可
+连接到服务器 直接使用ssh直接连接服务器，无需输入密码
+$ ssh root@192.168.0.1 </description>
+    </item>
+    
     <item>
       <title>在 Linux 命令行中使用的 6 个元字符</title>
       <link>https://3ae.cn/article/2022/linux_metacharacters/</link>
@@ -30,7 +42,7 @@ $ dmesg | grep amd &amp;gt; amd.txt $ cat amd.txt [ 0.897] amd_uncore: 4 amd_df 
       <description>介绍 由于微信官网 https://weixin.qq.com/ 没有linux版本的下载和安装方法，但微信确实提供了优麒麟发行版的官方版本，所以就有了下面的安装方法。
 安装方法 打开优麒麟应用商店官网，然后下载应用，就看到微信了 https://www.ubuntukylin.com/applications/106-cn.html 下载deb包，用命令sudo dpkg -i ，就能安装上了，而且可以用。 这是linux原生的，功能少点，但比wine的要轻巧不少。
 安装方法2 下载链接在方法1中，优麒麟应用商店微信应用页面右键 “64位下载” ——&amp;gt; “复制链接” 终端下载Deb安装：
-wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34; sudo dpkg -i ~/weixin.deb </description>
+ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34;   sudo dpkg -i ~/weixin.deb </description>
     </item>
     
     <item>
@@ -41,7 +53,7 @@ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partn
       <guid>https://3ae.cn/article/2021/docker_postgres/</guid>
       <description>简单步骤   安装docker，可参考 安装docker及简单的使用 或 百度解决；
   拉取postgreSQL的docker镜像文件：
-  docker pull postgres 创建 docker volume，名字为“dv_pgdata&amp;quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）：  docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面：  docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume:  docker volume ls 查看volume信息：  cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容：  cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql：  cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。  docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \  -e &amp;#39;PGADMIN_DEFAULT_EMAIL=hi@nav.</description>
+   docker pull postgres 创建 docker volume，名字为“dv_pgdata&amp;quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）：   docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面：  docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume:  docker volume ls 查看volume信息：  cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容：  cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql：  cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。  docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \  -e &amp;#39;PGADMIN_DEFAULT_EMAIL=hi@nav.</description>
     </item>
     
     <item>
@@ -53,13 +65,13 @@ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partn
       <description>systemd Systemd 是 Linux 系统工具，用来启动守护进程，已成为大多数发行版的标准配置。
 由来 历史上，Linux 的启动一直采用init进程。
 下面的命令用来启动服务。
-$ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺点。
+ $ sudo /etc/init.d/apache2 start  # 或者  $ service apache2 start 这种方法有两个缺点。
 一是启动时间长。init进程是串行启动，只有前一个进程启动完，才会启动下一个进程。
 二是启动脚本复杂。init进程只是执行启动脚本，不管其他事情。脚本需要自己处理各种情况，这往往使得脚本变得很长。
 Systemd 概述 Systemd 就是为了解决这些问题而诞生的。它的设计目标是，为系统的启动和管理提供一套完整的解决方案。
 根据 Linux 惯例，字母d是守护进程（daemon）的缩写。 Systemd 这个名字的含义，就是它要守护整个系统。
 使用了 Systemd，就不需要再用init了。Systemd 取代了initd，成为系统的第一个进程（PID 等于 1），其他进程都是它的子进程。
-$ systemctl --version 上面的命令查看 Systemd 的版本。
+ $ systemctl --version 上面的命令查看 Systemd 的版本。
 使用 systemd 实现开机执行 Shell 脚本 通用操作步骤 创建希望开机马上执行的脚本，本文举例脚本存放位置为 /home/navxin/Example/startup.sh，脚本内容如下：
 #!/bin/bash # 开机时在脚本的同级目录下创建一个名为 StartupTouch.txt 的文件 touch /home/navxin/Example/startup.sh.txt 开机执行的脚本需增加可执行权限才能被 systemd 运行，使用如下命令 chmod u+x /home/navxin/Example/startup.sh chmod g+x /home/navxin/Example/startup.sh 进入 systemd 放置 service 的目录，在该目录下可看到大量服务配置文件，命令如下 # 进入 systemd 的 service 目录 cd /usr/lib/systemd/system # 查看文件列表 ls -al 在该目录创建一个新的 .</description>
     </item>
@@ -78,7 +90,7 @@ $ systemctl --version 上面的命令查看 Systemd 的版本。
 1.2 也可以直接到官网下载，https://download.docker.com/mac/stable/Docker.dmg
 1.3 docker的参考文档：https://docs.docker.com
 1.4 dockerhub查找镜像源地址：https://hub.docker.com
-二. docker的使用 1.1 查看版本 docker --version docker-compose --version docker-machine --version 1.2 查看docker系统信息（包括镜像和容器的数量等） docker info 1.3 帮助命令 docker help 1.4 查看 cpu的状况 docker stats 三. docker的基本命令 镜像相关命令：
+二. docker的使用 1.1 查看版本 docker --version  docker-compose --version  docker-machine --version 1.2 查看docker系统信息（包括镜像和容器的数量等） docker info 1.3 帮助命令 docker help 1.4 查看 cpu的状况 docker stats 三. docker的基本命令 镜像相关命令：
 1.1 查看镜像可用版本（nginx为例） docker search nginx 1.2 下载一个镜像 docker pull nginx:latest #（：后面跟镜像版本） 1.3 运行一个nginx服务器 docker run -d -p 81:80 --name webserver nginx 可选项：</description>
     </item>
     
@@ -136,9 +148,8 @@ $ df --human-readable Filesystem Size Used Avail Use% Mounted on /dev/root 110G 
  Zlib 是一个用于数据压缩的开源库。
 作为使用者，你可能会遇到需要安装 zlib（或 zlib-devel 包）作为另一个应用程序的依赖项的情况。
 但问题来了，如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
-sudo apt install zlib Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
-如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。
-在基于 Ubuntu 的 Linux 发行版上安装 Zlib 打开终端，使用以下命令：</description>
+ sudo apt install zlib  Reading package lists... Done  Building dependency tree  Reading state information... Done  E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
+如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。</description>
     </item>
     
     <item>
@@ -204,13 +215,11 @@ systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox</descrip
       
       <guid>https://3ae.cn/article/2021/mac_find/</guid>
       <description>find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*”
-/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */ find ~ -iname &amp;#34;vue-*.zip&amp;#34; /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &amp;#34;*vue*&amp;#34; /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
+/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */   find ~ -iname &amp;#34;vue-*.zip&amp;#34;  /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &amp;#34;*vue*&amp;#34;  /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
 mdfind命令 描述：通过 mdfind命令查找 语法：mdfind -name 文件名
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
-在 shell 中执行命令  你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面
- 若要运行当前用户个人文件夹中的命令，请在前面加上文件夹说明符。例如，若要运行 MyCommandLineProg，请使用以下命令：
-% ~/MyCommandLineProg 若要打开一个 App，请使用打开命令：</description>
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue  /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
+在 shell 中执行命令  你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面</description>
     </item>
     
     <item>
@@ -225,7 +234,7 @@ crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.
 清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
 上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index
 更换国内源 更换为国内源，否则安装太慢了。 新建文件：~/.cargo/config，内容替换为如下，replace-with 这行可自己 ping 文件中各个国内源头，看哪个源快用哪个：
-[source.crates-io] registry = &amp;quot;https://github.com/rust-lang/crates.io-index&amp;quot; # 替换成你偏好的镜像源 replace-with = &#39;sjtu&#39; # 清华大学 [source.tuna] registry = &amp;quot;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&amp;quot; # 中国科学技术大学 [source.ustc] registry = &amp;quot;git://mirrors.ustc.edu.cn/crates.io-index&amp;quot; # 上海交通大学 [source.sjtu] registry = &amp;quot;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&amp;quot; # rustcc社区 [source.rustcc] registry = &amp;quot;git://crates.rustcc.cn/crates.io-index&amp;quot; # 字节跳动 [source.rsproxy] registry = &amp;quot;https://rsproxy.cn/crates.io-index&amp;quot; </description>
+[source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; # 替换成你偏好的镜像源 replace-with = &amp;#39;sjtu&amp;#39; # 清华大学 [source.tuna] registry = &amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&amp;#34; # 中国科学技术大学 [source.ustc] registry = &amp;#34;git://mirrors.ustc.edu.cn/crates.io-index&amp;#34; # 上海交通大学 [source.sjtu] registry = &amp;#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&amp;#34; # rustcc社区 [source.rustcc] registry = &amp;#34;git://crates.rustcc.cn/crates.io-index&amp;#34; # 字节跳动 [source.rsproxy] registry = &amp;#34;https://rsproxy.cn/crates.io-index&amp;#34; </description>
     </item>
     
     <item>
@@ -305,7 +314,7 @@ Deskreen 还为你提供了管理连接设备的能力。因此，如果你需�
       <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
       <description>Linux 常用命令
 日期 $(date -d &amp;#39;1 day ago&amp;#39; &amp;#39;+%Y-%m-%d&amp;#39;) 常用方法
-数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i}day&amp;#34;) echo $_date done # for i in {1..10} do echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
+数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i}day&amp;#34;) echo $_date done # for i in {1..10} do  echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
     </item>
     
     <item>
@@ -427,8 +436,8 @@ MacOS 用户可以在 MacPorts 或 Homebrew 上找到 GNU sed。
       <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以允许程序员在不编译和运行应用程序的前提下运行 Swift 代码并实时查看结果。
 Swift 通过采用现代编程模式来避免大量常见编程错误：
  变量始终在使用前初始化。 检查数组索引超出范围的错误。 检查整数是否溢出。 可选值确保明确处理 nil 值。 内存被自动管理。 错误处理允许从意外故障控制恢复。  基础部分 常量和变量 声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。 示例：
-let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
-// 这是一个注释 /* 这也是一个注释， 但是是多行的 */ /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0  // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
+// 这是一个注释  /* 这也是一个注释， 但是是多行的 */  /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
     </item>
     
     <item>

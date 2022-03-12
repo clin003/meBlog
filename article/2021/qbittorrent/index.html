@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1644832046">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1647088144">
 	
 	
 </head>
@@ -67,24 +67,24 @@
 <p>注意：Web UI功能不仅限于Qbittorrent-Nox应用程序，此功能还可以与传统的Qbittorent Linux桌面应用程序一起使用</p>
 <h3 id="安装qbittorrent">安装qbittorrent</h3>
 <h4 id="安装add-apt-repository命令">安装add-apt-repository命令</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get install software-properties-common -y
-</code></pre></div><h4 id="添加qbittorrent-nox的ppa软件源">添加qbittorrent-nox的PPA软件源</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
-</code></pre></div><h4 id="安装qbittorrent-noxwebui版">安装qbittorrent-nox（webui版）</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get install qbittorrent-nox
-</code></pre></div><h3 id="设置开机启动">设置开机启动</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get install software-properties-common -y
+</span></span></code></pre></div><h4 id="添加qbittorrent-nox的ppa软件源">添加qbittorrent-nox的PPA软件源</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+</span></span></code></pre></div><h4 id="安装qbittorrent-noxwebui版">安装qbittorrent-nox（webui版）</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get install qbittorrent-nox
+</span></span></code></pre></div><h3 id="设置开机启动">设置开机启动</h3>
 <h4 id="通过rclocal完成">通过rc.local完成</h4>
 <p>如果是Ubuntu-16.10及其之后的版本需要先按下面的文章完成设置后，开机启动才会生效</p>
 <p>Ubuntu-18.04设置开机启动脚本
 起因Ubuntu-16.10（不包括）之前的版本使用的是update-rc.d以及rc.local等方法设置开机启&hellip;</p>
 <p>编辑rc.local脚本</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano /etc/rc.local
-</code></pre></div><p>在exit 0前面（前一行）添加以下内容并保存</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qbittorrent-nox -d
-</code></pre></div><h4 id="通过创建自定义服务实现">通过创建自定义服务实现</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano /etc/rc.local
+</span></span></code></pre></div><p>在exit 0前面（前一行）添加以下内容并保存</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qbittorrent-nox -d
+</span></span></code></pre></div><h4 id="通过创建自定义服务实现">通过创建自定义服务实现</h4>
 <p>创建系统服务</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install nano -y <span style="color:#f92672">&amp;&amp;</span> nano /etc/systemd/system/qbittorrent-nox.service
-</code></pre></div><p>粘贴以下内容，并保存。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install nano -y <span style="color:#f92672">&amp;&amp;</span> nano /etc/systemd/system/qbittorrent-nox.service
+</span></span></code></pre></div><p>粘贴以下内容，并保存。</p>
 <pre tabindex="0"><code>[Unit]
 Description=qBittorrent-nox
 After=network.target
@@ -98,12 +98,12 @@ ExecStart=/usr/bin/qbittorrent-nox -d
 [Install]
 WantedBy=multi-user.target
 </code></pre><p>启动qbittorrent-nox并创建服务配置</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl start qbittorrent-nox
-</code></pre></div><p>设置开机自动启动qbittorrent-nox</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl enable qbittorrent-nox
-</code></pre></div><p>查看qbittorrent-nox状态</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl status qbittorrent-nox
-</code></pre></div><p>默认账号：admin 密码： adminadmin
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl start qbittorrent-nox
+</span></span></code></pre></div><p>设置开机自动启动qbittorrent-nox</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl enable qbittorrent-nox
+</span></span></code></pre></div><p>查看qbittorrent-nox状态</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl status qbittorrent-nox
+</span></span></code></pre></div><p>默认账号：admin 密码： adminadmin
 默认登陆网址：ip:8080</p>
 
 			</div>
@@ -117,6 +117,8 @@ WantedBy=multi-user.target
 		<div>
 			<ul>
 				
+				<li><a href="/article/2022/linux_ssh_copy_id/">上传公钥实现ssh登录</a></li>
+				
 				<li><a href="/article/2022/linux_metacharacters/">在 Linux 命令行中使用的 6 个元字符</a></li>
 				
 				<li><a href="/article/2022/ubuntu_wechat-install/">ubuntu上安装微信(wechat)</a></li>
@@ -124,8 +126,6 @@ WantedBy=multi-user.target
 				<li><a href="/article/2021/docker_postgres/">Docker 运行 postgreSQL</a></li>
 				
 				<li><a href="/article/2021/ubuntu_systemd_service/">Ubuntu使用systemd配置开机运行service</a></li>
-				
-				<li><a href="/article/2021/docker_start/">安装docker及简单的使用</a></li>
 				
 			</ul>
 		</div>

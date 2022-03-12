@@ -20,7 +20,7 @@ crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.
 清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
 上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index
 更换国内源 更换为国内源，否则安装太慢了。 新建文件：~/.cargo/config，内容替换为如下，replace-with 这行可自己 ping 文件中各个国内源头，看哪个源快用哪个：
-[source.crates-io] registry = &amp;quot;https://github.com/rust-lang/crates.io-index&amp;quot; # 替换成你偏好的镜像源 replace-with = &#39;sjtu&#39; # 清华大学 [source.tuna] registry = &amp;quot;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&amp;quot; # 中国科学技术大学 [source.ustc] registry = &amp;quot;git://mirrors.ustc.edu.cn/crates.io-index&amp;quot; # 上海交通大学 [source.sjtu] registry = &amp;quot;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&amp;quot; # rustcc社区 [source.rustcc] registry = &amp;quot;git://crates.rustcc.cn/crates.io-index&amp;quot; # 字节跳动 [source.rsproxy] registry = &amp;quot;https://rsproxy.cn/crates.io-index&amp;quot; </description>
+[source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; # 替换成你偏好的镜像源 replace-with = &amp;#39;sjtu&amp;#39; # 清华大学 [source.tuna] registry = &amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&amp;#34; # 中国科学技术大学 [source.ustc] registry = &amp;#34;git://mirrors.ustc.edu.cn/crates.io-index&amp;#34; # 上海交通大学 [source.sjtu] registry = &amp;#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&amp;#34; # rustcc社区 [source.rustcc] registry = &amp;#34;git://crates.rustcc.cn/crates.io-index&amp;#34; # 字节跳动 [source.rsproxy] registry = &amp;#34;https://rsproxy.cn/crates.io-index&amp;#34; </description>
     </item>
     
     <item>
@@ -63,8 +63,8 @@ goproxy.io：https://goproxy.io/
       <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以允许程序员在不编译和运行应用程序的前提下运行 Swift 代码并实时查看结果。
 Swift 通过采用现代编程模式来避免大量常见编程错误：
  变量始终在使用前初始化。 检查数组索引超出范围的错误。 检查整数是否溢出。 可选值确保明确处理 nil 值。 内存被自动管理。 错误处理允许从意外故障控制恢复。  基础部分 常量和变量 声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。 示例：
-let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
-// 这是一个注释 /* 这也是一个注释， 但是是多行的 */ /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0  // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
+// 这是一个注释  /* 这也是一个注释， 但是是多行的 */  /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
     </item>
     
     <item>

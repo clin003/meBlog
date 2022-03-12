@@ -17,7 +17,7 @@
       <description>介绍 由于微信官网 https://weixin.qq.com/ 没有linux版本的下载和安装方法，但微信确实提供了优麒麟发行版的官方版本，所以就有了下面的安装方法。
 安装方法 打开优麒麟应用商店官网，然后下载应用，就看到微信了 https://www.ubuntukylin.com/applications/106-cn.html 下载deb包，用命令sudo dpkg -i ，就能安装上了，而且可以用。 这是linux原生的，功能少点，但比wine的要轻巧不少。
 安装方法2 下载链接在方法1中，优麒麟应用商店微信应用页面右键 “64位下载” ——&amp;gt; “复制链接” 终端下载Deb安装：
-wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34; sudo dpkg -i ~/weixin.deb </description>
+ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34;   sudo dpkg -i ~/weixin.deb </description>
     </item>
     
     <item>
@@ -29,13 +29,13 @@ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partn
       <description>systemd Systemd 是 Linux 系统工具，用来启动守护进程，已成为大多数发行版的标准配置。
 由来 历史上，Linux 的启动一直采用init进程。
 下面的命令用来启动服务。
-$ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺点。
+ $ sudo /etc/init.d/apache2 start  # 或者  $ service apache2 start 这种方法有两个缺点。
 一是启动时间长。init进程是串行启动，只有前一个进程启动完，才会启动下一个进程。
 二是启动脚本复杂。init进程只是执行启动脚本，不管其他事情。脚本需要自己处理各种情况，这往往使得脚本变得很长。
 Systemd 概述 Systemd 就是为了解决这些问题而诞生的。它的设计目标是，为系统的启动和管理提供一套完整的解决方案。
 根据 Linux 惯例，字母d是守护进程（daemon）的缩写。 Systemd 这个名字的含义，就是它要守护整个系统。
 使用了 Systemd，就不需要再用init了。Systemd 取代了initd，成为系统的第一个进程（PID 等于 1），其他进程都是它的子进程。
-$ systemctl --version 上面的命令查看 Systemd 的版本。
+ $ systemctl --version 上面的命令查看 Systemd 的版本。
 使用 systemd 实现开机执行 Shell 脚本 通用操作步骤 创建希望开机马上执行的脚本，本文举例脚本存放位置为 /home/navxin/Example/startup.sh，脚本内容如下：
 #!/bin/bash # 开机时在脚本的同级目录下创建一个名为 StartupTouch.txt 的文件 touch /home/navxin/Example/startup.sh.txt 开机执行的脚本需增加可执行权限才能被 systemd 运行，使用如下命令 chmod u+x /home/navxin/Example/startup.sh chmod g+x /home/navxin/Example/startup.sh 进入 systemd 放置 service 的目录，在该目录下可看到大量服务配置文件，命令如下 # 进入 systemd 的 service 目录 cd /usr/lib/systemd/system # 查看文件列表 ls -al 在该目录创建一个新的 .</description>
     </item>
@@ -80,9 +80,8 @@ tcpdump -i eth0 icmp and icmp[icmptype]=icmp-echo -n 参考：nixCraft[1]</descr
  Zlib 是一个用于数据压缩的开源库。
 作为使用者，你可能会遇到需要安装 zlib（或 zlib-devel 包）作为另一个应用程序的依赖项的情况。
 但问题来了，如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
-sudo apt install zlib Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
-如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。
-在基于 Ubuntu 的 Linux 发行版上安装 Zlib 打开终端，使用以下命令：</description>
+ sudo apt install zlib  Reading package lists... Done  Building dependency tree  Reading state information... Done  E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
+如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。</description>
     </item>
     
     <item>

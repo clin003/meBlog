@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Sun, 30 Jan 2022 15:19:12 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Mar 2022 20:22:55 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://3ae.cn/tags/linux/</link>
+      <pubDate>Sat, 12 Mar 2022 20:22:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh-copy-id</title>
+      <link>https://3ae.cn/tags/ssh-copy-id/</link>
+      <pubDate>Sat, 12 Mar 2022 20:22:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/tags/ssh-copy-id/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Ubuntu</title>
       <link>https://3ae.cn/tags/ubuntu/</link>
@@ -50,15 +68,6 @@
       <pubDate>Wed, 29 Sep 2021 16:19:42 +0800</pubDate>
       
       <guid>https://3ae.cn/tags/firefox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://3ae.cn/tags/linux/</link>
-      <pubDate>Sat, 28 Aug 2021 21:14:41 +0800</pubDate>
-      
-      <guid>https://3ae.cn/tags/linux/</guid>
       <description></description>
     </item>
     

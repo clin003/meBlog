@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1644832046">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1647088144">
 	
 	
 </head>
@@ -62,135 +62,135 @@
 			<div>
 				<p>Linux 常用命令</p>
 <h3 id="日期">日期</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">$(</span>date -d <span style="color:#e6db74">&#39;1 day ago&#39;</span> <span style="color:#e6db74">&#39;+%Y-%m-%d&#39;</span><span style="color:#66d9ef">)</span>
-</code></pre></div><p>常用方法</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span>date -d <span style="color:#e6db74">&#39;1 day ago&#39;</span> <span style="color:#e6db74">&#39;+%Y-%m-%d&#39;</span><span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><p>常用方法</p>
 <h3 id="数字格式化">数字格式化</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">part<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>printf <span style="color:#e6db74">&#34;%03d&#34;</span> $i<span style="color:#e6db74">`</span> <span style="color:#75715e"># 左补0</span>
-</code></pre></div><h3 id="删除旧文件">删除旧文件</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 找出5天前修改的文件名以.tar结尾的文件进行删除</span>
-find /www/backup -mtime +5 -name <span style="color:#e6db74">&#34;*.tar&#34;</span>  |xargs rm
-</code></pre></div><h3 id="for循环">for循环</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">for</span> <span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;10;i++<span style="color:#f92672">))</span>
-<span style="color:#66d9ef">do</span>
-_date<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d -d <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74"> day&#34;</span><span style="color:#66d9ef">)</span>
-echo $_date
-<span style="color:#66d9ef">done</span>
-<span style="color:#75715e">#</span>
-<span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>1..10<span style="color:#f92672">}</span>
-<span style="color:#66d9ef">do</span>
-        echo $i
-<span style="color:#66d9ef">done</span>
-</code></pre></div><h3 id="文件合并">文件合并</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find ./ -name <span style="color:#e6db74">&#34;item*&#34;</span> | xargs sed <span style="color:#e6db74">&#39;a\&#39;</span> &gt; all.txt
-find ./ -name <span style="color:#e6db74">&#34;item*&#34;</span> | xargs cat &gt; all.txt
-:s/old/new           <span style="color:#75715e">#替换当前行的第一个old为new</span>
-:s/old/new/g         <span style="color:#75715e">#替换当前行的所有的old为new</span>
-:.,$s/old/new        <span style="color:#75715e">#替换当前行到最后行的第一个old为new</span>
-:.,$s/old/new/g      <span style="color:#75715e">#替换当前行到最后行的所有old为new</span>
-:N,Ms/old/new        <span style="color:#75715e">#替换第N行到第M行的第一个old为new</span>
-:N,Ms/old/new/g      <span style="color:#75715e">#替换第N行到第M行的所有old为new</span>
-:N,Ms/old/new/gc     <span style="color:#75715e">#替换第N行到第M行的所有old为new，且逐一询问是否删除</span>
-:%s/old/new          <span style="color:#75715e">#替换所有行的第一个old为new</span>
-:%s/old/new/g        <span style="color:#75715e">#替换所有行的所有old为new</span>
-</code></pre></div><h3 id="文件排序交集并集差集">文件排序、交集、并集、差集</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#排序</span>
-sort a.txt |uniq -c
-<span style="color:#75715e">#一、交集</span>
-sort a.txt b.txt | uniq -d
-<span style="color:#75715e">#二、并集</span>
-sort a.txt b.txt | uniq
-<span style="color:#75715e">#三、差集 a.txt-b.txt:</span>
-sort a.txt b.txt b.txt | uniq -u
-<span style="color:#75715e">#差集 b.txt - a.txt:</span>
-sort b.txt a.txt a.txt | uniq -u
-</code></pre></div><h3 id="删除重复行">删除重复行</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sort -k2n all.txt | uniq &gt; real.out
-sort -k2n all.txt | awk <span style="color:#e6db74">&#39;{if ($0!=line) print;line=$0}&#39;</span>
-sort -k2n all.txt | sed <span style="color:#e6db74">&#39;$!N; /^\(.*\)\n\1$/!P; D&#39;</span>
-</code></pre></div><h3 id="删除空格">删除空格</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat all.txt |sed s/<span style="color:#f92672">[[</span>:space:<span style="color:#f92672">]]</span>//g
-</code></pre></div><h3 id="awk-去重">awk 去重</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#e6db74">&#39;!($1 in a){a[$1];print $1}&#39;</span>
-<span style="color:#75715e">#或</span>
-sort $1 | uniq 
-<span style="color:#75715e"># awk结果使用逗号间隔拼接</span>
-awk -F <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#e6db74">&#39;{print $1}&#39;</span> | xargs | tr <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#e6db74">&#39;,&#39;</span>
-</code></pre></div><h3 id="常用状态查看">常用状态查看</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 按CPU和内存倒序前n个进程</span>
-ps -aux --sort -pcpu,+pmem | head -n <span style="color:#ae81ff">5</span>
-<span style="color:#75715e"># 按进程名查看</span>
-ps -f -C java
-</code></pre></div><h3 id="文件同步rsync">文件同步rsync</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -zvrtopgl --progress --delete /fromDist/ root@s1:/toDist/
-</code></pre></div><h3 id="链接状态统计">链接状态统计</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -n | awk <span style="color:#e6db74">&#39;/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}&#39;</span>
-<span style="color:#75715e"># TCP连接状态详解 </span>
-<span style="color:#75715e"># LISTEN: 服务器在侦听来自远方的TCP端口的连接请求</span>
-<span style="color:#75715e"># SYN-SENT: 在发送连接请求后等待匹配的连接请求</span>
-<span style="color:#75715e"># SYN_RECV: 一个连接请求已经到达，等待确认</span>
-<span style="color:#75715e"># SYN-RECEIVED: 再收到和发送一个连接请求后等待对方对连接请求的确认</span>
-<span style="color:#75715e"># ESTABLISHED: 代表一个打开的连接/正常数据传输状态/当前并发连接数</span>
-<span style="color:#75715e"># FIN_WAIT1: 等待远程TCP连接中断请求，或先前的连接中断请求的确认/应用说它已经完成</span>
-<span style="color:#75715e"># FIN_WAIT2: 从远程TCP等待连接中断请求/另一边已同意释放</span>
-<span style="color:#75715e"># CLOSE-WAIT: 等待从本地用户发来的连接中断请求</span>
-<span style="color:#75715e"># CLOSING: 等待远程TCP对连接中断的确认/两边同时尝试关闭</span>
-<span style="color:#75715e"># LAST-ACK: 等待原来的发向远程TCP的连接中断请求的确认/等待所有分组死掉</span>
-<span style="color:#75715e"># TIME-WAIT: 等待足够的时间以确保远程TCP接收到连接中断请求的确认/另一边已初始化一个释放</span>
-<span style="color:#75715e"># ITMED_WAIT:  等待所有分组死掉</span>
-<span style="color:#75715e"># CLOSED： 没有任何连接状态</span>
-</code></pre></div><h3 id="cpu内存系统信息查看">CPU/内存/系统信息查看</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># cpu</span>
-grep <span style="color:#e6db74">&#34;model name&#34;</span> /proc/cpuinfo 
-cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
-cat /proc/cpuinfo | grep physical | uniq -c
-<span style="color:#75715e"># cpu位数</span>
-echo $HOSTTYPE
-<span style="color:#75715e"># 内存</span>
-grep MemTotal /proc/meminfo 
-<span style="color:#75715e"># linux 版本</span>
-cat /etc/redhat-release
-cat /etc/os-release
-cat /etc/lsb-release
-<span style="color:#75715e"># linux 内核版本</span>
-uname -a 
-uname -r
-</code></pre></div><h3 id="常用监控工具">常用监控工具</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 网络监控</span>
-iftop
-<span style="color:#75715e"># IO监控</span>
-iotop
-<span style="color:#75715e"># 负载监控</span>
-htop
-top
-</code></pre></div><h3 id="进程监控">进程监控</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pidstat -p <span style="color:#ae81ff">843</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span> -u -t
-<span style="color:#75715e"># -u：代表对 CPU 使用率的监控</span>
-<span style="color:#75715e"># 参数 1 3 代表每秒采样一次，一共三次</span>
-<span style="color:#75715e"># -t：将监控级别细化到线程</span>
-</code></pre></div><h3 id="ssh相关">ssh相关</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 秘钥生成</span>
-ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;your_hostname&#34;</span>
-<span style="color:#75715e"># 免密登录</span>
-cat ~/.ssh/id_rsa.pub | ssh  root@ip <span style="color:#e6db74">&#34;cat &gt;&gt; .ssh/authorized_keys&#34;</span>
-</code></pre></div><h3 id="firewalld防火墙使用">firewalld防火墙使用</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 禁止ping</span>
-firewall-cmd --permanent --add-rich-rule<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rule protocol value=icmp drop&#39;</span>
-<span style="color:#75715e"># 允许192.168.1.0/24主机所有连接</span>
-firewall-cmd --add-rich-rule<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rule family=&#34;ipv4&#34; source address=&#34;192.168.1.0&#34; accept&#39;</span>
-<span style="color:#75715e"># 禁止某IP访问</span>
-firewall-cmd --permanent --zone<span style="color:#f92672">=</span>public --add-rich-rule<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rule family=ipv4 source address=&#39;123.56.247.76/24&#39; reject&#34;</span>
-<span style="color:#75715e"># 开放端口</span>
-firewall-cmd --zone<span style="color:#f92672">=</span>public --permanent --add-port<span style="color:#f92672">=</span>8080/tcp
-firewall-cmd --reload
-</code></pre></div><h3 id="文件统计">文件统计</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -g |awk <span style="color:#e6db74">&#39;BEGIN{sum=0}{sum+=$4}END{print sum/(1024*1024*1024)}&#39;</span>
-</code></pre></div><h3 id="history格式及数量修改">history格式及数量修改</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export HISTSIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>
-export HISTTIMEFORMAT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; %Y-%m-%d %H:%M:%S - `who am i 2&gt;/dev/null | awk &#39;{print </span>$NF<span style="color:#e6db74">}&#39;|sed -e &#39;s/[()]//g&#39;` - `who -u am i |awk &#39;{print </span>$1<span style="color:#e6db74">}&#39;` &#34;</span>
-export PROMPT_COMMAND<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;history 1 &gt;&gt; /var/log/.myhistory&#34;</span> <span style="color:#75715e">#将命令记录输出到文本中</span>
-touch /var/log/.myhistory
-chmod  /var/log/.myhistory
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>part<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>printf <span style="color:#e6db74">&#34;%03d&#34;</span> $i<span style="color:#e6db74">`</span> <span style="color:#75715e"># 左补0</span>
+</span></span></code></pre></div><h3 id="删除旧文件">删除旧文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 找出5天前修改的文件名以.tar结尾的文件进行删除</span>
+</span></span><span style="display:flex;"><span>find /www/backup -mtime +5 -name <span style="color:#e6db74">&#34;*.tar&#34;</span>  |xargs rm
+</span></span></code></pre></div><h3 id="for循环">for循环</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;10;i++<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>_date<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d -d <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74"> day&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>echo $_date
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>1..10<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>        echo $i
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><h3 id="文件合并">文件合并</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find ./ -name <span style="color:#e6db74">&#34;item*&#34;</span> | xargs sed <span style="color:#e6db74">&#39;a\&#39;</span> &gt; all.txt
+</span></span><span style="display:flex;"><span>find ./ -name <span style="color:#e6db74">&#34;item*&#34;</span> | xargs cat &gt; all.txt
+</span></span><span style="display:flex;"><span>:s/old/new           <span style="color:#75715e">#替换当前行的第一个old为new</span>
+</span></span><span style="display:flex;"><span>:s/old/new/g         <span style="color:#75715e">#替换当前行的所有的old为new</span>
+</span></span><span style="display:flex;"><span>:.,$s/old/new        <span style="color:#75715e">#替换当前行到最后行的第一个old为new</span>
+</span></span><span style="display:flex;"><span>:.,$s/old/new/g      <span style="color:#75715e">#替换当前行到最后行的所有old为new</span>
+</span></span><span style="display:flex;"><span>:N,Ms/old/new        <span style="color:#75715e">#替换第N行到第M行的第一个old为new</span>
+</span></span><span style="display:flex;"><span>:N,Ms/old/new/g      <span style="color:#75715e">#替换第N行到第M行的所有old为new</span>
+</span></span><span style="display:flex;"><span>:N,Ms/old/new/gc     <span style="color:#75715e">#替换第N行到第M行的所有old为new，且逐一询问是否删除</span>
+</span></span><span style="display:flex;"><span>:%s/old/new          <span style="color:#75715e">#替换所有行的第一个old为new</span>
+</span></span><span style="display:flex;"><span>:%s/old/new/g        <span style="color:#75715e">#替换所有行的所有old为new</span>
+</span></span></code></pre></div><h3 id="文件排序交集并集差集">文件排序、交集、并集、差集</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#排序</span>
+</span></span><span style="display:flex;"><span>sort a.txt |uniq -c
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#一、交集</span>
+</span></span><span style="display:flex;"><span>sort a.txt b.txt | uniq -d
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#二、并集</span>
+</span></span><span style="display:flex;"><span>sort a.txt b.txt | uniq
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#三、差集 a.txt-b.txt:</span>
+</span></span><span style="display:flex;"><span>sort a.txt b.txt b.txt | uniq -u
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#差集 b.txt - a.txt:</span>
+</span></span><span style="display:flex;"><span>sort b.txt a.txt a.txt | uniq -u
+</span></span></code></pre></div><h3 id="删除重复行">删除重复行</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sort -k2n all.txt | uniq &gt; real.out
+</span></span><span style="display:flex;"><span>sort -k2n all.txt | awk <span style="color:#e6db74">&#39;{if ($0!=line) print;line=$0}&#39;</span>
+</span></span><span style="display:flex;"><span>sort -k2n all.txt | sed <span style="color:#e6db74">&#39;$!N; /^\(.*\)\n\1$/!P; D&#39;</span>
+</span></span></code></pre></div><h3 id="删除空格">删除空格</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat all.txt |sed s/<span style="color:#f92672">[[</span>:space:<span style="color:#f92672">]]</span>//g
+</span></span></code></pre></div><h3 id="awk-去重">awk 去重</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>awk <span style="color:#e6db74">&#39;!($1 in a){a[$1];print $1}&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#或</span>
+</span></span><span style="display:flex;"><span>sort $1 | uniq 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># awk结果使用逗号间隔拼接</span>
+</span></span><span style="display:flex;"><span>awk -F <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#e6db74">&#39;{print $1}&#39;</span> | xargs | tr <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#e6db74">&#39;,&#39;</span>
+</span></span></code></pre></div><h3 id="常用状态查看">常用状态查看</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 按CPU和内存倒序前n个进程</span>
+</span></span><span style="display:flex;"><span>ps -aux --sort -pcpu,+pmem | head -n <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按进程名查看</span>
+</span></span><span style="display:flex;"><span>ps -f -C java
+</span></span></code></pre></div><h3 id="文件同步rsync">文件同步rsync</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -zvrtopgl --progress --delete /fromDist/ root@s1:/toDist/
+</span></span></code></pre></div><h3 id="链接状态统计">链接状态统计</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>netstat -n | awk <span style="color:#e6db74">&#39;/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># TCP连接状态详解 </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># LISTEN: 服务器在侦听来自远方的TCP端口的连接请求</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SYN-SENT: 在发送连接请求后等待匹配的连接请求</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SYN_RECV: 一个连接请求已经到达，等待确认</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SYN-RECEIVED: 再收到和发送一个连接请求后等待对方对连接请求的确认</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ESTABLISHED: 代表一个打开的连接/正常数据传输状态/当前并发连接数</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># FIN_WAIT1: 等待远程TCP连接中断请求，或先前的连接中断请求的确认/应用说它已经完成</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># FIN_WAIT2: 从远程TCP等待连接中断请求/另一边已同意释放</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CLOSE-WAIT: 等待从本地用户发来的连接中断请求</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CLOSING: 等待远程TCP对连接中断的确认/两边同时尝试关闭</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># LAST-ACK: 等待原来的发向远程TCP的连接中断请求的确认/等待所有分组死掉</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># TIME-WAIT: 等待足够的时间以确保远程TCP接收到连接中断请求的确认/另一边已初始化一个释放</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ITMED_WAIT:  等待所有分组死掉</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CLOSED： 没有任何连接状态</span>
+</span></span></code></pre></div><h3 id="cpu内存系统信息查看">CPU/内存/系统信息查看</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># cpu</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#e6db74">&#34;model name&#34;</span> /proc/cpuinfo 
+</span></span><span style="display:flex;"><span>cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
+</span></span><span style="display:flex;"><span>cat /proc/cpuinfo | grep physical | uniq -c
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cpu位数</span>
+</span></span><span style="display:flex;"><span>echo $HOSTTYPE
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 内存</span>
+</span></span><span style="display:flex;"><span>grep MemTotal /proc/meminfo 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># linux 版本</span>
+</span></span><span style="display:flex;"><span>cat /etc/redhat-release
+</span></span><span style="display:flex;"><span>cat /etc/os-release
+</span></span><span style="display:flex;"><span>cat /etc/lsb-release
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># linux 内核版本</span>
+</span></span><span style="display:flex;"><span>uname -a 
+</span></span><span style="display:flex;"><span>uname -r
+</span></span></code></pre></div><h3 id="常用监控工具">常用监控工具</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 网络监控</span>
+</span></span><span style="display:flex;"><span>iftop
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># IO监控</span>
+</span></span><span style="display:flex;"><span>iotop
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 负载监控</span>
+</span></span><span style="display:flex;"><span>htop
+</span></span><span style="display:flex;"><span>top
+</span></span></code></pre></div><h3 id="进程监控">进程监控</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pidstat -p <span style="color:#ae81ff">843</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span> -u -t
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -u：代表对 CPU 使用率的监控</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 参数 1 3 代表每秒采样一次，一共三次</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -t：将监控级别细化到线程</span>
+</span></span></code></pre></div><h3 id="ssh相关">ssh相关</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 秘钥生成</span>
+</span></span><span style="display:flex;"><span>ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;your_hostname&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 免密登录</span>
+</span></span><span style="display:flex;"><span>cat ~/.ssh/id_rsa.pub | ssh  root@ip <span style="color:#e6db74">&#34;cat &gt;&gt; .ssh/authorized_keys&#34;</span>
+</span></span></code></pre></div><h3 id="firewalld防火墙使用">firewalld防火墙使用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 禁止ping</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --permanent --add-rich-rule<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rule protocol value=icmp drop&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 允许192.168.1.0/24主机所有连接</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --add-rich-rule<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rule family=&#34;ipv4&#34; source address=&#34;192.168.1.0&#34; accept&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 禁止某IP访问</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --permanent --zone<span style="color:#f92672">=</span>public --add-rich-rule<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rule family=ipv4 source address=&#39;123.56.247.76/24&#39; reject&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 开放端口</span>
+</span></span><span style="display:flex;"><span>firewall-cmd --zone<span style="color:#f92672">=</span>public --permanent --add-port<span style="color:#f92672">=</span>8080/tcp
+</span></span><span style="display:flex;"><span>firewall-cmd --reload
+</span></span></code></pre></div><h3 id="文件统计">文件统计</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -g |awk <span style="color:#e6db74">&#39;BEGIN{sum=0}{sum+=$4}END{print sum/(1024*1024*1024)}&#39;</span>
+</span></span></code></pre></div><h3 id="history格式及数量修改">history格式及数量修改</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export HISTSIZE<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>
+</span></span><span style="display:flex;"><span>export HISTTIMEFORMAT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; %Y-%m-%d %H:%M:%S - `who am i 2&gt;/dev/null | awk &#39;{print </span>$NF<span style="color:#e6db74">}&#39;|sed -e &#39;s/[()]//g&#39;` - `who -u am i |awk &#39;{print </span>$1<span style="color:#e6db74">}&#39;` &#34;</span>
+</span></span><span style="display:flex;"><span>export PROMPT_COMMAND<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;history 1 &gt;&gt; /var/log/.myhistory&#34;</span> <span style="color:#75715e">#将命令记录输出到文本中</span>
+</span></span><span style="display:flex;"><span>touch /var/log/.myhistory
+</span></span><span style="display:flex;"><span>chmod  /var/log/.myhistory
+</span></span></code></pre></div>
 			</div>
 		</article>
 	</main>
@@ -202,6 +202,8 @@ chmod  /var/log/.myhistory
 		<div>
 			<ul>
 				
+				<li><a href="/article/2022/linux_ssh_copy_id/">上传公钥实现ssh登录</a></li>
+				
 				<li><a href="/article/2022/linux_metacharacters/">在 Linux 命令行中使用的 6 个元字符</a></li>
 				
 				<li><a href="/article/2022/ubuntu_wechat-install/">ubuntu上安装微信(wechat)</a></li>
@@ -209,8 +211,6 @@ chmod  /var/log/.myhistory
 				<li><a href="/article/2021/docker_postgres/">Docker 运行 postgreSQL</a></li>
 				
 				<li><a href="/article/2021/ubuntu_systemd_service/">Ubuntu使用systemd配置开机运行service</a></li>
-				
-				<li><a href="/article/2021/docker_start/">安装docker及简单的使用</a></li>
 				
 			</ul>
 		</div>

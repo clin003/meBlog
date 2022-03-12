@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Sat, 28 Aug 2021 21:14:41 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Mar 2022 20:22:55 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>上传公钥实现ssh登录</title>
+      <link>https://3ae.cn/article/2022/linux_ssh_copy_id/</link>
+      <pubDate>Sat, 12 Mar 2022 20:22:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2022/linux_ssh_copy_id/</guid>
+      <description>生成密钥和公钥 如果之前已经存在就不用重新生成了
+$ ssh-keygen -t rsa 上传公钥 $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.0.1 其中root 服务器用户， 192.168.0.1 是服务器ip。之后按照提示输入密码即可
+连接到服务器 直接使用ssh直接连接服务器，无需输入密码
+$ ssh root@192.168.0.1 </description>
+    </item>
+    
     <item>
       <title>如何知道谁在ping我？</title>
       <link>https://3ae.cn/article/2021/tcpdump_icmp-echo/</link>
@@ -33,9 +45,8 @@ tcpdump -i eth0 icmp and icmp[icmptype]=icmp-echo -n 参考：nixCraft[1]</descr
  Zlib 是一个用于数据压缩的开源库。
 作为使用者，你可能会遇到需要安装 zlib（或 zlib-devel 包）作为另一个应用程序的依赖项的情况。
 但问题来了，如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
-sudo apt install zlib Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
-如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。
-在基于 Ubuntu 的 Linux 发行版上安装 Zlib 打开终端，使用以下命令：</description>
+ sudo apt install zlib  Reading package lists... Done  Building dependency tree  Reading state information... Done  E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
+如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。</description>
     </item>
     
     <item>
@@ -88,7 +99,7 @@ Deskreen 还为你提供了管理连接设备的能力。因此，如果你需�
       <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
       <description>Linux 常用命令
 日期 $(date -d &amp;#39;1 day ago&amp;#39; &amp;#39;+%Y-%m-%d&amp;#39;) 常用方法
-数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i}day&amp;#34;) echo $_date done # for i in {1..10} do echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
+数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i}day&amp;#34;) echo $_date done # for i in {1..10} do  echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
     </item>
     
     <item>

@@ -35,7 +35,7 @@ crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.
 清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
 上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index
 更换国内源 更换为国内源，否则安装太慢了。 新建文件：~/.cargo/config，内容替换为如下，replace-with 这行可自己 ping 文件中各个国内源头，看哪个源快用哪个：
-[source.crates-io] registry = &amp;quot;https://github.com/rust-lang/crates.io-index&amp;quot; # 替换成你偏好的镜像源 replace-with = &#39;sjtu&#39; # 清华大学 [source.tuna] registry = &amp;quot;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&amp;quot; # 中国科学技术大学 [source.ustc] registry = &amp;quot;git://mirrors.ustc.edu.cn/crates.io-index&amp;quot; # 上海交通大学 [source.sjtu] registry = &amp;quot;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&amp;quot; # rustcc社区 [source.rustcc] registry = &amp;quot;git://crates.rustcc.cn/crates.io-index&amp;quot; # 字节跳动 [source.rsproxy] registry = &amp;quot;https://rsproxy.cn/crates.io-index&amp;quot; </description>
+[source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; # 替换成你偏好的镜像源 replace-with = &amp;#39;sjtu&amp;#39; # 清华大学 [source.tuna] registry = &amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&amp;#34; # 中国科学技术大学 [source.ustc] registry = &amp;#34;git://mirrors.ustc.edu.cn/crates.io-index&amp;#34; # 上海交通大学 [source.sjtu] registry = &amp;#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&amp;#34; # rustcc社区 [source.rustcc] registry = &amp;#34;git://crates.rustcc.cn/crates.io-index&amp;#34; # 字节跳动 [source.rsproxy] registry = &amp;#34;https://rsproxy.cn/crates.io-index&amp;#34; </description>
     </item>
     
     <item>

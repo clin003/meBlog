@@ -17,7 +17,7 @@
       <description>介绍 由于微信官网 https://weixin.qq.com/ 没有linux版本的下载和安装方法，但微信确实提供了优麒麟发行版的官方版本，所以就有了下面的安装方法。
 安装方法 打开优麒麟应用商店官网，然后下载应用，就看到微信了 https://www.ubuntukylin.com/applications/106-cn.html 下载deb包，用命令sudo dpkg -i ，就能安装上了，而且可以用。 这是linux原生的，功能少点，但比wine的要轻巧不少。
 安装方法2 下载链接在方法1中，优麒麟应用商店微信应用页面右键 “64位下载” ——&amp;gt; “复制链接” 终端下载Deb安装：
-wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34; sudo dpkg -i ~/weixin.deb </description>
+ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34;   sudo dpkg -i ~/weixin.deb </description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partn
       <guid>https://3ae.cn/article/2021/docker_postgres/</guid>
       <description>简单步骤   安装docker，可参考 安装docker及简单的使用 或 百度解决；
   拉取postgreSQL的docker镜像文件：
-  docker pull postgres 创建 docker volume，名字为“dv_pgdata&amp;quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）：  docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面：  docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume:  docker volume ls 查看volume信息：  cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容：  cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql：  cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。  docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \  -e &amp;#39;PGADMIN_DEFAULT_EMAIL=hi@nav.</description>
+   docker pull postgres 创建 docker volume，名字为“dv_pgdata&amp;quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）：   docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面：  docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume:  docker volume ls 查看volume信息：  cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容：  cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql：  cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。  docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \  -e &amp;#39;PGADMIN_DEFAULT_EMAIL=hi@nav.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partn
 1.2 也可以直接到官网下载，https://download.docker.com/mac/stable/Docker.dmg
 1.3 docker的参考文档：https://docs.docker.com
 1.4 dockerhub查找镜像源地址：https://hub.docker.com
-二. docker的使用 1.1 查看版本 docker --version docker-compose --version docker-machine --version 1.2 查看docker系统信息（包括镜像和容器的数量等） docker info 1.3 帮助命令 docker help 1.4 查看 cpu的状况 docker stats 三. docker的基本命令 镜像相关命令：
+二. docker的使用 1.1 查看版本 docker --version  docker-compose --version  docker-machine --version 1.2 查看docker系统信息（包括镜像和容器的数量等） docker info 1.3 帮助命令 docker help 1.4 查看 cpu的状况 docker stats 三. docker的基本命令 镜像相关命令：
 1.1 查看镜像可用版本（nginx为例） docker search nginx 1.2 下载一个镜像 docker pull nginx:latest #（：后面跟镜像版本） 1.3 运行一个nginx服务器 docker run -d -p 81:80 --name webserver nginx 可选项：</description>
     </item>
     
@@ -99,7 +99,7 @@ crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.
 清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
 上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index
 更换国内源 更换为国内源，否则安装太慢了。 新建文件：~/.cargo/config，内容替换为如下，replace-with 这行可自己 ping 文件中各个国内源头，看哪个源快用哪个：
-[source.crates-io] registry = &amp;quot;https://github.com/rust-lang/crates.io-index&amp;quot; # 替换成你偏好的镜像源 replace-with = &#39;sjtu&#39; # 清华大学 [source.tuna] registry = &amp;quot;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&amp;quot; # 中国科学技术大学 [source.ustc] registry = &amp;quot;git://mirrors.ustc.edu.cn/crates.io-index&amp;quot; # 上海交通大学 [source.sjtu] registry = &amp;quot;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&amp;quot; # rustcc社区 [source.rustcc] registry = &amp;quot;git://crates.rustcc.cn/crates.io-index&amp;quot; # 字节跳动 [source.rsproxy] registry = &amp;quot;https://rsproxy.cn/crates.io-index&amp;quot; </description>
+[source.crates-io] registry = &amp;#34;https://github.com/rust-lang/crates.io-index&amp;#34; # 替换成你偏好的镜像源 replace-with = &amp;#39;sjtu&amp;#39; # 清华大学 [source.tuna] registry = &amp;#34;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&amp;#34; # 中国科学技术大学 [source.ustc] registry = &amp;#34;git://mirrors.ustc.edu.cn/crates.io-index&amp;#34; # 上海交通大学 [source.sjtu] registry = &amp;#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&amp;#34; # rustcc社区 [source.rustcc] registry = &amp;#34;git://crates.rustcc.cn/crates.io-index&amp;#34; # 字节跳动 [source.rsproxy] registry = &amp;#34;https://rsproxy.cn/crates.io-index&amp;#34; </description>
     </item>
     
     <item>
@@ -154,8 +154,8 @@ goproxy.io：https://goproxy.io/
       <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以允许程序员在不编译和运行应用程序的前提下运行 Swift 代码并实时查看结果。
 Swift 通过采用现代编程模式来避免大量常见编程错误：
  变量始终在使用前初始化。 检查数组索引超出范围的错误。 检查整数是否溢出。 可选值确保明确处理 nil 值。 内存被自动管理。 错误处理允许从意外故障控制恢复。  基础部分 常量和变量 声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。 示例：
-let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
-// 这是一个注释 /* 这也是一个注释， 但是是多行的 */ /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0  // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
+// 这是一个注释  /* 这也是一个注释， 但是是多行的 */  /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
     </item>
     
     <item>
