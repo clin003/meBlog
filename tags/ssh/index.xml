@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on 白菜林</title>
+    <link>https://3ae.cn/tags/ssh/</link>
+    <description>Recent content in ssh on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>baicai</copyright>
+    <lastBuildDate>Sat, 12 Mar 2022 20:22:55 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>上传公钥实现ssh登录</title>
+      <link>https://3ae.cn/article/2022/linux_ssh_copy_id/</link>
+      <pubDate>Sat, 12 Mar 2022 20:22:55 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2022/linux_ssh_copy_id/</guid>
+      <description>生成密钥和公钥 如果之前已经存在就不用重新生成了
+$ ssh-keygen -t rsa 上传公钥 $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.0.1 其中root 服务器用户， 192.168.0.1 是服务器ip。之后按照提示输入密码即可
+连接到服务器 直接使用ssh直接连接服务器，无需输入密码
+$ ssh root@192.168.0.1 </description>
+    </item>
+    
+  </channel>
+</rss>
