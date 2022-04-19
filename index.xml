@@ -402,11 +402,12 @@ Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指
       <pubDate>Thu, 27 May 2021 11:22:40 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/goproxy/</guid>
-      <description>Go Module代理仓库服务 七牛云提供的：https://goproxy.cn/
-goproxy.io：https://goproxy.io/
-百度云BOS提供的：https://goproxy.baidu.com/
+      <description>Go Module代理仓库服务 七牛云提供的：https://goproxy.cn
+goproxy.io：https://goproxy.io 或 https://proxy.golang.com.cn
+百度云BOS提供的：https://goproxy.bj.bcebos.com/
 阿里云提供的：https://mirrors.aliyun.com/goproxy/
-下载 Go 镜像（Golang Downloads Mirrors） 下载 Go 镜像：https://golang.google.cn/
+下载 Go 镜像（Golang Downloads Mirrors） 官网：https://go.dev/
+下载 Go 镜像：https://golang.google.cn/
 下载 Go 镜像：https://gomirrors.org/
 下载 Go 镜像：https://studygolang.com/dl</description>
     </item>
