@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2022/ubuntu_kill_port_porc/" />
+	<link rel="canonical" href="https://3ae.cn/article/2022/ubuntu_kill_port_porc/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>如何关闭 Ubuntu 中的开放端口？</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1655651963">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>如何关闭 Ubuntu 中的开放端口？</h1>
+			<b><time>2022.06.19 22:53</time></b>
+		       
+		           <a href="/tags/ubuntu">Ubuntu</a>
+        	       
+		           <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C">命令行</a>
+        	       
+		           <a href="/tags/netstat">netstat</a>
+        	       
+
+			<div>
+				<p>如何关闭 Ubuntu 中的开放端口？</p>
+<h3 id="问题描述">问题描述</h3>
+<p>列出所有打开的端口，以关闭一些应用程序的端口。</p>
+<h3 id="最佳办法">最佳办法</h3>
+<p>如果要关闭端口，则必须终止进程或停止相关服务。
+可以使用 netstat -nalp 和 lsof -i:port 工具来识别打开端口后面的进程/二进制文件。</p>
+<p>netstat 可用于查看端口统计信息。
+要显示所有开放端口的列表：</p>
+<pre><code>sudo netstat -lnp
+</code></pre>
+<p>列出所有侦听端口号以及每个负责的进程。终止或终止进程以关闭端口。 ( kill , pkill …)</p>
+<p>关闭一个打开的端口：</p>
+<pre><code>sudo fuser -k port_no/tcp
+</code></pre>
+<p>例子：</p>
+<pre><code>sudo fuser -k 8080/tcp
+</code></pre>
+<h3 id="次佳办法">次佳办法</h3>
+<p>要在 ubuntu 中关闭开放端口，可以使用以下命令</p>
+<pre><code>sudo kill $(sudo lsof -t -i:3000)
+</code></pre>
+<p>代替 3000 你可以指定你的端口号</p>
+<p>lsof 命令将提供有关进程打开的文件的信息</p>
+<p>-t ：此标志指定 lsof 应仅生成带有进程标识符且没有标头的简洁输出 – 例如，以便可以将输出通过管道传输到 kill(1)。此选项选择 -w 选项。</p>
+<p>-i ：此标志选择任何 Internet 地址与 i 中指定的地址匹配的文件列表。如果未指定地址，此选项将选择所有 Internet 和 x.25 (HP-UX) 网络文件的列表。</p>
+<h3 id="防火墙规则应用">防火墙规则应用</h3>
+<pre><code>sudo ufw allow 22
+
+sudo ufw deny 22
+</code></pre>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2022/ubuntu_kill_port_porc/">如何关闭 Ubuntu 中的开放端口？</a></li>
+				
+				<li><a href="/article/2022/firefox_weibo_alpn/">解决 Firefox 访问weibo搜索或热搜提示 建立安全连接失败</a></li>
+				
+				<li><a href="/article/2022/linux_ssh_copy_id/">上传公钥实现ssh登录</a></li>
+				
+				<li><a href="/article/2022/linux_metacharacters/">在 Linux 命令行中使用的 6 个元字符</a></li>
+				
+				<li><a href="/article/2022/ubuntu_wechat-install/">ubuntu上安装微信(wechat)</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://3ae.cn/links/"><b>友情链接</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>

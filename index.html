@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1655651889">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1655651963">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -53,6 +53,36 @@
 	
 	<main>
 		
+		
+			<article>
+	<h1><a href="https://3ae.cn/article/2022/ubuntu_kill_port_porc/">如何关闭 Ubuntu 中的开放端口？</a></h1>
+	<b><time>2022.06.19 22:53</time></b>
+	
+	<a href="/tags/ubuntu">Ubuntu</a>
+	
+	<a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C">命令行</a>
+	
+	<a href="/tags/netstat">netstat</a>
+	
+	<div>
+		如何关闭 Ubuntu 中的开放端口？
+问题描述 列出所有打开的端口，以关闭一些应用程序的端口。
+最佳办法 如果要关闭端口，则必须终止进程或停止相关服务。 可以使用 netstat -nalp 和 lsof -i:port 工具来识别打开端口后面的进程/二进制文件。
+netstat 可用于查看端口统计信息。 要显示所有开放端口的列表：
+sudo netstat -lnp 列出所有侦听端口号以及每个负责的进程。终止或终止进程以关闭端口。 ( kill , pkill …)
+关闭一个打开的端口：
+sudo fuser -k port_no/tcp 例子：
+sudo fuser -k 8080/tcp 次佳办法 要在 ubuntu 中关闭开放端口，可以使用以下命令
+sudo kill $(sudo lsof -t -i:3000) 代替 3000 你可以指定你的端口号
+lsof 命令将提供有关进程打开的文件的信息
+-t ：此标志指定 lsof 应仅生成带有进程标识符且没有标头的简洁输出 – 例如，以便可以将输出通过管道传输到 kill(1)。此选项选择 -w 选项。
+-i ：此标志选择任何 Internet 地址与 i 中指定的地址匹配的文件列表。如果未指定地址，此选项将选择所有 Internet 和 x.25 (HP-UX) 网络文件的列表。
+		
+			<a href="https://3ae.cn/article/2022/ubuntu_kill_port_porc/">Read more...</a>
+		
+	</div>
+</article>
+
 		
 			<article>
 	<h1><a href="https://3ae.cn/article/2022/firefox_weibo_alpn/">解决 Firefox 访问weibo搜索或热搜提示 建立安全连接失败</a></h1>
@@ -240,26 +270,6 @@ sudo tcpdump -i ethX icmp and icmp[icmptype]=icmp-echo 选项：
 示例：我有 2 台 pc win7 192.168.0.8 , Ubuntu 192.168.0.57 它将监控到达的数据包： 在Win上：
 ping 192.168.0.57 在 Ubuntu 上：
 tcpdump -i eth0 icmp and icmp[icmptype]=icmp-echo -n 参考：nixCraft[1]
-		
-	</div>
-</article>
-
-		
-			<article>
-	<h1><a href="https://3ae.cn/article/2021/check-disk-space-linux-df/">使用 df 命令查看 Linux 上的可用磁盘空间</a></h1>
-	<b><time>2021.08.04 16:12</time></b>
-	
-	<a href="/tags/df">df</a>
-	
-	<div>
-		磁盘空间已经不像计算机早期那样珍贵，但无论你有多少磁盘空间，总有耗尽的可能。计算机需要一些磁盘空间才能启动运行，所以为了确保你没有在无意间用尽了所有的硬盘空间，偶尔检查一下是非常必要的。在 Linux 终端，你可以用 df 命令来做这件事。
-df 命令可以显示文件系统中可用的磁盘空间。
-要想使输出结果易于阅读，你可以加上 &ndash;human-readable（或其简写 -h）选项：
-$ df --human-readable Filesystem Size Used Avail Use% Mounted on /dev/sda1 1.0T 525G 500G 52% / 在这个例子中，计算机的磁盘已经用了 52%，还有 500 GB 可用空间。
-由于 Linux 从整体上看待所有挂载设备的文件系统，df 命令会展示出连接到计算机上的每个存储设备的详细信息。如果你有很多磁盘，那么输出结果将会反映出来：
-$ df --human-readable Filesystem Size Used Avail Use% Mounted on /dev/root 110G 45G 61G 43% / devtmpfs 12G 0 12G 0% /dev tmpfs 12G 848K 12G 1% /run /dev/sda1 1.6T 1.3T 191G 87% /home /dev/sdb1 917G 184G 687G 22% /penguin /dev/sdc1 57G 50G 4.
-		
-			<a href="https://3ae.cn/article/2021/check-disk-space-linux-df/">Read more...</a>
 		
 	</div>
 </article>

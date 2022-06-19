@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Sat, 12 Mar 2022 20:22:55 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 22:53:02 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何关闭 Ubuntu 中的开放端口？</title>
+      <link>https://3ae.cn/article/2022/ubuntu_kill_port_porc/</link>
+      <pubDate>Sun, 19 Jun 2022 22:53:02 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2022/ubuntu_kill_port_porc/</guid>
+      <description>如何关闭 Ubuntu 中的开放端口？
+问题描述 列出所有打开的端口，以关闭一些应用程序的端口。
+最佳办法 如果要关闭端口，则必须终止进程或停止相关服务。 可以使用 netstat -nalp 和 lsof -i:port 工具来识别打开端口后面的进程/二进制文件。
+netstat 可用于查看端口统计信息。 要显示所有开放端口的列表：
+sudo netstat -lnp 列出所有侦听端口号以及每个负责的进程。终止或终止进程以关闭端口。 ( kill , pkill …)
+关闭一个打开的端口：
+sudo fuser -k port_no/tcp 例子：
+sudo fuser -k 8080/tcp 次佳办法 要在 ubuntu 中关闭开放端口，可以使用以下命令
+sudo kill $(sudo lsof -t -i:3000) 代替 3000 你可以指定你的端口号
+lsof 命令将提供有关进程打开的文件的信息
+-t ：此标志指定 lsof 应仅生成带有进程标识符且没有标头的简洁输出 – 例如，以便可以将输出通过管道传输到 kill(1)。此选项选择 -w 选项。
+-i ：此标志选择任何 Internet 地址与 i 中指定的地址匹配的文件列表。如果未指定地址，此选项将选择所有 Internet 和 x.25 (HP-UX) 网络文件的列表。</description>
+    </item>
+    
     <item>
       <title>上传公钥实现ssh登录</title>
       <link>https://3ae.cn/article/2022/linux_ssh_copy_id/</link>
