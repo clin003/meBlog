@@ -42,12 +42,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
-    <loc>https://3ae.cn/categories/linux/</loc>
+    <loc>https://3ae.cn/tags/linux/</loc>
     <lastmod>2022-03-12T20:22:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
-    <loc>https://3ae.cn/tags/linux/</loc>
+    <loc>https://3ae.cn/categories/linux/</loc>
     <lastmod>2022-03-12T20:22:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -107,12 +107,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
-    <loc>https://3ae.cn/tags/docker/</loc>
+    <loc>https://3ae.cn/categories/docker/</loc>
     <lastmod>2021-12-09T14:19:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
-    <loc>https://3ae.cn/categories/docker/</loc>
+    <loc>https://3ae.cn/tags/docker/</loc>
     <lastmod>2021-12-09T14:19:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

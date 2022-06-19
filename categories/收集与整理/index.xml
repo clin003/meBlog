@@ -17,7 +17,7 @@
       <description>介绍 由于微信官网 https://weixin.qq.com/ 没有linux版本的下载和安装方法，但微信确实提供了优麒麟发行版的官方版本，所以就有了下面的安装方法。
 安装方法 打开优麒麟应用商店官网，然后下载应用，就看到微信了 https://www.ubuntukylin.com/applications/106-cn.html 下载deb包，用命令sudo dpkg -i ，就能安装上了，而且可以用。 这是linux原生的，功能少点，但比wine的要轻巧不少。
 安装方法2 下载链接在方法1中，优麒麟应用商店微信应用页面右键 “64位下载” ——&amp;gt; “复制链接” 终端下载Deb安装：
- wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34;   sudo dpkg -i ~/weixin.deb </description>
+wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34; sudo dpkg -i ~/weixin.deb </description>
     </item>
     
     <item>
@@ -26,9 +26,9 @@
       <pubDate>Thu, 09 Dec 2021 14:19:08 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/docker_postgres/</guid>
-      <description>简单步骤   安装docker，可参考 安装docker及简单的使用 或 百度解决；
-  拉取postgreSQL的docker镜像文件：
-   docker pull postgres 创建 docker volume，名字为“dv_pgdata&amp;quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）：   docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面：  docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume:  docker volume ls 查看volume信息：  cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容：  cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql：  cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。  docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \  -e &amp;#39;PGADMIN_DEFAULT_EMAIL=hi@nav.</description>
+      <description>简单步骤 安装docker，可参考 安装docker及简单的使用 或 百度解决；
+拉取postgreSQL的docker镜像文件：
+docker pull postgres 创建 docker volume，名字为“dv_pgdata&amp;quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）： docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面： docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume: docker volume ls 查看volume信息： cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容： cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql： cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。 docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \ -e &amp;#39;PGADMIN_DEFAULT_EMAIL=hi@nav.xin&amp;#39; \ -e &amp;#39;PGADMIN_DEFAULT_PASSWORD=xxxxxx&amp;#39; \ -e &amp;#39;PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION=True&amp;#39; \ -e &amp;#39;PGADMIN_CONFIG_LOGIN_BANNER=&amp;#34;Authorised users only!</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
 1.2 也可以直接到官网下载，https://download.docker.com/mac/stable/Docker.dmg
 1.3 docker的参考文档：https://docs.docker.com
 1.4 dockerhub查找镜像源地址：https://hub.docker.com
-二. docker的使用 1.1 查看版本 docker --version  docker-compose --version  docker-machine --version 1.2 查看docker系统信息（包括镜像和容器的数量等） docker info 1.3 帮助命令 docker help 1.4 查看 cpu的状况 docker stats 三. docker的基本命令 镜像相关命令：
+二. docker的使用 1.1 查看版本 docker --version docker-compose --version docker-machine --version 1.2 查看docker系统信息（包括镜像和容器的数量等） docker info 1.3 帮助命令 docker help 1.4 查看 cpu的状况 docker stats 三. docker的基本命令 镜像相关命令：
 1.1 查看镜像可用版本（nginx为例） docker search nginx 1.2 下载一个镜像 docker pull nginx:latest #（：后面跟镜像版本） 1.3 运行一个nginx服务器 docker run -d -p 81:80 --name webserver nginx 可选项：</description>
     </item>
     
@@ -58,8 +58,8 @@
       <description>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。
 用 jsDelivr 免费CDN托管静态资源 国内的免费 CDN 不少，但需要备案 国外的免费 CDN 也不少，但在国内速度慢 但 jsDelivr 是一个特殊的存在，虽然是一家国外 CDN 但是有国内节点
 jsDelivr官网： https://www.jsdelivr.com
- 放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
- 使用步骤 1、新建Github仓库
+放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
+使用步骤 1、新建Github仓库
 2、克隆Github仓库到本地
 执行以下命令：
 git clone 一键复制的仓库地址 3、上传资源
@@ -68,8 +68,8 @@ git status #查看状态 git add . #添加所有文件到暂存区 git commit -m
 点击release发布
 自定义发布版本号 5、通过jsDelivr引用资源
 使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径 例如：
-https://cdn.jsdelivr.net/gh/clin003/meBlog/index.html https://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.png https://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css  注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
-// 加载任何Github发布、提交或分支 https://cdn.jsdelivr.net/gh/user/repo@version/file // 加载 jQuery v3.2.1 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js // 使用版本范围而不是特定版本 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js https://cdn.</description>
+https://cdn.jsdelivr.net/gh/clin003/meBlog/index.html https://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.png https://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css 注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
+// 加载任何Github发布、提交或分支 https://cdn.jsdelivr.net/gh/user/repo@version/file // 加载 jQuery v3.2.1 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js // 使用版本范围而不是特定版本 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js // 完全省略该版本以获取最新版本 https://cdn.</description>
     </item>
     
     <item>
@@ -115,7 +115,7 @@ TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言�
 宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
 TOML 被设计成可以无歧义地映射为哈希表。
 TOML 应该能很容易地被解析成各种语言中的数据结构。
-目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
+目录 规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法 规格 TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。 注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
     </item>
     
     <item>
@@ -126,8 +126,8 @@ TOML 应该能很容易地被解析成各种语言中的数据结构。
       <guid>https://3ae.cn/article/2021/learn_rust/</guid>
       <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org
 Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指引页 和 Rust 官方文档主页 上，目前 Rust 官方团队已经将相关文档拆分到不同的仓库上：
- 《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库  还有其他更多官方或其他非官方相关的文档：
- 使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库  上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
+《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库 还有其他更多官方或其他非官方相关的文档：
+使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库 上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
     </item>
     
     <item>
@@ -154,9 +154,9 @@ goproxy.io：https://goproxy.io 或 https://proxy.golang.com.cn
       <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
       <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以允许程序员在不编译和运行应用程序的前提下运行 Swift 代码并实时查看结果。
 Swift 通过采用现代编程模式来避免大量常见编程错误：
- 变量始终在使用前初始化。 检查数组索引超出范围的错误。 检查整数是否溢出。 可选值确保明确处理 nil 值。 内存被自动管理。 错误处理允许从意外故障控制恢复。  基础部分 常量和变量 声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。 示例：
-let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0  // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
-// 这是一个注释  /* 这也是一个注释， 但是是多行的 */  /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
+变量始终在使用前初始化。 检查数组索引超出范围的错误。 检查整数是否溢出。 可选值确保明确处理 nil 值。 内存被自动管理。 错误处理允许从意外故障控制恢复。 基础部分 常量和变量 声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。 示例：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
+// 这是一个注释 /* 这也是一个注释， 但是是多行的 */ /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
     </item>
     
     <item>
@@ -166,11 +166,11 @@ let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0  // 类型注�
       
       <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
       <description>在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多步骤：
-  下载并安装必备软件 验证构建服务器上是否有新的测试软件包 获取并设置依赖软件包所需的 yum 仓库 下载并安装新的测试软件包（基于步骤 2） 获取并设置必需的 SSL 证书 设置测试环境，获取所需的 Git 仓库，更改配置，重新启动守护进程等 做其他需要做的事情  用脚本自动化 这些步骤非常常规，以至于有必要对其进行自动化并将脚本保存到中央位置（例如文件服务器），在需要时可以在此处下载脚本。为此，我编写了 100-120 行的 Bash shell 脚本，它为我完成了所有配置（包括错误检查）。这个脚本通过以下方式简化了我的工作流程：
- 配置新的 Linux 系统（支持测试的架构） 登录系统并从中央位置下载自动化 shell 脚本 运行它来配置系统 开始测试  学习 Go 语言 我想学习 Go 语言 有一段时间了，将我心爱的 Shell 脚本转换为 Go 程序似乎是一个很好的项目，可以帮助我入门。它的语法看起来很简单，在尝试了一些测试程序后，我开始着手提高自己的知识并熟悉 Go 标准库。
+下载并安装必备软件 验证构建服务器上是否有新的测试软件包 获取并设置依赖软件包所需的 yum 仓库 下载并安装新的测试软件包（基于步骤 2） 获取并设置必需的 SSL 证书 设置测试环境，获取所需的 Git 仓库，更改配置，重新启动守护进程等 做其他需要做的事情 用脚本自动化 这些步骤非常常规，以至于有必要对其进行自动化并将脚本保存到中央位置（例如文件服务器），在需要时可以在此处下载脚本。为此，我编写了 100-120 行的 Bash shell 脚本，它为我完成了所有配置（包括错误检查）。这个脚本通过以下方式简化了我的工作流程：
+配置新的 Linux 系统（支持测试的架构） 登录系统并从中央位置下载自动化 shell 脚本 运行它来配置系统 开始测试 学习 Go 语言 我想学习 Go 语言 有一段时间了，将我心爱的 Shell 脚本转换为 Go 程序似乎是一个很好的项目，可以帮助我入门。它的语法看起来很简单，在尝试了一些测试程序后，我开始着手提高自己的知识并熟悉 Go 标准库。
 我花了一个星期的时间在笔记本电脑上编写 Go 程序。我经常在我的 x86 服务器上测试程序，清除错误并使程序健壮起来，一切都很顺利。
 直到完全转换到 Go 程序前，我继续依赖自己的 shell 脚本。然后，我将二进制文件推送到中央文件服务器上，以便每次配置新服务器时，我要做的就是获取二进制文件，将可执行标志打开，然后运行二进制文件。我对早期的结果很满意：
-$ wget http://file.example.com/&amp;lt;myuser&amp;gt;/bins/prepnode $ chmod +x .</description>
+$ wget http://file.example.com/&amp;lt;myuser&amp;gt;/bins/prepnode $ chmod +x ./prepnode $ ./prepnode 然后，出现了一个问题</description>
     </item>
     
   </channel>

@@ -48,7 +48,7 @@ TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言�
 宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
 TOML 被设计成可以无歧义地映射为哈希表。
 TOML 应该能很容易地被解析成各种语言中的数据结构。
-目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
+目录 规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法 规格 TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。 注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
     </item>
     
     <item>
@@ -59,8 +59,8 @@ TOML 应该能很容易地被解析成各种语言中的数据结构。
       <guid>https://3ae.cn/article/2021/learn_rust/</guid>
       <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org
 Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指引页 和 Rust 官方文档主页 上，目前 Rust 官方团队已经将相关文档拆分到不同的仓库上：
- 《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库  还有其他更多官方或其他非官方相关的文档：
- 使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库  上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
+《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库 还有其他更多官方或其他非官方相关的文档：
+使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库 上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
     </item>
     
   </channel>

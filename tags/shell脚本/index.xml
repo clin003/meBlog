@@ -16,7 +16,7 @@
       <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
       <description>Linux 常用命令
 日期 $(date -d &amp;#39;1 day ago&amp;#39; &amp;#39;+%Y-%m-%d&amp;#39;) 常用方法
-数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i}day&amp;#34;) echo $_date done # for i in {1..10} do  echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
+数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i} day&amp;#34;) echo $_date done # for i in {1..10} do echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
     </item>
     
     <item>

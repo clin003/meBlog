@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <head>
-	<meta name="generator" content="Hugo 0.93.1" />
+	<meta name="generator" content="Hugo 0.100.2" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1651844209">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1655651889">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -66,11 +66,12 @@
 	
 	<div>
 		如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
- Zlib 是一个用于数据压缩的开源库。
+Zlib 是一个用于数据压缩的开源库。
 作为使用者，你可能会遇到需要安装 zlib（或 zlib-devel 包）作为另一个应用程序的依赖项的情况。
 但问题来了，如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
- sudo apt install zlib  Reading package lists... Done  Building dependency tree  Reading state information... Done  E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
+sudo apt install zlib Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
 如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。
+在基于 Ubuntu 的 Linux 发行版上安装 Zlib 打开终端，使用以下命令：
 		
 			<a href="https://3ae.cn/article/2021/zlib/">Read more...</a>
 		
@@ -92,8 +93,8 @@
 		CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。
 用 jsDelivr 免费CDN托管静态资源 国内的免费 CDN 不少，但需要备案 国外的免费 CDN 也不少，但在国内速度慢 但 jsDelivr 是一个特殊的存在，虽然是一家国外 CDN 但是有国内节点
 jsDelivr官网： https://www.jsdelivr.com
- 放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
- 使用步骤 1、新建Github仓库
+放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
+使用步骤 1、新建Github仓库
 2、克隆Github仓库到本地
 执行以下命令：
 git clone 一键复制的仓库地址 3、上传资源
@@ -102,8 +103,8 @@ git status #查看状态 git add . #添加所有文件到暂存区 git commit -m
 点击release发布
 自定义发布版本号 5、通过jsDelivr引用资源
 使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径 例如：
-https://cdn.jsdelivr.net/gh/clin003/meBlog/index.html https://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.png https://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css  注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
-// 加载任何Github发布、提交或分支 https://cdn.jsdelivr.net/gh/user/repo@version/file // 加载 jQuery v3.2.1 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js // 使用版本范围而不是特定版本 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js https://cdn.
+https://cdn.jsdelivr.net/gh/clin003/meBlog/index.html https://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.png https://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css 注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
+// 加载任何Github发布、提交或分支 https://cdn.jsdelivr.net/gh/user/repo@version/file // 加载 jQuery v3.2.1 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js // 使用版本范围而不是特定版本 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js // 完全省略该版本以获取最新版本 https://cdn.
 		
 			<a href="https://3ae.cn/article/2021/jsdelivr_github/">Read more...</a>
 		
@@ -176,11 +177,13 @@ systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox
 	
 	<div>
 		find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*”
-/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */   find ~ -iname &#34;vue-*.zip&#34;  /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &#34;*vue*&#34;  /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
+/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */ find ~ -iname &#34;vue-*.zip&#34; /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &#34;*vue*&#34; /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
 mdfind命令 描述：通过 mdfind命令查找 语法：mdfind -name 文件名
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue  /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
-在 shell 中执行命令  你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
+在 shell 中执行命令 你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面
+若要运行当前用户个人文件夹中的命令，请在前面加上文件夹说明符。例如，若要运行 MyCommandLineProg，请使用以下命令：
+% ~/MyCommandLineProg 若要打开一个 App，请使用打开命令：
 		
 			<a href="https://3ae.cn/article/2021/mac_find/">Read more...</a>
 		
@@ -221,7 +224,7 @@ crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.
 	
 	<div>
 		网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新页面，往往是一些用了平时不太多见的网页设计元素制作出来的页面演示，有时候也会有独到设计的网页游戏，或许还有些别的内容。这个网站收录的内容都挺不错，有些网站的质量完全可以拿出来单独写一篇文章。
- 传送门 https://sharkle.com/
+传送门 https://sharkle.com/
 方法 进入网站直接点击SHOW ME SOMETHING AWESOME即可欣赏！
 		
 	</div>
@@ -256,12 +259,12 @@ C:\&gt;cargo install cargo-wix C:\&gt;cd Path\To\Project C:\Path\To\Project\&gt;
 	
 	<div>
 		如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。
- Deskreen：将任何设备变成你的 Linux 系统的副屏 Deskreen 是一个自由开源的应用，可以让你使用任何带有 Web 浏览器的设备来作为电脑的副屏。
+Deskreen：将任何设备变成你的 Linux 系统的副屏 Deskreen 是一个自由开源的应用，可以让你使用任何带有 Web 浏览器的设备来作为电脑的副屏。
 如果你愿意，它还支持多个设备连接。
 Deskreen 很容易使用，当你的所有设备都连接到同一个 Wi-Fi 网络时，它可以正常工作。
 让我们来看看它的功能和工作原理。 Deskreen 的功能
 Deskreen 的功能包括以下要点：
- 分享整个屏幕的能力 选择一个特定的应用窗口进行串流 翻转模式，将你的屏幕作为提词器使用 支持多种设备 高级视频质量设置 提供端对端加密 最小的系统要求 黑暗模式  没有一个冗长的功能列表，但对大多数用户来说应该是足够的。
+分享整个屏幕的能力 选择一个特定的应用窗口进行串流 翻转模式，将你的屏幕作为提词器使用 支持多种设备 高级视频质量设置 提供端对端加密 最小的系统要求 黑暗模式 没有一个冗长的功能列表，但对大多数用户来说应该是足够的。
 如何使用 Deskreen 应用？ Deskreen 使用分为三个简单的步骤，让我为你强调一下，以便你开始使用：
 首先，当你启动该应用时，它会显示一个二维码和一个 IP 地址，以帮助你用 Web 浏览器连接其他设备，以串流你的屏幕。
 你可以按你喜欢的方式，在你的辅助设备上的 Web 浏览器的帮助下建立连接。
@@ -290,7 +293,7 @@ Deskreen 还为你提供了管理连接设备的能力。因此，如果你需�
 	
 	<div>
 		网站为你营造了专注冥想的时间，通过三个简单的小游戏，你可以进入一个精神集中的状态，从而让大脑思维平静下来！
- 传送门 https://thezen.zone/
+传送门 https://thezen.zone/
 方法 进入网站直接开始冥想吧！
 		
 	</div>

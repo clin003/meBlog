@@ -15,12 +15,12 @@
       
       <guid>https://3ae.cn/article/2022/firefox_weibo_alpn/</guid>
       <description>应用版本：firefox 开发者版 v101 问题描述：微博主页可以正常访问，但点击搜索或热搜链接，都提示：
- 建立安全连接失败 连接到 s.weibo.com 时发生错误。 由于不能验证所收到的数据是否可信，无法显示您想要查看的页面。 建议向此网站的管理员反馈这个问题。 详细了解… 通过curl -v “网址” 反复重试对比发现在访问微博热搜的时候有一个加密协商被“微博账户认证网关服务器”拒绝了。
+建立安全连接失败 连接到 s.weibo.com 时发生错误。 由于不能验证所收到的数据是否可信，无法显示您想要查看的页面。 建议向此网站的管理员反馈这个问题。 详细了解… 通过curl -v “网址” 反复重试对比发现在访问微博热搜的时候有一个加密协商被“微博账户认证网关服务器”拒绝了。
 具体测试指令： 通过
- curl -v &amp;#34;https://s.weibo.com/weibo?q=%23%E7%A5%9D%E8%9E%8D%E5%8F%B7%E5%87%86%E5%A4%87%E5%9C%A8%E7%81%AB%E6%98%9F%E8%B6%8A%E5%86%AC%23&amp;amp;topic_ad=&amp;#34; 得到302跳转请求链接 继续
- curl -v &amp;#34;https://passport.weibo.com/visitor/visitor?entry=miniblog&amp;amp;a=enter&amp;amp;url=https%3A%2F%2Fs.weibo.com%2Fweibo%3Fq%3D%2523%25E7%25A5%259D%25E8%259E%258D%25E5%258F%25B7%25E5%2587%2586%25E5%25A4%2587%25E5%259C%25A8%25E7%2581%25AB%25E6%2598%259F%25E8%25B6%258A%25E5%2586%25AC%2523%26topic_ad%3D&amp;amp;domain=.weibo.com&amp;amp;sudaref=&amp;amp;ua=php-sso_sdk_client-0.6.29&amp;amp;_rand=1651842429.1375&amp;#34; 返回
- …… * TLSv1.2 (IN), TLS handshake, Finished (20): * SSL connection using TLSv1.2 / AES256-GCM-SHA384 * ALPN, server did not agree to a protocol * Server certificate: * subject: C=CN; ST=Beijing; O=Sina.com Technology(China)Co.,ltd; CN=sina.com …… 注意这段提示：
- ALPN, server did not agree to a protocol ALPN ALPN(Application-Layer Protocol Negotiation):应用层协议协商是 TLS 的一个扩展，故而应用层协议在协商加密协议的过程中，避免了额外的往返通讯开销。 ALPN支持任意应用层协议的协商，目前应用最多是HTTP2的协商。当前主流浏览器，都只支持基于 HTTPS 部署的 HTTP/2，因为浏览器是基于ALPN协议来判断服务器是否支持HTTP2协议。</description>
+curl -v &amp;#34;https://s.weibo.com/weibo?q=%23%E7%A5%9D%E8%9E%8D%E5%8F%B7%E5%87%86%E5%A4%87%E5%9C%A8%E7%81%AB%E6%98%9F%E8%B6%8A%E5%86%AC%23&amp;amp;topic_ad=&amp;#34; 得到302跳转请求链接 继续
+curl -v &amp;#34;https://passport.weibo.com/visitor/visitor?entry=miniblog&amp;amp;a=enter&amp;amp;url=https%3A%2F%2Fs.weibo.com%2Fweibo%3Fq%3D%2523%25E7%25A5%259D%25E8%259E%258D%25E5%258F%25B7%25E5%2587%2586%25E5%25A4%2587%25E5%259C%25A8%25E7%2581%25AB%25E6%2598%259F%25E8%25B6%258A%25E5%2586%25AC%2523%26topic_ad%3D&amp;amp;domain=.weibo.com&amp;amp;sudaref=&amp;amp;ua=php-sso_sdk_client-0.6.29&amp;amp;_rand=1651842429.1375&amp;#34; 返回
+…… * TLSv1.2 (IN), TLS handshake, Finished (20): * SSL connection using TLSv1.2 / AES256-GCM-SHA384 * ALPN, server did not agree to a protocol * Server certificate: * subject: C=CN; ST=Beijing; O=Sina.com Technology(China)Co.,ltd; CN=sina.com …… 注意这段提示：
+ALPN, server did not agree to a protocol ALPN ALPN(Application-Layer Protocol Negotiation):应用层协议协商是 TLS 的一个扩展，故而应用层协议在协商加密协议的过程中，避免了额外的往返通讯开销。 ALPN支持任意应用层协议的协商，目前应用最多是HTTP2的协商。当前主流浏览器，都只支持基于 HTTPS 部署的 HTTP/2，因为浏览器是基于ALPN协议来判断服务器是否支持HTTP2协议。</description>
     </item>
     
     <item>
@@ -41,8 +41,8 @@ $ ssh root@192.168.0.1 </description>
       <pubDate>Mon, 14 Feb 2022 17:37:24 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2022/linux_metacharacters/</guid>
-      <description>在 Linux 命令行上使用元字符是提高生产力的一个好方法。  许多 Linux 电脑是无头运行的，你可以在命令行上完成所有的管理任务。它使用许多所有人都熟悉的基本命令，如 ls、ls-l、ls-l、cd、pwd、top 等等。
-Linux 上的 Shell 元字符  你可以通过使用元字符来扩展这些命令。
+      <description>在 Linux 命令行上使用元字符是提高生产力的一个好方法。 许多 Linux 电脑是无头运行的，你可以在命令行上完成所有的管理任务。它使用许多所有人都熟悉的基本命令，如 ls、ls-l、ls-l、cd、pwd、top 等等。
+Linux 上的 Shell 元字符 你可以通过使用元字符来扩展这些命令。
 管道符 | 假设我想知道我的系统上运行的 Firefox 的所有实例。我可以使用带有 -ef 参数的 ps 命令来列出我系统上运行的所有程序实例。现在我想只看那些涉及 Firefox 的实例。我使用了我最喜欢的元字符之一，管道符 |，将其结果送到 grep，用它来搜索模式：
 $ ps -ef | grep firefox 输出重定向 &amp;gt; 另一个我最喜欢的元字符是输出重定向 &amp;gt;。我用它来打印 dmesg 命令结果中所有 AMD 相关的结果。你可能会发现这在硬件故障排除中很有帮助：
 $ dmesg | grep amd &amp;gt; amd.txt $ cat amd.txt [ 0.897] amd_uncore: 4 amd_df counters detected [ 0.897] amd_uncore: 6 amd_l3 counters detected [ 0.898] perf/amd_iommu: Detected AMD IOMMU #0 (2 banks, 4 counters/bank).</description>
@@ -57,7 +57,7 @@ $ dmesg | grep amd &amp;gt; amd.txt $ cat amd.txt [ 0.897] amd_uncore: 4 amd_df 
       <description>介绍 由于微信官网 https://weixin.qq.com/ 没有linux版本的下载和安装方法，但微信确实提供了优麒麟发行版的官方版本，所以就有了下面的安装方法。
 安装方法 打开优麒麟应用商店官网，然后下载应用，就看到微信了 https://www.ubuntukylin.com/applications/106-cn.html 下载deb包，用命令sudo dpkg -i ，就能安装上了，而且可以用。 这是linux原生的，功能少点，但比wine的要轻巧不少。
 安装方法2 下载链接在方法1中，优麒麟应用商店微信应用页面右键 “64位下载” ——&amp;gt; “复制链接” 终端下载Deb安装：
- wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34;   sudo dpkg -i ~/weixin.deb </description>
+wget -O ~/weixin.deb &amp;#34;http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb&amp;#34; sudo dpkg -i ~/weixin.deb </description>
     </item>
     
     <item>
@@ -66,9 +66,9 @@ $ dmesg | grep amd &amp;gt; amd.txt $ cat amd.txt [ 0.897] amd_uncore: 4 amd_df 
       <pubDate>Thu, 09 Dec 2021 14:19:08 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/docker_postgres/</guid>
-      <description>简单步骤   安装docker，可参考 安装docker及简单的使用 或 百度解决；
-  拉取postgreSQL的docker镜像文件：
-   docker pull postgres 创建 docker volume，名字为“dv_pgdata&amp;quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）：   docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面：  docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume:  docker volume ls 查看volume信息：  cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容：  cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql：  cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。  docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \  -e &amp;#39;PGADMIN_DEFAULT_EMAIL=hi@nav.</description>
+      <description>简单步骤 安装docker，可参考 安装docker及简单的使用 或 百度解决；
+拉取postgreSQL的docker镜像文件：
+docker pull postgres 创建 docker volume，名字为“dv_pgdata&amp;quot;（其实可以省略手动创建，直接跑下一步，docker也会自动创建的）： docker volume create dv_pgdata 启动容器，用-v来指定把postgres的数据目录映射到上面创建的dv_pgdata里面： docker run --name my_postgres -v dv_pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=xxxxxx -p 5432:5432 -d postgres 这时候查看已存在的docker volume: docker volume ls 查看volume信息： cn2d6@navxin-desktop:~$ docker inspect dv_pgdata 在宿主机，也可以直接查看volume里的内容： cn2d6@navxin-desktop:~$ cd /var/lib/docker/volumes/dv_pgdata/_data cn2d6@navxin-desktop:~$ ll 查看postgresql： cn2d6@navxin-desktop:~$docker exec -it 618 bash root@618f1a4128ee:/# psql -U postgres 更多的时候，我们希望能用图形界面来管理和操作数据库，可以部署pgadmin工具（例如下面），然后在浏览器中访问宿主机的5080端口，便能打开pgadmin。 docker pull dpage/pgadmin4 docker run --name pgadmin -p 5080:80 \ -e &amp;#39;PGADMIN_DEFAULT_EMAIL=hi@nav.xin&amp;#39; \ -e &amp;#39;PGADMIN_DEFAULT_PASSWORD=xxxxxx&amp;#39; \ -e &amp;#39;PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION=True&amp;#39; \ -e &amp;#39;PGADMIN_CONFIG_LOGIN_BANNER=&amp;#34;Authorised users only!</description>
     </item>
     
     <item>
@@ -80,13 +80,13 @@ $ dmesg | grep amd &amp;gt; amd.txt $ cat amd.txt [ 0.897] amd_uncore: 4 amd_df 
       <description>systemd Systemd 是 Linux 系统工具，用来启动守护进程，已成为大多数发行版的标准配置。
 由来 历史上，Linux 的启动一直采用init进程。
 下面的命令用来启动服务。
- $ sudo /etc/init.d/apache2 start  # 或者  $ service apache2 start 这种方法有两个缺点。
+$ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺点。
 一是启动时间长。init进程是串行启动，只有前一个进程启动完，才会启动下一个进程。
 二是启动脚本复杂。init进程只是执行启动脚本，不管其他事情。脚本需要自己处理各种情况，这往往使得脚本变得很长。
 Systemd 概述 Systemd 就是为了解决这些问题而诞生的。它的设计目标是，为系统的启动和管理提供一套完整的解决方案。
 根据 Linux 惯例，字母d是守护进程（daemon）的缩写。 Systemd 这个名字的含义，就是它要守护整个系统。
 使用了 Systemd，就不需要再用init了。Systemd 取代了initd，成为系统的第一个进程（PID 等于 1），其他进程都是它的子进程。
- $ systemctl --version 上面的命令查看 Systemd 的版本。
+$ systemctl --version 上面的命令查看 Systemd 的版本。
 使用 systemd 实现开机执行 Shell 脚本 通用操作步骤 创建希望开机马上执行的脚本，本文举例脚本存放位置为 /home/navxin/Example/startup.sh，脚本内容如下：
 #!/bin/bash # 开机时在脚本的同级目录下创建一个名为 StartupTouch.txt 的文件 touch /home/navxin/Example/startup.sh.txt 开机执行的脚本需增加可执行权限才能被 systemd 运行，使用如下命令 chmod u+x /home/navxin/Example/startup.sh chmod g+x /home/navxin/Example/startup.sh 进入 systemd 放置 service 的目录，在该目录下可看到大量服务配置文件，命令如下 # 进入 systemd 的 service 目录 cd /usr/lib/systemd/system # 查看文件列表 ls -al 在该目录创建一个新的 .</description>
     </item>
@@ -105,7 +105,7 @@ Systemd 概述 Systemd 就是为了解决这些问题而诞生的。它的设计
 1.2 也可以直接到官网下载，https://download.docker.com/mac/stable/Docker.dmg
 1.3 docker的参考文档：https://docs.docker.com
 1.4 dockerhub查找镜像源地址：https://hub.docker.com
-二. docker的使用 1.1 查看版本 docker --version  docker-compose --version  docker-machine --version 1.2 查看docker系统信息（包括镜像和容器的数量等） docker info 1.3 帮助命令 docker help 1.4 查看 cpu的状况 docker stats 三. docker的基本命令 镜像相关命令：
+二. docker的使用 1.1 查看版本 docker --version docker-compose --version docker-machine --version 1.2 查看docker系统信息（包括镜像和容器的数量等） docker info 1.3 帮助命令 docker help 1.4 查看 cpu的状况 docker stats 三. docker的基本命令 镜像相关命令：
 1.1 查看镜像可用版本（nginx为例） docker search nginx 1.2 下载一个镜像 docker pull nginx:latest #（：后面跟镜像版本） 1.3 运行一个nginx服务器 docker run -d -p 81:80 --name webserver nginx 可选项：</description>
     </item>
     
@@ -115,13 +115,13 @@ Systemd 概述 Systemd 就是为了解决这些问题而诞生的。它的设计
       <pubDate>Wed, 29 Sep 2021 16:19:42 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/ubuntu_firefox-install/</guid>
-      <description>卸载原来Firefox sudo apt-get purge firefox  或 sudo apt-get remove firefox
-下载最新Firefox二进制压缩包 wget -O ~/firefox.tar.bz2 &amp;quot;https://download.mozilla.org/?product=firefox-latest&amp;amp;os=linux64&amp;quot;  解压并移动到/opt目录 sudo tar xjf ~/firefox.tar.bz2 -C /opt/  创建软链接 sudo ln -s /opt/firefox/firefox /usr/lib/firefox/firefox  在/usr/lib/中创建一个firefox可执行链接文件，该文件指向/opt中firefox可执行主程序位置。
+      <description>卸载原来Firefox sudo apt-get purge firefox 或 sudo apt-get remove firefox
+下载最新Firefox二进制压缩包 wget -O ~/firefox.tar.bz2 &amp;quot;https://download.mozilla.org/?product=firefox-latest&amp;amp;os=linux64&amp;quot; 解压并移动到/opt目录 sudo tar xjf ~/firefox.tar.bz2 -C /opt/ 创建软链接 sudo ln -s /opt/firefox/firefox /usr/lib/firefox/firefox 在/usr/lib/中创建一个firefox可执行链接文件，该文件指向/opt中firefox可执行主程序位置。
 启动firefox 终端启动Firefox
-firefox  创建桌面快捷方式 进入/usr/share/applications目录
-touch firefox.desktop nano firefox.desktop  添加内容：
-[Desktop Entry] Name=firefox Comment=firefox Exec=/opt/firefox/firefox Icon=/opt/firefox/browser/chrome/icons/default/default128.png Terminal=false Type=Application Categories=Application; Encoding=UTF-8 StartupNotify=true  卸载Firefox 通过上面方法安装的Firefox，如果想删除，可以在终端种输入以下命令：
-sudo rm -rf /opt/firefox sudo rm /usr/share/applications/firefox.desktop  </description>
+firefox 创建桌面快捷方式 进入/usr/share/applications目录
+touch firefox.desktop nano firefox.desktop 添加内容：
+[Desktop Entry] Name=firefox Comment=firefox Exec=/opt/firefox/firefox Icon=/opt/firefox/browser/chrome/icons/default/default128.png Terminal=false Type=Application Categories=Application; Encoding=UTF-8 StartupNotify=true 卸载Firefox 通过上面方法安装的Firefox，如果想删除，可以在终端种输入以下命令：
+sudo rm -rf /opt/firefox sudo rm /usr/share/applications/firefox.desktop </description>
     </item>
     
     <item>
@@ -130,7 +130,7 @@ sudo rm -rf /opt/firefox sudo rm /usr/share/applications/firefox.desktop  </desc
       <pubDate>Wed, 29 Sep 2021 11:48:42 +0800</pubDate>
       
       <guid>https://3ae.cn/links/</guid>
-      <description>1.申请链接请先在贵站的首页做好本站的友情链接（本站名称：白菜林，本站地址：https://3ae.cn/）。
+      <description> 1.申请链接请先在贵站的首页做好本站的友情链接（本站名称：白菜林，本站地址：https://3ae.cn/）。
 2.优先交换电脑网络和学习类的网站以及博客的友情链接。
 3.做好链接后可与我联系，本站将在7个工作日内回复。
 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; 云服务器购买地址 小姐姐在线播放 Limited Time Offer
@@ -144,7 +144,7 @@ sudo rm -rf /opt/firefox sudo rm /usr/share/applications/firefox.desktop  </desc
       
       <guid>https://3ae.cn/article/2021/tcpdump_icmp-echo/</guid>
       <description>tcpdump 是 Linux 上可用的最强大和使用最广泛的 命令行 数据包嗅探器(包分析器)工具。
- 在您要监控的计算机的终端应用程序中：
+在您要监控的计算机的终端应用程序中：
 sudo tcpdump -i ethX icmp and icmp[icmptype]=icmp-echo 选项：
 -n avoid a (potentially slow) reverse DNS query −i interface icmp[icmptype]=icmp-echo To print all ICMP packets that are echo requests/replies 它将开始侦听 ethX 并等待到达的数据包。
 示例：我有 2 台 pc win7 192.168.0.8 , Ubuntu 192.168.0.57 它将监控到达的数据包： 在Win上：
@@ -173,11 +173,12 @@ $ df --human-readable Filesystem Size Used Avail Use% Mounted on /dev/root 110G 
       
       <guid>https://3ae.cn/article/2021/zlib/</guid>
       <description>如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
- Zlib 是一个用于数据压缩的开源库。
+Zlib 是一个用于数据压缩的开源库。
 作为使用者，你可能会遇到需要安装 zlib（或 zlib-devel 包）作为另一个应用程序的依赖项的情况。
 但问题来了，如果你尝试在 Ubuntu 上安装 zlib，它会抛出 “unable to locate package zlib” 错误。
- sudo apt install zlib  Reading package lists... Done  Building dependency tree  Reading state information... Done  E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
-如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。</description>
+sudo apt install zlib Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package zlib 为什么会看到这个 Ubable to locate package 错误呢？因为没有名为 zlib 的包。
+如果你 使用 apt search 命令，你会发现有几个包可以让你安装：zlib 1g 和 zlib 1g-dev。当你知道这些后，只需一个 apt 命令就可以安装它们。
+在基于 Ubuntu 的 Linux 发行版上安装 Zlib 打开终端，使用以下命令：</description>
     </item>
     
     <item>
@@ -189,8 +190,8 @@ $ df --human-readable Filesystem Size Used Avail Use% Mounted on /dev/root 110G 
       <description>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。
 用 jsDelivr 免费CDN托管静态资源 国内的免费 CDN 不少，但需要备案 国外的免费 CDN 也不少，但在国内速度慢 但 jsDelivr 是一个特殊的存在，虽然是一家国外 CDN 但是有国内节点
 jsDelivr官网： https://www.jsdelivr.com
- 放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
- 使用步骤 1、新建Github仓库
+放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDelivr + Github便是免费且好用的CDN，非常适合博客网站使用。
+使用步骤 1、新建Github仓库
 2、克隆Github仓库到本地
 执行以下命令：
 git clone 一键复制的仓库地址 3、上传资源
@@ -199,8 +200,8 @@ git status #查看状态 git add . #添加所有文件到暂存区 git commit -m
 点击release发布
 自定义发布版本号 5、通过jsDelivr引用资源
 使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径 例如：
-https://cdn.jsdelivr.net/gh/clin003/meBlog/index.html https://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.png https://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css  注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
-// 加载任何Github发布、提交或分支 https://cdn.jsdelivr.net/gh/user/repo@version/file // 加载 jQuery v3.2.1 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js // 使用版本范围而不是特定版本 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js https://cdn.</description>
+https://cdn.jsdelivr.net/gh/clin003/meBlog/index.html https://cdn.jsdelivr.net/gh/clin003/meBlog/favicon-16x16.png https://cdn.jsdelivr.net/gh/clin003/cdn/v@3.1.3/css.css 注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
+// 加载任何Github发布、提交或分支 https://cdn.jsdelivr.net/gh/user/repo@version/file // 加载 jQuery v3.2.1 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js // 使用版本范围而不是特定版本 https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js // 完全省略该版本以获取最新版本 https://cdn.</description>
     </item>
     
     <item>
@@ -243,11 +244,13 @@ systemctl start qbittorrent-nox 设置开机自动启动qbittorrent-nox</descrip
       
       <guid>https://3ae.cn/article/2021/mac_find/</guid>
       <description>find命令 描述：通过 find命令查找 语法：find ~ -iname “文件名*”
-/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */   find ~ -iname &amp;#34;vue-*.zip&amp;#34;  /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &amp;#34;*vue*&amp;#34;  /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
+/** * 比如我要查找一个以‘vue-’开头的.zip文件, * 但是你忘了它的全名也忘了在那个文件夹， * 查找范围是‘～’节点以内 * 就可以用这种方式进行模糊搜索 */ find ~ -iname &amp;#34;vue-*.zip&amp;#34; /** * 然后它就把所有包含符合条件的文件和路径都打印出来了 */ find不但能查找文件，还能查找文件夹
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ find ~ -iname &amp;#34;*vue*&amp;#34; /** * 结果它找到了所有包含‘vue’的文件或文件夹 */ find方式很简单但是需要一点专业知识，需要知道一些正则的基本常识，需要指定路径范围，搜索的名字需要加引号等等
 mdfind命令 描述：通过 mdfind命令查找 语法：mdfind -name 文件名
-/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue  /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
-在 shell 中执行命令  你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面</description>
+/** * 比如我要查找所有包含‘vue’的文件或文件夹 */ mdfind -name vue /** * 看，我直接输入我要找的关键字‘vue’ * 就把所有文件和文件夹都输出出来了，是不是很方便 */ mdfind 简单粗暴，没缺点，但有个前提是你mac电脑要支持Spotlight功能，不过也不用担心，一般mac默认是支持的
+在 shell 中执行命令 你是找到这个文件或文件夹了，但是你想直接打开它，那么怎么打开呢，看下面
+若要运行当前用户个人文件夹中的命令，请在前面加上文件夹说明符。例如，若要运行 MyCommandLineProg，请使用以下命令：
+% ~/MyCommandLineProg 若要打开一个 App，请使用打开命令：</description>
     </item>
     
     <item>
@@ -272,7 +275,7 @@ crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.
       
       <guid>https://3ae.cn/article/2021/sharkle/</guid>
       <description>网页前端是一门技术活！出色的网站除了后台够快够可靠，也非常需要前端吸引眼球。在这个网站里，点击SHOW ME SOMETHING AWESOME就能随机跳转到一个新页面，往往是一些用了平时不太多见的网页设计元素制作出来的页面演示，有时候也会有独到设计的网页游戏，或许还有些别的内容。这个网站收录的内容都挺不错，有些网站的质量完全可以拿出来单独写一篇文章。
- 传送门 https://sharkle.com/
+传送门 https://sharkle.com/
 方法 进入网站直接点击SHOW ME SOMETHING AWESOME即可欣赏！</description>
     </item>
     
@@ -295,12 +298,12 @@ C:\&amp;gt;cargo install cargo-wix C:\&amp;gt;cd Path\To\Project C:\Path\To\Proj
       
       <guid>https://3ae.cn/article/2021/linux_deskreen/</guid>
       <description>如果你有多显示器设置，你会意识到拥有多个屏幕的好处。而且，有了 Deskreen，你可以把任何设备变成你的副屏。
- Deskreen：将任何设备变成你的 Linux 系统的副屏 Deskreen 是一个自由开源的应用，可以让你使用任何带有 Web 浏览器的设备来作为电脑的副屏。
+Deskreen：将任何设备变成你的 Linux 系统的副屏 Deskreen 是一个自由开源的应用，可以让你使用任何带有 Web 浏览器的设备来作为电脑的副屏。
 如果你愿意，它还支持多个设备连接。
 Deskreen 很容易使用，当你的所有设备都连接到同一个 Wi-Fi 网络时，它可以正常工作。
 让我们来看看它的功能和工作原理。 Deskreen 的功能
 Deskreen 的功能包括以下要点：
- 分享整个屏幕的能力 选择一个特定的应用窗口进行串流 翻转模式，将你的屏幕作为提词器使用 支持多种设备 高级视频质量设置 提供端对端加密 最小的系统要求 黑暗模式  没有一个冗长的功能列表，但对大多数用户来说应该是足够的。
+分享整个屏幕的能力 选择一个特定的应用窗口进行串流 翻转模式，将你的屏幕作为提词器使用 支持多种设备 高级视频质量设置 提供端对端加密 最小的系统要求 黑暗模式 没有一个冗长的功能列表，但对大多数用户来说应该是足够的。
 如何使用 Deskreen 应用？ Deskreen 使用分为三个简单的步骤，让我为你强调一下，以便你开始使用：
 首先，当你启动该应用时，它会显示一个二维码和一个 IP 地址，以帮助你用 Web 浏览器连接其他设备，以串流你的屏幕。
 你可以按你喜欢的方式，在你的辅助设备上的 Web 浏览器的帮助下建立连接。
@@ -319,7 +322,7 @@ Deskreen 还为你提供了管理连接设备的能力。因此，如果你需�
       
       <guid>https://3ae.cn/article/2021/the-zen-zone/</guid>
       <description>网站为你营造了专注冥想的时间，通过三个简单的小游戏，你可以进入一个精神集中的状态，从而让大脑思维平静下来！
- 传送门 https://thezen.zone/
+传送门 https://thezen.zone/
 方法 进入网站直接开始冥想吧！</description>
     </item>
     
@@ -330,7 +333,7 @@ Deskreen 还为你提供了管理连接设备的能力。因此，如果你需�
       
       <guid>https://3ae.cn/article/2021/skylinewebcams/</guid>
       <description>网站收录了全球范围内的公开实况摄像头，你可以看到世界各地的文化遗产、城市风光、人气景点！
- 传送门 https://www.skylinewebcams.com/
+传送门 https://www.skylinewebcams.com/
 方法 网站支持中文，进入后直接观看！</description>
     </item>
     
@@ -342,7 +345,7 @@ Deskreen 还为你提供了管理连接设备的能力。因此，如果你需�
       <guid>https://3ae.cn/article/2021/linux_cmd/</guid>
       <description>Linux 常用命令
 日期 $(date -d &amp;#39;1 day ago&amp;#39; &amp;#39;+%Y-%m-%d&amp;#39;) 常用方法
-数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i}day&amp;#34;) echo $_date done # for i in {1..10} do  echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
+数字格式化 part=`printf &amp;#34;%03d&amp;#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &amp;#34;*.tar&amp;#34; |xargs rm for循环 for ((i=0;i&amp;lt;10;i++)) do _date=$(date +%Y-%m-%d -d &amp;#34;${i} day&amp;#34;) echo $_date done # for i in {1..10} do echo $i done 文件合并 find ./ -name &amp;#34;item*&amp;#34; | xargs sed &amp;#39;a\&amp;#39; &amp;gt; all.txt find ./ -name &amp;#34;item*&amp;#34; | xargs cat &amp;gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.</description>
     </item>
     
     <item>
@@ -374,7 +377,7 @@ TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言�
 宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
 TOML 被设计成可以无歧义地映射为哈希表。
 TOML 应该能很容易地被解析成各种语言中的数据结构。
-目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
+目录 规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法 规格 TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。 注释 井字符将该行余下的部分标记为注释，除非它在字符串中。</description>
     </item>
     
     <item>
@@ -385,8 +388,8 @@ TOML 应该能很容易地被解析成各种语言中的数据结构。
       <guid>https://3ae.cn/article/2021/learn_rust/</guid>
       <description>了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org
 Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指引页 和 Rust 官方文档主页 上，目前 Rust 官方团队已经将相关文档拆分到不同的仓库上：
- 《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库  还有其他更多官方或其他非官方相关的文档：
- 使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库  上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
+《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库 还有其他更多官方或其他非官方相关的文档：
+使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库 上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。</description>
     </item>
     
     <item>
@@ -395,8 +398,8 @@ Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指
       <pubDate>Wed, 02 Jun 2021 19:52:08 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/tower-defense/</guid>
-      <description>塔防游戏  可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就停不下来。
- 传送门 https://yorg.io/
+      <description>塔防游戏 可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就停不下来。
+传送门 https://yorg.io/
 玩法 通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击</description>
     </item>
     
@@ -406,8 +409,8 @@ Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指
       <pubDate>Wed, 02 Jun 2021 19:22:30 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/red-alert-2-chronodivide/</guid>
-      <description>在线红警  又是一波人的集体回忆。。。网站高度还原了经典游戏——红色警戒2，原汁原味的画面和音效，仿佛又回到了那个电脑房的年代！
- 传送门 https://game.chronodivide.com/
+      <description>在线红警 又是一波人的集体回忆。。。网站高度还原了经典游戏——红色警戒2，原汁原味的画面和音效，仿佛又回到了那个电脑房的年代！
+传送门 https://game.chronodivide.com/
 玩法 网站支持多人在线对战，注册登陆后即可开始！</description>
     </item>
     
@@ -434,11 +437,11 @@ goproxy.io：https://goproxy.io 或 https://proxy.golang.com.cn
       
       <guid>https://3ae.cn/article/2021/linux-memory-forensics/</guid>
       <description>利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。
- 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量关于运行应用、网络连接、内核模块、打开的文件以及几乎所有其他的内容信息，但这些信息每次计算机重启的时候都会被清除。
+计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量关于运行应用、网络连接、内核模块、打开的文件以及几乎所有其他的内容信息，但这些信息每次计算机重启的时候都会被清除。
 内存取证是一种从内存中找到和抽取这些有价值的信息的方式。Volatility 是一种使用插件来处理这类信息的开源工具。但是，存在一个问题：在你处理这些信息前，必须将物理内存转储到一个文件中，而 Volatility 没有这种能力。
 因此，这篇文章分为两部分：
- 第一部分是处理获取物理内存并将其转储到一个文件中。 第二部分使用 Volatility 从这个内存转储中读取并处理这些信息。  我在本教程中使用了以下测试系统，不过它可以在任何 Linux 发行版上工作：
-$ cat /etc/redhat-release Red Hat Enterprise Linux release 8.3 (Ootpa) $ $ uname -r 4.18.0-240.el8.x86_64 $ 注意事项： 部分 1 涉及到编译和加载一个内核模块。不要担心：它并不像听起来那么困难。 一些指南： 按照以下的步骤。 不要在生产系统或你的主要计算机上尝试任何这些步骤。 始终使用测试的虚拟机（VM）来尝试，直到你熟悉使用这些工具并理解它们的工作原理为止。  安装需要的包 在开始之前安装必要的工具。如果你经常使用基于 Debian 的发行版，可以使用 apt-get 命令。这些包大多数提供了需要的内核信息和工具来编译代码：
+第一部分是处理获取物理内存并将其转储到一个文件中。 第二部分使用 Volatility 从这个内存转储中读取并处理这些信息。 我在本教程中使用了以下测试系统，不过它可以在任何 Linux 发行版上工作：
+$ cat /etc/redhat-release Red Hat Enterprise Linux release 8.3 (Ootpa) $ $ uname -r 4.18.0-240.el8.x86_64 $ 注意事项： 部分 1 涉及到编译和加载一个内核模块。不要担心：它并不像听起来那么困难。 一些指南： 按照以下的步骤。 不要在生产系统或你的主要计算机上尝试任何这些步骤。 始终使用测试的虚拟机（VM）来尝试，直到你熟悉使用这些工具并理解它们的工作原理为止。 安装需要的包 在开始之前安装必要的工具。如果你经常使用基于 Debian 的发行版，可以使用 apt-get 命令。这些包大多数提供了需要的内核信息和工具来编译代码：
 $ yum install kernel-headers kernel-devel gcc elfutils-libelf-devel make git libdwarf-tools python2-devel.x86_64-y 部分 1：使用 LiME 获取内存并将其转储到一个文件中 在开始分析内存之前，你需要一个内存转储供你使用。在实际的取证活动中，这可能来自一个被破坏或者被入侵的系统。这些信息通常会被收集和存储来分析入侵是如何发生的及其影响。由于你可能没有可用的内存转储，你可以获取你的测试 VM 的内存转储，并使用它来执行内存取证。
 Linux 内存提取器（LiME）是一个在 Linux 系统上获取内存很常用的工具。使用以下命令获得 LiME：</description>
     </item>
@@ -450,7 +453,7 @@ Linux 内存提取器（LiME）是一个在 Linux 系统上获取内存很常用
       
       <guid>https://3ae.cn/article/2021/linux_sed/</guid>
       <description>很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有相似之处。虽然它们都能用于文本解析，但都有其特殊性。本文研究 sed 命令，它是一个 流编辑器。
- 安装 sed 如果你使用的是 Linux、BSD 或 macOS，那么它们已经安装了 GNU 的或 BSD 的 sed。这些是原始 sed 命令的独特重新实现。虽然它们很相似，但也有一些细微的差别。本文已经在 Linux 和 NetBSD 版本上进行了测试，所以你可以使用你的计算机上找到的任何 sed，但是对于 BSD sed，你必须使用短选项（例如 -n 而不是 &amp;ndash;quiet）。
+安装 sed 如果你使用的是 Linux、BSD 或 macOS，那么它们已经安装了 GNU 的或 BSD 的 sed。这些是原始 sed 命令的独特重新实现。虽然它们很相似，但也有一些细微的差别。本文已经在 Linux 和 NetBSD 版本上进行了测试，所以你可以使用你的计算机上找到的任何 sed，但是对于 BSD sed，你必须使用短选项（例如 -n 而不是 &amp;ndash;quiet）。
 GNU sed 通常被认为是功能最丰富的 sed，因此无论你是否运行 Linux，你可能都想要尝试一下。如果在 Ports 树中找不到 GNU sed（在非 Linux 系统上通常称为 gsed），你可以从 GNU 网站 下载源代码。 安装 GNU sed 的好处是，你可以使用它的额外功能，但是如果需要可移植性，还可以限制它以遵守 sed 的 POSIX 规范。
 MacOS 用户可以在 MacPorts 或 Homebrew 上找到 GNU sed。
 在 Windows 上，你可以通过 Chocolatey 来 安装 GNU sed。</description>
@@ -463,7 +466,7 @@ MacOS 用户可以在 MacPorts 或 Homebrew 上找到 GNU sed。
       
       <guid>https://3ae.cn/donations/</guid>
       <description>请扫下方二维码打赏一杯咖啡。
-多少不重要，1元也是支持       </description>
+多少不重要，1元也是支持 </description>
     </item>
     
     <item>
@@ -474,9 +477,9 @@ MacOS 用户可以在 MacPorts 或 Homebrew 上找到 GNU sed。
       <guid>https://3ae.cn/article/2021/swift-basic-syntax/</guid>
       <description>Swift介绍 Swift 是一门开发 iOS, macOS, watchOS 和 tvOS 应用的新语言。 swift 是一种安全，快速和互动的编程语言。 swift 支持代码预览（playgrounds），这个特性可以允许程序员在不编译和运行应用程序的前提下运行 Swift 代码并实时查看结果。
 Swift 通过采用现代编程模式来避免大量常见编程错误：
- 变量始终在使用前初始化。 检查数组索引超出范围的错误。 检查整数是否溢出。 可选值确保明确处理 nil 值。 内存被自动管理。 错误处理允许从意外故障控制恢复。  基础部分 常量和变量 声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。 示例：
-let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0  // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
-// 这是一个注释  /* 这也是一个注释， 但是是多行的 */  /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
+变量始终在使用前初始化。 检查数组索引超出范围的错误。 检查整数是否溢出。 可选值确保明确处理 nil 值。 内存被自动管理。 错误处理允许从意外故障控制恢复。 基础部分 常量和变量 声明常量和变量， 常量和变量必须在使用前声明，使用 let 来声明常量，使用 var 来声明变量。 示例：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 // 类型注解 var welcomeMessage: String 注释 单行注释双正斜杠（//）， 多行注释（/* 多行的 */）。Swift 的多行注释可以嵌套在其它的多行注释之中。 示例：
+// 这是一个注释 /* 这也是一个注释， 但是是多行的 */ /* 这是第一个多行注释的开头 /* 这是第二个被嵌套的多行注释 */ 这是第一个多行注释的结尾 */ 分号 Swift 并不强制要求你在每条语句的结尾处使用分号（;）。 同一行内写多条独立的语句必须用分号分隔。</description>
     </item>
     
     <item>
@@ -486,11 +489,11 @@ let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0  // 类型注�
       
       <guid>https://3ae.cn/article/2021/go_cross_compilling/</guid>
       <description>在 Linux 上测试软件时，我使用各种架构的服务器，例如 Intel、AMD、Arm 等。当我 分配了一台满足我的测试需求的 Linux 机器[1]，我仍然需要执行许多步骤：
-  下载并安装必备软件 验证构建服务器上是否有新的测试软件包 获取并设置依赖软件包所需的 yum 仓库 下载并安装新的测试软件包（基于步骤 2） 获取并设置必需的 SSL 证书 设置测试环境，获取所需的 Git 仓库，更改配置，重新启动守护进程等 做其他需要做的事情  用脚本自动化 这些步骤非常常规，以至于有必要对其进行自动化并将脚本保存到中央位置（例如文件服务器），在需要时可以在此处下载脚本。为此，我编写了 100-120 行的 Bash shell 脚本，它为我完成了所有配置（包括错误检查）。这个脚本通过以下方式简化了我的工作流程：
- 配置新的 Linux 系统（支持测试的架构） 登录系统并从中央位置下载自动化 shell 脚本 运行它来配置系统 开始测试  学习 Go 语言 我想学习 Go 语言 有一段时间了，将我心爱的 Shell 脚本转换为 Go 程序似乎是一个很好的项目，可以帮助我入门。它的语法看起来很简单，在尝试了一些测试程序后，我开始着手提高自己的知识并熟悉 Go 标准库。
+下载并安装必备软件 验证构建服务器上是否有新的测试软件包 获取并设置依赖软件包所需的 yum 仓库 下载并安装新的测试软件包（基于步骤 2） 获取并设置必需的 SSL 证书 设置测试环境，获取所需的 Git 仓库，更改配置，重新启动守护进程等 做其他需要做的事情 用脚本自动化 这些步骤非常常规，以至于有必要对其进行自动化并将脚本保存到中央位置（例如文件服务器），在需要时可以在此处下载脚本。为此，我编写了 100-120 行的 Bash shell 脚本，它为我完成了所有配置（包括错误检查）。这个脚本通过以下方式简化了我的工作流程：
+配置新的 Linux 系统（支持测试的架构） 登录系统并从中央位置下载自动化 shell 脚本 运行它来配置系统 开始测试 学习 Go 语言 我想学习 Go 语言 有一段时间了，将我心爱的 Shell 脚本转换为 Go 程序似乎是一个很好的项目，可以帮助我入门。它的语法看起来很简单，在尝试了一些测试程序后，我开始着手提高自己的知识并熟悉 Go 标准库。
 我花了一个星期的时间在笔记本电脑上编写 Go 程序。我经常在我的 x86 服务器上测试程序，清除错误并使程序健壮起来，一切都很顺利。
 直到完全转换到 Go 程序前，我继续依赖自己的 shell 脚本。然后，我将二进制文件推送到中央文件服务器上，以便每次配置新服务器时，我要做的就是获取二进制文件，将可执行标志打开，然后运行二进制文件。我对早期的结果很满意：
-$ wget http://file.example.com/&amp;lt;myuser&amp;gt;/bins/prepnode $ chmod +x .</description>
+$ wget http://file.example.com/&amp;lt;myuser&amp;gt;/bins/prepnode $ chmod +x ./prepnode $ ./prepnode 然后，出现了一个问题</description>
     </item>
     
     <item>
@@ -500,7 +503,7 @@ $ wget http://file.example.com/&amp;lt;myuser&amp;gt;/bins/prepnode $ chmod +x .
       
       <guid>https://3ae.cn/article/2021/linux_screen/</guid>
       <description>学习基本的 GNU Screen 终端复用技术，然后下载我们的终端命令备忘录，以便你能够熟悉常用的快捷方式。
- 对于一般用户而言，命令行终端窗口可能是令人困惑和神秘的。但随着你对 Linux 终端的进一步了解，你很快就会意识到它的高效和强大。不过，也不需要很长时间，你就会想让终端变得更加高效，除了将更多的终端放到你的终端，还有什么高好的方法能够提升你的终端效率呢？
+对于一般用户而言，命令行终端窗口可能是令人困惑和神秘的。但随着你对 Linux 终端的进一步了解，你很快就会意识到它的高效和强大。不过，也不需要很长时间，你就会想让终端变得更加高效，除了将更多的终端放到你的终端，还有什么高好的方法能够提升你的终端效率呢？
 终端复用 终端的许多优点之一是它是一个集中控制的界面。它是一个能让你访问数百个应用程序的窗口，而你与每一个应用程序进行交互所需要的只是一个键盘。但是，现代计算机几乎总是有多余的处理能力，而且现代计算机专家喜欢多任务处理，导致一个窗口处理数百个应用程序的能力是相当有限的。
 解决这一问题的常见答案是终端复用：即将虚拟终端叠放在一起，然后在它们之间移动的能力。通过终端复用器，你保持了集中控制，但是当你进行多任务时，你能够进行终端切换。更好的是，你能够在终端中拆分屏幕，使得在同一时间显示多个屏幕窗口。
 选择合适的复用器 一些终端提供类似的功能，有标签式界面和分割式视图，但也有细微的差别。首先，这些终端的功能依赖于图形化的桌面环境。其次，许多图形化的终端功能需要鼠标交互或使用不方便的键盘快捷键。终端复用器的功能在文本控制台上和在图形桌面上一样好用，而且键位绑定是针对常见的终端序列设计的，很方便。
@@ -519,8 +522,8 @@ $ wget http://file.example.com/&amp;lt;myuser&amp;gt;/bins/prepnode $ chmod +x .
       
       <guid>https://3ae.cn/article/2021/linux_cron/</guid>
       <description>cron 是一个调度守护进程，它以指定的时间间隔执行任务，这些任务称为 corn 作业，主要用于自动执行系统维护或管理任务。例如，你可以设置一个 cron 作业来自动执行重复的任务，比如备份数据库或数据，使用最新的安全补丁更新系统，检查磁盘空间使用情况，发送电子邮件等等。 cron 作业可以按分钟、小时、日、月、星期或它们的任意组合运行。
- cron 的一些优点 以下是使用 cron 作业的一些优点：
-你可以更好地控制作业的运行时间。例如，你可以精确到分钟、小时、天等。 它消除了为循环任务逻辑而去写代码的需要，当你不再需要执行任务时，可以直接关闭它。 作业在不执行时不会占用内存，因此你可以节省内存分配。 如果一个作业执行失败并由于某种原因退出，它将在适当的时间再次运行。  安装 cron 守护进程 幸运的是，Fedora Linux 预先配置了运行重要的系统任务来保持系统更新，有几个实用程序可以运行任务例如 cron、anacron、at 和 batch 。本文只关注 cron 实用程序的安装。cron 和 cronie 包一起安装，cronie 包也提供 cron 服务。
+cron 的一些优点 以下是使用 cron 作业的一些优点：
+你可以更好地控制作业的运行时间。例如，你可以精确到分钟、小时、天等。 它消除了为循环任务逻辑而去写代码的需要，当你不再需要执行任务时，可以直接关闭它。 作业在不执行时不会占用内存，因此你可以节省内存分配。 如果一个作业执行失败并由于某种原因退出，它将在适当的时间再次运行。 安装 cron 守护进程 幸运的是，Fedora Linux 预先配置了运行重要的系统任务来保持系统更新，有几个实用程序可以运行任务例如 cron、anacron、at 和 batch 。本文只关注 cron 实用程序的安装。cron 和 cronie 包一起安装，cronie 包也提供 cron 服务。
 要确定软件包是否已经存在，使用 rpm 命令： $ rpm -q cronie Cronie-1.5.2-4.el8.x86_64
 如果安装了 cronie ，它将返回 cronie 包的全名。如果你的系统中没有安装，则会显示未安装。
 使用以下命令安装： $ dnf install cronie
@@ -549,8 +552,8 @@ $ wget http://file.example.com/&amp;lt;myuser&amp;gt;/bins/prepnode $ chmod +x .
 我的主页 Gitee: https://gitee.com/lyhuilin
 Github: https://github.com/clin003/meBlog
 NavXin: https://www.nav.xin
-我的微信公众号    未来发展： 未来很长，且慢慢耕耘。
-白菜林的博客小站历程： 2021年5月11日 白菜林的博客小站 建站并部署至Github page。  特别感谢 非常感谢每一位走进本站的同学对我们的大力支持，你们的走进是我坚持的动力！
+我的微信公众号 未来发展： 未来很长，且慢慢耕耘。
+白菜林的博客小站历程： 2021年5月11日 白菜林的博客小站 建站并部署至Github page。 特别感谢 非常感谢每一位走进本站的同学对我们的大力支持，你们的走进是我坚持的动力！
 如果不介意,请把本站分享给您的同学朋友！
 我会一直努力，不求最好，只求更好！</description>
     </item>
@@ -561,7 +564,7 @@ NavXin: https://www.nav.xin
       <pubDate>Tue, 11 May 2021 14:00:54 +0800</pubDate>
       
       <guid>https://3ae.cn/article/2021/hello_world/</guid>
-      <description>Hello World! 白菜林^_^  </description>
+      <description>Hello World! 白菜林^_^ </description>
     </item>
     
   </channel>

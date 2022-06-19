@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <head>
-	<meta name="generator" content="Hugo 0.93.1" />
+	<meta name="generator" content="Hugo 0.100.2" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1651844209">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1655651889">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -66,7 +66,7 @@
 	
 	<div>
 		网站收录了全球范围内的公开实况摄像头，你可以看到世界各地的文化遗产、城市风光、人气景点！
- 传送门 https://www.skylinewebcams.com/
+传送门 https://www.skylinewebcams.com/
 方法 网站支持中文，进入后直接观看！
 		
 	</div>
@@ -84,7 +84,7 @@
 	<div>
 		Linux 常用命令
 日期 $(date -d &#39;1 day ago&#39; &#39;+%Y-%m-%d&#39;) 常用方法
-数字格式化 part=`printf &#34;%03d&#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &#34;*.tar&#34; |xargs rm for循环 for ((i=0;i&lt;10;i++)) do _date=$(date +%Y-%m-%d -d &#34;${i}day&#34;) echo $_date done # for i in {1..10} do  echo $i done 文件合并 find ./ -name &#34;item*&#34; | xargs sed &#39;a\&#39; &gt; all.txt find ./ -name &#34;item*&#34; | xargs cat &gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.
+数字格式化 part=`printf &#34;%03d&#34; $i` # 左补0 删除旧文件 # 找出5天前修改的文件名以.tar结尾的文件进行删除 find /www/backup -mtime +5 -name &#34;*.tar&#34; |xargs rm for循环 for ((i=0;i&lt;10;i++)) do _date=$(date +%Y-%m-%d -d &#34;${i} day&#34;) echo $_date done # for i in {1..10} do echo $i done 文件合并 find ./ -name &#34;item*&#34; | xargs sed &#39;a\&#39; &gt; all.txt find ./ -name &#34;item*&#34; | xargs cat &gt; all.txt :s/old/new #替换当前行的第一个old为new :s/old/new/g #替换当前行的所有的old为new :.
 		
 			<a href="https://3ae.cn/article/2021/linux_cmd/">Read more...</a>
 		
@@ -130,7 +130,7 @@ TOML v1.0.0 全称：Tom 的（语义）明显、（配置）最小化的语言�
 宗旨 TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。
 TOML 被设计成可以无歧义地映射为哈希表。
 TOML 应该能很容易地被解析成各种语言中的数据结构。
-目录  规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法  规格  TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。  注释 井字符将该行余下的部分标记为注释，除非它在字符串中。
+目录 规格 注释 键值对 键名 字符串 整数 浮点数 布尔值 坐标日期时刻 各地日期时刻 各地日期 各地时刻 数组 表 内联表 表数组 文件扩展名 MIME 类型 ABNF 语法 规格 TOML 是大小写敏感的。 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档。 空白是指制表符（0x09）或空格（0x20）。 换行是指 LF（0x0A）或 CRLF（0x0D0A）。 注释 井字符将该行余下的部分标记为注释，除非它在字符串中。
 		
 			<a href="https://3ae.cn/article/2021/toml/">Read more...</a>
 		
@@ -147,8 +147,8 @@ TOML 应该能很容易地被解析成各种语言中的数据结构。
 	<div>
 		了解 一般来说，要决定学习一门新语言之前，会先大体了解下这门语言的特点和目前的发展情况。 这时，建议看 Rust 官网 https://rust-lang.org
 Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指引页 和 Rust 官方文档主页 上，目前 Rust 官方团队已经将相关文档拆分到不同的仓库上：
- 《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库  还有其他更多官方或其他非官方相关的文档：
- 使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库  上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。
+《Rust 程序设计语言》（The Rust Programming Language），对应 GitHub 仓库 《通过例子学 Rust》（Rust by Example），对应 GitHub 仓库 Rust 版本指南（The Edition Guide），对应 GitHub 仓库 Cargo 帮助文档，对应 GitHub 仓库源文件 rustdoc 帮助文档，对应 GitHub 仓库源文件 rustc 帮助文档，对应 GitHub 仓库源文件 Rust 编译错误索引，对应 GitHub 仓库源代码 《Rust 语言参考》（The Rust Reference），对应 GitHub 仓库 The Rustonomicon，对应 GitHub 仓库 还有其他更多官方或其他非官方相关的文档：
+使用 Rust 编写命令行应用，对应 GitHub 仓库地址 Rust 和 WebAssembly 教程（WebAssembly Book），对应 GitHub 仓库 嵌入式 Rust 教程，对应 GitHub 仓库 A Rust Cookbook，对应 GitHub 仓库 The Unstable Book，对应 GitHub 仓库源代码 rustc 指引——Rust 编译器的工作原理及如何参与贡献（rustc-guide），对应 GitHub 仓库 rustup 命令说明，本翻译项目会将 rustup 的相关说明翻译成中文 Rust RFC——Rust 发展相关制定的文稿，对应 GitHub 仓库 mdBook 使用手册，对应 GitHub 仓库 Rust API 指导原则，对应 GitHub 仓库 async-book，对应 GitHub 仓库 上述文档的源文件有些是放在 rust 和 cargo 的仓库的子目录中：Rust 文档 和 cargo 文档。
 		
 			<a href="https://3ae.cn/article/2021/learn_rust/">Read more...</a>
 		
@@ -169,8 +169,8 @@ Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指
 	<a href="/tags/tower-defense">Tower Defense</a>
 	
 	<div>
-		塔防游戏  可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就停不下来。
- 传送门 https://yorg.io/
+		塔防游戏 可玩性很高的一款塔防游戏，需要各类元素合成，通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击，一玩就停不下来。
+传送门 https://yorg.io/
 玩法 通过传送带传送宝石、木材、铁等元素，最后合成弓箭、大炮、闪电塔等来抵御怪兽的袭击
 		
 	</div>
@@ -188,8 +188,8 @@ Rust 官方文档 Rust 语言的学习或参考文档大都列在 Rust 学习指
 	<a href="/tags/%E7%BD%91%E9%A1%B5%E6%B8%B8%E6%88%8F">网页游戏</a>
 	
 	<div>
-		在线红警  又是一波人的集体回忆。。。网站高度还原了经典游戏——红色警戒2，原汁原味的画面和音效，仿佛又回到了那个电脑房的年代！
- 传送门 https://game.chronodivide.com/
+		在线红警 又是一波人的集体回忆。。。网站高度还原了经典游戏——红色警戒2，原汁原味的画面和音效，仿佛又回到了那个电脑房的年代！
+传送门 https://game.chronodivide.com/
 玩法 网站支持多人在线对战，注册登陆后即可开始！
 		
 	</div>
@@ -236,11 +236,11 @@ goproxy.io：https://goproxy.io 或 https://proxy.golang.com.cn
 	
 	<div>
 		利用 Volatility 找出应用程序、网络连接、内核模块、文件等方面的情况。
- 计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量关于运行应用、网络连接、内核模块、打开的文件以及几乎所有其他的内容信息，但这些信息每次计算机重启的时候都会被清除。
+计算机的操作系统和应用使用主内存（RAM）来执行不同的任务。这种易失性内存包含大量关于运行应用、网络连接、内核模块、打开的文件以及几乎所有其他的内容信息，但这些信息每次计算机重启的时候都会被清除。
 内存取证是一种从内存中找到和抽取这些有价值的信息的方式。Volatility 是一种使用插件来处理这类信息的开源工具。但是，存在一个问题：在你处理这些信息前，必须将物理内存转储到一个文件中，而 Volatility 没有这种能力。
 因此，这篇文章分为两部分：
- 第一部分是处理获取物理内存并将其转储到一个文件中。 第二部分使用 Volatility 从这个内存转储中读取并处理这些信息。  我在本教程中使用了以下测试系统，不过它可以在任何 Linux 发行版上工作：
-$ cat /etc/redhat-release Red Hat Enterprise Linux release 8.3 (Ootpa) $ $ uname -r 4.18.0-240.el8.x86_64 $ 注意事项： 部分 1 涉及到编译和加载一个内核模块。不要担心：它并不像听起来那么困难。 一些指南： 按照以下的步骤。 不要在生产系统或你的主要计算机上尝试任何这些步骤。 始终使用测试的虚拟机（VM）来尝试，直到你熟悉使用这些工具并理解它们的工作原理为止。  安装需要的包 在开始之前安装必要的工具。如果你经常使用基于 Debian 的发行版，可以使用 apt-get 命令。这些包大多数提供了需要的内核信息和工具来编译代码：
+第一部分是处理获取物理内存并将其转储到一个文件中。 第二部分使用 Volatility 从这个内存转储中读取并处理这些信息。 我在本教程中使用了以下测试系统，不过它可以在任何 Linux 发行版上工作：
+$ cat /etc/redhat-release Red Hat Enterprise Linux release 8.3 (Ootpa) $ $ uname -r 4.18.0-240.el8.x86_64 $ 注意事项： 部分 1 涉及到编译和加载一个内核模块。不要担心：它并不像听起来那么困难。 一些指南： 按照以下的步骤。 不要在生产系统或你的主要计算机上尝试任何这些步骤。 始终使用测试的虚拟机（VM）来尝试，直到你熟悉使用这些工具并理解它们的工作原理为止。 安装需要的包 在开始之前安装必要的工具。如果你经常使用基于 Debian 的发行版，可以使用 apt-get 命令。这些包大多数提供了需要的内核信息和工具来编译代码：
 $ yum install kernel-headers kernel-devel gcc elfutils-libelf-devel make git libdwarf-tools python2-devel.x86_64-y 部分 1：使用 LiME 获取内存并将其转储到一个文件中 在开始分析内存之前，你需要一个内存转储供你使用。在实际的取证活动中，这可能来自一个被破坏或者被入侵的系统。这些信息通常会被收集和存储来分析入侵是如何发生的及其影响。由于你可能没有可用的内存转储，你可以获取你的测试 VM 的内存转储，并使用它来执行内存取证。
 Linux 内存提取器（LiME）是一个在 Linux 系统上获取内存很常用的工具。使用以下命令获得 LiME：
 		
@@ -264,7 +264,7 @@ Linux 内存提取器（LiME）是一个在 Linux 系统上获取内存很常用
 	
 	<div>
 		很少有 Unix 命令像 sed、grep 和 awk 一样出名，它们经常组合在一起，可能是因为它们具有奇怪的名称和强大的文本解析能力。它们还在一些语法和逻辑上有相似之处。虽然它们都能用于文本解析，但都有其特殊性。本文研究 sed 命令，它是一个 流编辑器。
- 安装 sed 如果你使用的是 Linux、BSD 或 macOS，那么它们已经安装了 GNU 的或 BSD 的 sed。这些是原始 sed 命令的独特重新实现。虽然它们很相似，但也有一些细微的差别。本文已经在 Linux 和 NetBSD 版本上进行了测试，所以你可以使用你的计算机上找到的任何 sed，但是对于 BSD sed，你必须使用短选项（例如 -n 而不是 &ndash;quiet）。
+安装 sed 如果你使用的是 Linux、BSD 或 macOS，那么它们已经安装了 GNU 的或 BSD 的 sed。这些是原始 sed 命令的独特重新实现。虽然它们很相似，但也有一些细微的差别。本文已经在 Linux 和 NetBSD 版本上进行了测试，所以你可以使用你的计算机上找到的任何 sed，但是对于 BSD sed，你必须使用短选项（例如 -n 而不是 &ndash;quiet）。
 GNU sed 通常被认为是功能最丰富的 sed，因此无论你是否运行 Linux，你可能都想要尝试一下。如果在 Ports 树中找不到 GNU sed（在非 Linux 系统上通常称为 gsed），你可以从 GNU 网站 下载源代码。 安装 GNU sed 的好处是，你可以使用它的额外功能，但是如果需要可移植性，还可以限制它以遵守 sed 的 POSIX 规范。
 MacOS 用户可以在 MacPorts 或 Homebrew 上找到 GNU sed。
 在 Windows 上，你可以通过 Chocolatey 来 安装 GNU sed。
