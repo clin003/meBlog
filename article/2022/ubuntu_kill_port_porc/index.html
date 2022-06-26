@@ -17,7 +17,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1655653011">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1656244117">
 	
 	
 </head>
@@ -91,6 +91,10 @@
 <pre><code>sudo ufw allow 22
 
 sudo ufw deny 22
+</code></pre>
+<h3 id="附注">附注</h3>
+<p>关闭特定进程</p>
+<pre><code>kill $(ps -e|grep firefox|awk '{print $1}')
 </code></pre>
 
 			</div>
