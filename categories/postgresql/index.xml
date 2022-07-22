@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PostgreSQL on 白菜林</title>
+    <link>https://3ae.cn/categories/postgresql/</link>
+    <description>Recent content in PostgreSQL on 白菜林</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>baicai</copyright>
+    <lastBuildDate>Fri, 22 Jul 2022 14:26:40 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgresSQL 基本用法：新建数据库、用户、连接、备份/恢复数据库</title>
+      <link>https://3ae.cn/article/2022/create_use1/</link>
+      <pubDate>Fri, 22 Jul 2022 14:26:40 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2022/create_use1/</guid>
+      <description>系统环境： Debian 11
+切换到超级用户： sudo su postgres 进入psql： psql 创建一个用户： CREATE USER username WITH PASSWORD &amp;#39;password&amp;#39;; 查看角色列表： \du 创建数据库并制定所有者和编码： CREATE DATABASE dbname WITH OWNER username ENCODING UTF8; 创建一个数据库： CREATE DATABASE dbname; 查看数据库列表： \l 更改刚创建的数据库所有权： ALTER DATABASE dbname OWNER TO username; 通过psql连接数据库 psql -h 127.0.0.1 -p 5432 -U username -d dbname 备份数据库 pg_dump dbname &amp;gt; dbname.dump 恢复数据库 psql -f dbname.dump dbname </description>
+    </item>
+    
+  </channel>
+</rss>

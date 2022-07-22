@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2022/create_use1/" />
+	<link rel="canonical" href="https://3ae.cn/article/2022/create_use1/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>PostgresSQL 基本用法：新建数据库、用户、连接、备份/恢复数据库</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1658474902">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>PostgresSQL 基本用法：新建数据库、用户、连接、备份/恢复数据库</h1>
+			<b><time>2022.07.22 14:26</time></b>
+		       
+		           <a href="/tags/postgres">postgres</a>
+        	       
+
+			<div>
+				<p>系统环境：
+Debian 11</p>
+<h3 id="切换到超级用户">切换到超级用户：</h3>
+<pre tabindex="0"><code>    sudo su postgres
+</code></pre><h3 id="进入psql">进入psql：</h3>
+<pre tabindex="0"><code>    psql
+</code></pre><h3 id="创建一个用户">创建一个用户：</h3>
+<pre tabindex="0"><code>    CREATE USER username WITH PASSWORD &#39;password&#39;;
+</code></pre><h3 id="查看角色列表">查看角色列表：</h3>
+<pre tabindex="0"><code>    \du
+</code></pre><h3 id="创建数据库并制定所有者和编码">创建数据库并制定所有者和编码：</h3>
+<pre tabindex="0"><code>    CREATE DATABASE dbname WITH OWNER username ENCODING UTF8;
+</code></pre><h4 id="创建一个数据库">创建一个数据库：</h4>
+<pre tabindex="0"><code>    CREATE DATABASE dbname;
+</code></pre><h4 id="查看数据库列表">查看数据库列表：</h4>
+<pre tabindex="0"><code>    \l
+</code></pre><h4 id="更改刚创建的数据库所有权">更改刚创建的数据库所有权：</h4>
+<pre tabindex="0"><code>    ALTER DATABASE dbname OWNER TO username;
+</code></pre><h3 id="通过psql连接数据库">通过psql连接数据库</h3>
+<pre tabindex="0"><code>    psql -h 127.0.0.1 -p 5432 -U username -d dbname
+</code></pre><h3 id="备份数据库">备份数据库</h3>
+<pre tabindex="0"><code>    pg_dump dbname &gt; dbname.dump
+</code></pre><h3 id="恢复数据库">恢复数据库</h3>
+<pre tabindex="0"><code>    psql -f dbname.dump dbname
+</code></pre>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2022/create_use1/">PostgresSQL 基本用法：新建数据库、用户、连接、备份/恢复数据库</a></li>
+				
+				<li><a href="/article/2022/debian_version_check/">查看 Debian 系统版本的方式</a></li>
+				
+				<li><a href="/article/2022/debian_gnome_remove_game/">删除 Debian Gnome 所有默认安装的游戏</a></li>
+				
+				<li><a href="/article/2022/ubuntu_kill_port_porc/">如何关闭 Ubuntu 中的开放端口？</a></li>
+				
+				<li><a href="/article/2022/firefox_weibo_alpn/">解决 Firefox 访问weibo搜索或热搜提示 建立安全连接失败</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://3ae.cn/links/"><b>友情链接</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>
