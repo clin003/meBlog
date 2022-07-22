@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Sun, 19 Jun 2022 22:53:02 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jul 2022 10:35:22 +0800</lastBuildDate><atom:link href="https://3ae.cn/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>删除 Debian Gnome 所有默认安装的游戏</title>
+      <link>https://3ae.cn/article/2022/debian_gnome_remove_game/</link>
+      <pubDate>Fri, 22 Jul 2022 10:35:22 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2022/debian_gnome_remove_game/</guid>
+      <description>我用以下命令删除Debian 11.3（带有gnome）中的所有预装游戏：
+sudo apt purge aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy gnome-sushi gnome-taquin gnome-tetravex gnome-robots gnome-chess lightsoff swell-foop quadrapassel &amp;amp;&amp;amp; sudo apt autoremove </description>
+    </item>
+    
     <item>
       <title>如何关闭 Ubuntu 中的开放端口？</title>
       <link>https://3ae.cn/article/2022/ubuntu_kill_port_porc/</link>
