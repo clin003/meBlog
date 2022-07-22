@@ -15,7 +15,7 @@
       
       <guid>https://3ae.cn/article/2022/debian_gnome_remove_game/</guid>
       <description>我用以下命令删除Debian 11.3（带有gnome）中的所有预装游戏：
-sudo apt purge aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy gnome-sushi gnome-taquin gnome-tetravex gnome-robots gnome-chess lightsoff swell-foop quadrapassel &amp;amp;&amp;amp; sudo apt autoremove </description>
+sudo apt purge aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy gnome-sushi gnome-taquin gnome-tetravex gnome-robots gnome-chess lightsoff swell-foop quadrapassel tali &amp;amp;&amp;amp; sudo apt autoremove </description>
     </item>
     
     <item>
