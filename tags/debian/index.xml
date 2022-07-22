@@ -7,7 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>baicai</copyright>
-    <lastBuildDate>Fri, 22 Jul 2022 10:35:22 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jul 2022 11:04:30 +0800</lastBuildDate><atom:link href="https://3ae.cn/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>查看 Debian 系统版本的方式</title>
+      <link>https://3ae.cn/article/2022/debian_version_check/</link>
+      <pubDate>Fri, 22 Jul 2022 11:04:30 +0800</pubDate>
+      
+      <guid>https://3ae.cn/article/2022/debian_version_check/</guid>
+      <description>查看 Dibian 系统发行版本号的方式
+1. 使用 lsb_release 命令 lsb_release 命令可用于查看 Linux 发行版操作系统的具体版本。它可能尚未安装在你的操作系统中，因此你需要先安装它。运行以下命令来安装 lsb_release：
+apt-get install lsb-release 安装完成之后，只需要输入下面的命令就可以查看到你当前系统的版本信息：
+lsb_release -a 你将看到类似下面的结果：
+No LSB modules are available. Distributor ID:	Debian Description:	Debian GNU/Linux 11 (bullseye) Release:	11 Codename:	bullseye 以上运行结果说明当前使用的操作系统版本是 Debian 11.
+2. 查看 /etc/issue 文件 第二种查看当前 Debian 版本的方法是查看位于 /etc 目录中的 issue 文件。你可以使用 cat 命令查看文件的内容，输入下面的命令：
+cat /etc/issue 你将看到类似下面的结果：
+Debian GNU/Linux 11 \n \l 3. 查看 /etc/os-release 文件 /etc/os-release 是一个包含操作系统标识数据的文件，它只能在运行 systemd 的最新 Debian 发行版上找到。同样可以使用 cat 命令查看该文件的内容，输入下面的命令：</description>
+    </item>
+    
     <item>
       <title>删除 Debian Gnome 所有默认安装的游戏</title>
       <link>https://3ae.cn/article/2022/debian_gnome_remove_game/</link>

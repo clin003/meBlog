@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="白菜林" />
+	<meta property="og:url" content="https://3ae.cn/article/2022/debian_version_check/" />
+	<link rel="canonical" href="https://3ae.cn/article/2022/debian_version_check/" /><style type=text/css>
+		body {
+			font-family: monospace;
+		}
+	</style>
+	<title>查看 Debian 系统版本的方式</title>
+	
+	
+	<meta name="author" content="白菜林">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1658459849">
+	
+	
+</head>
+
+<body>
+	<header>
+	===============<br>
+	== <a href="https://3ae.cn">白菜林</a> ==<br>
+	===============
+	<div style="float: right;">一个勤奋的代码搬运工！</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>文章</b></a>.
+			
+			<a href="/categories/"><b>分类</b></a>.
+			
+			<a href="/tags/"><b>标签</b></a>.
+			
+			<a href="/about/"><b>关于</b></a>.
+			
+			<a href="https://www.nav.xin"><b>@白菜林</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>查看 Debian 系统版本的方式</h1>
+			<b><time>2022.07.22 11:04</time></b>
+		       
+		           <a href="/tags/debian">debian</a>
+        	       
+
+			<div>
+				<p>查看 Dibian 系统发行版本号的方式</p>
+<h3 id="1-使用-lsb_release-命令">1. 使用 lsb_release 命令</h3>
+<p>lsb_release 命令可用于查看 Linux 发行版操作系统的具体版本。它可能尚未安装在你的操作系统中，因此你需要先安装它。运行以下命令来安装 lsb_release：</p>
+<pre tabindex="0"><code>    apt-get install lsb-release
+</code></pre><p>安装完成之后，只需要输入下面的命令就可以查看到你当前系统的版本信息：</p>
+<pre tabindex="0"><code>    lsb_release -a
+</code></pre><p>你将看到类似下面的结果：</p>
+<pre tabindex="0"><code>    No LSB modules are available.
+    Distributor ID:	Debian
+    Description:	Debian GNU/Linux 11 (bullseye)
+    Release:	11
+    Codename:	bullseye
+</code></pre><p>以上运行结果说明当前使用的操作系统版本是 Debian 11.</p>
+<h3 id="2-查看-etcissue-文件">2. 查看 /etc/issue 文件</h3>
+<p>第二种查看当前 Debian 版本的方法是查看位于 /etc 目录中的 issue 文件。你可以使用 cat 命令查看文件的内容，输入下面的命令：</p>
+<pre tabindex="0"><code>    cat /etc/issue
+</code></pre><p>你将看到类似下面的结果：</p>
+<pre tabindex="0"><code>    Debian GNU/Linux 11 \n \l
+</code></pre><h3 id="3-查看-etcos-release-文件">3. 查看 /etc/os-release 文件</h3>
+<p>/etc/os-release 是一个包含操作系统标识数据的文件，它只能在运行 systemd 的最新 Debian 发行版上找到。同样可以使用 cat 命令查看该文件的内容，输入下面的命令：</p>
+<pre tabindex="0"><code>cat /etc/os-release
+</code></pre><p>你将看到类似下面的结果：</p>
+<pre tabindex="0"><code>    PRETTY_NAME=&#34;Debian GNU/Linux 11 (bullseye)&#34;
+    NAME=&#34;Debian GNU/Linux&#34;
+    VERSION_ID=&#34;11&#34;
+    VERSION=&#34;11 (bullseye)&#34;
+    VERSION_CODENAME=bullseye
+    ID=debian
+    HOME_URL=&#34;https://www.debian.org/&#34;
+    SUPPORT_URL=&#34;https://www.debian.org/support&#34;
+    BUG_REPORT_URL=&#34;https://bugs.debian.org/&#34;
+</code></pre><p>如果想知道更具体的小版本号，可以查看 /etc/debian_version 文件，输入下面的命令：</p>
+<pre tabindex="0"><code>    cat /etc/debian_version
+</code></pre><p>你将看到类似下面的结果：</p>
+<pre tabindex="0"><code>    11.4
+</code></pre><h3 id="4-使用-uname-命令">4. 使用 uname 命令</h3>
+<p>uname 命令可以显示电脑以及操作系统的相关信息，输入下面的命令：</p>
+<pre tabindex="0"><code>    uname -a
+</code></pre><p>你将看到类似下面的结果：</p>
+<pre tabindex="0"><code>    Linux baicai-l01 5.10.0-16-amd64 #1 SMP Debian 5.10.127-1 (2022-06-30) x86_64 GNU/Linux
+</code></pre><h3 id="5-使用-hostnamectl-命令">5. 使用 hostnamectl 命令</h3>
+<p>hostnamectl 命令用于配置或修改系统的主机名，不过也使用此命令来获取 Debian 系统的版本，只需要直接输入 hostnamectl 即可：</p>
+<pre tabindex="0"><code>    hostnamectl
+</code></pre><p>你将看到类似下面的结果：</p>
+<pre tabindex="0"><code>   Static hostname: baicai-l01
+         Icon name: computer-desktop
+           Chassis: desktop
+        Machine ID: xxx
+           Boot ID: xxx
+  Operating System: Debian GNU/Linux 11 (bullseye)
+            Kernel: Linux 5.10.0-16-amd64
+      Architecture: x86-64
+</code></pre>
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/article/2022/debian_version_check/">查看 Debian 系统版本的方式</a></li>
+				
+				<li><a href="/article/2022/debian_gnome_remove_game/">删除 Debian Gnome 所有默认安装的游戏</a></li>
+				
+				<li><a href="/article/2022/ubuntu_kill_port_porc/">如何关闭 Ubuntu 中的开放端口？</a></li>
+				
+				<li><a href="/article/2022/firefox_weibo_alpn/">解决 Firefox 访问weibo搜索或热搜提示 建立安全连接失败</a></li>
+				
+				<li><a href="/article/2022/linux_ssh_copy_id/">上传公钥实现ssh登录</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2022 <a href="https://3ae.cn"><b>baicai</b></a>.
+	<a href="https://github.com/clin003/meBlog"><b>Github</b></a>.
+	<a href="https://support.qq.com/product/325110"><b>反馈</b></a>.
+	<a href="https://3ae.cn/donations/"><b>赞助</b></a>.
+	<a href="https://nav.3ae.cn/"><b>网络导航</b></a>.
+	<a href="https://3ae.cn/links/"><b>友情链接</b></a>.
+	<a href="https://lyhuilin.gitee.io"><b>Profile</b></a>.
+	<a href="/index.xml"><b>RSS</b></a>.
+	</p>
+</footer>
+
+</body>
+
+</html>
