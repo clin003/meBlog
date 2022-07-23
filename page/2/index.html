@@ -18,7 +18,7 @@
 	
 	<meta name="author" content="白菜林">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1658475137">
+	<link rel="stylesheet" href="/css/baicai_custom.css?rnd=1658591988">
 	
 	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="白菜林">
 	
@@ -53,6 +53,32 @@
 	
 	<main>
 		
+		
+			<article>
+	<h1><a href="https://3ae.cn/article/2021/ubuntu_systemd_service/">Ubuntu使用systemd配置开机运行service</a></h1>
+	<b><time>2021.12.01 22:44</time></b>
+	
+	<a href="/tags/ubuntu">ubuntu</a>
+	
+	<div>
+		systemd Systemd 是 Linux 系统工具，用来启动守护进程，已成为大多数发行版的标准配置。
+由来 历史上，Linux 的启动一直采用init进程。
+下面的命令用来启动服务。
+$ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺点。
+一是启动时间长。init进程是串行启动，只有前一个进程启动完，才会启动下一个进程。
+二是启动脚本复杂。init进程只是执行启动脚本，不管其他事情。脚本需要自己处理各种情况，这往往使得脚本变得很长。
+Systemd 概述 Systemd 就是为了解决这些问题而诞生的。它的设计目标是，为系统的启动和管理提供一套完整的解决方案。
+根据 Linux 惯例，字母d是守护进程（daemon）的缩写。 Systemd 这个名字的含义，就是它要守护整个系统。
+使用了 Systemd，就不需要再用init了。Systemd 取代了initd，成为系统的第一个进程（PID 等于 1），其他进程都是它的子进程。
+$ systemctl --version 上面的命令查看 Systemd 的版本。
+使用 systemd 实现开机执行 Shell 脚本 通用操作步骤 创建希望开机马上执行的脚本，本文举例脚本存放位置为 /home/navxin/Example/startup.sh，脚本内容如下：
+#!/bin/bash # 开机时在脚本的同级目录下创建一个名为 StartupTouch.txt 的文件 touch /home/navxin/Example/startup.sh.txt 开机执行的脚本需增加可执行权限才能被 systemd 运行，使用如下命令 chmod u+x /home/navxin/Example/startup.sh chmod g+x /home/navxin/Example/startup.sh 进入 systemd 放置 service 的目录，在该目录下可看到大量服务配置文件，命令如下 # 进入 systemd 的 service 目录 cd /usr/lib/systemd/system # 查看文件列表 ls -al 在该目录创建一个新的 .
+		
+			<a href="https://3ae.cn/article/2021/ubuntu_systemd_service/">Read more...</a>
+		
+	</div>
+</article>
+
 		
 			<article>
 	<h1><a href="https://3ae.cn/article/2021/docker_start/">安装docker及简单的使用</a></h1>
@@ -274,27 +300,6 @@ mdfind命令 描述：通过 mdfind命令查找 语法：mdfind -name 文件名
 % ~/MyCommandLineProg 若要打开一个 App，请使用打开命令：
 		
 			<a href="https://3ae.cn/article/2021/mac_find/">Read more...</a>
-		
-	</div>
-</article>
-
-		
-			<article>
-	<h1><a href="https://3ae.cn/article/2021/rustproxy/">Rust 镜像源</a></h1>
-	<b><time>2021.06.25 22:53</time></b>
-	
-	<a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
-	
-	<a href="/tags/rust">Rust</a>
-	
-	<div>
-		通常cargo跑得挺顺畅，不怎么需要proxy。但有备无患。
-crates.io 和 rustup 的国内镜像源 字节跳动提供的：https://rsproxy.cn/
-中国科技大学的：https://mirrors.ustc.edu.cn/help/crates.io-index.html
-清华大学的：https://mirrors.tuna.tsinghua.edu.cn/help/rustup/
-上海交通大学的：https://git.sjtu.edu.cn/sjtug/crates.io-index
-更换国内源 更换为国内源，否则安装太慢了。 新建文件：~/.cargo/config，内容替换为如下，replace-with 这行可自己 ping 文件中各个国内源头，看哪个源快用哪个：
-[source.crates-io] registry = &#34;https://github.com/rust-lang/crates.io-index&#34; # 替换成你偏好的镜像源 replace-with = &#39;sjtu&#39; # 清华大学 [source.tuna] registry = &#34;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&#34; # 中国科学技术大学 [source.ustc] registry = &#34;git://mirrors.ustc.edu.cn/crates.io-index&#34; # 上海交通大学 [source.sjtu] registry = &#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index&#34; # rustcc社区 [source.rustcc] registry = &#34;git://crates.rustcc.cn/crates.io-index&#34; # 字节跳动 [source.rsproxy] registry = &#34;https://rsproxy.cn/crates.io-index&#34; 
 		
 	</div>
 </article>
